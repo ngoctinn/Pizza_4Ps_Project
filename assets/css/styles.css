@@ -1,3 +1,10 @@
+/* Khai báo biến màu sắc */
+:root {
+  --color-primary: rgb(24, 28, 40);
+  --color-secondary: rgb(42, 46, 57);
+  --color-white: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +14,14 @@ html {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 input,
