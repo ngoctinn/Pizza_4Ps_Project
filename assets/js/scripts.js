@@ -14,3 +14,17 @@ function load(selector, path) {
       }
     });
 }
+// HEADER
+document.addEventListener("DOMContentLoaded", (event) => {
+  const video = document.querySelector("video");
+  video.play();
+
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      header.classList.add("header-scrolled");
+    } else {
+      header.classList.remove("header-scrolled");
+    }
+  });
+});

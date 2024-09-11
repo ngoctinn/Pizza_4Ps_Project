@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
     <!-- Fonts -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <!-- Favicon -->
@@ -45,7 +46,18 @@
         load("#header", "./templates/header.html");
       </script>
     </header>
-    <main></main>
+    <main>
+      <div class="video__container">
+        <video autoplay loop muted playsinline>
+          <source
+            src="./assets/Videos/Pizza 4P's - Delivering Wow, Sharing Hapiness.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+      </div>
+    </main>
     <footer id="footer">
       <script>
         load("#footer", "./templates/footer.html");

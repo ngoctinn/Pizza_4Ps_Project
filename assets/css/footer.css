@@ -1,0 +1,6 @@
+footer {
+  height: 300rem;
+  margin-top: 100vh;
+  padding: 50px 20px;
+  background-color: var(--color-secondary);
+}
