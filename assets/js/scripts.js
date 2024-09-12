@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const header = document.querySelector("header");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 500) {
       header.classList.add("header-scrolled");
     } else {
       header.classList.remove("header-scrolled");
