@@ -1,9 +1,0 @@
-.topSection__container {
-  height: 100vh;
-}
-.topSection__container .topSection__position {
-  background: var(--color-secondary);
-}
-.topSection__container .topSection__menu {
-  background: #eae6dc;
-}
