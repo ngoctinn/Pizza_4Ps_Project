@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const video = document.querySelector("video");
   video.play();
 
-  const header = document.querySelector("header");
+  const header = document.querySelector("nav");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 500) {
       header.classList.add("header-scrolled");

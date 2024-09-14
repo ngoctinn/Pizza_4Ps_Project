@@ -1,24 +1,72 @@
-<div class="header__container">
-  <div class="header__left">
-    <div class="header__left--logo"><a href="#">PIZZA 4P'S</a></div>
-  </div>
-  <div class="header__right">
-    <nav class="header__right--menu">
-      <ul>
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li><a href="#">Tin tức</a></li>
-        <li><a href="#">Thực đơn</a></li>
-        <li><a href="#">Đặt bàn</a></li>
-      </ul>
-    </nav>
-    <div class="header__right--action">
-      <div class="header__right--login">
-        <a href="#">Đăng nhập</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-tranparent fixed-top">
+  <div class="container">
+    <!-- logo -->
+    <a class="navbar__brand" href="#">PIZZA 4P'S</a>
+    <!-- Toggle btn -->
+    <button
+      class="navbar-toggler shadow-none border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Sidebar -->
+    <div
+      class="sidebar offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <!-- Sidebar header -->
+      <div class="offcanvas-header text-white border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PIZZA 4P'S</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
-      <div class="header__right--register">
-        <a href="#">Đăng ký</a>
+      <!-- Sidebar body -->
+      <div class="offcanvas-body d-flex flex-column flex-lg-row p-4">
+        <ul
+          class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
+        >
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">giới thiệu</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">menu</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">tin tức</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">liên hệ</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">đặt bàn</a>
+          </li>
+        </ul>
+        <!-- login/signup -->
+        <div
+          class="d-flex justify-content-center flex-lg-row align-items-center gap-3"
+        >
+          <a href="#" class="text-white">Đăng nhập</a>
+          <a
+            href="#"
+            class="text-black text-decoration-none px-4 py-2 rounded-4"
+            style="background-color: #ffc107"
+            >Đăng ký</a
+          >
+        </div>
       </div>
     </div>
   </div>
-</div>
+</nav>
