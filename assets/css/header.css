@@ -14,7 +14,7 @@
 }
 .navbar .container {
   font-size: 2rem;
-  padding: 0rem 3rem;
+  margin: 0 2rem;
   z-index: 1000;
   font-weight: 500;
   height: 100%;
@@ -170,8 +170,8 @@
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.4)
   );
 }
