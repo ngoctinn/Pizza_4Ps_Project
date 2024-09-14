@@ -28,6 +28,7 @@
   height: auto;
   transform: translateX(-50%) translateY(-50%);
 }
+/* CSS PHẦN HERO */
 .hero__container {
   height: 100vh;
   position: relative;
@@ -37,7 +38,8 @@
   bottom: 0;
   left: 0;
   text-align: left;
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
   z-index: 5;
   line-height: 1.5;
   font-size: 5rem;
@@ -116,7 +118,7 @@
   background: linear-gradient(
     to bottom,
     rgb(0, 0, 0),
-    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
@@ -126,14 +128,16 @@
   );
 }
 
+/* CSS HEADER */
+
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
   line-height: 8rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  font-size: 1.8rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
   z-index: 1000;
 }
 .header__left {
@@ -141,12 +145,10 @@
   align-items: center;
   width: 50%;
 }
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
 .header__left--logo a {
   color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 .header__right {
   display: flex;
@@ -164,4 +166,64 @@
 .header__right--action {
   display: flex;
   gap: 1rem;
+}
+.header__right .navbar-toggler .icon-bar {
+  background-color: #fff;
+  margin: 0 auto 6px;
+  border-radius: 0;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.header__right .navbar .navbar-toggler .icon-bar:first-child {
+  margin-top: 3px;
+}
+
+.header__right .navbar-toggler .icon-bar-1 {
+  width: 10px;
+  top: 0px;
+}
+
+.header__right .navbar-toggler .icon-bar-2 {
+  width: 16px;
+  top: 12px;
+}
+
+.header__right .navbar-toggler .icon-bar-3 {
+  width: 20px;
+  top: 21px;
+}
+
+.header__right .current .icon-bar {
+  margin-bottom: 5px;
+  border-radius: 0;
+  display: block;
+}
+
+.header__right .current .icon-bar-1 {
+  width: 18px;
+}
+
+.header__right .current .icon-bar-2 {
+  width: 30px;
+}
+
+.header__right .current .icon-bar-3 {
+  width: 10px;
+}
+
+.header__right .navbar-toggler:hover .icon-bar {
+  background-color: #fff;
+}
+
+.header__right .navbar-toggler:focus .icon-bar {
+  background-color: #fff;
+}
+[data-target="#mainMenu"] {
+  position: relative;
+  z-index: 999;
 }
