@@ -1,10 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-tranparent fixed-top">
+<div class="logo logo-style" id="logo">
+  <h1>PIZZA 4P'S</h1>
+</div>
+<nav
+  class="navbar navbar-expand-lg d-flex justify-content-end navbar-dark bg-tranparent fixed-top"
+>
   <div class="container">
-    <!-- logo -->
-    <a class="navbar__brand" href="#">PIZZA 4P'S</a>
     <!-- Toggle btn -->
     <button
-      class="navbar-toggler shadow-none border-0"
+      class="navbar-toggler py-4 shadow-none border-0 fs-5 ms-auto"
       type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasNavbar"
@@ -15,14 +18,16 @@
     </button>
     <!-- Sidebar -->
     <div
-      class="sidebar offcanvas offcanvas-start"
+      class="sidebar offcanvas offcanvas-start d-flex flex-lg-row justify-content-end"
       tabindex="-1"
       id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel"
     >
       <!-- Sidebar header -->
       <div class="offcanvas-header text-white border-bottom">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PIZZA 4P'S</h5>
+        <h5 class="offcanvas-title logo-style" id="offcanvasNavbarLabel">
+          PIZZA 4P'S
+        </h5>
         <button
           type="button"
           class="btn-close btn-close-white"
@@ -31,7 +36,7 @@
         ></button>
       </div>
       <!-- Sidebar body -->
-      <div class="offcanvas-body d-flex flex-column flex-lg-row p-4">
+      <div class="offcanvas-body d-flex flex-lg-row p-4">
         <ul
           class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3"
         >
@@ -55,17 +60,17 @@
           </li>
         </ul>
         <!-- login/signup -->
-        <div
-          class="d-flex justify-content-center flex-lg-row align-items-center gap-3"
+      </div>
+      <div
+        class="d-flex ml-lg-5 pb-5 pb-lg-0 flex-column justify-content-center flex-lg-row align-items-center gap-3"
+      >
+        <a href="#" class="text-white">Đăng nhập</a>
+        <a
+          href="#"
+          class="text-black text-decoration-none px-4 py-2 rounded-4"
+          style="background-color: #ffc107"
+          >Đăng ký</a
         >
-          <a href="#" class="text-white">Đăng nhập</a>
-          <a
-            href="#"
-            class="text-black text-decoration-none px-4 py-2 rounded-4"
-            style="background-color: #ffc107"
-            >Đăng ký</a
-          >
-        </div>
       </div>
     </div>
   </div>

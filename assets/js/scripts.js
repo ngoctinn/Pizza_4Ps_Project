@@ -28,3 +28,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 });
+
+// đóng mở menu tắt logo
+document.addEventListener("DOMContentLoaded", function () {
+  var offcanvasElement = document.getElementById("offcanvasNavbar");
+  var logo = document.getElementById("logo");
+
+  offcanvasElement.addEventListener("show.bs.offcanvas", function () {
+    logo.classList.add("hidden");
+  });
+
+  offcanvasElement.addEventListener("hide.bs.offcanvas", function () {
+    logo.classList.remove("hidden");
+  });
+});
