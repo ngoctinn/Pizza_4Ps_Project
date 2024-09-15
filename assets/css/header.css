@@ -118,18 +118,18 @@
   color: white;
   padding: 2rem;
   border-radius: 1rem;
-  max-width: 40rem;
+  max-width: 34rem;
   min-width: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 5;
 }
 .hero__booking--title {
-  font-size: 30px;
+  font-size: 2.5rem;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .hero__booking--subtitle {
-  font-size: 14px;
+  font-size: 1.2rem;
   margin: 10px 0;
   font-weight: 300;
 }
@@ -157,7 +157,7 @@
   background-color: #ffa000;
 }
 .hero__booking--card .pizza-count {
-  font-size: 21px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-top: 15px;
 }
