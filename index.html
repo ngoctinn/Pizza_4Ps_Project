@@ -23,7 +23,6 @@
     ></script>
     <!-- script -->
     <script src="./assets/js/scripts.js"></script>
-    <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -196,12 +195,27 @@
                 </li>
               </ul>
             </div>
+
             <div class="shop-list">
-              <label>Select Shop</label>
-              <select class="form-control">
-                <option>Shop 1</option>
-                <option>Shop 2</option>
-              </select>
+              <div class="dropdown mb-5">
+                <button
+                  class="btn btn-outline-light dropdown-toggle w-100 text-start"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select Shop
+                </button>
+                <ul
+                  class="dropdown-menu w-100"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                  <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                  <li><a class="dropdown-item" href="#">Shop 3</a></li>
+                </ul>
+              </div>
               <div class="shop-video">
                 <!-- Replace with your video or image -->
                 <img
@@ -222,5 +236,8 @@
         load("#footer", "./templates/footer.html");
       </script>
     </footer>
+    <!-- bootstrap -->
+    <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
