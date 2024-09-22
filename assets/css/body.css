@@ -72,29 +72,33 @@
 
 /*====================================TUAN AN ==============================*/
 
-.libary__intro h1{
-  font-size: 3rem
+.libary__intro h1 {
+  font-size: 4rem;
+  color: var(--color-primary);
 }
-
 
 .container__mid {
   background: var(--color-third);
 }
 .libary__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   width: calc(min(144rem, 90%));
   margin: 0 auto;
-  min-height: 100vh;
-  column-gap: 3rem;
+  min-height: 90vh;
+  width: inherit;
+  margin: 0 3rem;
+  column-gap: 10rem;
   background: var(--color-third);
   padding-block: min(20vh, 3rem);
 }
+.libary__container .libary__intro {
+  width: 100rem;
+}
 
-
-.libary__container > div p {
+.libary__container .libary__intro p {
   line-height: 1.6;
 }
 
@@ -109,17 +113,16 @@
   transition: 0.3s ease-in-out;
 }
 
-.libary__container > div > a {
+.libary__container .libary__intro a {
   border: 2px solid #c2c2c2;
   margin-top: 3.5rem;
-  padding: 0.625rem 1.875rem;
+  padding: 1rem 2.5rem;
 }
 
-.libary__container > div > a:hover {
-  border: 0.2rem solid #005baa;
-  color: #005baa;
+.libary__container .libary__intro a:hover {
+  border: 0.2rem solid var(--color-primary);
+  color: var(--color-primary);
 }
-
 
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
@@ -143,10 +146,10 @@
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 2rem;
   line-height: 1.4;
-  margin-bottom: 0.625rem;
-  padding: 0 0 0 1.563rem;
+  margin-bottom: 1rem;
+  padding: 0 0 0 2rem;
   text-transform: uppercase;
 }
 
@@ -158,17 +161,15 @@
   line-height: 1.6;
   font-size: 0.75rem;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .swiper-slide a {
-  margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+  margin: 2rem 2rem 4rem 2rem;
   padding: 0.438em 1.875rem;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
-
 
 .swiper-slide--one {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
@@ -194,28 +195,26 @@
       no-repeat 50% 50% / cover;
 }
 
-
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 76.8rem) {
   .libary__container {
     display: flex;
     align-items: center;
   }
   .bg,
   .bg2 {
-    opacity: 0.1;
+    opacity: 0;
   }
 }
 
-@media screen and (min-width: 93.75rem) {
+@media screen and (min-width: 149.6rem) {
   .swiper {
     width: 85%;
   }
 }
 /* END */
 
-
 .container__midtop {
   height: 100vh;
   width: 100vh;
-  background: transparent;;
+  background: transparent;
 }

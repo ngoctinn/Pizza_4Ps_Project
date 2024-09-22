@@ -1,37 +1,37 @@
 var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 3,
-      slideShadows: true
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 60,
+    depth: 20,
+    modifier: 4,
+    slideShadows: true,
+  },
+  keyboard: {
+    enabled: true,
+  },
+  mousewheel: {
+    thresholdDelta: 70,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
     },
-    keyboard: {
-      enabled: true
+    768: {
+      slidesPerView: 1,
     },
-    mousewheel: {
-      thresholdDelta: 70
+    1024: {
+      slidesPerView: 2,
     },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
+    1560: {
+      slidesPerView: 3,
     },
-    breakpoints: {
-      640: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 1
-      },
-      1024: {
-        slidesPerView: 2
-      },
-      1560: {
-        slidesPerView: 3
-      }
-    }
-  });
+  },
+});
