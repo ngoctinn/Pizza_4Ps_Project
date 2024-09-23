@@ -4,9 +4,9 @@ var swiper = new Swiper(".swiper", {
   centeredSlides: true,
   coverflowEffect: {
     rotate: 0,
-    stretch: 60,
-    depth: 20,
-    modifier: 4,
+    stretch: 40,
+    depth: 50,
+    modifier: 3,
     slideShadows: true,
   },
   keyboard: {
@@ -22,7 +22,7 @@ var swiper = new Swiper(".swiper", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     768: {
       slidesPerView: 1,
