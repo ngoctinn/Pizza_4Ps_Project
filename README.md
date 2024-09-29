@@ -64,12 +64,12 @@ Dự án này nhằm phát triển một trang web cho Pizza 4P's, cho phép kh�
    ```
    cd pizza-4ps-website
    ```
-3. Mở dự án trong trình soạn thảo hoặc IDE ưa thích của bạn
+3. Mở dự án trong trình soạn thảo hoặc IDE
 
 ## Quy trình làm việc với Git và GitHub
 
 ### Cấu hình Git
-Trước khi bắt đầu, hãy cấu hình Git với thông tin cá nhân của bạn:
+Trước khi bắt đầu, hãy cấu hình Git với thông tin cá nhân:
 ```bash
 git config --global user.name "Tên của bạn"
 git config --global user.email "email.cua.ban@example.com"
@@ -137,10 +137,11 @@ Nếu xuất hiện conflicts khi merge:
 3. Commit thay đổi: `git commit -am 'Thêm tính năng mới'`
 4. Push lên branch: `git push origin feature/TinhNangMoi`
 5. Tạo Pull Request mới trên GitHub
+   
 ## Thành viên nhóm
-[Nguyễn Ngọc Tín] - 3121410041
-[Nguyễn Thị Tuyết Thư] - 3121410017
-[Ngô Gia Khang] - 3121410041
-[Cao Yên Tuấn An] - Mã số sinh viên
+1. Nguyễn Ngọc Tín - 3121410041
+2. Nguyễn Thị Tuyết Thư - 3121410017
+3. Ngô Gia Khang - 3121410041
+4. Cao Yên Tuấn An - Mã số sinh viên
 
 Nếu có bất kỳ câu hỏi hoặc thắc mắc nào, vui lòng tạo một issue trên repository GitHub.
