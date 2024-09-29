@@ -13,7 +13,7 @@
    - [Cài đặt](#cài-đặt)
 7. [Quy trình làm việc với Git](#quy-trình-làm-việc-với-git)
 8. [Đóng góp](#đóng-góp)
-9. [Thông tin liên hệ](#thông-tin-liên-hệ)
+9. [Thành viên nhóm](#thành-viên-nhóm)
 
 ## Tổng quan dự án
 Dự án này nhằm phát triển một trang web cho Pizza 4P's, cho phép khách hàng xem thực đơn và đặt hàng trực tuyến một cách dễ dàng. Trang web sẽ có giao diện đơn giản, thân thiện với người dùng và tương thích với nhiều thiết bị khác nhau.
