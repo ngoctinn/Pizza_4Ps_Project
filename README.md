@@ -1,3 +1,87 @@
+# Mô tả dự án: Website Pizza 4P's
+
+## 1. Giới thiệu
+Dự án này là xây dựng một website cho **Pizza 4P's** nhằm giúp khách hàng xem thực đơn và đặt hàng trực tuyến một cách dễ dàng. Website sẽ có giao diện đơn giản, thân thiện với người dùng, phù hợp cho các thiết bị khác nhau.
+
+## 2. Mục tiêu
+- Tạo một website hiển thị thực đơn của Pizza 4P's.
+- Cho phép khách hàng đặt món online.
+- Hiển thị thông tin chi nhánh và bản đồ các cửa hàng.
+- Cung cấp thông tin liên hệ và hỗ trợ khách hàng.
+- trang admin quản lý đơn hàng, khách hàng, thống kê
+
+## Các Chức Năng Dành Cho Người Dùng Cuối (End-user)
+
+1. **Hiển thị sản phẩm theo phân loại (có phân trang)**:
+   - Người dùng có thể duyệt qua các sản phẩm theo danh mục như pizza, pasta, đồ uống, v.v. Sản phẩm được phân trang để dễ dàng xem từng phần.
+
+2. **Hiển thị chi tiết sản phẩm**:
+   - Mỗi sản phẩm sẽ có trang chi tiết, hiển thị thông tin đầy đủ về sản phẩm như tên, giá, mô tả, thành phần, và hình ảnh.
+
+3. **Tìm kiếm sản phẩm**:
+   - **Cơ bản**: Tìm kiếm sản phẩm theo tên.
+   - **Nâng cao**: Tìm kiếm theo tên, chọn danh mục và khoảng giá. Kết quả tìm kiếm có phân trang để dễ xem.
+
+4. **Đăng nhập/Đăng xuất**:
+   - Người dùng có thể đăng nhập và đăng xuất. Thông tin tài khoản đang đăng nhập sẽ được hiển thị trên giao diện.
+
+5. **Đăng ký**:
+   - Người dùng cần đăng ký tài khoản để trở thành khách hàng, chỉ khi đăng ký mới có thể mua hàng.
+
+6. **Giỏ hàng**:
+   - Người dùng có thể thêm sản phẩm vào giỏ hàng, thay đổi số lượng sản phẩm trong giỏ, và chọn địa chỉ giao hàng (có thể chọn từ tài khoản hoặc nhập địa chỉ mới).
+
+7. **Lịch sử mua hàng**:
+   - Người dùng có thể xem lại lịch sử mua hàng của tài khoản đang đăng nhập, bao gồm chi tiết đơn hàng đã đặt trước đó.
+
+---
+
+## 3. Các Chức Năng Dành Cho Người Quản Trị (Web-admin)
+
+1. **Giao diện admin**:
+   - Quản trị viên đăng nhập vào trang admin thông qua một URL riêng (không dùng chung giao diện với khách hàng).
+   - Hiển thị thông tin phân biệt tài khoản quản trị và danh sách chức năng quản trị.
+
+2. **Quản lý người dùng**:
+   - Thêm, sửa thông tin người dùng, và khóa tài khoản người dùng (không cho phép người dùng bị khóa đăng nhập).
+
+3. **Quản lý sản phẩm**:
+   - **Thêm sản phẩm**: Có chức năng upload hình ảnh sản phẩm.
+   - **Sửa sản phẩm**: Hiển thị đầy đủ thông tin trước khi sửa, cho phép sửa và bỏ hình.
+   - **Xóa sản phẩm**: Hệ thống sẽ hỏi xác nhận trước khi xóa.
+
+4. **Quản lý đơn hàng của khách**:
+   - Xem danh sách đơn hàng theo khoảng thời gian, và chi tiết từng đơn hàng trong danh sách.
+   - Đánh dấu trạng thái đơn hàng (chưa xử lý hoặc đã xử lý).
+
+5. **Thống kê tình hình kinh doanh**:
+   - Xem các đơn hàng và tính tổng theo sản phẩm hoặc loại sản phẩm trong khoảng thời gian cụ thể. Quản trị viên có thể nhập sản phẩm, loại sản phẩm và khoảng thời gian để lọc dữ liệu.
+
+---
+
+## 4. Yêu Cầu Đối Với Hệ Thống
+
+### 1. **Tính đúng và đầy đủ**:
+   - Đảm bảo đầy đủ các tập tin giao diện theo yêu cầu.
+   - Hệ thống liên kết hoạt động đầy đủ, không có trang "dead-end".
+
+### 2. **Tính thẩm mỹ**:
+   - Đánh giá theo nguyên tắc C.R.A.P (Contrast, Repetition, Alignment, Proximity).
+   - Đảm bảo tính tiện dụng (usability), sử dụng ngôn ngữ và biểu tượng đại diện rõ ràng, dễ hiểu.
+
+## 4. Công nghệ sử dụng
+- **HTML/CSS**
+- **JavaScript**
+- **Bootstrap**
+
+## 5. Kết quả mong đợi
+Hoàn thành website đáp ứng các yêu cầu về tính năng và giao diện, giúp khách hàng dễ dàng tìm hiểu và đặt hàng trực tuyến từ Pizza 4P's.
+
+--- 
+
+**Sinh viên thực hiện**: [Tên của bạn]  
+**Lớp**: [Tên lớp]  
+**Mã số sinh viên**: [MSSV]
 # README: Hướng Dẫn Sử Dụng Git và GitHub
 
 ## Mục lục
