@@ -1,234 +1,146 @@
-# Mô tả dự án: Website Pizza 4P's
-
-## 1. Giới thiệu
-Dự án này là xây dựng một website cho **Pizza 4P's** nhằm giúp khách hàng xem thực đơn và đặt hàng trực tuyến một cách dễ dàng. Website sẽ có giao diện đơn giản, thân thiện với người dùng, phù hợp cho các thiết bị khác nhau.
-
-## 2. Mục tiêu
-- Tạo một website hiển thị thực đơn của Pizza 4P's.
-- Cho phép khách hàng đặt món online.
-- Hiển thị thông tin chi nhánh và bản đồ các cửa hàng.
-- Cung cấp thông tin liên hệ và hỗ trợ khách hàng.
-- trang admin quản lý đơn hàng, khách hàng, thống kê
-
-## Các Chức Năng Dành Cho Người Dùng Cuối (End-user)
-
-1. **Hiển thị sản phẩm theo phân loại (có phân trang)**:
-   - Người dùng có thể duyệt qua các sản phẩm theo danh mục như pizza, pasta, đồ uống, v.v. Sản phẩm được phân trang để dễ dàng xem từng phần.
-
-2. **Hiển thị chi tiết sản phẩm**:
-   - Mỗi sản phẩm sẽ có trang chi tiết, hiển thị thông tin đầy đủ về sản phẩm như tên, giá, mô tả, thành phần, và hình ảnh.
-
-3. **Tìm kiếm sản phẩm**:
-   - **Cơ bản**: Tìm kiếm sản phẩm theo tên.
-   - **Nâng cao**: Tìm kiếm theo tên, chọn danh mục và khoảng giá. Kết quả tìm kiếm có phân trang để dễ xem.
-
-4. **Đăng nhập/Đăng xuất**:
-   - Người dùng có thể đăng nhập và đăng xuất. Thông tin tài khoản đang đăng nhập sẽ được hiển thị trên giao diện.
-
-5. **Đăng ký**:
-   - Người dùng cần đăng ký tài khoản để trở thành khách hàng, chỉ khi đăng ký mới có thể mua hàng.
-
-6. **Giỏ hàng**:
-   - Người dùng có thể thêm sản phẩm vào giỏ hàng, thay đổi số lượng sản phẩm trong giỏ, và chọn địa chỉ giao hàng (có thể chọn từ tài khoản hoặc nhập địa chỉ mới).
-
-7. **Lịch sử mua hàng**:
-   - Người dùng có thể xem lại lịch sử mua hàng của tài khoản đang đăng nhập, bao gồm chi tiết đơn hàng đã đặt trước đó.
-
----
-
-## 3. Các Chức Năng Dành Cho Người Quản Trị (Web-admin)
-
-1. **Giao diện admin**:
-   - Quản trị viên đăng nhập vào trang admin thông qua một URL riêng (không dùng chung giao diện với khách hàng).
-   - Hiển thị thông tin phân biệt tài khoản quản trị và danh sách chức năng quản trị.
-
-2. **Quản lý người dùng**:
-   - Thêm, sửa thông tin người dùng, và khóa tài khoản người dùng (không cho phép người dùng bị khóa đăng nhập).
-
-3. **Quản lý sản phẩm**:
-   - **Thêm sản phẩm**: Có chức năng upload hình ảnh sản phẩm.
-   - **Sửa sản phẩm**: Hiển thị đầy đủ thông tin trước khi sửa, cho phép sửa và bỏ hình.
-   - **Xóa sản phẩm**: Hệ thống sẽ hỏi xác nhận trước khi xóa.
-
-4. **Quản lý đơn hàng của khách**:
-   - Xem danh sách đơn hàng theo khoảng thời gian, và chi tiết từng đơn hàng trong danh sách.
-   - Đánh dấu trạng thái đơn hàng (chưa xử lý hoặc đã xử lý).
-
-5. **Thống kê tình hình kinh doanh**:
-   - Xem các đơn hàng và tính tổng theo sản phẩm hoặc loại sản phẩm trong khoảng thời gian cụ thể. Quản trị viên có thể nhập sản phẩm, loại sản phẩm và khoảng thời gian để lọc dữ liệu.
-
----
-
-## 4. Yêu Cầu Đối Với Hệ Thống
-
-### 1. **Tính đúng và đầy đủ**:
-   - Đảm bảo đầy đủ các tập tin giao diện theo yêu cầu.
-   - Hệ thống liên kết hoạt động đầy đủ, không có trang "dead-end".
-
-### 2. **Tính thẩm mỹ**:
-   - Đánh giá theo nguyên tắc C.R.A.P (Contrast, Repetition, Alignment, Proximity).
-   - Đảm bảo tính tiện dụng (usability), sử dụng ngôn ngữ và biểu tượng đại diện rõ ràng, dễ hiểu.
-
-## 4. Công nghệ sử dụng
-- **HTML/CSS**
-- **JavaScript**
-- **Bootstrap**
-
-## 5. Kết quả mong đợi
-Hoàn thành website đáp ứng các yêu cầu về tính năng và giao diện, giúp khách hàng dễ dàng tìm hiểu và đặt hàng trực tuyến từ Pizza 4P's.
-
---- 
-
-**Sinh viên thực hiện**: [Tên của bạn]  
-**Lớp**: [Tên lớp]  
-**Mã số sinh viên**: [MSSV]
-# README: Hướng Dẫn Sử Dụng Git và GitHub
+# Dự án Website Pizza 4P's
 
 ## Mục lục
-1. [Cấu hình Git](#1-cấu-hình-git)
-2. [Khởi tạo Git trong project](#2-khởi-tạo-git-trong-project)
-3. [Theo dõi trạng thái dự án](#3-theo-dõi-trạng-thái-dự-án)
-4. [Commit code](#4-commit-code)
-5. [Push code lên remote repository](#5-push-code-lên-remote-repository)
-6. [Làm việc với branch](#6-làm-việc-với-branch)
-7. [Merge branch](#7-merge-branch)
-8. [Git workflow hiệu quả](#8-git-workflow-hiệu-quả)
+1. [Tổng quan dự án](#tổng-quan-dự-án)
+2. [Mục tiêu](#mục-tiêu)
+3. [Tính năng](#tính-năng)
+   - [Tính năng cho người dùng cuối](#tính-năng-cho-người-dùng-cuối)
+   - [Tính năng cho quản trị viên](#tính-năng-cho-quản-trị-viên)
+4. [Yêu cầu hệ thống](#yêu-cầu-hệ-thống)
+5. [Công nghệ sử dụng](#công-nghệ-sử-dụng)
+6. [Bắt đầu](#bắt-đầu)
+   - [Yêu cầu trước khi cài đặt](#yêu-cầu-trước-khi-cài-đặt)
+   - [Cài đặt](#cài-đặt)
+7. [Quy trình làm việc với Git](#quy-trình-làm-việc-với-git)
+8. [Đóng góp](#đóng-góp)
+9. [Thông tin liên hệ](#thông-tin-liên-hệ)
 
----
+## Tổng quan dự án
+Dự án này nhằm phát triển một trang web cho Pizza 4P's, cho phép khách hàng xem thực đơn và đặt hàng trực tuyến một cách dễ dàng. Trang web sẽ có giao diện đơn giản, thân thiện với người dùng và tương thích với nhiều thiết bị khác nhau.
 
-## 1. Cấu hình Git
-Trước khi bắt đầu sử dụng Git, cần cấu hình một số thông tin cá nhân:
+## Mục tiêu
+- Tạo trang web hiển thị thực đơn của Pizza 4P's
+- Cho phép khách hàng đặt hàng trực tuyến
+- Hiển thị thông tin chi nhánh và bản đồ các cửa hàng
+- Cung cấp thông tin liên hệ và hỗ trợ khách hàng
+- Xây dựng trang quản trị để quản lý đơn hàng, khách hàng và thống kê
 
+## Tính năng
+
+### Tính năng cho người dùng cuối
+1. **Hiển thị sản phẩm**: Duyệt sản phẩm theo danh mục với phân trang
+2. **Chi tiết sản phẩm**: Xem thông tin chi tiết về từng sản phẩm
+3. **Tìm kiếm**: Tùy chọn tìm kiếm cơ bản và nâng cao
+4. **Xác thực người dùng**: Chức năng đăng nhập/đăng xuất
+5. **Đăng ký**: Đăng ký để trở thành khách hàng
+6. **Giỏ hàng**: Thêm sản phẩm, điều chỉnh số lượng và chọn địa chỉ giao hàng
+7. **Lịch sử đơn hàng**: Xem các đơn hàng đã đặt và chi tiết
+
+### Tính năng cho quản trị viên
+1. **Giao diện quản trị**: Đăng nhập riêng cho quản trị viên
+2. **Quản lý người dùng**: Thêm, sửa và khóa tài khoản người dùng
+3. **Quản lý sản phẩm**: Thêm, sửa và xóa sản phẩm
+4. **Quản lý đơn hàng**: Xem và cập nhật trạng thái đơn hàng
+5. **Thống kê bán hàng**: Tạo báo cáo dựa trên sản phẩm, danh mục và khoảng thời gian
+
+## Yêu cầu hệ thống
+1. **Tính chính xác và đầy đủ**: Đảm bảo tất cả các file giao diện cần thiết đều có mặt và hoạt động đầy đủ
+2. **Tính thẩm mỹ**: Tuân thủ nguyên tắc C.R.A.P (Tương phản, Lặp lại, Căn chỉnh, Gần kề)
+3. **Tính tiện dụng**: Sử dụng ngôn ngữ rõ ràng và biểu tượng trực quan
+
+## Công nghệ sử dụng
+- HTML/CSS
+- JavaScript
+- Bootstrap
+
+## Bắt đầu
+
+### Cài đặt
+1. Clone repository:
+   ```
+   git clone https://github.com/username/pizza-4ps-website.git
+   ```
+2. Di chuyển vào thư mục dự án:
+   ```
+   cd pizza-4ps-website
+   ```
+3. Mở dự án trong trình soạn thảo hoặc IDE ưa thích của bạn
+
+## Quy trình làm việc với Git và GitHub
+
+### Cấu hình Git
+Trước khi bắt đầu, hãy cấu hình Git với thông tin cá nhân của bạn:
 ```bash
 git config --global user.name "Tên của bạn"
-git config --global user.email "example@email.com"
+git config --global user.email "email.cua.ban@example.com"
 ```
 
-Lệnh trên sẽ lưu thông tin của bạn vào cấu hình toàn cục, áp dụng cho tất cả các dự án Git mà bạn làm việc.
-
----
-
-## 2. Khởi tạo Git trong project
-Để khởi tạo Git trong một dự án hiện tại, sử dụng lệnh sau:
-
-```bash
-git init
-```
-
-Hoặc clone một repository từ GitHub về máy local:
-
-```bash
-git clone <URL_repository>
-```
-
-Ví dụ:
-
-```bash
-git clone https://github.com/username/repository.git
-```
-
----
-
-## 3. Theo dõi trạng thái dự án
-Sau khi chỉnh sửa, thêm mới, hoặc xóa file, để xem thay đổi của dự án, sử dụng lệnh:
-
-```bash
-git status
-```
-
----
-
-## 4. Commit code
-Trước khi lưu trạng thái code (commit), cần thêm các thay đổi vào stage:
-
-- Thêm tất cả file:
-
-  ```bash
-  git add .
-  ```
-
-- Hoặc thêm một file cụ thể:
-
-  ```bash
-  git add <path_to_file>
-  ```
-
-Sau đó, commit các thay đổi:
-
-```bash
-git commit -m "Mô tả ngắn về thay đổi"
-```
-
----
-
-## 5. Push code lên remote repository
-Sau khi commit, đẩy thay đổi lên remote repository bằng lệnh:
-
-```bash
-git push <remote_repository> <branch>
-```
-
-Ví dụ:
-
-```bash
-git push origin master
-```
-
----
-
-## 6. Làm việc với branch
-- Tạo một branch mới:
-
-  ```bash
-  git branch <new_branch>
-  ```
-
-- Tạo và chuyển sang branch mới:
-
-  ```bash
-  git checkout -b <new_branch>
-  ```
-
-- Chuyển đổi giữa các branch:
-
-  ```bash
-  git checkout <branch_name>
-  ```
-
-- Liệt kê tất cả các branch hiện có:
-
-  ```bash
-  git branch -a
-  ```
-
----
-
-## 7. Merge branch
-Khi muốn merge branch A vào branch B, thực hiện các bước sau:
-
-1. Lấy code mới nhất từ branch B:
-
+### Quy trình làm việc cơ bản
+1. **Clone repository**:
    ```bash
-   git pull origin <branch_B>
+   git clone https://github.com/username/pizza-4ps-website.git
+   cd pizza-4ps-website
    ```
 
-2. Merge branch A vào branch B:
-
+2. **Tạo branch mới**:
    ```bash
-   git merge <branch_A>
+   git checkout -b feature/ten-tinh-nang-moi
    ```
 
-Nếu làm việc trong một nhóm lớn, hãy tạo **merge request** trên GitHub để người có quyền xem xét trước khi merge code.
+3. **Thực hiện các thay đổi và commit**:
+   ```bash
+   git add .
+   git commit -m "Mô tả chi tiết về những thay đổi"
+   ```
 
----
+4. **Push branch lên GitHub**:
+   ```bash
+   git push origin feature/ten-tinh-nang-moi
+   ```
 
-## 8. Git workflow hiệu quả
-- **Master branch** là nhánh chính chứa mã nguồn ổn định cho production.
-- **Develop branch** chứa mã nguồn mới nhất đang phát triển và được kiểm thử.
-- Khi phát triển một tính năng mới, hãy tạo một branch riêng từ develop.
-- Sau khi hoàn thành, tạo merge request để review và merge vào develop hoặc master.
-- Cần pull code từ repository gốc để đảm bảo mã nguồn của bạn luôn cập nhật nhất.
+5. **Tạo Pull Request**:
+   - Truy cập repository trên GitHub
+   - Chọn "New pull request"
+   - Chọn branch của bạn để so sánh với main
+   - Điền thông tin mô tả Pull Request
+   - Nhấn "Create pull request"
 
----
+6. **Review và Merge**:
+   - Người review sẽ kiểm tra code và để lại comment nếu cần
+   - Sau khi được chấp thuận, Pull Request sẽ được merge vào main
 
-**Chúc các bạn làm việc hiệu quả với Git và GitHub!**
+### Cập nhật local repository
+Để đảm bảo bạn luôn làm việc với phiên bản mới nhất:
+```bash
+git checkout main
+git pull origin main
+```
+
+### Xử lý conflicts
+Nếu xuất hiện conflicts khi merge:
+1. Mở các file bị conflict
+2. Tìm và sửa các đoạn code bị conflict
+3. Commit các thay đổi đã sửa
+4. Push lại lên branch của bạn
+
+### Sử dụng GitHub Issues
+- Sử dụng Issues để theo dõi bugs, tính năng mới, và các task
+- Gán labels, milestones và assignees cho Issues để quản lý hiệu quả
+
+### GitHub Actions (Tùy chọn)
+- Sử dụng GitHub Actions để tự động hóa quy trình CI/CD
+- Tạo file `.github/workflows/main.yml` để cấu hình workflow
+
+## Đóng góp
+1. Fork repository
+2. Tạo branch mới: `git checkout -b feature/TinhNangMoi`
+3. Commit thay đổi: `git commit -am 'Thêm tính năng mới'`
+4. Push lên branch: `git push origin feature/TinhNangMoi`
+5. Tạo Pull Request mới trên GitHub
+## Thành viên nhóm
+[Nguyễn Ngọc Tín] - 3121410041
+[Nguyễn Thị Tuyết Thư] - 3121410017
+[Ngô Gia Khang] - 3121410041
+[Cao Yên Tuấn An] - Mã số sinh viên
+
+Nếu có bất kỳ câu hỏi hoặc thắc mắc nào, vui lòng tạo một issue trên repository GitHub.
