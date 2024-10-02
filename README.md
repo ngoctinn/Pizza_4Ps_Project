@@ -23,8 +23,7 @@ Dự án này nhằm phát triển một trang web cho Pizza 4P's, cho phép kh�
 - Cho phép khách hàng đặt hàng trực tuyến
 - Hiển thị thông tin chi nhánh và bản đồ các cửa hàng
 - Cung cấp thông tin liên hệ và hỗ trợ khách hàng
-- Xây dựng trang quản trị để quản lý đơn hàng, khách hàng và thống kê
-
+- Xây dựng trang quản trị để quản lý đơn hàng, khách hàng và thống kê  
 ## Tính năng
 
 ### Tính năng cho người dùng cuối

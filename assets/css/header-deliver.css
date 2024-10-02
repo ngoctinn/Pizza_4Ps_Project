@@ -1,0 +1,63 @@
+header {
+    position: fixed;
+    background-color: Var(--color-primary);
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+  }
+
+  
+  .logo-style {
+    position: fixed;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+  }
+  .logo {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    z-index: 100000;
+  }
+  /* Ẩn logo khi sidebar mở */
+  .logo.hidden {
+    z-index: -1;
+  }
+  
+  .header-scrolled {
+    background-color: var(--color-primary);
+  }
+  /* navbar */
+  .navbar {
+    width: 100%;
+    Background-color: var(--color-primary);
+  }
+  .navbar .container {
+    font-size: 2rem;
+    margin: 0 2rem;
+    z-index: 999;
+    font-weight: 500;
+    height: 100%;
+  }
+  .navbar .navbar__brand {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-left: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  /* sidebar */
+  
+  @media (max-width: 991px) {
+    .sidebar {
+      background-color: var(--color-primary);
+    }
+  }
+
+  main {
+    background-color: var(--color-secondary);
+    height: 500vh;
+  }
