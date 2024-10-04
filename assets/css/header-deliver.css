@@ -57,7 +57,3 @@ header {
     }
   }
 
-  main {
-    background-color: var(--color-secondary);
-    height: 500vh;
-  }
