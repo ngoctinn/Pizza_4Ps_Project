@@ -6,12 +6,18 @@ footer {
 
 .footer__row {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1.3fr 1.5fr;
+    grid-template-columns: 4.5fr 2.3fr 2fr 3fr 1fr;
     gap: 60px;
 }
 @media (max-width: 992px) {
     .footer__row {
         grid-template-columns: 1fr;
+        margin: 0 3rem;
+    }
+}@media (min-width: 992px) {
+    footer .footer__container {
+        max-width: 100%;
+        margin: 0 3rem;
     }
 }
 .footer__logo.logo {
@@ -39,6 +45,7 @@ footer {
         width: min(400px, 100%);
     }
 }
+
 .footer__help-text {
     margin-top: 40px;
     line-height: 1.4;
@@ -179,10 +186,4 @@ footer {
         width: 18px;
     }
 }
-@media (min-width: 1230px) {
-    footer .container {
-        max-width: 1218px;
 
-    }
-    
-}
