@@ -17,7 +17,6 @@
 
     <!-- script -->
     <script src="../assets/js/scripts.js"></script>
-    <script src="../assets/js/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <!-- CSS -->
@@ -137,17 +136,60 @@
               >
     </header>  
     <main>
-      <div class="banner__container">
-        <div class="gallery js-flickity"
-  data-flickity-options='{ "wrapAround": true }'>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-</div>
-      </div>
+      <div class="banner__container"><div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
+        <div class="carousel-cell">
+          <img src="../assets/img/banner1.webp" alt="banner1" />
+        </div>
+        <div class="carousel-cell">
+          <img src="../assets/img/banner2.webp" alt="banner1" />
+        </div>
+        <div class="carousel-cell">
+          <img src="../assets/img/banner3.webp" alt="banner1" />
+        </div>
+        <div class="carousel-cell">
+          <img src="../assets/img/banner4.webp" alt="banner1" />
+        </div>
+      </div></div>
+      <!-- delivery -->
+      <div class="menu-container">
+        <h2>Menu</h2>
+        <div class="menu-items">
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/theomua.webp" alt="Seasonal">
+          <p>Seasonal</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/pizza.webp" alt="Bánh Pizza">
+          <p>Bánh Pizza</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/khaivi.webp" alt="Khai vị">
+          <p>Khai vị</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/salad.webp" alt="Salad">
+          <p>Salad</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/miy.webp" alt="Món Chính/ Mì Ý">
+          <p>Món Chính/ Mì Ý</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/trangmieng.webp" alt="Tráng miệng">
+          <p>Tráng miệng</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/thucuong.webp" alt="Thức uống">
+          <p>Thức uống</p>
+            </a>
+            <a href="#" class="menu-item">
+          <img src="../assets/img/menu/topping.webp" alt="Thêm Topping">
+          <p>Thêm Topping</p>
+            </a>
+        </div>
+    </div>
+
     </main>
-      
+    <script src="../assets/js/flickity.pkgd.min.js"></script>
   </body>
   

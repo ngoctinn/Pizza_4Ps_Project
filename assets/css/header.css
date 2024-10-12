@@ -15,7 +15,7 @@
   letter-spacing: 7px;
 }
 .logo {
-  margin-left: 3rem;
+  margin-left: 5rem;
   margin-top: 2rem;
   z-index: 100000;
 }
@@ -34,7 +34,7 @@
 }
 .navbar .container {
   font-size: 2rem;
-  margin: 0 2rem;
+  margin: 0 4rem;
   z-index: 999;
   font-weight: 500;
   height: 100%;
@@ -92,7 +92,7 @@
   line-height: 1.3;
   font-size: 5rem;
   font-weight: 500;
-  padding: 0 0 3rem 3rem;
+  padding: 0 0 3rem 5rem;
 }
 
 .hero__container .hero__position ul li::after {
@@ -111,7 +111,7 @@
 .hero__booking--card {
   position: absolute;
   bottom: 3rem;
-  right: 3rem;
+  right: 5rem;
   font-family: Arial, sans-serif;
   background-color: var(--color-primary);
   color: white;

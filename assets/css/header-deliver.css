@@ -1,3 +1,4 @@
+
 header {
     position: fixed;
     background-color: Var(--color-primary);
@@ -17,7 +18,7 @@ header {
     letter-spacing: 7px;
   }
   .logo {
-    margin-left: 3rem;
+    margin-left: 5rem;
     margin-top: 2rem;
     z-index: 100000;
   }
@@ -36,7 +37,7 @@ header {
   }
   .navbar .container {
     font-size: 2rem;
-    margin: 0 2rem;
+    margin: 0 4rem;
     z-index: 999;
     font-weight: 500;
     height: 100%;
@@ -58,29 +59,101 @@ header {
   }
 
   /* banner */
-  .banner__container{
-    margin-top: 10rem;
-  }
+/* external css: flickity.css */
 
-.gallery {
-  margin: 0 3rem;
-  background: #EEE;
+.banner__container {
+margin: 10rem 5rem;
+}
+.carousel {
+  background: var(--color-white);
+  margin: 0 auto;
 }
 
-.gallery-cell {
-  width: 66%;
-  height: 400px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 2rem;
+
 }
 
-/* cell number */
-.gallery-cell:before {
+.carousel-cell img {
   display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+  height: 200px;
 }
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+}
+/* MENU */
+.menu-container {
+  margin: auto 5rem;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  text-decoration: none; /* Loại bỏ gạch chân liên kết */
+  color: inherit; /* Giữ nguyên màu chữ của các phần tử con */
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.menu-item p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+/* Media query cho man hinh lon */
+@media (max-width: 1300px) {
+  .menu-item {
+      width: calc(100%/8 - 15px); /* Chia đều cho 4 cột */
+  }
+  .menu-item p {
+      font-size: 16px;
+  }
+}
+/* Media query cho màn hình máy tính bảng (tablet) */
+@media (max-width: 1024px) {
+  .menu-item {
+      width: calc(100% / 4 - 15px); /* Chia đều cho 3 cột */
+  }
+}
+
+/* Media query cho màn hình điện thoại (smartphone) */
+@media (max-width: 768px) {
+  .menu-item {
+      width: calc(100% / 2 - 15px); /* Chia đều cho 2 cột */
+  }
+  .menu-item p {
+      font-size: 14px;
+  }
+}
+
