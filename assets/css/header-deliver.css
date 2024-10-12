@@ -57,3 +57,30 @@ header {
     }
   }
 
+  /* banner */
+  .banner__container{
+    margin-top: 10rem;
+  }
+
+.gallery {
+  margin: 0 3rem;
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}

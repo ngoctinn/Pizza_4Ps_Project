@@ -17,9 +17,11 @@
 
     <!-- script -->
     <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/flickity.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <!-- CSS -->
+     <link rel="stylesheet" href="../assets/css/flickity.min.css">
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/header-deliver.css" />
@@ -135,6 +137,16 @@
               >
     </header>  
     <main>
+      <div class="banner__container">
+        <div class="gallery js-flickity"
+  data-flickity-options='{ "wrapAround": true }'>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+</div>
+      </div>
     </main>
       
   </body>
