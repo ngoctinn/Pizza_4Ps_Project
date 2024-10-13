@@ -24,8 +24,9 @@
 
 
 
-Tên đề tài: Pizza 4P's Website
-Học phần: Lập trình web và ứng dụng
+**Tên đề tài:** Pizza 4P's Website
+**Học phần:** Lập trình web và ứng dụng
+**Học kì:** I **Năm học:** 2024-2025
 
 ## Tổng quan dự án
 
@@ -38,7 +39,7 @@ Học phần: Lập trình web và ứng dụng
 | 1   | 3121410041 | Nguyễn Ngọc       | Tín          |
 | 2   | 3121410017 | Nguyễn Thị Tuyết  | Thư          |
 | 3   | 3121410041 | Ngô Gia           | Khang        |
-| 4   | 3121410044 | Cao Yên           | Tuấn An      |
+| 4   | 3121410044 | Cao Yên Tuấn      | An           |
 
 
 ## Mục tiêu
@@ -69,7 +70,6 @@ thông tin thẻ)
    - Cho phép người mua coi lại tóm tắt hoá đơn của cả quá trình mua.
 8. **Khách hàng xem lại lịch sử mua hàng của tài khoản đang đăng nhập**
 
-### Tính năng cho quản trị viên
 ### Tính năng cho quản trị viên
 
 1. **Giao diện admin**
