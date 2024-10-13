@@ -24,9 +24,9 @@
 
 
 
-**Tên đề tài:** Pizza 4P's Website
-**Học phần:** Lập trình web và ứng dụng
-**Học kì:** I **Năm học:** 2024-2025
+-**Tên đề tài:** Pizza 4P's Website
+-**Học phần:** Lập trình web và ứng dụng
+-**Học kì:** I **Năm học:** 2024-2025
 
 ## Tổng quan dự án
 
