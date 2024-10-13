@@ -22,11 +22,12 @@
 
 
 
+## Giới thiệu
 
-
--**Tên đề tài:** Pizza 4P's Website
--**Học phần:** Lập trình web và ứng dụng
--**Học kì:** I **Năm học:** 2024-2025
+1. **Tên đề tài:** Pizza 4P's Website
+2. **Học phần:** Lập trình web và ứng dụng
+3. **Học kì:** I 
+4. **Năm học:** 2024-2025
 
 ## Tổng quan dự án
 
