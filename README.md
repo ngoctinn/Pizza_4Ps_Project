@@ -27,13 +27,14 @@ Dự án này nhằm phát triển một trang web cho Pizza 4P's, cho phép kh�
 ## Tính năng
 
 ### Tính năng cho người dùng cuối
-1. **Hiển thị sản phẩm**: Duyệt sản phẩm theo danh mục với phân trang
-2. **Chi tiết sản phẩm**: Xem thông tin chi tiết về từng sản phẩm
-3. **Tìm kiếm**: Tùy chọn tìm kiếm cơ bản và nâng cao
-4. **Xác thực người dùng**: Chức năng đăng nhập/đăng xuất
-5. **Đăng ký**: Đăng ký để trở thành khách hàng
-6. **Giỏ hàng**: Thêm sản phẩm, điều chỉnh số lượng và chọn địa chỉ giao hàng
-7. **Lịch sử đơn hàng**: Xem các đơn hàng đã đặt và chi tiết
+1. **Hiển thị sản phẩm theo phân loại(có phân trang)**
+2. **Hiển thị chi tiết sản phẩm (thông tin chi tiết phù hợp với sản phẩm bán)**
+3. **Tìm kiếm (kết quả tìm kiếm có phân trang)**
+4.1. ***cơ bản theo tên sản phẩm***
+4. **Xác thực người dùng**
+5. **Đăng ký**
+6. **Giỏ hàng**
+7. **Lịch sử đơn hàng**
 
 ### Tính năng cho quản trị viên
 1. **Giao diện quản trị**: Đăng nhập riêng cho quản trị viên
