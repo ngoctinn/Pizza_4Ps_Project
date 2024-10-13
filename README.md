@@ -52,7 +52,7 @@
 ## Tính năng
 
 ### Tính năng cho người dùng cuối
-1. **Hiển thị sản phẩm theo phân loại(có phân trang)**
+1. **Hiển thị sản phẩm theo phân loại (có phân trang)**
 2. **Hiển thị chi tiết sản phẩm (thông tin chi tiết phù hợp với sản phẩm bán)**
 3. **Tìm kiếm (kết quả tìm kiếm có phân trang)**
    - Cơ bản theo tên sản phẩm
