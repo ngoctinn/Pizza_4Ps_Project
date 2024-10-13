@@ -304,55 +304,89 @@ const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);
 
 
-//   Phân Trang
+// Hiển thị sản phẩm
+document.addEventListener("DOMContentLoaded", function () {
+  const storedProducts = JSON.parse(localStorage.getItem("products"));
+  const productList = document.querySelector(".product-list");
 
-let thisPage = 1;
-let limit = 8;
-let list = document.querySelectorAll('.product__list--item');
- console.log(list);
-function loadItem(){
-    let beginGet = limit * (thisPage - 1);
-    let endGet = limit * thisPage - 1;
-    list.forEach((item, key)=>{
-        if(key >= beginGet && key <= endGet){
-            item.style.display = 'block';
-        }else{
-            item.style.display = 'none';
+  if (storedProducts && productList) {
+    storedProducts.forEach((product) => {
+      const productItem = `<div class="col-md-3 mt-5 product__list--item">
+                  <section class="panel">
+                      <div class="pro-img-box">
+                          <img src="${product.image}" alt="" />
+                          <a href="#" class="adtocart">
+                              <i class="fa fa-shopping-cart"></i>
+                          </a>
+                      </div>
+        
+                      <div class="panel-body text-center pb-2">
+                          <h4>
+                              <a href="#" class="pro-title">
+                                  ${product.name}
+                              </a>
+                          </h4>
+                          <p class="price">${product.price}</p>
+                      </div>
+                  </section>
+              </div>`;
+      productList.innerHTML += productItem;
+    });
+
+    // Phân Trang
+    let thisPage = 1;
+    let limit = 8;
+    let list = document.querySelectorAll(".product__list--item");
+
+    function loadItem() {
+      let beginGet = limit * (thisPage - 1);
+      let endGet = limit * thisPage - 1;
+      list.forEach((item, key) => {
+        if (key >= beginGet && key <= endGet) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
         }
-    })
-    listPage();
-}
-loadItem();
-function listPage(){
-    let count = Math.ceil(list.length / limit);
-    document.querySelector('.listPage').innerHTML = '';
-
-    if(thisPage != 1){
-        let prev = document.createElement('li');
-        prev.innerText = 'PREV';
-        prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
-        document.querySelector('.listPage').appendChild(prev);
+      });
+      listPage();
     }
 
-    for(i = 1; i <= count; i++){
-        let newPage = document.createElement('li');
+    function listPage() {
+      let count = Math.ceil(list.length / limit);
+      document.querySelector(".listPage").innerHTML = "";
+
+      if (thisPage != 1) {
+        let prev = document.createElement("li");
+        prev.innerText = "PREV";
+        prev.setAttribute("onclick", "changePage(" + (thisPage - 1) + ")");
+        document.querySelector(".listPage").appendChild(prev);
+      }
+
+      for (let i = 1; i <= count; i++) {
+        let newPage = document.createElement("li");
         newPage.innerText = i;
-        if(i == thisPage){
-            newPage.classList.add('active');
+        if (i == thisPage) {
+          newPage.classList.add("active");
         }
-        newPage.setAttribute('onclick', "changePage(" + i + ")");
-        document.querySelector('.listPage').appendChild(newPage);
+        newPage.setAttribute("onclick", "changePage(" + i + ")");
+        document.querySelector(".listPage").appendChild(newPage);
+      }
+
+      if (thisPage != count) {
+        let next = document.createElement("li");
+        next.innerText = "NEXT";
+        next.setAttribute("onclick", "changePage(" + (thisPage + 1) + ")");
+        document.querySelector(".listPage").appendChild(next);
+      }
     }
 
-    if(thisPage != count){
-        let next = document.createElement('li');
-        next.innerText = 'NEXT';
-        next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
-        document.querySelector('.listPage').appendChild(next);
-    }
-}
-function changePage(i){
-    thisPage = i;
+    window.changePage = function (i) {
+      thisPage = i;
+      loadItem();
+    };
+
     loadItem();
-}
+  }
+});
+
 
