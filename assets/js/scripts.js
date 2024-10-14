@@ -212,7 +212,7 @@ function handleActiveMenu() {
  * <button class="js-toggle" toggle-target="#box">Click</button>
  * <div id="box">Content show/hide</div>
  */
-window.addEventListener("template-loaded", initJsToggle);
+window.addEventListener("DOMContentLoaded", initJsToggle);
 
 function initJsToggle() {
   $$(".js-toggle").forEach((button) => {
@@ -303,7 +303,6 @@ window.addEventListener("template-loaded", () => {
 const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);
 
-
 // Hiển thị sản phẩm
 document.addEventListener("DOMContentLoaded", function () {
   const storedProducts = JSON.parse(localStorage.getItem("products"));
@@ -388,5 +387,3 @@ document.addEventListener("DOMContentLoaded", function () {
     loadItem();
   }
 });
-
-

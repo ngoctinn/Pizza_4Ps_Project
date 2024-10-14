@@ -14,13 +14,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
 
     <!-- script -->
+    <script src="../assets/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-    <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- CSS -->
-     <link rel="stylesheet" href="../assets/css/flickity.min.css">
+    <link rel="stylesheet" href="../assets/css/flickity.min.css" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/header-deliver.css" />
@@ -107,9 +111,11 @@
                   <a class="nav-link" href="#">giới thiệu</a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="./Templates/deliver.html">giao hàng</a>
+                  <a class="nav-link" href="./Templates/deliver.html"
+                    >giao hàng</a
+                  >
                 </li>
-              
+
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="#">tin tức</a>
                 </li>
@@ -134,73 +140,230 @@
                 style="background-color: #ffc107"
                 >Đăng ký</a
               >
-    </header>  
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>
-      <div class="banner__container"><div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
-        <div class="carousel-cell">
-          <img src="../assets/img/banner1.webp" alt="banner1" />
+      <!-- Banner -->
+      <div class="banner__container">
+        <div
+          class="carousel"
+          data-flickity='{ "autoPlay": true, "wrapAround": true }'
+        >
+          <div class="carousel-cell">
+            <img src="../assets/img/banner1.webp" alt="banner1" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../assets/img/banner2.webp" alt="banner1" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../assets/img/banner3.webp" alt="banner1" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../assets/img/banner4.webp" alt="banner1" />
+          </div>
         </div>
-        <div class="carousel-cell">
-          <img src="../assets/img/banner2.webp" alt="banner1" />
-        </div>
-        <div class="carousel-cell">
-          <img src="../assets/img/banner3.webp" alt="banner1" />
-        </div>
-        <div class="carousel-cell">
-          <img src="../assets/img/banner4.webp" alt="banner1" />
-        </div>
-      </div></div>
+      </div>
       <!-- delivery -->
       <div class="menu-container">
-        <h2>Menu</h2>
+        <h2 class="heading">Menu</h2>
         <div class="menu-items">
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/theomua.webp" alt="Seasonal">
-          <p>Seasonal</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/pizza.webp" alt="Bánh Pizza">
-          <p>Bánh Pizza</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/khaivi.webp" alt="Khai vị">
-          <p>Khai vị</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/salad.webp" alt="Salad">
-          <p>Salad</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/miy.webp" alt="Món Chính/ Mì Ý">
-          <p>Món Chính/ Mì Ý</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/trangmieng.webp" alt="Tráng miệng">
-          <p>Tráng miệng</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/thucuong.webp" alt="Thức uống">
-          <p>Thức uống</p>
-            </a>
-            <a href="#" class="menu-item">
-          <img src="../assets/img/menu/topping.webp" alt="Thêm Topping">
-          <p>Thêm Topping</p>
-            </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/theomua.webp" alt="Seasonal" />
+            <p>Seasonal</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/pizza.webp" alt="Bánh Pizza" />
+            <p>Bánh Pizza</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/khaivi.webp" alt="Khai vị" />
+            <p>Khai vị</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/salad.webp" alt="Salad" />
+            <p>Salad</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/miy.webp" alt="Món Chính/ Mì Ý" />
+            <p>Món Chính/ Mì Ý</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/trangmieng.webp" alt="Tráng miệng" />
+            <p>Tráng miệng</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/thucuong.webp" alt="Thức uống" />
+            <p>Thức uống</p>
+          </a>
+          <a href="#" class="menu-item">
+            <img src="../assets/img/menu/topping.webp" alt="Thêm Topping" />
+            <p>Thêm Topping</p>
+          </a>
         </div>
-    </div>
-    <!-- Phổ biến -->
-    <div class="row product-list">
-            <!-- Existing product list code here -->
-            <h2>Sản phẩm</h2>
-            
-</div>
-<!-- pagination -->
-<div class="pag_container">
-    <ul class="listPage"></ul>
-</div>
+      </div>
+      <!-- Phổ biến -->
+      <div class="row product-list">
+        <!-- Existing product list code here -->
+        <div class="home__row">
+          <h2 class="heading">Sản phẩm</h2>
+          <div class="filter-wrap">
+            <button class="filter-btn js-toggle" toggle-target="#home-filter">
+              Filter
+              <img
+                src="../assets/icons/filter.svg"
+                alt=""
+                class="filter-btn__icon icon"
+              />
+            </button>
+            <div id="home-filter" class="filter hide">
+              <img
+                src="./assets/icons/arrow-up.png"
+                alt=""
+                class="filter__arrow"
+              />
+              <h3 class="filter__heading">Filter</h3>
+              <form action="" class="filter__form">
+                <div class="filter__row filter__content">
+                  <!-- filter column 1 -->
+                  <div class="filter__col">
+                    <label for="" class="filter__form-label">Price</label>
+                    <div class="filter__form-group">
+                      <div
+                        class="filter__form-slider"
+                        style="--min-value: 10%; --max-value: 60%"
+                      ></div>
+                    </div>
+                    <div class="filter__form-group filter__form-group--inline">
+                      <div>
+                        <label
+                          for=""
+                          class="filter__form-label filter__form-label--small"
+                        >
+                          Minimum
+                        </label>
+                        <div
+                          class="filter__form-text-input filter__form-text-input--small"
+                        >
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            class="filter__form-input"
+                            value="$30.00"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <label
+                          for=""
+                          class="filter__form-label filter__form-label--small"
+                        >
+                          Maximum
+                        </label>
+                        <div
+                          class="filter__form-text-input filter__form-text-input--small"
+                        >
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            class="filter__form-input"
+                            value="$100.00"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter__separate"></div>
+                  <!-- filter column2 -->
+                  <div class="filter__col">
+                    <label for="" class="filter__form-label">Size/Weight</label>
+                    <div class="filter__form-group">
+                      <div class="filter__form-select-wrap">
+                        <div class="filter__form-select" style="--width: 158px">
+                          500g
+                          <img
+                            src="./assets/icons/select-arrow.svg"
+                            alt=""
+                            class="filter__form-select-arrow icon"
+                          />
+                        </div>
+                        <div class="filter__form-select">
+                          Gram
+                          <img
+                            src="./assets/icons/select-arrow.svg"
+                            alt=""
+                            class="filter__form-select-arrow icon"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__form-group">
+                      <div class="filter__form-tags">
+                        <button class="filter__form-tag">Small</button>
+                        <button class="filter__form-tag">Medium</button>
+                        <button class="filter__form-tag">Large</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__separate"></div>
+                  <!-- filter column3 -->
+                  <div class="filter__col">
+                    <label for="" class="filter__form-label">Brand</label>
+                    <div class="filter__form-group">
+                      <div class="filter__form-text-input">
+                        <input
+                          type="text"
+                          name=""
+                          id=""
+                          placeholder="Search brand name"
+                          class="filter__form-input"
+                        />
+                        <img
+                          src="./assets/icons/search.svg"
+                          alt=""
+                          class="filter__form-input-icon icon"
+                        />
+                      </div>
+                    </div>
+                    <div class="filter__form-group">
+                      <div class="filter__form-tags">
+                        <button class="filter__form-tag">Lavazza</button>
+                        <button class="filter__form-tag">Nescafe</button>
+                        <button class="filter__form-tag">Starbucks</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__row filter__footer">
+                  <button
+                    class="btn btn--text filter__cancel js-toggle"
+                    toggle-target="#home-filter"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="btn btn--primary filter__submit js-toggle"
+                    toggle-target="#home-filter"
+                  >
+                    Show Result
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="pag_container">
+        <ul class="listPage"></ul>
+      </div>
     </main>
-    <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/products.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>
   </body>
-  
+</html>
