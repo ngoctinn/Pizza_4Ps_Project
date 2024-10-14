@@ -747,6 +747,7 @@ header {
 }
 .filter__submit:hover {
   background: #ffb700;
+  color: #171c28;
 }
 
 .filter__heading,
