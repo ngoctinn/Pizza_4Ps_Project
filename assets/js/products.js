@@ -5,6 +5,7 @@ const products = [
     name: "Pizza Tôm Xốt Tỏi Cay",
     price: "245,000 VND",
     image: "../assets/img/products/PZ_TomXotToiCay.webp",
+    type: "Pizza",
   },
   {
     id: 2,
