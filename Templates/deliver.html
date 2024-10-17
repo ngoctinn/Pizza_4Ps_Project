@@ -158,6 +158,10 @@
       <div class="menu-container">
         <h2 class="heading">Menu</h2>
         <div class="menu-items">
+          <a href="#" class="menu-item" id="menu-all">
+            <img src="../assets/img/menu/theomua.webp" alt="Tất cả" />
+            <p>Tất cả</p>
+          </a>
           <a href="#" class="menu-item" id="menu-seasonal">
             <img src="../assets/img/menu/theomua.webp" alt="Seasonal" />
             <p>Seasonal</p>
@@ -193,160 +197,158 @@
         </div>
       </div>
       <!-- Phổ biến -->
-      <div class="row product-list">
-        <!-- Existing product list code here -->
-        <div class="home__row">
-          <h2 class="heading">Sản phẩm</h2>
-          <div class="filter-wrap">
-            <button class="filter-btn js-toggle" toggle-target="#home-filter">
-              Filter
-              <img
-                src="../assets/icons/filter.svg"
-                alt=""
-                class="filter-btn__icon icon"
-              />
-            </button>
-            <div id="home-filter" class="filter hide">
-              <img
-                src="./assets/icons/arrow-up.png"
-                alt=""
-                class="filter__arrow"
-              />
-              <h3 class="filter__heading">Filter</h3>
-              <form action="" class="filter__form">
-                <div class="filter__row filter__content">
-                  <!-- filter column 1 -->
-                  <div class="filter__col">
-                    <label for="" class="filter__form-label">Price</label>
-                    <div class="filter__form-group">
+      <div class="home__row">
+        <h2 class="heading">Sản phẩm</h2>
+        <div class="filter-wrap">
+          <button class="filter-btn js-toggle" toggle-target="#home-filter">
+            Filter
+            <img
+              src="../assets/icons/filter.svg"
+              alt=""
+              class="filter-btn__icon icon"
+            />
+          </button>
+          <div id="home-filter" class="filter hide">
+            <img
+              src="./assets/icons/arrow-up.png"
+              alt=""
+              class="filter__arrow"
+            />
+            <h3 class="filter__heading">Filter</h3>
+            <form action="" class="filter__form">
+              <div class="filter__row filter__content">
+                <!-- filter column 1 -->
+                <div class="filter__col">
+                  <label for="" class="filter__form-label">Price</label>
+                  <div class="filter__form-group">
+                    <div
+                      class="filter__form-slider"
+                      style="--min-value: 10%; --max-value: 60%"
+                    ></div>
+                  </div>
+                  <div class="filter__form-group filter__form-group--inline">
+                    <div>
+                      <label
+                        for=""
+                        class="filter__form-label filter__form-label--small"
+                      >
+                        Minimum
+                      </label>
                       <div
-                        class="filter__form-slider"
-                        style="--min-value: 10%; --max-value: 60%"
-                      ></div>
-                    </div>
-                    <div class="filter__form-group filter__form-group--inline">
-                      <div>
-                        <label
-                          for=""
-                          class="filter__form-label filter__form-label--small"
-                        >
-                          Minimum
-                        </label>
-                        <div
-                          class="filter__form-text-input filter__form-text-input--small"
-                        >
-                          <input
-                            type="text"
-                            name=""
-                            id=""
-                            class="filter__form-input"
-                            value="$30.00"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <label
-                          for=""
-                          class="filter__form-label filter__form-label--small"
-                        >
-                          Maximum
-                        </label>
-                        <div
-                          class="filter__form-text-input filter__form-text-input--small"
-                        >
-                          <input
-                            type="text"
-                            name=""
-                            id=""
-                            class="filter__form-input"
-                            value="$100.00"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="filter__separate"></div>
-                  <!-- filter column2 -->
-                  <div class="filter__col">
-                    <label for="" class="filter__form-label">Size/Weight</label>
-                    <div class="filter__form-group">
-                      <div class="filter__form-select-wrap">
-                        <div class="filter__form-select" style="--width: 158px">
-                          500g
-                          <img
-                            src="./assets/icons/select-arrow.svg"
-                            alt=""
-                            class="filter__form-select-arrow icon"
-                          />
-                        </div>
-                        <div class="filter__form-select">
-                          Gram
-                          <img
-                            src="./assets/icons/select-arrow.svg"
-                            alt=""
-                            class="filter__form-select-arrow icon"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filter__form-group">
-                      <div class="filter__form-tags">
-                        <button class="filter__form-tag">Small</button>
-                        <button class="filter__form-tag">Medium</button>
-                        <button class="filter__form-tag">Large</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="filter__separate"></div>
-                  <!-- filter column3 -->
-                  <div class="filter__col">
-                    <label for="" class="filter__form-label"
-                      >Loại sản phẩm</label
-                    >
-                    <div class="filter__form-group">
-                      <div class="filter__form-text-input">
+                        class="filter__form-text-input filter__form-text-input--small"
+                      >
                         <input
                           type="text"
                           name=""
                           id=""
-                          placeholder="Search brand name"
                           class="filter__form-input"
-                        />
-                        <img
-                          src="./assets/icons/search.svg"
-                          alt=""
-                          class="filter__form-input-icon icon"
+                          value="$30.00"
                         />
                       </div>
                     </div>
-                    <div class="filter__form-group">
-                      <div class="filter__form-tags">
-                        <button class="filter__form-tag">Lavazza</button>
-                        <button class="filter__form-tag">Nescafe</button>
-                        <button class="filter__form-tag">Starbucks</button>
+                    <div>
+                      <label
+                        for=""
+                        class="filter__form-label filter__form-label--small"
+                      >
+                        Maximum
+                      </label>
+                      <div
+                        class="filter__form-text-input filter__form-text-input--small"
+                      >
+                        <input
+                          type="text"
+                          name=""
+                          id=""
+                          class="filter__form-input"
+                          value="$100.00"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="filter__row filter__footer">
-                  <button
-                    class="btn btn--text filter__cancel js-toggle"
-                    toggle-target="#home-filter"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    class="btn btn--primary filter__submit js-toggle"
-                    toggle-target="#home-filter"
-                  >
-                    Show Result
-                  </button>
+
+                <div class="filter__separate"></div>
+                <!-- filter column2 -->
+                <div class="filter__col">
+                  <label for="" class="filter__form-label">Size/Weight</label>
+                  <div class="filter__form-group">
+                    <div class="filter__form-select-wrap">
+                      <div class="filter__form-select" style="--width: 158px">
+                        500g
+                        <img
+                          src="./assets/icons/select-arrow.svg"
+                          alt=""
+                          class="filter__form-select-arrow icon"
+                        />
+                      </div>
+                      <div class="filter__form-select">
+                        Gram
+                        <img
+                          src="./assets/icons/select-arrow.svg"
+                          alt=""
+                          class="filter__form-select-arrow icon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__form-group">
+                    <div class="filter__form-tags">
+                      <button class="filter__form-tag">Small</button>
+                      <button class="filter__form-tag">Medium</button>
+                      <button class="filter__form-tag">Large</button>
+                    </div>
+                  </div>
                 </div>
-              </form>
-            </div>
+                <div class="filter__separate"></div>
+                <!-- filter column3 -->
+                <div class="filter__col">
+                  <label for="" class="filter__form-label">Loại sản phẩm</label>
+                  <div class="filter__form-group">
+                    <div class="filter__form-text-input">
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="Search brand name"
+                        class="filter__form-input"
+                      />
+                      <img
+                        src="./assets/icons/search.svg"
+                        alt=""
+                        class="filter__form-input-icon icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="filter__form-group">
+                    <div class="filter__form-tags">
+                      <button class="filter__form-tag">Lavazza</button>
+                      <button class="filter__form-tag">Nescafe</button>
+                      <button class="filter__form-tag">Starbucks</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__row filter__footer">
+                <button
+                  class="btn btn--text filter__cancel js-toggle"
+                  toggle-target="#home-filter"
+                >
+                  Cancel
+                </button>
+                <button
+                  class="btn btn--primary filter__submit js-toggle"
+                  toggle-target="#home-filter"
+                >
+                  Show Result
+                </button>
+              </div>
+            </form>
           </div>
         </div>
+      </div>
+      <div class="row product-list">
+        <!-- Existing product list code here -->
       </div>
       <!-- pagination -->
       <div class="pag_container">
