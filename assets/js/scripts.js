@@ -268,11 +268,19 @@ document.querySelector("html").classList.toggle("dark", isDark);
 // Hiển thị sản phẩm
 document.addEventListener("DOMContentLoaded", function () {
   const storedProducts = JSON.parse(localStorage.getItem("products"));
+  const storedCategories = JSON.parse(localStorage.getItem("categories"));
   const productList = document.querySelector(".product-list");
+  let filteredProducts = storedProducts;
+  let thisPage = 1;
+  let limit = 8;
 
-  if (storedProducts && productList) {
-    storedProducts.forEach((product) => {
-      const productItem = `<div class="col-md-3 mt-5 product__list--item">
+  function loadItem() {
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    productList.innerHTML = "";
+    filteredProducts.forEach((product, key) => {
+      if (key >= beginGet && key <= endGet) {
+        const productItem = `<div class="col-md-3 mt-5 product__list--item">
                   <section class="panel">
                       <div class="pro-img-box">
                           <img src="${product.image}" alt="" />
@@ -291,61 +299,64 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                   </section>
               </div>`;
-      productList.innerHTML += productItem;
+        productList.innerHTML += productItem;
+      }
     });
+    listPage();
+  }
 
-    // Phân Trang
-    let thisPage = 1;
-    let limit = 8;
-    let list = document.querySelectorAll(".product__list--item");
+  function listPage() {
+    let count = Math.ceil(filteredProducts.length / limit);
+    document.querySelector(".listPage").innerHTML = "";
 
-    function loadItem() {
-      let beginGet = limit * (thisPage - 1);
-      let endGet = limit * thisPage - 1;
-      list.forEach((item, key) => {
-        if (key >= beginGet && key <= endGet) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-      listPage();
+    if (thisPage != 1) {
+      let prev = document.createElement("li");
+      prev.innerText = "PREV";
+      prev.setAttribute("onclick", "changePage(" + (thisPage - 1) + ")");
+      document.querySelector(".listPage").appendChild(prev);
     }
 
-    function listPage() {
-      let count = Math.ceil(list.length / limit);
-      document.querySelector(".listPage").innerHTML = "";
-
-      if (thisPage != 1) {
-        let prev = document.createElement("li");
-        prev.innerText = "PREV";
-        prev.setAttribute("onclick", "changePage(" + (thisPage - 1) + ")");
-        document.querySelector(".listPage").appendChild(prev);
+    for (let i = 1; i <= count; i++) {
+      let newPage = document.createElement("li");
+      newPage.innerText = i;
+      if (i == thisPage) {
+        newPage.classList.add("active");
       }
-
-      for (let i = 1; i <= count; i++) {
-        let newPage = document.createElement("li");
-        newPage.innerText = i;
-        if (i == thisPage) {
-          newPage.classList.add("active");
-        }
-        newPage.setAttribute("onclick", "changePage(" + i + ")");
-        document.querySelector(".listPage").appendChild(newPage);
-      }
-
-      if (thisPage != count) {
-        let next = document.createElement("li");
-        next.innerText = "NEXT";
-        next.setAttribute("onclick", "changePage(" + (thisPage + 1) + ")");
-        document.querySelector(".listPage").appendChild(next);
-      }
+      newPage.setAttribute("onclick", "changePage(" + i + ")");
+      document.querySelector(".listPage").appendChild(newPage);
     }
 
-    window.changePage = function (i) {
-      thisPage = i;
-      loadItem();
-    };
+    if (thisPage != count) {
+      let next = document.createElement("li");
+      next.innerText = "NEXT";
+      next.setAttribute("onclick", "changePage(" + (thisPage + 1) + ")");
+      document.querySelector(".listPage").appendChild(next);
+    }
+  }
 
+  window.changePage = function (i) {
+    thisPage = i;
+    loadItem();
+  };
+
+  function filterProductsByCategory(category) {
+    const categoryIds = storedCategories[category];
+    filteredProducts = storedProducts.filter((product) =>
+      categoryIds.includes(product.id)
+    );
+    thisPage = 1; // Reset to the first page
     loadItem();
   }
+
+  // Add event listeners to menu items
+  document.getElementById("menu-pizza").addEventListener("click", function () {
+    filterProductsByCategory("Pizza");
+  });
+
+  document.getElementById("menu-khaivi").addEventListener("click", function () {
+    filterProductsByCategory("KhaiVi");
+  });
+
+  // Load all products initially
+  loadItem();
 });
