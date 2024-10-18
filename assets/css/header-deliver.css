@@ -127,6 +127,9 @@
 
 .menu-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-third);
+  color: #fff;
 }
 /* Media query cho man hinh lon */
 @media (max-width: 1300px) {
@@ -256,18 +259,34 @@
   color: #5a5a5a;
   display: inline-block;
   margin-top: 3rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  font-size: 18px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 16px;
   height: 4rem;
+  position: relative;
+}
+.pro-title::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s;
 }
 .pro-title:hover {
-  color: #ff7261;
+  color: var(--color-primary);
+}
+.pro-title:hover::after {
+  width: 100%;
 }
 .product-list .price {
-  color: #fc5959;
+  color: var(--color-primary);
   font-size: 18px;
+  font-weight: 700;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .pro-img-details {
