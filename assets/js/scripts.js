@@ -347,6 +347,14 @@ document.addEventListener("DOMContentLoaded", function () {
     thisPage = 1; // Reset to the first page
     loadItem();
   }
+  function searchProducts(query) {
+    filteredProducts = storedProducts.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    console.log("Filtered products:", filteredProducts);
+    thisPage = 1; // Reset to the first page
+    loadItem();
+  }
 
   // Add event listeners to menu items
   document.getElementById("menu-pizza").addEventListener("click", function () {
@@ -357,17 +365,28 @@ document.addEventListener("DOMContentLoaded", function () {
     filterProductsByCategory("KhaiVi");
   });
 
-  // Load all products initially
-  loadItem();
-});
-document.addEventListener("DOMContentLoaded", function () {
-  // Lắng nghe sự kiện click trên các thẻ a trong menu
-  document.querySelectorAll(".menu-item").forEach(function (menuItem) {
-    menuItem.addEventListener("click", function (event) {
-      event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
-      document.getElementById("san-pham").scrollIntoView({
-        behavior: "smooth",
+  document.addEventListener("DOMContentLoaded", function () {
+    // Lắng nghe sự kiện click trên các thẻ a trong menu
+    document.querySelectorAll(".menu-item").forEach(function (menuItem) {
+      menuItem.addEventListener("click", function (event) {
+        event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+        document.getElementById("san-pham").scrollIntoView({
+          behavior: "smooth",
+        });
       });
     });
   });
+
+  // Search
+  // Add event listener to search form
+  document
+    .getElementById("search-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const query = document.getElementById("search-input").value;
+      searchProducts(query);
+    });
+
+  // Load all products initially
+  loadItem();
 });
