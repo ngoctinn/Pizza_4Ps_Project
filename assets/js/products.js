@@ -46,7 +46,7 @@ const products = [
     id: 8,
     name: "Pizza Margherita & 2 loại xúc xích Ý",
     price: "238,000 VND",
-    image: "../assets/img/products/PZ_Margherita&2LoaiXXY.webp",
+    image: "../assets/img/products/PZ_Margherita&2LoaiXucXichY.webp",
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ const products = [
     id: 12,
     name: "Pizza tôm và xốt Mayonnaise",
     price: "254,000 VND",
-    image: "../assets/img/products/PZ_Tom&XotMayonnaise.webp",
+    image: "../assets/img/products/PZ_tom&mayonnaise.webp",
   },
   {
     id: 13,
@@ -106,7 +106,7 @@ const products = [
     id: 18,
     name: "Xốt bí ngòi quế tây với phô mai Latic nhà làm",
     price: "178,000 VND",
-    image: "../assets/img/products/PZ_XotBiNgoiQueTay&PMNL.webp",
+    image: "../assets/img/products/PZ_xotbingoiquetay&pmLactic.webp",
   },
   {
     id: 19,
@@ -118,7 +118,7 @@ const products = [
     id: 20,
     name: "Pizza gà Tandoori",
     price: "218,000 VND",
-    image: "../assets/img/products/PZ_GaTandoori.webp",
+    image: "../assets/img/products/PZ_gaTandooi.webp",
   },
   {
     id: 21,
@@ -152,15 +152,15 @@ const products = [
   },
   {
     id: 26,
-    name: "(Chỉ có ở Đà Nẵng) Pizza trứng, cải bos xôi",
+    name: "(Chỉ có ở Đà Nẵng) Pizza trứng, cải bó xôi",
     price: "160,000 VND",
-    image: "../assets/img/products/PZ_Trung&CaiBosXoi.webp",
+    image: "../assets/img/products/PZ_trung&caiboxoi.webp",
   },
   {
     id: 27,
     name: "(Chỉ có ở Đà Nẵng) Pizza Hawaiian 4P's",
     price: "160,000 VND",
-    image: "../assets/img/products/PZ_Hawaiian4Ps.webp",
+    image: "../assets/img/products/PZ_Hawaiian.webp",
   },
   {
     id: 28,
@@ -332,13 +332,15 @@ localStorage.setItem("products", JSON.stringify(products));
 const categories = {
   All: [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
   ],
   Pizza: [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     22, 23, 24, 25, 26, 27,
   ],
-  KhaiVi: [28, 29, 30, 31, 32, 33],
+  KhaiVi: [28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+  Salad: [45, 46, 47, 48, 49, 50, 51, 52, 53, 54],
 };
 
 // Lưu trữ danh mục vào localStorage
