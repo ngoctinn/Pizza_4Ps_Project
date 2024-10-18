@@ -28,7 +28,7 @@
   }
 
   .d-flex {
-    justify-content: left;
+    justify-content: lefts;
   }
 }
 .logo-style {
@@ -53,6 +53,7 @@
 .btn__login {
   height: 3rem;
   text-wrap: nowrap;
+  border: #ddd solid 1px;
 }
 
 /* banner */
@@ -104,7 +105,7 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  width: 125px;
+  width: 100px;
   padding: 10px;
   transition: transform 0.3s ease;
   text-align: center;
@@ -130,26 +131,29 @@
 /* Media query cho man hinh lon */
 @media (max-width: 1300px) {
   .menu-item {
-    width: calc(100% / 8 - 15px); /* Chia đều cho 4 cột */
+    width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
   }
   .menu-item p {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 /* Media query cho màn hình máy tính bảng (tablet) */
 @media (max-width: 1024px) {
   .menu-item {
-    width: calc(100% / 4 - 15px); /* Chia đều cho 4 cột */
+    width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
+  }
+  .menu-item p {
+    font-size: 10px;
   }
 }
 
 /* Media query cho màn hình điện thoại (smartphone) */
 @media (max-width: 768px) {
   .menu-item {
-    width: calc(100% / 2 - 15px); /* Chia đều cho 2 cột */
+    width: calc(100% / 3 - 15px); /* Chia đều cho 2 cột */
   }
   .menu-item p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 /*panel*/
