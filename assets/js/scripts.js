@@ -360,3 +360,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load all products initially
   loadItem();
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Lắng nghe sự kiện click trên các thẻ a trong menu
+  document.querySelectorAll(".menu-item").forEach(function (menuItem) {
+    menuItem.addEventListener("click", function (event) {
+      event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+      document.getElementById("san-pham").scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+});

@@ -4,6 +4,33 @@
   padding: 2rem 5rem;
   width: 100%;
 }
+.nav-item {
+  text-wrap: nowrap;
+}
+/* Ensure the navbar content is centered when collapsed */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: left;
+  }
+
+  .navbar-nav {
+    margin: 0 auto;
+    float: none;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    float: none;
+  }
+
+  .form__search {
+    margin-inline-start: 0;
+  }
+
+  .d-flex {
+    justify-content: left;
+  }
+}
 .logo-style {
   display: block;
   font-size: 2.5rem;
@@ -13,11 +40,19 @@
   letter-spacing: 7px;
 }
 .form__search {
-  height: 4rem;
-  max-width: 35rem;
+  height: 3rem;
+  width: 50%;
 }
 .btn__search {
-  height: 4rem;
+  height: 3rem;
+}
+.btn_signup {
+  height: 3rem;
+  text-wrap: nowrap;
+}
+.btn__login {
+  height: 3rem;
+  text-wrap: nowrap;
 }
 
 /* banner */

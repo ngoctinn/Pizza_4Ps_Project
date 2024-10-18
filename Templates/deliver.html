@@ -70,6 +70,9 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,12 +80,12 @@
         <!-- Navbar content -->
         <div class="collapse navbar-collapse" id="navbarContent">
           <!-- Nav Links -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Trang chủ</a>
+              <a class="nav-link" href="../index.html">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sản phẩm</a>
+              <a class="nav-link active" href="#">Giao hàng</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Liên hệ</a>
@@ -90,23 +93,28 @@
           </ul>
 
           <!-- Search Form -->
-          <form class="d-flex mx-auto mb-2 mb-lg-0">
-            <input
-              class="form-control form__search me-2 form__input"
-              type="search"
-              placeholder="Tìm kiếm..."
-            />
-            <button class="my_btn btn__search btn--primary" type="submit">
-              TÌM
-            </button>
+          <form class="d-flex mx-auto form__search mb-2 mb-lg-0 ms-lg-5 w-100">
+            <div class="input-group">
+              <input
+                class="form-control me-2 form__input"
+                type="search"
+                placeholder="Tìm kiếm..."
+                aria-label="Search"
+              />
+              <button class="my_btn btn__search btn--primary" type="submit">
+                Tìm
+              </button>
+            </div>
           </form>
 
           <!-- Auth Buttons -->
-          <div class="d-flex">
-            <button class="my_btn btn--text me-2" type="button">
-              Đăng nhập
+          <div class="d-flex ms-lg-5">
+            <button class="my_btn btn__login btn--text me-2" type="button">
+              <a href="../Templates/sign-in.html">Đăng nhập</a>
             </button>
-            <button class="my_btn btn--primary" type="button">Đăng ký</button>
+            <button class="my_btn btn_signup btn--primary" type="button">
+              <a href="../Templates/sign-up.html">Đăng ký</a>
+            </button>
           </div>
         </div>
       </nav>
@@ -136,39 +144,39 @@
       <div class="menu-container">
         <h2 class="heading">Menu</h2>
         <div class="menu-items">
-          <a href="#" class="menu-item" id="menu-all">
+          <a href="#san-pham" class="menu-item" id="menu-all">
             <img src="../assets/img/menu/theomua.webp" alt="Tất cả" />
             <p>Tất cả</p>
           </a>
-          <a href="#" class="menu-item" id="menu-seasonal">
+          <a href="#san-pham" class="menu-item" id="menu-seasonal">
             <img src="../assets/img/menu/theomua.webp" alt="Seasonal" />
             <p>Seasonal</p>
           </a>
-          <a href="#" class="menu-item" id="menu-pizza">
+          <a href="#san-pham" class="menu-item" id="menu-pizza">
             <img src="../assets/img/menu/pizza.webp" alt="Bánh Pizza" />
             <p>Bánh Pizza</p>
           </a>
-          <a href="#" class="menu-item" id="menu-khaivi">
+          <a href="#san-pham" class="menu-item" id="menu-khaivi">
             <img src="../assets/img/menu/khaivi.webp" alt="Khai vị" />
             <p>Khai vị</p>
           </a>
-          <a href="#" class="menu-item" id="menu-salad">
+          <a href="#san-pham" class="menu-item" id="menu-salad">
             <img src="../assets/img/menu/salad.webp" alt="Salad" />
             <p>Salad</p>
           </a>
-          <a href="#" class="menu-item" id="menu-miy">
+          <a href="#san-pham" class="menu-item" id="menu-miy">
             <img src="../assets/img/menu/miy.webp" alt="Món Chính/ Mì Ý" />
             <p>Món Chính/ Mì Ý</p>
           </a>
-          <a href="#" class="menu-item" id="menu-trangmieng">
+          <a href="#san-pham" class="menu-item" id="menu-trangmieng">
             <img src="../assets/img/menu/trangmieng.webp" alt="Tráng miệng" />
             <p>Tráng miệng</p>
           </a>
-          <a href="#" class="menu-item" id="menu-thucuong">
+          <a href="#san-pham" class="menu-item" id="menu-thucuong">
             <img src="../assets/img/menu/thucuong.webp" alt="Thức uống" />
             <p>Thức uống</p>
           </a>
-          <a href="#" class="menu-item" id="menu-topping">
+          <a href="#san-pham" class="menu-item" id="menu-topping">
             <img src="../assets/img/menu/topping.webp" alt="Thêm Topping" />
             <p>Thêm Topping</p>
           </a>
@@ -176,7 +184,7 @@
       </div>
       <!-- Phổ biến -->
       <div class="home__row">
-        <h2 class="heading">Sản phẩm</h2>
+        <h2 class="heading" id="san-pham">Sản phẩm</h2>
         <div class="filter-wrap">
           <button class="filter-btn js-toggle" toggle-target="#home-filter">
             Filter
