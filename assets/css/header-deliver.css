@@ -237,7 +237,7 @@
 }
 .adtocart:hover {
   background: #ff7261;
-  border: #ff7261;
+  border: 3px solid white;
   color: #fff;
   text-decoration: none;
 }
