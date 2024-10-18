@@ -1,59 +1,23 @@
-header {
-  position: fixed;
-  background-color: Var(--color-primary);
-  top: 0;
-  left: 0;
-  z-index: 99;
+.navbar {
+  font-size: large;
+  background-color: var(--color-primary) !important;
+  padding: 2rem 5rem;
   width: 100%;
 }
-
 .logo-style {
-  position: fixed;
+  display: block;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 7px;
 }
-.logo {
-  margin-left: 5rem;
-  margin-top: 2rem;
-  z-index: 100000;
+.form__search {
+  height: 4rem;
+  max-width: 35rem;
 }
-/* Ẩn logo khi sidebar mở */
-.logo.hidden {
-  z-index: -1;
-}
-
-.header-scrolled {
-  background-color: var(--color-primary);
-}
-/* navbar */
-.navbar {
-  width: 100%;
-  background-color: var(--color-primary);
-}
-.navbar .container {
-  font-size: 2rem;
-  margin: 0 4rem;
-  z-index: 999;
-  font-weight: 500;
-  height: 100%;
-}
-.navbar .navbar__brand {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-white);
-  margin-left: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-/* sidebar */
-
-@media (max-width: 991px) {
-  .sidebar {
-    background-color: var(--color-primary);
-  }
+.btn__search {
+  height: 4rem;
 }
 
 /* banner */
@@ -361,7 +325,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
   margin-top: 5rem;
 }
 .filter-wrap {
