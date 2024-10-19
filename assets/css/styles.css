@@ -264,7 +264,7 @@ input {
   width: 19px;
   height: 19px;
   border-radius: 5px;
-  border: 1.5px solid #9e9da8;
+  border: 1.5px solid #9e9da6;
 }
 
 .form__checkbox:has(:checked)::before {
