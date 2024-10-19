@@ -37,7 +37,10 @@
   justify-content: center;
   gap: 50px;
   min-height: 100vh;
-  background: var(--auth-intro-bg);
+  background-image: url(../img/auth/auth-img.jpg);
+  background-size: COVER;
+  background-position: calc(50% - 50px);
+  background-repeat: no-repeat;
 }
 
 .auth__intro-logo,
