@@ -28,7 +28,7 @@
   }
 
   .d-flex {
-    justify-content: left;
+    justify-content: lefts;
   }
 }
 .logo-style {
@@ -53,6 +53,7 @@
 .btn__login {
   height: 3rem;
   text-wrap: nowrap;
+  border: #ddd solid 1px;
 }
 
 /* banner */
@@ -104,7 +105,7 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  width: 125px;
+  width: 100px;
   padding: 10px;
   transition: transform 0.3s ease;
   text-align: center;
@@ -126,6 +127,9 @@
 
 .menu-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-third);
+  color: #fff;
 }
 /* Media query cho man hinh lon */
 @media (max-width: 1300px) {
@@ -133,7 +137,7 @@
     width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
   }
   .menu-item p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 /* Media query cho màn hình máy tính bảng (tablet) */
@@ -142,7 +146,7 @@
     width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
   }
   .menu-item p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -152,7 +156,7 @@
     width: calc(100% / 3 - 15px); /* Chia đều cho 2 cột */
   }
   .menu-item p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 /*panel*/
@@ -255,18 +259,34 @@
   color: #5a5a5a;
   display: inline-block;
   margin-top: 3rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  font-size: 18px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 16px;
   height: 4rem;
+  position: relative;
+}
+.pro-title::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s;
 }
 .pro-title:hover {
-  color: #ff7261;
+  color: var(--color-primary);
+}
+.pro-title:hover::after {
+  width: 100%;
 }
 .product-list .price {
-  color: #fc5959;
+  color: var(--color-primary);
   font-size: 18px;
+  font-weight: 700;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .pro-img-details {

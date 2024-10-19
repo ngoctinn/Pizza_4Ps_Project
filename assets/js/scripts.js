@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           </a>
                       </div>
         
-                      <div class="panel-body text-center pb-2">
+                      <div class="panel-body pb-2 text-center">
                           <h4>
                               <a href="#" class="pro-title">
                                   ${product.name}
