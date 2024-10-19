@@ -265,21 +265,9 @@
   height: 4rem;
   position: relative;
 }
-.pro-title::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-primary);
-  transition: width 0.3s;
-}
+
 .pro-title:hover {
   color: var(--color-primary);
-}
-.pro-title:hover::after {
-  width: 100%;
 }
 .product-list .price {
   color: var(--color-primary);

@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filteredProducts = storedProducts.filter((product) =>
       categoryIds.includes(product.id)
     );
+    console.log("Filtered products:", filteredProducts); // Debug
     thisPage = 1; // Reset to the first page
     loadItem();
   }
@@ -360,10 +361,22 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("menu-pizza").addEventListener("click", function () {
     filterProductsByCategory("Pizza");
   });
-
   document.getElementById("menu-khaivi").addEventListener("click", function () {
     filterProductsByCategory("KhaiVi");
   });
+  document.getElementById("menu-salad").addEventListener("click", function () {
+    filterProductsByCategory("Salad");
+  });
+  document
+    .getElementById("menu-monchinh")
+    .addEventListener("click", function () {
+      filterProductsByCategory("MonChinh");
+    });
+  document
+    .getElementById("menu-trangmieng")
+    .addEventListener("click", function () {
+      filterProductsByCategory("TrangMieng");
+    });
 
   document.addEventListener("DOMContentLoaded", function () {
     // Lắng nghe sự kiện click trên các thẻ a trong menu
