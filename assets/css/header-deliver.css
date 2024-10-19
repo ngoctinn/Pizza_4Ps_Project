@@ -41,7 +41,7 @@
 }
 .form__search {
   height: 3rem;
-  width: 50%;
+  min-width: 20rem;
 }
 .btn__search {
   height: 3rem;
@@ -130,23 +130,26 @@
 /* Media query cho man hinh lon */
 @media (max-width: 1300px) {
   .menu-item {
-    width: calc(100% / 8 - 15px); /* Chia đều cho 4 cột */
+    width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
   }
   .menu-item p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 /* Media query cho màn hình máy tính bảng (tablet) */
 @media (max-width: 1024px) {
   .menu-item {
-    width: calc(100% / 4 - 15px); /* Chia đều cho 4 cột */
+    width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
+  }
+  .menu-item p {
+    font-size: 12px;
   }
 }
 
 /* Media query cho màn hình điện thoại (smartphone) */
 @media (max-width: 768px) {
   .menu-item {
-    width: calc(100% / 2 - 15px); /* Chia đều cho 2 cột */
+    width: calc(100% / 3 - 15px); /* Chia đều cho 2 cột */
   }
   .menu-item p {
     font-size: 14px;
@@ -326,6 +329,7 @@
   font-weight: 300;
 }
 .pag_container {
+  margin: 3rem 0;
   display: flex;
   justify-content: center;
 }
