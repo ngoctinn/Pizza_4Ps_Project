@@ -1,7 +1,7 @@
 .navbar {
   font-size: large;
   background-color: var(--color-primary) !important;
-  padding: 2rem 5rem;
+  padding: 2rem 5%;
   width: 100%;
 }
 .nav-item {
@@ -60,7 +60,7 @@
 /* external css: flickity.css */
 
 .banner__container {
-  margin: 10rem 5rem;
+  margin: 10rem 5%;
 }
 .carousel {
   background: var(--color-white);
@@ -84,7 +84,7 @@
 }
 /* MENU */
 .menu-container {
-  margin: auto 5rem;
+  margin: auto 5%;
 }
 
 .heading {
@@ -172,7 +172,7 @@
 
 /* product-list */
 .product-list {
-  margin: 0rem 4rem;
+  margin: 0rem 5%;
 }
 .prod-cat li a {
   border-bottom: 1px dashed #d9d9d9;
@@ -367,8 +367,8 @@
 
 /* filter */
 .home__row {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
