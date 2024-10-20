@@ -389,6 +389,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Lắng nghe sự kiện click trên các thẻ a trong menu
+    document.querySelectorAll(".menu-item").forEach(function (menuItem) {
+      menuItem.addEventListener("click", function (event) {
+        event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+        document.getElementById("san-pham").scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  });
 
   // Search
   // Add event listener to search form
@@ -402,4 +413,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load all products initially
   loadItem();
+});
+// thay đổi thẻ h2 id="san-pham" thành tên menu
+document.addEventListener("DOMContentLoaded", function () {
+  // Lắng nghe sự kiện click trên các thẻ a trong menu
+  document.querySelectorAll(".menu-item").forEach((item) => {
+    item.addEventListener("click", function () {
+      const menuItemText = item.querySelector("p").textContent;
+      document.getElementById("san-pham").textContent = menuItemText;
+    });
+  });
 });
