@@ -1,3 +1,12 @@
+html {
+  background: #fafafa;
+}
+main {
+  background: #fafafa;
+}
+.product__list--item .panel {
+  background: var(--color-white);
+}
 .navbar {
   font-size: large;
   background-color: var(--color-primary) !important;
@@ -45,6 +54,7 @@
 }
 .btn__search {
   height: 3rem;
+  padding: 0 1rem !important;
 }
 .btn_signup {
   height: 3rem;
@@ -88,10 +98,9 @@
 }
 
 .heading {
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 600;
   color: var(--color-primary);
-  margin-bottom: 1.5rem;
 }
 
 .menu-items {
@@ -99,12 +108,13 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
+  margin-top: 3rem;
 }
 
 .menu-item {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 12.5rem;
   padding: 10px;
   transition: transform 0.3s ease;
@@ -127,7 +137,7 @@
 
 .menu-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   background-color: var(--color-third);
   color: #fff;
 }
@@ -173,6 +183,8 @@
 /* product-list */
 .product-list {
   margin: 0rem 5%;
+  display: flex;
+  justify-content: center;
 }
 .prod-cat li a {
   border-bottom: 1px dashed #d9d9d9;
@@ -335,6 +347,11 @@
 .pro-d-head {
   font-size: 18px;
   font-weight: 300;
+}
+#undiscovered {
+  width: 60rem;
+  height: 60rem;
+  margin-bottom: 10rem;
 }
 .pag_container {
   margin: 3rem 0;

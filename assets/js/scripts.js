@@ -344,7 +344,6 @@ document.addEventListener("DOMContentLoaded", function () {
     filteredProducts = storedProducts.filter((product) =>
       categoryIds.includes(product.id)
     );
-    console.log("Filtered products:", filteredProducts); // Debug
     thisPage = 1; // Reset to the first page
     loadItem();
   }
@@ -354,7 +353,15 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     console.log("Filtered products:", filteredProducts);
     thisPage = 1; // Reset to the first page
-    loadItem();
+    document.getElementById("san-pham").scrollIntoView({
+      behavior: "smooth",
+    });
+    if (filteredProducts.length === 0) {
+      productList.innerHTML =
+        "<img src='../assets/img/order/Undiscovered.avif' id='undiscovered' />";
+    } else {
+      loadItem();
+    }
   }
 
   // Add event listeners to menu items
