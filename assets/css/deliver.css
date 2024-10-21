@@ -7,64 +7,6 @@ main {
 .product__list--item .panel {
   background: var(--color-white);
 }
-.navbar {
-  font-size: large;
-  background-color: var(--color-primary) !important;
-  padding: 2rem 5%;
-  width: 100%;
-}
-.nav-item {
-  text-wrap: nowrap;
-}
-/* Ensure the navbar content is centered when collapsed */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    text-align: left;
-  }
-
-  .navbar-nav {
-    margin: 0 auto;
-    float: none;
-  }
-
-  .navbar-nav .nav-item {
-    display: inline-block;
-    float: none;
-  }
-
-  .form__search {
-    margin-inline-start: 0;
-  }
-
-  .d-flex {
-    justify-content: lefts;
-  }
-}
-.logo-style {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-white);
-  text-transform: uppercase;
-  letter-spacing: 7px;
-}
-.form__search {
-  height: 3rem;
-  min-width: 20rem;
-}
-.btn__search {
-  height: 3rem;
-  padding: 0 1rem !important;
-}
-.btn_signup {
-  height: 3rem;
-  text-wrap: nowrap;
-}
-.btn__login {
-  height: 3rem;
-  text-wrap: nowrap;
-  border: #ddd solid 1px;
-}
 
 /* banner */
 /* external css: flickity.css */

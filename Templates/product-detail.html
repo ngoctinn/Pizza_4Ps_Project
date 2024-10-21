@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza 4ps</title>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <!-- link cnd -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- script -->
+    <script src="../assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <!-- <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/flickity.min.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/product-detail.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Logo -->
+        <a class="navbar-brand logo-style" href="#">Pizza 4p's</a>
+
+        <!-- Hamburger button for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Nav Links -->
+          <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Giao hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+          </ul>
+
+          <!-- Search Form -->
+          <form
+            id="search-form"
+            class="d-flex mx-auto form__search mb-2 mb-lg-0 ms-lg-5 w-100"
+          >
+            <div class="input-group">
+              <input
+                id="search-input"
+                class="form-control me-2 form__input"
+                type="search"
+                placeholder="Tìm kiếm..."
+                aria-label="Search"
+              />
+              <button class="my_btn btn__search btn--primary" type="submit">
+                Tìm
+              </button>
+            </div>
+          </form>
+
+          <!-- Auth Buttons -->
+          <div class="d-flex ms-lg-5">
+            <button class="my_btn btn__login btn--text me-2" type="button">
+              <a href="../Templates/sign-in.html">Đăng nhập</a>
+            </button>
+            <button class="my_btn btn_signup btn--primary" type="button">
+              <a href="../Templates/sign-up.html">Đăng ký</a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main style="height: 100rem">
+      <div class="product-page">
+        <div class="product-container">
+          <ul class="breadcrumbs">
+            <li>
+              <a href="#!" class="breadcrumbs__link">
+                Departments
+                <img src="../assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumbs__link">
+                Coffee
+                <img src="../assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumbs__link">
+                Coffee Beans
+                <img src="../assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"
+                >LavAzza</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__row">
+          <!-- Footer column 1 -->
+          <div class="footer__col">
+            <!-- Logo -->
+            <a href="./" class="logo footer__logo">
+              <h1 class="logo__title">pizza 4ps</h1>
+            </a>
+            <p class="footer__desc">
+              Chúng tôi cam kết mang đến cho khách hàng những trải nghiệm ẩm
+              thực tuyệt vời với các món pizza được làm từ nguyên liệu tươi ngon
+              và công thức độc đáo.
+            </p>
+
+            <p class="footer__help-text">
+              Nhận thông tin mới nhất từ chúng tôi.
+            </p>
+            <form action="" class="footer__form">
+              <input
+                type="text"
+                class="footer__input"
+                placeholder="Email address"
+              />
+              <button class="my_btn btn--primary">GỬI</button>
+            </form>
+          </div>
+
+          <!-- Footer column 2 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Nhà hàng</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="#!" class="footer__link">Hà Nội</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Hồ Chí Minh</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Hải Phòng</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Đà Nẵng</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Bình Dương</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer column 3 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Dịch vụ</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="#!" class="footer__link">Chính sách giao hàng</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link"
+                  >Chính sách đổi trả và hoàn tiền</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer column 4 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Chính sách</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="#!" class="footer__link"
+                  >Chính sách và quy định chung</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Chính sách thanh toán</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link"
+                  >Chính sách quy định E-Voucher</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Careers</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">About</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Affiliates</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer column 5 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Contact</h3>
+            <ul class="footer__list">
+              <li>
+                <p class="footer__label">Email</p>
+                <a href="mailto:contact@grocerymart.com" class="footer__link">
+                  contact@grocerymart.com
+                </a>
+              </li>
+              <li>
+                <p class="footer__label">Hotline</p>
+                <a href="tel:18008888" class="footer__link">18008888</a>
+              </li>
+              <li>
+                <p class="footer__label">Address</p>
+                <p class="footer__text">
+                  No. 11D, Lot A10, Nam Trung Yen urban area, Yen Hoa Ward, Cau
+                  Giay District, City. Hanoi
+                </p>
+              </li>
+              <li>
+                <p class="footer__label">Hours</p>
+                <p class="footer__text">M - F 08:00am - 06:00pm</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            Bản quyền © 2024 Pizza 4P’s. Đã đăng ký Bản quyền
+          </p>
+
+          <div class="footer__socials">
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--facebook"
+            >
+              <img
+                src="../assets/icons/facebook.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--youtube"
+            >
+              <img
+                src="../assets/icons/youtube.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--tiktok"
+            >
+              <img
+                src="../assets/icons/tiktok.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--twitter"
+            >
+              <img
+                src="../assets/icons/twitter.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--linkedin"
+            >
+              <img
+                src="../assets/icons/linkedin.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/flickity.pkgd.min.js"></script>
+  </body>
+</html>
