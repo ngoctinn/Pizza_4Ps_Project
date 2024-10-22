@@ -284,14 +284,14 @@ document.addEventListener("DOMContentLoaded", function () {
                   <section class="panel">
                       <div class="pro-img-box">
                           <img src="${product.image}" alt="" />
-                          <a href="#" class="adtocart">
+                            <a href="#" class="adtocart">
                               <i class="fa fa-shopping-cart"></i>
                           </a>
                       </div>
         
                       <div class="panel-body pb-2 text-center">
                           <h4>
-                              <a href="#" class="pro-title">
+                              <a href="../Templates/product-detail.html?id=${product.id}" class="pro-title">
                                   ${product.name}
                               </a>
                           </h4>
@@ -365,6 +365,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add event listeners to menu items
+
+  document.getElementById("menu-all").addEventListener("click", function () {
+    filterProductsByCategory("All");
+  });
   document.getElementById("menu-pizza").addEventListener("click", function () {
     filterProductsByCategory("Pizza");
   });

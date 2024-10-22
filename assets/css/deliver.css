@@ -8,7 +8,7 @@ main {
   background: var(--color-white);
 }
 
-/* banner */
+/* bannerfz */
 /* external css: flickity.css */
 
 .banner__container {
@@ -84,7 +84,7 @@ main {
   color: #fff;
 }
 /* Media query cho man hinh lon */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .menu-item {
     width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
   }

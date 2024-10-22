@@ -153,6 +153,43 @@
             </li>
           </ul>
         </div>
+        <!-- Product detail -->
+        <div class="product-container">
+          <div class="product-detail-container">
+            <div class="product-image">
+              <img
+                src="../assets/img/products/KV_(2pc)Camembert&MascarponeTruffle.webp"
+                alt="Eggs Benedict Burger"
+              />
+            </div>
+            <div class="product-details">
+              <h2>Eggs Benedict Burger</h2>
+              <p>
+                Ground beef, hollandaise sauce mix, stone ground mustard, with a
+                egg; it's so much taste you would like most this taste burger.
+              </p>
+              <span class="price">$7.50</span>
+
+              <div class="special-instructions">
+                <label for="instructions">Special Instructions</label>
+                <textarea
+                  id="instructions"
+                  placeholder="Add any request here"
+                ></textarea>
+              </div>
+
+              <div class="details-bottom">
+                <div class="quantity">
+                  <button class="minus-btn">-</button>
+                  <input type="number" value="2" min="1" />
+                  <button class="plus-btn">+</button>
+                </div>
+
+                <button class="add-to-cart-btn">Add to cart: $15.00</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -337,6 +374,37 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to get query parameter by name
+        function getQueryParam(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+        }
+
+        // Get the product ID from the URL
+        const productId = getQueryParam("id");
+
+        // Fetch the product details from local storage
+        const storedProducts = JSON.parse(localStorage.getItem("products"));
+        const product = storedProducts.find((p) => p.id == productId);
+
+        if (product) {
+          // Update the product details on the page
+          document.querySelector(".product-image img").src = product.image;
+          document.querySelector(".product-details h2").textContent =
+            product.name;
+          document.querySelector(".product-details p").textContent =
+            product.description;
+          document.querySelector(".product-details .price").textContent =
+            product.price;
+        } else {
+          // Handle case where product is not found
+          document.querySelector(".product-details").innerHTML =
+            "<p>Product not found.</p>";
+        }
+      });
+    </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>
