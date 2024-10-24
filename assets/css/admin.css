@@ -1,40 +1,3 @@
-@font-face {
-  font-family: "SFProDisplay";
-  src: url("../font/SFPRODISPLAY/SFProDisplay-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "SFProDisplay";
-  src: url("../font/SFPRODISPLAY/SFProDisplay-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "SFProDisplay";
-  src: url("../font/SFPRODISPLAY/SFProDisplay-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "SFProDisplay";
-  src: url("../font/SFPRODISPLAY/SFProDisplay-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "SFProDisplay";
-  src: url("../font/SFPRODISPLAY/SFProDisplay-Semibold.ttf") format("truetype");
-  font-weight: 600;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "SFProDisplay";
-  src: url("../font/SFPRODISPLAY/SFProDisplay-Heavy.ttf") format("truetype");
-  font-weight: 800;
-  font-display: fallback;
-}
-
 *,
 *::before,
 *::after {
@@ -323,7 +286,7 @@ pre {
   flex-direction: column;
   height: 100vh;
   /* height: calc(100vh - var(--header-height)); */
-  padding-top: 5rem;
+  padding-top: 2rem;
   align-items: center;
   justify-content: stretch;
   transition: width var(--animation-duration) var(--animation-timing-curve);
@@ -346,28 +309,12 @@ pre {
   opacity: 1;
 }
 
-.sidebar .top-sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.sidebar .channel-logo {
-  display: block;
-  width: 30px;
-  height: 30px;
-  transition: var(--animation-duration) var(--animation-timing-curve);
-}
-
-.sidebar.open .channel-logo {
-  width: 100px;
-  height: 100px;
-}
-
-.sidebar .channel-logo > img {
-  width: 100%;
-  height: 100%;
+.logo-style {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 .middle-sidebar {
@@ -465,7 +412,6 @@ pre {
 
 .sidebar .top-sidebar {
   height: 30px;
-  transition: height var(--animation-duration) var(--animation-timing-curve);
 }
 
 .sidebar.open .top-sidebar {
