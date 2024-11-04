@@ -16,17 +16,20 @@
             <a
               href="#"
               class="admin__sidebar-nav-link admin__sidebar-nav-link--active"
-              >Tab 1</a
+              >Tổng quan</a
             >
           </li>
           <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Tab 2</a>
+            <a href="#" class="admin__sidebar-nav-link">Sản phẩm</a>
           </li>
           <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Tab 3</a>
+            <a href="#" class="admin__sidebar-nav-link">Đơn hàng</a>
           </li>
           <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Tab 4</a>
+            <a href="#" class="admin__sidebar-nav-link">Người dùng</a>
+          </li>
+          <li class="admin__sidebar-nav-item">
+            <a href="#" class="admin__sidebar-nav-link">Thống kê</a>
           </li>
         </ul>
       </div>
@@ -36,8 +39,22 @@
           <p>This is the content for Tab 1.</p>
         </div>
         <div class="admin__tab admin__tab--2">
-          <h2>Tab 2</h2>
-          <p>This is the content for Tab 2.</p>
+          <div class="admin_tab-container">
+            <div class="product_tab-header">
+              <select class="header_dropdown">
+                <option value="all">Tất cả</option>
+                <option value="new">Mới</option>
+                <option value="sale">Giảm giá</option>
+              </select>
+              <div class="header_search">
+                <input type="text" placeholder="Tìm kiếm" />
+                <button>Tìm kiếm</button>
+              </div>
+              <div class="header_btn">
+                <button>Thêm sản phẩm</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="admin__tab admin__tab--3">
           <h2>Tab 3</h2>

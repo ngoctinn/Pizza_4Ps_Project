@@ -52,6 +52,18 @@
 
 .admin__tab--2 {
   background-color: #f0ffe6;
+  width: 100%;
+  height: 100%;
+}
+.product_tab-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header_dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .admin__tab--3 {
@@ -60,7 +72,6 @@
 .admin__tab--4 {
   background-color: #f0f0f0;
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .admin {
