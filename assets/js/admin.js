@@ -14,3 +14,11 @@ sidebarLinks.forEach((link, index) => {
     tabs[index].classList.add("admin__tab--active");
   });
 });
+
+function openDialog() {
+  document.getElementById("dialogOverlay").style.display = "flex";
+}
+
+function closeDialog() {
+  document.getElementById("dialogOverlay").style.display = "none";
+}

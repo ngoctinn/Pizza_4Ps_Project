@@ -51,13 +51,163 @@
                 <button>Tìm kiếm</button>
               </div>
               <div class="header_btn">
-                <button>Thêm sản phẩm</button>
+                <button type="button" onclick="openDialog()">
+                  Thêm sản phẩm
+                </button>
+                <!-- DIALOG START -->
+                <div class="dialog-overlay" id="dialogOverlay">
+                  <div class="dialog">
+                    <div class="header">
+                      <div class="header__content">
+                        <h2 class="header__title">Thêm Sản Phẩm Mới</h2>
+                        <button
+                          class="header__close-btn"
+                          onclick="closeDialog()"
+                        >
+                          &times;
+                        </button>
+                      </div>
+                    </div>
+
+                    <form
+                      class="product-form"
+                      id="productForm"
+                      onsubmit="handleSubmit(event)"
+                    >
+                      <div class="product-form__group">
+                        <label class="product-form__label" for="productImage"
+                          >Hình ảnh sản phẩm:</label
+                        >
+                        <input
+                          class="product-form__input product-form__input--file"
+                          type="file"
+                          id="productImage"
+                          accept="image/*"
+                          required
+                        />
+                      </div>
+
+                      <div class="product-form__group">
+                        <label class="product-form__label" for="productName"
+                          >Tên sản phẩm:</label
+                        >
+                        <input
+                          class="product-form__input"
+                          type="text"
+                          id="productName"
+                          required
+                        />
+                      </div>
+
+                      <div class="product-form__group">
+                        <label class="product-form__label" for="productType"
+                          >Loại sản phẩm:</label
+                        >
+                        <select
+                          class="product-form__select"
+                          id="productType"
+                          required
+                        >
+                          <option value="">Chọn loại sản phẩm</option>
+                          <option value="quanao">Quần áo</option>
+                          <option value="giay">Giày</option>
+                          <option value="phukien">Phụ kiện</option>
+                        </select>
+                      </div>
+
+                      <div class="product-form__group">
+                        <label class="product-form__label" for="productPrice"
+                          >Giá tiền:</label
+                        >
+                        <input
+                          class="product-form__input"
+                          type="number"
+                          id="productPrice"
+                          min="0"
+                          required
+                        />
+                      </div>
+
+                      <div class="product-form__group">
+                        <label
+                          class="product-form__label"
+                          for="productDescription"
+                          >Mô tả sản phẩm:</label
+                        >
+                        <textarea
+                          class="product-form__input product-form__input--textarea"
+                          id="productDescription"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <button type="submit" class="button button--primary">
+                        Thêm Sản Phẩm
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <!-- DIALOG END -->
               </div>
             </div>
             <ul class="product-list">
               <li class="product-item">
                 <img
-                  src="/api/placeholder/80/80"
+                  src="./assets/img/menu/salad.webp"
+                  alt="Product 1"
+                  class="admin__product-image"
+                />
+                <div class="product-info">
+                  <h3 class="product-name">Product 1</h3>
+                  <p class="product-price">$9.99</p>
+                  <p class="product-description">
+                    This is a description of Product 1.
+                  </p>
+                </div>
+                <div class="product-actions">
+                  <button class="product_btn">Edit</button>
+                  <button class="product_btn">Delete</button>
+                </div>
+              </li>
+              <li class="product-item">
+                <img
+                  src="./assets/img/menu/salad.webp"
+                  alt="Product 1"
+                  class="admin__product-image"
+                />
+                <div class="product-info">
+                  <h3 class="product-name">Product 1</h3>
+                  <p class="product-price">$9.99</p>
+                  <p class="product-description">
+                    This is a description of Product 1.
+                  </p>
+                </div>
+                <div class="product-actions">
+                  <button class="product_btn">Edit</button>
+                  <button class="product_btn">Delete</button>
+                </div>
+              </li>
+              <li class="product-item">
+                <img
+                  src="./assets/img/menu/salad.webp"
+                  alt="Product 1"
+                  class="admin__product-image"
+                />
+                <div class="product-info">
+                  <h3 class="product-name">Product 1</h3>
+                  <p class="product-price">$9.99</p>
+                  <p class="product-description">
+                    This is a description of Product 1.
+                  </p>
+                </div>
+                <div class="product-actions">
+                  <button class="product_btn">Edit</button>
+                  <button class="product_btn">Delete</button>
+                </div>
+              </li>
+              <li class="product-item">
+                <img
+                  src="./assets/img/menu/salad.webp"
                   alt="Product 1"
                   class="admin__product-image"
                 />
