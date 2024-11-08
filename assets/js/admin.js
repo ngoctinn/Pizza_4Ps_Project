@@ -22,3 +22,67 @@ function openDialog() {
 function closeDialog() {
   document.getElementById("dialogOverlay").style.display = "none";
 }
+
+// ================== Product Management ==================
+function showProducts() {
+  const productList = document.querySelector(".product-list");
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+
+  productList.innerHTML = ""; // Clear existing products
+
+  products.forEach((product) => {
+    const productItem = document.createElement("li");
+    productItem.classList.add("product-item");
+
+    productItem.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" class="admin__product-image" />
+      <div class="product-info">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">${product.price}</p>
+        <p class="product-description">${product.description}</p>
+      </div>
+      <div class="product-actions">
+        <button class="product_btn">Edit</button>
+        <button class="product_btn">Delete</button>
+      </div>
+    `;
+
+    productList.appendChild(productItem);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", showProducts);
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const productImage = document.getElementById("productImage").files[0];
+  const productName = document.getElementById("productName").value;
+  const productType = document.getElementById("productType").value;
+  const productPrice = document.getElementById("productPrice").value;
+  const productDescription =
+    document.getElementById("productDescription").value;
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const newProduct = {
+      id: Date.now(),
+      name: productName,
+      type: productType,
+      price: productPrice,
+      description: productDescription,
+      image: e.target.result,
+    };
+
+    const products = localStorage.getItem("products")
+      ? JSON.parse(localStorage.getItem("products"))
+      : [];
+    products.push(newProduct);
+    localStorage.setItem("products", JSON.stringify(products));
+
+    closeDialog();
+    showProducts();
+  };
+
+  reader.readAsDataURL(productImage);
+}

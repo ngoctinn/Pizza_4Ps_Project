@@ -267,7 +267,7 @@ document.querySelector("html").classList.toggle("dark", isDark);
 
 // Hiển thị sản phẩm
 document.addEventListener("DOMContentLoaded", function () {
-  const storedProducts = JSON.parse(localStorage.getItem("products"));
+  const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
   const storedCategories = JSON.parse(localStorage.getItem("categories"));
   const productList = document.querySelector(".product-list");
   let filteredProducts = storedProducts;
@@ -281,24 +281,24 @@ document.addEventListener("DOMContentLoaded", function () {
     filteredProducts.forEach((product, key) => {
       if (key >= beginGet && key <= endGet) {
         const productItem = `<div class="col-md-3 mt-5 product__list--item">
-                  <section class="panel">
-                      <div class="pro-img-box">
-                          <img src="${product.image}" alt="" />
-                            <a href="#" class="adtocart">
-                              <i class="fa fa-shopping-cart"></i>
-                          </a>
-                      </div>
-        
-                      <div class="panel-body pb-2 text-center">
-                          <h4>
-                              <a href="../Templates/product-detail.html?id=${product.id}" class="pro-title">
-                                  ${product.name}
-                              </a>
-                          </h4>
-                          <p class="price">${product.price}</p>
-                      </div>
-                  </section>
-              </div>`;
+                    <section class="panel">
+                        <div class="pro-img-box">
+                            <img src="${product.image}" alt="" />
+                              <a href="#" class="adtocart">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </div>
+          
+                        <div class="panel-body pb-2 text-center">
+                            <h4>
+                                <a href="../Templates/product-detail.html?id=${product.id}" class="pro-title">
+                                    ${product.name}
+                                </a>
+                            </h4>
+                            <p class="price">${product.price}</p>
+                        </div>
+                    </section>
+                </div>`;
         productList.innerHTML += productItem;
       }
     });

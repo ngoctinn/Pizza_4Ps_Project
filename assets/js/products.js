@@ -591,7 +591,9 @@ const products = [
 ];
 
 // Lưu trữ sản phẩm vào localStorage
-localStorage.setItem("products", JSON.stringify(products));
+if (!localStorage.getItem("products")) {
+  localStorage.setItem("products", JSON.stringify(products));
+}
 // Tạo mảng các danh mục
 const categories = {
   All: [
@@ -613,4 +615,6 @@ const categories = {
 };
 
 // Lưu trữ danh mục vào localStorage
-localStorage.setItem("categories", JSON.stringify(categories));
+if (!localStorage.getItem("categories")) {
+  localStorage.setItem("categories", JSON.stringify(categories));
+}
