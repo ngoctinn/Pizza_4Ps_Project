@@ -339,14 +339,17 @@ document.addEventListener("DOMContentLoaded", function () {
     loadItem();
   };
 
-  function filterProductsByCategory(category) {
-    const categoryIds = storedCategories[category];
+  function filterProductsByType(type) {
     filteredProducts = storedProducts.filter((product) =>
-      categoryIds.includes(product.id)
+      product.type.toLowerCase().includes(type.toLowerCase())
     );
     thisPage = 1; // Reset to the first page
+    document.getElementById("san-pham").scrollIntoView({
+      behavior: "smooth",
+    });
     loadItem();
   }
+
   function searchProducts(query) {
     filteredProducts = storedProducts.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
@@ -365,41 +368,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add event listeners to menu items
-
+  document.querySelectorAll(".menu-item").forEach((menuItem) => {
+    menuItem.addEventListener("click", function (event) {
+      event.preventDefault();
+      const type = menuItem.id.replace("menu-", "");
+      console.log("Type:", type);
+      filterProductsByType(type);
+    });
+  });
   document.getElementById("menu-all").addEventListener("click", function () {
-    filterProductsByCategory("All");
+    filteredProducts = storedProducts;
+    thisPage = 1;
+    loadItem();
   });
-  document.getElementById("menu-pizza").addEventListener("click", function () {
-    filterProductsByCategory("Pizza");
-  });
-  document.getElementById("menu-khaivi").addEventListener("click", function () {
-    filterProductsByCategory("KhaiVi");
-  });
-  document.getElementById("menu-salad").addEventListener("click", function () {
-    filterProductsByCategory("Salad");
-  });
-  document
-    .getElementById("menu-monchinh")
-    .addEventListener("click", function () {
-      filterProductsByCategory("MonChinh");
-    });
-  document
-    .getElementById("menu-trangmieng")
-    .addEventListener("click", function () {
-      filterProductsByCategory("TrangMieng");
-    });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Lắng nghe sự kiện click trên các thẻ a trong menu
-    document.querySelectorAll(".menu-item").forEach(function (menuItem) {
-      menuItem.addEventListener("click", function (event) {
-        event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
-        document.getElementById("san-pham").scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  });
   document.addEventListener("DOMContentLoaded", function () {
     // Lắng nghe sự kiện click trên các thẻ a trong menu
     document.querySelectorAll(".menu-item").forEach(function (menuItem) {

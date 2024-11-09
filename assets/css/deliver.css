@@ -86,7 +86,7 @@ main {
 /* Media query cho man hinh lon */
 @media (max-width: 1400px) {
   .menu-item {
-    width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
+    width: calc(100% / 8 - 15px); /* Chia đều cho 4 cột */
   }
   .menu-item p {
     font-size: 14px;
@@ -95,7 +95,7 @@ main {
 /* Media query cho màn hình máy tính bảng (tablet) */
 @media (max-width: 1024px) {
   .menu-item {
-    width: calc(100% / 9 - 15px); /* Chia đều cho 4 cột */
+    width: calc(100% / 8 - 15px); /* Chia đều cho 4 cột */
   }
   .menu-item p {
     font-size: 12px;
@@ -105,7 +105,7 @@ main {
 /* Media query cho màn hình điện thoại (smartphone) */
 @media (max-width: 768px) {
   .menu-item {
-    width: calc(100% / 3 - 15px); /* Chia đều cho 2 cột */
+    width: calc(100% / 4 - 15px); /* Chia đều cho 2 cột */
   }
   .menu-item p {
     font-size: 14px;
