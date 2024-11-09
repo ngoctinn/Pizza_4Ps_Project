@@ -56,13 +56,13 @@
       <div id="auth-content" class="auth__content hide">
         <div class="auth__content-inner">
           <h1 class="auth__heading">Đăng nhập</h1>
-          <form action="./index-logined.html" class="form auth__form">
+          <form class="form auth__form">
             <div class="form__group">
               <div class="form__text-input">
                 <input
                   type="email"
                   name=""
-                  id=""
+                  id="account"
                   placeholder="Email"
                   class="form__input"
                   required
@@ -85,7 +85,7 @@
                 <input
                   type="password"
                   name=""
-                  id=""
+                  id="password"
                   placeholder="Mật khẩu"
                   class="form__input"
                   required
@@ -122,7 +122,10 @@
               >
             </div>
             <div class="form__group auth__btn-group">
-              <button class="my_btn btn--primary auth__btn form__submit-btn">
+              <button
+                class="my_btn btn--primary auth__btn form__submit-btn"
+                onclick="login()"
+              >
                 Đăng nhập
               </button>
               <button class="my_btn btn--outline auth__btn btn--no-margin">
@@ -145,8 +148,6 @@
         </div>
       </div>
     </main>
-    <script>
-      window.dispatchEvent(new Event("template-loaded"));
-    </script>
+    <script src="../assets/js/scripts.js"></script>
   </body>
 </html>

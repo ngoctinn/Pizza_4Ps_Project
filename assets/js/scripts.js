@@ -417,3 +417,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// ========================= Login =========================
+function login() {
+  const users = [
+    {
+      account: "admin@gmail.com",
+      password: "admin123",
+      role: "admin",
+    },
+    {
+      account: "user@gmail.com",
+      password: "user",
+      role: "user",
+    },
+    // Thêm các người dùng khác ở đây
+  ];
+
+  const account = document.getElementById("account").value;
+  const password = document.getElementById("password").value;
+
+  if (account && password) {
+    const user = users.find(
+      (user) => user.account === account && user.password === password
+    );
+
+    if (user) {
+      alert("Login success");
+      if (user.role === "admin") {
+        console.log("admin");
+        window.location.href = "./admin.html";
+      } else if (user.role === "user") {
+        window.location.href = "../Templates/user.html";
+      }
+    } else {
+      alert("Login failed");
+    }
+  }
+}
