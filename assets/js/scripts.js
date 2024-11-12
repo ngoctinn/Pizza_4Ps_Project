@@ -418,6 +418,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // ========================= Login =========================
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Ngăn chặn sự kiện submit mặc định
+    login();
+  });
 function login() {
   const users = [
     {
@@ -445,7 +451,7 @@ function login() {
       alert("Login success");
       if (user.role === "admin") {
         console.log("admin");
-        window.location.href = "./admin.html";
+        window.location.href = "../admin.html";
       } else if (user.role === "user") {
         window.location.href = "../Templates/user.html";
       }

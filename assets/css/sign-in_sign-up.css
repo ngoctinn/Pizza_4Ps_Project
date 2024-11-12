@@ -77,6 +77,14 @@ form.sign-up-form {
   display: flex;
   align-items: center;
 }
+.logo-style {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
 
 .logo img {
   width: 27px;
