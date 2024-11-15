@@ -86,3 +86,24 @@ function handleSubmit(event) {
 
   reader.readAsDataURL(productImage);
 }
+function searchProducts(query) {
+  const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
+  filteredProducts = storedProducts.filter((product) =>
+    product.name.toLowerCase().includes(query.toLowerCase())
+  );
+  if (filteredProducts.length === 0) {
+    alert("No products found");
+    return;
+  } else {
+    showProducts();
+  }
+}
+document
+  .getElementById("search-form")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const searchQuery = document.getElementById("search-input").value;
+    searchProducts(searchQuery);
+    console.log("searchQuery");
+    showProducts();
+  });
