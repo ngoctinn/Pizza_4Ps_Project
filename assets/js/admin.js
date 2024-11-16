@@ -28,6 +28,9 @@ function showProducts() {
   const productList = document.querySelector(".product-list");
   const products = JSON.parse(localStorage.getItem("products")) || [];
 
+  // Sort products by id in descending order
+  products.sort((a, b) => b.id - a.id);
+
   productList.innerHTML = ""; // Clear existing products
 
   products.forEach((product) => {
@@ -86,24 +89,43 @@ function handleSubmit(event) {
 
   reader.readAsDataURL(productImage);
 }
-function searchProducts(query) {
-  const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
-  filteredProducts = storedProducts.filter((product) =>
-    product.name.toLowerCase().includes(query.toLowerCase())
+function searchProducts() {
+  const query = document.getElementById("search-input").value.toLowerCase();
+  const productList = document.querySelector(".product-list");
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
   );
-  if (filteredProducts.length === 0) {
-    alert("No products found");
-    return;
-  } else {
-    showProducts();
-  }
+
+  productList.innerHTML = "";
+
+  filteredProducts.forEach((product) => {
+    const productItem = document.createElement("li");
+    productItem.classList.add("product-item");
+
+    productItem.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" class="admin__product-image" />
+      <div class="product-info">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">${product.price}</p>
+        <p class="product-description">${product.description}</p>
+      </div>
+      <div class="product-actions">
+        <button class="product_btn">Edit</button>
+        <button class="product_btn">Delete</button>
+      </div>
+    `;
+
+    productList.appendChild(productItem);
+  });
 }
+// Thêm sự kiện nghe cho ô nhập liệu tìm kiếm
 document
-  .getElementById("search-form")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    const searchQuery = document.getElementById("search-input").value;
-    searchProducts(searchQuery);
-    console.log("searchQuery");
-    showProducts();
+  .getElementById("search-input")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Ngăn chặn hành vi mặc định của phím Enter
+      searchProducts();
+    }
   });

@@ -249,7 +249,7 @@ const products = [
     id: 36,
     name: "Gà rán với gia vị phương Đông, 2 miếng",
     price: "98,000 VND",
-    image: "../assets/img/products/KV_garanvoigiaviphuongDong.webp",
+    image: "../assets/img/products/KV_garan&giaviphuongDong(2mieng).webp",
     type: "KhaiVi",
   },
   {
@@ -445,7 +445,7 @@ const products = [
     id: 64,
     name: "Mì Ý xốt cà chua và phô mai Mascarpone",
     price: "150,000 VND",
-    image: "../assets/img/products/MC_miyxotcachua&pmMascarpone.webp",
+    image: "../assets/img/products/MC_miyxotcachua&mpMascarpone.webp",
     type: "MonChinh",
   },
   {
@@ -676,7 +676,7 @@ const products = [
     id: 97,
     name: "Rượu Robertson Brut",
     price: "600,000 VND",
-    image: "../assets/img/products/TU_RobertsonBrut.webp",
+    image: "../assets/img/products/TU_RobertsonBurt.webp",
     type: "Pizza",
   },
   {
