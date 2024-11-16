@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Sidebar with Tabs</title>
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/admin.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -39,20 +43,25 @@
           <p>This is the content for Tab 1.</p>
         </div>
         <div class="admin__tab admin__tab--2">
-          <div class="admin_tab-container">
-            <div class="product_tab-header">
-              <select class="header_dropdown">
-                <option value="all">Tất cả</option>
-                <option value="new">Mới</option>
-                <option value="sale">Giảm giá</option>
+          <div class="admin_tab-container container-fluid">
+            <div class="product_tab-header row d-flex justify-content-between">
+              <select class="header_dropdown col-lg-3" id="menu-dropdown">
+                <option value="menu-all">Tất cả</option>
+                <option value="menu-pizza">Bánh Pizza</option>
+                <option value="menu-khaivi">Khai vị</option>
+                <option value="menu-salad">Salad</option>
+                <option value="menu-monchinh">Món Chính/ Mì Ý</option>
+                <option value="menu-trangmieng">Tráng miệng</option>
+                <option value="menu-thucuong">Thức uống</option>
+                <option value="menu-topping">Thêm Topping</option>
               </select>
-              <div class="header_search" id="search-form">
+              <div class="header_search col-lg-7" id="search-form">
                 <input type="text" id="search-input" placeholder="Tìm kiếm" />
                 <button id="btn-search" onclick="searchProducts()">
                   Tìm kiếm
                 </button>
               </div>
-              <div class="header_btn">
+              <div class="header_btn col-lg-2">
                 <button type="button" onclick="openDialog()">
                   Thêm sản phẩm
                 </button>
@@ -150,6 +159,103 @@
                   </div>
                 </div>
                 <!-- DIALOG END -->
+                <!-- DIALOG EDIT -->
+                <div class="dialog-overlay" id="editDialogOverlay">
+                  <div class="dialog">
+                    <div class="header">
+                      <div class="header__content">
+                        <h2 class="header__title">Sửa Sản Phẩm</h2>
+                        <button
+                          class="header__close-btn"
+                          onclick="closeEditDialog()"
+                        >
+                          &times;
+                        </button>
+                      </div>
+                    </div>
+
+                    <form
+                      class="product-form"
+                      id="editProductForm"
+                      onsubmit="handleEditSubmit(event)"
+                    >
+                      <div class="product-form__group">
+                        <label
+                          class="product-form__label"
+                          for="editProductImage"
+                          >Hình ảnh sản phẩm:</label
+                        >
+                        <input
+                          class="product-form__input product-form__input--file"
+                          type="file"
+                          id="editProductImage"
+                          accept="image/*"
+                        />
+                      </div>
+
+                      <div class="product-form__group">
+                        <label class="product-form__label" for="editProductName"
+                          >Tên sản phẩm:</label
+                        >
+                        <input
+                          class="product-form__input"
+                          type="text"
+                          id="editProductName"
+                          required
+                        />
+                      </div>
+
+                      <div class="product-form__group">
+                        <label class="product-form__label" for="editProductType"
+                          >Loại sản phẩm:</label
+                        >
+                        <select
+                          class="product-form__select"
+                          id="editProductType"
+                          required
+                        >
+                          <option value="">Chọn loại sản phẩm</option>
+                          <option value="quanao">Quần áo</option>
+                          <option value="giay">Giày</option>
+                          <option value="phukien">Phụ kiện</option>
+                        </select>
+                      </div>
+
+                      <div class="product-form__group">
+                        <label
+                          class="product-form__label"
+                          for="editProductPrice"
+                          >Giá tiền:</label
+                        >
+                        <input
+                          class="product-form__input"
+                          type="number"
+                          id="editProductPrice"
+                          min="0"
+                          required
+                        />
+                      </div>
+
+                      <div class="product-form__group">
+                        <label
+                          class="product-form__label"
+                          for="editProductDescription"
+                          >Mô tả sản phẩm:</label
+                        >
+                        <textarea
+                          class="product-form__input product-form__input--textarea"
+                          id="editProductDescription"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <button type="submit" class="button button--primary">
+                        Lưu Thay Đổi
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <!-- DIALOG EDIT END -->
               </div>
             </div>
             <ul class="product-list">

@@ -71,66 +71,85 @@
 }
 /* Phần tiêu đề của tab */
 .product_tab-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 10px;
   margin-bottom: 15px;
 }
 
 /* Dropdown (select) */
+/* Tùy chỉnh dropdown */
 .header_dropdown {
-  padding: 8px 12px;
+  margin-left: 10px;
+  width: 200px;
+  appearance: none; /* Ẩn mũi tên mặc định */
+  background-color: #ffffff;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #333;
-  background-color: #fff;
+  padding: 10px 40px 10px 15px; /* Thêm khoảng cách để biểu tượng mũi tên không chồng lên text */
+  font-size: 16px;
+  border-radius: 4px;
+  background-image: url("../icons/arrow-down.svg"); /* Đường dẫn đến biểu tượng mũi tên tùy chỉnh */
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.header_dropdown:focus {
+  border-color: #242e52;
+  outline: none;
+}
+
+.header_dropdown:hover {
+  border-color: #242e52;
+}
+
+.header_dropdown option {
+  font-size: 16px;
 }
 
 /* Ô tìm kiếm và nút */
 .header_search {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  background-color: #f8f9fa;
 }
 
 .header_search input[type="text"] {
-  padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
   outline: none;
-  width: 500px; /* Chiều rộng cho ô tìm kiếm */
 }
 
 .header_search button {
-  padding: 8px 12px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #007bff; /* Màu xanh cho nút */
+  padding: 10px 16px;
   border: none;
-  border-radius: 5px;
+  background-color: #242e52;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .header_search button:hover {
-  background-color: #0056b3; /* Màu tối hơn khi hover */
+  opacity: 0.9;
 }
-
 /* Nút thêm sản phẩm */
 .header_btn button {
-  padding: 8px 15px;
-  font-size: 14px;
+  padding: 10px 15px;
+  font-size: 16px;
   color: #fff;
-  background-color: #28a745; /* Màu xanh lá cho nút */
+  background-color: #242e52; /* Màu xanh lá cho nút */
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .header_btn button:hover {
-  background-color: #218838; /* Màu tối hơn khi hover */
+  opacity: 0.9; /* Màu tối hơn khi hover */
 }
 /* Container danh sách sản phẩm */
 .product-list {
@@ -268,10 +287,6 @@
 }
 
 /* Block: Header */
-.header {
-  margin-bottom: 20px;
-}
-
 .header__content {
   display: flex;
   justify-content: space-between;
@@ -280,15 +295,15 @@
 
 .header__title {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.5em; /* Optional: Adjust as needed */
 }
 
 .header__close-btn {
-  border: none;
   background: none;
-  font-size: 20px;
+  border: none;
+  font-size: 1.5em;
   cursor: pointer;
-  padding: 5px;
+  display: block;
 }
 
 /* Block: Form */
@@ -336,13 +351,13 @@
 }
 
 .button--primary {
-  background-color: #4caf50;
+  background-color: #242e52;
   color: white;
   width: 100%;
 }
 
 .button--primary:hover {
-  background-color: #45a049;
+  opacity: 0.9;
 }
 
 .button--secondary {

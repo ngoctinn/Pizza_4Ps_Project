@@ -22,6 +22,12 @@ function openDialog() {
 function closeDialog() {
   document.getElementById("dialogOverlay").style.display = "none";
 }
+function openEditDialog() {
+  document.getElementById("editDialogOverlay").style.display = "flex";
+}
+function closeEditDialog() {
+  document.getElementById("editDialogOverlay").style.display = "none";
+}
 
 // ================== Product Management ==================
 function showProducts() {
@@ -45,12 +51,30 @@ function showProducts() {
         <p class="product-description">${product.description}</p>
       </div>
       <div class="product-actions">
-        <button class="product_btn">Edit</button>
-        <button class="product_btn">Delete</button>
+        <button class="product_btn edit-btn">Edit</button>
+        <button class="product_btn delete-btn">Delete</button>
       </div>
     `;
 
     productList.appendChild(productItem);
+  });
+
+  // Add event listeners for Edit and Delete buttons
+  const editButtons = document.querySelectorAll(".edit-btn");
+  const deleteButtons = document.querySelectorAll(".delete-btn");
+
+  editButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const productId = products[index].id;
+      editProduct(productId);
+    });
+  });
+
+  deleteButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const productId = products[index].id;
+      deleteProduct(productId);
+    });
   });
 }
 
@@ -129,3 +153,126 @@ document
       searchProducts();
     }
   });
+
+// Thêm sự kiện cho dropdown để lọc sản phẩm
+const dropdown = document.getElementById("menu-dropdown");
+
+dropdown.addEventListener("change", filterProducts);
+
+function filterProducts() {
+  const selectedValue = dropdown.value;
+  const productList = document.querySelector(".product-list");
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+
+  let filteredProducts = products;
+
+  if (selectedValue !== "menu-all") {
+    // Map giá trị dropdown với loại sản phẩm
+    const typeMap = {
+      "menu-pizza": "Pizza",
+      "menu-khaivi": "KhaiVi",
+      "menu-salad": "Salad",
+      "menu-monchinh": "MonChinh",
+      "menu-trangmieng": "TrangMieng",
+      "menu-thucuong": "ThucUong",
+      "menu-topping": "Topping",
+    };
+    const selectedType = typeMap[selectedValue] || "";
+
+    if (selectedType) {
+      filteredProducts = products.filter(
+        (product) => product.type === selectedType
+      );
+    }
+  }
+
+  productList.innerHTML = "";
+
+  filteredProducts.forEach((product) => {
+    const productItem = document.createElement("li");
+    productItem.classList.add("product-item");
+
+    productItem.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" class="admin__product-image" />
+      <div class="product-info">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">${product.price}</p>
+        <p class="product-description">${product.description}</p>
+      </div>
+      <div class="product-actions">
+        <button class="product_btn">Edit</button>
+        <button class="product_btn">Delete</button>
+      </div>
+    `;
+
+    productList.appendChild(productItem);
+  });
+}
+// sửa xóa sản phẩm
+// ================== Edit and Delete Functionality ==================
+function editProduct(id) {
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+  const product = products.find((p) => p.id === id);
+
+  if (!product) return;
+
+  // Populate the form with existing product data
+  document.getElementById("editProductName").value = product.name;
+  document.getElementById("editProductType").value = product.type;
+  document.getElementById("editProductPrice").value = product.price;
+  document.getElementById("editProductDescription").value = product.description;
+
+  // Show the edit dialog
+  openEditDialog();
+
+  // Handle form submission for editing
+  const form = document.getElementById("editProductForm");
+
+  const handleEditSubmit = function (event) {
+    event.preventDefault();
+
+    const updatedName = document.getElementById("editProductName").value;
+    const updatedType = document.getElementById("editProductType").value;
+    const updatedPrice = document.getElementById("editProductPrice").value;
+    const updatedDescription = document.getElementById(
+      "editProductDescription"
+    ).value;
+    const updatedImageFile =
+      document.getElementById("editProductImage").files[0];
+
+    if (updatedImageFile) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        product.image = e.target.result;
+        finalizeEdit();
+      };
+      reader.readAsDataURL(updatedImageFile);
+    } else {
+      finalizeEdit();
+    }
+
+    function finalizeEdit() {
+      product.name = updatedName;
+      product.type = updatedType;
+      product.price = updatedPrice;
+      product.description = updatedDescription;
+
+      localStorage.setItem("products", JSON.stringify(products));
+      closeEditDialog();
+      showProducts();
+
+      // Remove this event listener to prevent multiple bindings
+      form.removeEventListener("submit", handleEditSubmit);
+    }
+  };
+
+  form.addEventListener("submit", handleEditSubmit);
+}
+
+// Function to handle Delete button click
+function deleteProduct(id) {
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+  products = products.filter((p) => p.id !== id);
+  localStorage.setItem("products", JSON.stringify(products));
+  showProducts();
+}
