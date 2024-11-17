@@ -340,6 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   function filterProductsByType(type) {
+    currentType = type;
     filteredProducts = storedProducts.filter((product) =>
       product.type.toLowerCase().includes(type.toLowerCase())
     );
@@ -366,7 +367,40 @@ document.addEventListener("DOMContentLoaded", function () {
       loadItem();
     }
   }
+  // Add event listener to the sorting dropdown
+  document
+    .getElementById("menu-dropdown")
+    .addEventListener("change", function () {
+      const sortBy = this.value;
 
+      const parsePrice = (priceStr) => {
+        return parseInt(priceStr.replace(/[^0-9]/g, ""), 10);
+      };
+
+      switch (sortBy) {
+        case "newest":
+          filteredProducts.sort((a, b) => b.id - a.id);
+          break;
+        case "price-desc":
+          filteredProducts.sort(
+            (a, b) => parsePrice(b.price) - parsePrice(a.price)
+          );
+          break;
+        case "price-asc":
+          filteredProducts.sort(
+            (a, b) => parsePrice(a.price) - parsePrice(b.price)
+          );
+          break;
+        case "best-seller":
+          filteredProducts.sort((a, b) => (b.sold || 0) - (a.sold || 0));
+          return;
+        default:
+          break;
+      }
+
+      thisPage = 1;
+      loadItem();
+    });
   // Add event listeners to menu items
   document.querySelectorAll(".menu-item").forEach((menuItem) => {
     menuItem.addEventListener("click", function (event) {
@@ -417,46 +451,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// ========================= Login =========================
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Ngăn chặn sự kiện submit mặc định
-    login();
-  });
-function login() {
-  const users = [
-    {
-      account: "admin@gmail.com",
-      password: "admin123",
-      role: "admin",
-    },
-    {
-      account: "user@gmail.com",
-      password: "user",
-      role: "user",
-    },
-    // Thêm các người dùng khác ở đây
-  ];
-
-  const account = document.getElementById("account").value;
-  const password = document.getElementById("password").value;
-
-  if (account && password) {
-    const user = users.find(
-      (user) => user.account === account && user.password === password
-    );
-
-    if (user) {
-      alert("Login success");
-      if (user.role === "admin") {
-        console.log("admin");
-        window.location.href = "../admin.html";
-      } else if (user.role === "user") {
-        window.location.href = "../Templates/user.html";
-      }
-    } else {
-      alert("Login failed");
-    }
-  }
-}

@@ -124,25 +124,29 @@ function searchProducts() {
 
   productList.innerHTML = "";
 
-  filteredProducts.forEach((product) => {
-    const productItem = document.createElement("li");
-    productItem.classList.add("product-item");
+  if (filteredProducts.length === 0) {
+    productList.innerHTML = "<p>No products found</p>";
+  } else {
+    filteredProducts.forEach((product) => {
+      const productItem = document.createElement("li");
+      productItem.classList.add("product-item");
 
-    productItem.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" class="admin__product-image" />
-      <div class="product-info">
-        <h3 class="product-name">${product.name}</h3>
-        <p class="product-price">${product.price}</p>
-        <p class="product-description">${product.description}</p>
-      </div>
-      <div class="product-actions">
-        <button class="product_btn">Edit</button>
-        <button class="product_btn">Delete</button>
-      </div>
-    `;
+      productItem.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="admin__product-image" />
+        <div class="product-info">
+          <h3 class="product-name">${product.name}</h3>
+          <p class="product-price">${product.price}</p>
+          <p class="product-description">${product.description}</p>
+        </div>
+        <div class="product-actions">
+          <button class="product_btn">Edit</button>
+          <button class="product_btn">Delete</button>
+        </div>
+      `;
 
-    productList.appendChild(productItem);
-  });
+      productList.appendChild(productItem);
+    });
+  }
 }
 // Thêm sự kiện nghe cho ô nhập liệu tìm kiếm
 document

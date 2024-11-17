@@ -37,3 +37,100 @@ function moveSlider() {
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
+// ========================= Login =========================
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Ngăn chặn sự kiện submit mặc định
+    login();
+  });
+function login() {
+  const defaultUsers = [
+    {
+      account: "admin@gmail.com",
+      password: "admin123",
+      role: "admin",
+    },
+    {
+      account: "user@gmail.com",
+      password: "user123",
+      role: "user",
+    },
+    // Thêm các người dùng khác ở đây
+  ];
+  localStorage.setItem("users", JSON.stringify(defaultUsers));
+  let users = JSON.parse(localStorage.getItem("users")) || defaultUsers;
+
+  const account = document.getElementById("account").value;
+  const password = document.getElementById("password").value;
+
+  if (account && password) {
+    const user = users.find(
+      (user) => user.account === account && user.password === password
+    );
+
+    if (user) {
+      alert("Login success");
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      if (user.role === "admin") {
+        console.log("admin");
+        window.location.href = "../admin.html";
+      } else if (user.role === "user") {
+        window.location.href = "../Templates/user.html";
+      }
+    } else {
+      alert("Login failed");
+    }
+  }
+}
+// ========================= Sign Up =========================
+
+// Add event listener to the sign-up form
+document
+  .getElementById("signUpForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+    signUp();
+  });
+
+function signUp() {
+  const name = document.getElementById("signUpName").value.trim();
+  const email = document.getElementById("signUpEmail").value.trim();
+  const password = document.getElementById("signUpPassword").value.trim();
+  console.log("đã chạy");
+
+  if (name && email && password) {
+    // Retrieve existing users from localStorage
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check if the email already exists
+    const userExists = users.some((user) => user.account === email);
+    if (userExists) {
+      alert("Email đã được sử dụng. Vui lòng sử dụng email khác.");
+      return;
+    }
+
+    // Create a new user object
+    const newUser = {
+      account: email,
+      password: password,
+      role: "user", // Default role
+      name: name,
+    };
+
+    // Add the new user to the users array
+    users.push(newUser);
+
+    // Save the updated users array to localStorage
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.");
+
+    // Reset the sign-up form
+    document.getElementById("signUpForm").reset();
+    document.querySelector(".sign-up-mode") &&
+      main.classList.remove("sign-up-mode");
+  } else {
+    alert("Vui lòng nhập đầy đủ thông tin.");
+  }
+}
