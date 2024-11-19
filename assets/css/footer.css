@@ -1,7 +1,7 @@
 footer {
   padding: 50px 0;
   font-size: 1.6rem;
-  background: var(--color-primary);
+  background: #242e52;
   color: #d2d1d6 !important;
 }
 
@@ -68,7 +68,7 @@ footer {
   display: inline-block;
 }
 .footer__link:hover {
-  color: #0071dc;
+  color: #4863a9;
 }
 .footer__text,
 .footer__copyright {
