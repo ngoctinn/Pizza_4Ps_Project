@@ -45,6 +45,7 @@ document
     login();
   });
 function login() {
+  // khai báo dữ liệu mặc định
   const defaultUsers = [
     {
       account: "admin@gmail.com",
@@ -97,40 +98,54 @@ function signUp() {
   const name = document.getElementById("signUpName").value.trim();
   const email = document.getElementById("signUpEmail").value.trim();
   const password = document.getElementById("signUpPassword").value.trim();
-  console.log("đã chạy");
 
-  if (name && email && password) {
-    // Retrieve existing users from localStorage
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // Check if the email already exists
-    const userExists = users.some((user) => user.account === email);
-    if (userExists) {
-      alert("Email đã được sử dụng. Vui lòng sử dụng email khác.");
-      return;
-    }
-
-    // Create a new user object
-    const newUser = {
-      account: email,
-      password: password,
-      role: "user", // Default role
-      name: name,
-    };
-
-    // Add the new user to the users array
-    users.push(newUser);
-
-    // Save the updated users array to localStorage
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.");
-
-    // Reset the sign-up form
-    document.getElementById("signUpForm").reset();
-    document.querySelector(".sign-up-mode") &&
-      main.classList.remove("sign-up-mode");
-  } else {
-    alert("Vui lòng nhập đầy đủ thông tin.");
+  // Validate name
+  if (!name) {
+    alert("Vui lòng nhập tên.");
+    return;
   }
+
+  // Validate email format
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Vui lòng nhập email hợp lệ.");
+    return;
+  }
+
+  // Validate password strength (at least 6 characters)
+  if (password.length < 6) {
+    alert("Mật khẩu phải có ít nhất 6 ký tự.");
+    return;
+  }
+
+  // Retrieve existing users from localStorage
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Check if the email already exists
+  const userExists = users.some((user) => user.account === email);
+  if (userExists) {
+    alert("Email đã được sử dụng. Vui lòng sử dụng email khác.");
+    return;
+  }
+
+  // Create a new user object
+  const newUser = {
+    account: email,
+    password: password,
+    role: "user", // Default role
+    name: name,
+  };
+
+  // Add the new user to the users array
+  users.push(newUser);
+
+  // Save the updated users array to localStorage
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.");
+
+  // Reset the sign-up form
+  document.getElementById("signUpForm").reset();
+  document.querySelector(".sign-up-mode") &&
+    main.classList.remove("sign-up-mode");
 }
