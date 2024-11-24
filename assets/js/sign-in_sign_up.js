@@ -59,7 +59,9 @@ function login() {
     },
     // Thêm các người dùng khác ở đây
   ];
-  localStorage.setItem("users", JSON.stringify(defaultUsers));
+  if (!localStorage.getItem("users")) {
+    localStorage.setItem("users", JSON.stringify(defaultUsers));
+  }
   let users = JSON.parse(localStorage.getItem("users")) || defaultUsers;
 
   const account = document.getElementById("account").value;
@@ -77,7 +79,9 @@ function login() {
         console.log("admin");
         window.location.href = "../admin.html";
       } else if (user.role === "user") {
-        window.location.href = "../Templates/user.html";
+        // thêm trạng thái đăng nhập vào localStorage có key là isLoggedIn và giá trị là tên người dùng
+        localStorage.setItem("isLoggedIn", user.name);
+        window.location.href = "./deliver.html";
       }
     } else {
       alert("Login failed");

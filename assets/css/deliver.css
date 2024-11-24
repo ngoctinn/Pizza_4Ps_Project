@@ -37,6 +37,7 @@ main {
 }
 /* ================================Btn Login==================================== */
 .btn__login {
+  display: none;
   padding: 5px 20px;
   background-color: #fafafa;
   color: #5a5a5a;
@@ -403,4 +404,232 @@ main {
 .home__dropdown option:focus {
   background-color: #fc5959;
   color: blue;
+} /* Cart Styles */
+.cart-wrapper {
+  margin-right: 10px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.cart-button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.cart-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff; /* Icon màu trắng */
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff7a7a; /* Màu đỏ nhạt hơn */
+  color: white;
+  font-size: 12px;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Profile Styles */
+.nav-profile {
+  padding-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: none;
+}
+
+.profile-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  text-wrap: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff; /* Tên người dùng màu trắng */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 220px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.nav-profile:hover .dropdown-content {
+  display: block;
+}
+
+.user-info {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-info .user-name {
+  color: #333; /* Tên trong dropdown màu tối */
+}
+
+.user-email {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+}
+
+.logout-btn {
+  color: #ff7a7a; /* Màu đỏ nhạt hơn */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #fff1f1;
+}
+
+.logout-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Cart Dropdown */
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.cart-wrapper:hover .cart-dropdown {
+  display: block;
+}
+
+.cart-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 500;
+  color: #333;
+}
+
+.cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  padding: 12px 16px;
+  gap: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-item-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cart-item-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.cart-total {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  border-top: 1px solid #e5e7eb;
+  color: #333;
+}
+
+.view-cart-btn {
+  display: block;
+  background-color: #242e52; /* Màu nền giống navbar */
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.view-cart-btn:hover {
+  background-color: #1e2642; /* Màu tối hơn một chút khi hover */
+}
+
+.empty-cart {
+  padding: 24px 16px;
+  text-align: center;
+  color: #666;
 }

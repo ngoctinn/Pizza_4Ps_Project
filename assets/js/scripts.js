@@ -265,6 +265,18 @@ window.addEventListener("template-loaded", () => {
 const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);
 
+document.addEventListener("DOMContentLoaded", function () {
+  // kiểm tra xem có đang đăng nhập không
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn) {
+    document.querySelector(".btn__login").style.display = "none";
+    document.querySelector(".btn__logout").style.display = "block";
+  } else {
+    document.querySelector(".login").style.display = "block";
+    document.querySelector(".logout").style.display = "none";
+  }
+});
+
 // Hiển thị sản phẩm
 document.addEventListener("DOMContentLoaded", function () {
   const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
