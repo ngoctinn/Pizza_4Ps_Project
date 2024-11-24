@@ -26,6 +26,7 @@
               <div class="actual-form">
                 <div class="input-wrap">
                   <input
+                    placeholder=""
                     id="account"
                     type="text"
                     minlength="4"
@@ -34,10 +35,17 @@
                     required
                   />
                   <label>Name</label>
+                  <p class="form-error">Tên không được để trống</p>
+                  <img
+                    src="../assets/icons/form-error.svg"
+                    alt=""
+                    class="form__input-icon-error"
+                  />
                 </div>
 
                 <div class="input-wrap">
                   <input
+                    placeholder=""
                     id="password"
                     type="password"
                     minlength="4"
@@ -46,6 +54,12 @@
                     required
                   />
                   <label>Password</label>
+                  <p class="form-error">Mật khẩu ít nhất 4 ký tự</p>
+                  <img
+                    src="../assets/icons/form-error.svg"
+                    alt=""
+                    class="form__input-icon-error"
+                  />
                 </div>
 
                 <input
@@ -81,6 +95,7 @@
               <div class="actual-form">
                 <div class="input-wrap">
                   <input
+                    placeholder=""
                     type="text"
                     id="signUpName"
                     minlength="4"
@@ -89,10 +104,17 @@
                     required
                   />
                   <label>Name</label>
+                  <p class="form-error">Tên không được để trống</p>
+                  <img
+                    src="../assets/icons/form-error.svg"
+                    alt=""
+                    class="form__input-icon-error"
+                  />
                 </div>
 
                 <div class="input-wrap">
                   <input
+                    placeholder=""
                     type="email"
                     id="signUpEmail"
                     class="input-field"
@@ -100,10 +122,17 @@
                     required
                   />
                   <label>Email</label>
+                  <p class="form-error">Email chưa đúng định dạng</p>
+                  <img
+                    src="../assets/icons/form-error.svg"
+                    alt=""
+                    class="form__input-icon-error"
+                  />
                 </div>
 
                 <div class="input-wrap">
                   <input
+                    placeholder=""
                     type="password"
                     id="signUpPassword"
                     minlength="4"
@@ -112,6 +141,12 @@
                     required
                   />
                   <label>Password</label>
+                  <p class="form-error">Mật khẩu ít nhất 4 ký tự</p>
+                  <img
+                    src="../assets/icons/form-error.svg"
+                    alt=""
+                    class="form__input-icon-error"
+                  />
                 </div>
 
                 <input type="submit" value="Sign Up" class="sign-btn" />

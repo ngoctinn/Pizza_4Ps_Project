@@ -403,3 +403,47 @@ main.sign-up-mode .carousel {
     padding: 1rem 2rem 1.5rem;
   }
 }
+.form-error {
+  color: red;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(5px);
+  transition: 0.3s;
+  display: none;
+}
+.form__input-icon-error {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-left: 12px;
+  animation: shake 0.5s;
+}
+.input-wrap:has(:invalid):has(.input-field:not(:placeholder-shown)) .form-error,
+.input-wrap:has(:invalid):has(.input-field:not(:placeholder-shown))
+  .form__input-icon-error {
+  display: block;
+}
+.input-wrap:has(:invalid):has(.input-field:not(:placeholder-shown))
+  .input-field {
+  border-bottom-color: red;
+}
+@keyframes shake {
+  0%,
+  100% {
+    translate: 0;
+  }
+
+  25%,
+  75% {
+    translate: 4px;
+  }
+  50% {
+    translate: -4px;
+  }
+}
+
+/* nếu chưa typing vô thì không hiện */

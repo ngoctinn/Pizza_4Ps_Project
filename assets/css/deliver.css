@@ -1,8 +1,8 @@
 html {
-  background: #fafafa;
+  background: #fffdf7;
 }
 main {
-  background: #fafafa;
+  background: #fffdf7;
 }
 .product__list--item .panel {
   background: var(--color-white);
@@ -16,9 +16,7 @@ main {
   align-items: center;
   max-width: 300px;
   width: 100%;
-  background-color: #eae6dc;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 40px;
   overflow: hidden;
 }
 .search-input {
@@ -26,9 +24,16 @@ main {
   padding: 15px 20px;
   border: none;
   outline: none;
-  font-size: 18px;
-  border-radius: 50px;
-  background-color: #eae6dc;
+  font-size: 25px;
+}
+.form-control {
+  background-color: #eee !important;
+  border-color: transparent !important;
+  border-radius: 20px !important;
+  font-size: 18px !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
 }
 /* ================================Btn Login==================================== */
 .btn__login {
@@ -36,7 +41,8 @@ main {
   background-color: #fafafa;
   color: #5a5a5a;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  height: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -375,7 +381,7 @@ main {
   border: 1px solid #ccc;
   padding: 10px 40px 10px 15px; /* Thêm khoảng cách để biểu tượng mũi tên không chồng lên text */
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   background-image: url("../icons/arrow-down.svg"); /* Đường dẫn đến biểu tượng mũi tên tùy chỉnh */
   background-repeat: no-repeat;
   background-position: right 15px center;
@@ -384,15 +390,17 @@ main {
   transition: border-color 0.3s;
 }
 
-.header_dropdown:focus {
+.home__dropdown:focus {
   border-color: #242e52;
   outline: none;
 }
 
-.header_dropdown:hover {
+.home__dropdown:hover {
   border-color: #242e52;
 }
 
-.header_dropdown option {
-  font-size: 16px;
+/* Hover effect for select options */
+.home__dropdown option:focus {
+  background-color: #fc5959;
+  color: blue;
 }

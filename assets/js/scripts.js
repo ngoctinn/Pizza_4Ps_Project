@@ -283,7 +283,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const productItem = `<div class="col-md-3 mt-5 product__list--item">
                     <section class="panel">
                         <div class="pro-img-box">
-                            <img src="${product.image}" alt="" />
+                        <a href="../Templates/product-detail.html?id=${product.id}">
+                                    <img src="${product.image}" alt="" />
+                                </a>
+                            
                               <a href="#" class="adtocart">
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
