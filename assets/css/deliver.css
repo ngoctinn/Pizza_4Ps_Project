@@ -37,8 +37,8 @@ main {
 }
 /* ================================Btn Login==================================== */
 .btn__login {
-  display: none;
   padding: 5px 20px;
+  margin-top: 5px;
   background-color: #fafafa;
   color: #5a5a5a;
   border: none;
@@ -632,4 +632,70 @@ main {
   padding: 24px 16px;
   text-align: center;
   color: #666;
+}
+/* ======= Toast message ======== */
+#toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+}
+
+.toast-nof {
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  animation: slideIn 0.3s ease, fadeOut 0.5s ease 2.5s forwards;
+  cursor: pointer;
+}
+
+.toast-nof.success {
+  background: #4caf50;
+}
+
+.toast-nof.error {
+  background: #f44336;
+}
+
+.toast-nof.warning {
+  background: #ff9800;
+}
+
+.toast-nof.info {
+  background: #2196f3;
+}
+
+.toast-nof .icon {
+  font-size: 24px;
+}
+
+.toast-nof .message {
+  flex-grow: 1;
+}
+
+.toast-nof .close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }

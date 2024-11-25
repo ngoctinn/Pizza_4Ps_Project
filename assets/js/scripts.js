@@ -268,14 +268,60 @@ document.querySelector("html").classList.toggle("dark", isDark);
 document.addEventListener("DOMContentLoaded", function () {
   // kiểm tra xem có đang đăng nhập không
   const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const toastShown = localStorage.getItem("toastShown");
+
   if (isLoggedIn) {
+    if (!toastShown) {
+      showToast("success", "Đăng nhập thành công");
+      localStorage.setItem("toastShown", "true");
+    }
     document.querySelector(".btn__login").style.display = "none";
-    document.querySelector(".btn__logout").style.display = "block";
+    document.querySelector(".cart-wrapper").style.display = "block";
+    document.querySelector(".nav-profile").style.display = "block";
   } else {
-    document.querySelector(".login").style.display = "block";
-    document.querySelector(".logout").style.display = "none";
+    document.querySelector(".btn__login").style.display = "block";
+    document.querySelector(".cart-wrapper").style.display = "none";
+    document.querySelector(".nav-profile").style.display = "none";
+    localStorage.removeItem("toastShown"); // Reset toastShown khi đăng xuất
   }
 });
+
+// Đăng xuất
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  location.reload();
+}
+// SHOW TOAST
+
+function showToast(type, message) {
+  const toast = document.createElement("div");
+  toast.className = `toast-nof ${type}`;
+
+  const icons = {
+    success: "✓",
+    error: "✕",
+    warning: "⚠",
+    info: "ℹ",
+  };
+
+  toast.innerHTML = `
+        <div class="icon">${icons[type]}</div>
+        <div class="message">${message}</div>
+        <div class="close" onclick="this.parentElement.remove()">✕</div>
+    `;
+
+  document.getElementById("toast").appendChild(toast);
+
+  // Tự động xóa toast sau 3 giây
+  setTimeout(() => {
+    if (toast.parentElement) {
+      toast.remove();
+    }
+  }, 3000);
+
+  // Xóa toast khi click vào
+  toast.addEventListener("click", () => toast.remove());
+}
 
 // Hiển thị sản phẩm
 document.addEventListener("DOMContentLoaded", function () {

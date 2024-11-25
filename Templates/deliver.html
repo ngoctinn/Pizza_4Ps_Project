@@ -187,7 +187,7 @@
                   <div class="user-email">nguyenvana@example.com</div>
                 </div>
 
-                <button class="logout-btn">
+                <button class="logout-btn" onclick="logout()">
                   <svg
                     class="logout-icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -231,6 +231,12 @@
           </div>
         </div>
       </div>
+      <button
+        class="warning"
+        onclick="showToast('success', 'Thành công! Dữ liệu đã được lưu.')"
+      >
+        Warning
+      </button>
       <!-- delivery -->
       <div class="menu-container">
         <h2 class="heading">Menu</h2>
@@ -470,6 +476,7 @@
         </div>
       </footer>
     </main>
+    <div id="toast"></div>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>

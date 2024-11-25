@@ -73,7 +73,6 @@ function login() {
     );
 
     if (user) {
-      alert("Login success");
       localStorage.setItem("currentUser", JSON.stringify(user));
       if (user.role === "admin") {
         console.log("admin");
