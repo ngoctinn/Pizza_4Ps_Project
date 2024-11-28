@@ -3,7 +3,7 @@
   background-color: #242e52 !important;
   padding: 2rem 5%;
   width: 100%;
-  box-shadow: 3px 5px 8px #00000029;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .nav-item {
   text-wrap: nowrap;
@@ -184,14 +184,87 @@
 .cart-dropdown {
   display: none;
   position: absolute;
+  top: 100%;
   right: 0;
-  min-width: 300px;
+  width: 360px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  margin-top: 8px;
-  padding: 8px 0;
-  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.cart-item {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.cart-item-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.cart-item-price {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-controls button {
+  background-color: #f5f5f5;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+
+.cart-item-controls button:hover {
+  background-color: #e0e0e0;
+}
+
+.cart-item-controls .cart_quantity {
+  font-size: 14px;
+  color: #555;
+  margin-right: 8px;
+  padding: 8px;
+}
+
+.cart-item-controls .remove-item {
+  background-color: #ff4d4f;
+  color: #fff;
+  margin-left: 60px;
+}
+
+.cart-item-controls .remove-item:hover {
+  background-color: #d9363e;
 }
 /* nếu màn hình nhỏ hơn 992px thì cart dropdown nằm bên phải */
 @media (max-width: 992px) {
@@ -221,13 +294,6 @@
   padding: 12px 16px;
   gap: 12px;
   border-bottom: 1px solid #e5e7eb;
-}
-
-.cart-item-image {
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-  object-fit: cover;
 }
 
 .cart-item-details {

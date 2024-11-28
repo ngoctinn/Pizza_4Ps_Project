@@ -654,10 +654,84 @@ function showCart() {
         <div class="cart-item-details">
           <div class="cart-item-name">${product.name}</div>
           <div class="cart-item-price">${product.price} x ${cartItem.quantity}</div>
+          <div class="cart-item-controls">
+            <button class="decrease-quantity">-</button>
+            <span class="cart_quantity">${cartItem.quantity}</span>
+            <button class="increase-quantity">+</button>
+            <button class="remove-item">Xóa</button>
+          </div>
         </div>
       `;
-
       cartList.appendChild(cartItemElement);
+
+      // Add event listeners for the buttons
+      cartItemElement
+        .querySelector(".decrease-quantity")
+        .addEventListener("click", () => {
+          const quantityElement =
+            cartItemElement.querySelector(".cart_quantity");
+          let quantity = parseInt(quantityElement.textContent);
+          if (quantity > 1) {
+            quantity--;
+            quantityElement.textContent = quantity;
+
+            // Update quantity in local storage
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            const cart = currentUser.cart;
+            const productIndex = cart.findIndex(
+              (item) => item.id === cartItem.id
+            );
+            if (productIndex !== -1) {
+              cart[productIndex].quantity = quantity;
+              currentUser.cart = cart;
+              localStorage.setItem("currentUser", JSON.stringify(currentUser));
+              showCart();
+            }
+          } else {
+            if (confirm("Bạn có muốn xóa sản phẩm này khỏi giỏ hàng không?")) {
+              const newCart = cart.filter((item) => item.id !== cartItem.id);
+              const currentUser = JSON.parse(
+                localStorage.getItem("currentUser")
+              );
+              currentUser.cart = newCart;
+              localStorage.setItem("currentUser", JSON.stringify(currentUser));
+              showCart();
+            }
+          }
+        });
+
+      cartItemElement
+        .querySelector(".increase-quantity")
+        .addEventListener("click", () => {
+          const quantityElement =
+            cartItemElement.querySelector(".cart_quantity");
+          let quantity = parseInt(quantityElement.textContent);
+          quantity++;
+          quantityElement.textContent = quantity;
+
+          // Update quantity in local storage
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          const cart = currentUser.cart;
+          const productIndex = cart.findIndex(
+            (item) => item.id === cartItem.id
+          );
+          if (productIndex !== -1) {
+            cart[productIndex].quantity = quantity;
+            currentUser.cart = cart;
+            localStorage.setItem("currentUser", JSON.stringify(currentUser));
+            showCart();
+          }
+        });
+
+      cartItemElement
+        .querySelector(".remove-item")
+        .addEventListener("click", () => {
+          const newCart = cart.filter((item) => item.id !== cartItem.id);
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          currentUser.cart = newCart;
+          localStorage.setItem("currentUser", JSON.stringify(currentUser));
+          showCart();
+        });
     }
   });
 
