@@ -593,7 +593,7 @@ function animationToCart(productId) {
 // Thêm sản phẩm vào giỏ hàng
 function addToCart(productId) {
   console.log("đã bấm ");
-  animationToCart(productId);
+
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   // Lấy số lượng từ quantity-display nếu có
@@ -608,8 +608,15 @@ function addToCart(productId) {
     quantity: quantity,
   };
   if (!currentUser) {
+    toast({
+      title: "error",
+      message: "Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng",
+      type: "error",
+      duration: 3000,
+    });
     return;
   }
+  animationToCart(productId);
   const cart = currentUser.cart || [];
   const productIndex = cart.findIndex((item) => item.id === productId);
   if (productIndex === -1) {

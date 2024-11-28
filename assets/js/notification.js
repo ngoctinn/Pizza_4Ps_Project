@@ -26,10 +26,10 @@ function toast({
       error: "#ff6243",
     };
     const icons = {
-      success: "fa-light fa-check",
-      info: "fa-solid fa-circle-info",
-      warning: "fa-solid fa-triangle-exclamation",
-      error: "fa-solid fa-bug",
+      success: "fa fa-check-circle",
+      info: "fa fa-info-circle",
+      warning: "fa fa-exclamation-circle",
+      error: "fa fa-times-circle",
     };
     const color = colors[type];
     const icon = icons[type];

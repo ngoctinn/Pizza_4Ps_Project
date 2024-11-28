@@ -3,6 +3,7 @@
   background-color: #242e52 !important;
   padding: 2rem 5%;
   width: 100%;
+  box-shadow: 3px 5px 8px #00000029;
 }
 .nav-item {
   text-wrap: nowrap;

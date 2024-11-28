@@ -58,8 +58,8 @@ main {
 
 .heading {
   font-size: 3rem;
-  font-weight: 600;
-  color: var(--color-primary);
+  font-weight: 700;
+  color: #242e52;
 }
 
 .menu-items {
