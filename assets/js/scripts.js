@@ -427,12 +427,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function searchProducts(query) {
+    const sanPham = document.getElementById("san-pham");
+    sanPham.textContent = "Kết quả tìm kiếm cho: " + query;
     filteredProducts = storedProducts.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
     console.log("Filtered products:", filteredProducts);
     thisPage = 1; // Reset to the first page
     document.getElementById("san-pham").scrollIntoView({
+      block: "start",
       behavior: "smooth",
     });
     if (filteredProducts.length === 0) {
@@ -441,6 +444,17 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       loadItem();
     }
+  }
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Get the search query from the URL parameter
+  const searchQuery = getQueryParam("search");
+  if (searchQuery) {
+    // Perform the search
+    searchProducts(searchQuery);
   }
   // Add event listener to the sorting dropdown
   document
@@ -528,12 +542,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //Animation to cart
 function animationToCart(productId) {
-  const productElement = document
-    .querySelector(`.adtocart[onclick="addToCart(${productId})"]`)
-    .closest(".product__list--item");
-  const cartIcon = document.querySelector(".cart-icon"); // Assuming you have a cart icon with this class
+  const productElement =
+    document
+      .querySelector(`.adtocart[onclick="addToCart(${productId})"]`)
+      ?.closest(".product__list--item") ||
+    document.querySelector(".product-detail-container");
+
+  if (!productElement) {
+    console.error("Product element not found");
+    return;
+  }
+
+  const cartIcon = document.querySelector(".cart-icon");
+  if (!cartIcon) {
+    console.error("Cart icon not found");
+    return;
+  }
 
   const productImage = productElement.querySelector("img");
+  if (!productImage) {
+    console.error("Product image not found");
+    return;
+  }
+
   const imageClone = productImage.cloneNode(true);
   const imageRect = productImage.getBoundingClientRect();
   const cartRect = cartIcon.getBoundingClientRect();
@@ -543,30 +574,40 @@ function animationToCart(productId) {
   imageClone.style.left = `${imageRect.left}px`;
   imageClone.style.width = `${imageRect.width}px`;
   imageClone.style.height = `${imageRect.height}px`;
-  imageClone.style.transition = "all 1s ease-in-out";
+  imageClone.style.borderRadius = "50%";
+  imageClone.style.transition = "all 0.8s ease-in-out";
   document.body.appendChild(imageClone);
 
   setTimeout(() => {
     imageClone.style.top = `${cartRect.top}px`;
     imageClone.style.left = `${cartRect.left}px`;
-    imageClone.style.width = "0px";
-    imageClone.style.height = "0px";
+    imageClone.style.width = "20px";
+    imageClone.style.height = "20px";
     imageClone.style.opacity = "0";
   }, 100);
 
   setTimeout(() => {
     document.body.removeChild(imageClone);
-  }, 1100);
+  }, 1200);
 }
 // Thêm sản phẩm vào giỏ hàng
 function addToCart(productId) {
+  console.log("đã bấm ");
+  animationToCart(productId);
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  // Lấy số lượng từ quantity-display nếu có
+  let quantity = 1;
+  const quantityDisplay = document.querySelector(".quantity-display");
+  if (quantityDisplay) {
+    quantity = parseInt(quantityDisplay.textContent) || 1;
+  }
+
   const productCart = {
     id: productId,
-    quantity: 1,
+    quantity: quantity,
   };
   if (!currentUser) {
-    showToast("error", "Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng");
     return;
   }
   const cart = currentUser.cart || [];
@@ -574,13 +615,10 @@ function addToCart(productId) {
   if (productIndex === -1) {
     cart.push(productCart);
   } else {
-    cart[productIndex].quantity++;
+    cart[productIndex].quantity += quantity;
   }
   currentUser.cart = cart;
   localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  showToast("success", "Đã thêm sản phẩm vào giỏ hàng");
-  // kiểm tra nếu hàm showCart hoạt động thì console.log("showCart hoạt động");
-  animationToCart(productId);
   showCart();
 }
 // Hiển thị sản phẩm trong giỏ hàng
