@@ -73,13 +73,13 @@ function login() {
     );
 
     if (user) {
+      // Lưu thông tin người dùng hiện tại vào localStorage
       localStorage.setItem("currentUser", JSON.stringify(user));
       if (user.role === "admin") {
         console.log("admin");
         window.location.href = "../admin.html";
       } else if (user.role === "user") {
-        // thêm trạng thái đăng nhập vào localStorage có key là isLoggedIn và giá trị là tên người dùng
-        localStorage.setItem("isLoggedIn", user.name);
+        //giỏ hàng
         window.location.href = "./deliver.html";
       }
     } else {
@@ -137,6 +137,7 @@ function signUp() {
     password: password,
     role: "user", // Default role
     name: name,
+    cart: [], // Empty cart
   };
 
   // Add the new user to the users array

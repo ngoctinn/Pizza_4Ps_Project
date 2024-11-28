@@ -24,8 +24,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <!-- <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../assets/css/flickity.min.css" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/notification.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/deliver.css" />
@@ -133,7 +138,7 @@
                     d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
                   ></path>
                 </svg>
-                <span class="cart-count">3</span>
+                <span class="cart-count" id="cart-quanlity">3</span>
               </button>
 
               <div class="cart-dropdown">
@@ -178,7 +183,7 @@
                   alt="User avatar"
                   class="avatar"
                 />
-                <span class="user-name">Nguyen Van A</span>
+                <span class="user-name"></span>
               </button>
 
               <div class="dropdown-content">
@@ -233,7 +238,7 @@
       </div>
       <button
         class="warning"
-        onclick="showToast('success', 'Thành công! Dữ liệu đã được lưu.')"
+        onclick="toast({ title: 'Thành công', message: 'Tạo thành công tài khoản !', type: 'success', duration: 3000 });"
       >
         Warning
       </button>
@@ -479,6 +484,7 @@
     <div id="toast"></div>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>
   </body>
 </html>
