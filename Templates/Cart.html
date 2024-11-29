@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza 4ps</title>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <!-- link cnd -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- script -->
+    <script src="../assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <!-- <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/flickity.min.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/Cart.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Logo -->
+        <a class="navbar-brand logo-style" href="#">Pizza 4p's</a>
+
+        <!-- Hamburger button for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Nav Links -->
+          <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Giao hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+          </ul>
+
+          <!-- Search Form -->
+          <form
+            id="search-form"
+            class="d-flex mx-auto mb-2 mb-lg-0 ms-lg-5 w-100"
+          >
+            <div class="search-container">
+              <input
+                id="search-input"
+                class="form-control my-form-control form__input"
+                type="search"
+                placeholder="Tìm kiếm..."
+                aria-label="Search"
+              />
+            </div>
+          </form>
+
+          <!-- Auth Buttons -->
+          <div class="d-flex ms-lg-5">
+            <button class="btn__login" type="button">
+              <a href="../Templates/sign-in_sign-up.html">Đăng nhập</a>
+            </button>
+            <!-- Cart -->
+            <div class="cart-wrapper">
+              <button class="cart-button">
+                <svg
+                  class="cart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  ></path>
+                </svg>
+                <span class="cart-count" id="cart-quanlity">3</span>
+              </button>
+
+              <div class="cart-dropdown">
+                <div class="cart-header">Giỏ hàng (3)</div>
+                <div class="cart-items">
+                  <div class="cart-item">
+                    <img
+                      src="/api/placeholder/48/48"
+                      alt="Product 1"
+                      class="cart-item-image"
+                    />
+                    <div class="cart-item-details">
+                      <div class="cart-item-name">Sản phẩm 1</div>
+                      <div class="cart-item-price">200.000đ x 1</div>
+                    </div>
+                  </div>
+                  <div class="cart-item">
+                    <img
+                      src="/api/placeholder/48/48"
+                      alt="Product 2"
+                      class="cart-item-image"
+                    />
+                    <div class="cart-item-details">
+                      <div class="cart-item-name">Sản phẩm 2</div>
+                      <div class="cart-item-price">350.000đ x 2</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-total">
+                  <span>Tổng cộng:</span>
+                  <span>900.000đ</span>
+                </div>
+                <a href="#" class="view-cart-btn">Xem giỏ hàng</a>
+              </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="nav-profile">
+              <button class="profile-trigger">
+                <img
+                  src="../assets/img/user.jpg"
+                  alt="User avatar"
+                  class="avatar"
+                />
+                <span class="user-name"></span>
+              </button>
+
+              <div class="dropdown-content">
+                <div class="user-info">
+                  <div class="user-name">Nguyen Van A</div>
+                  <div class="user-email">nguyenvana@example.com</div>
+                </div>
+
+                <button class="logout-btn" onclick="logout()">
+                  <svg
+                    class="logout-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  Đăng xuất
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <div class="row g-4 shopping-cart">
+        <!-- Nội dung chính -->
+        <div class="col-lg-8">
+          <div class="main-content">
+            <h2>Giỏ Hàng</h2>
+
+            <!-- Danh sách sản phẩm -->
+            <div id="product-list">
+              <div class="product-card">
+                <img
+                  src="../assets/img/products/KV_Burrata&cacom.webp"
+                  alt="Sản phẩm"
+                  class="me-3"
+                />
+                <div>
+                  <h5>Tên Sản Phẩm</h5>
+                  <p>Giá: 100,000đ</p>
+                </div>
+                <div class="product-quantity ms-auto">
+                  <button class="btn btn-sm btn-outline-secondary">-</button>
+                  <p class="quantity-count">1</p>
+                  <button class="btn btn-sm btn-outline-secondary">+</button>
+                </div>
+                <button class="btn btn-danger btn-sm ms-2">Xóa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="sidebar">
+            <!-- Địa chỉ giao hàng -->
+            <div class="card mb-3 card-address">
+              <div class="card-header">Địa Chỉ Giao Hàng</div>
+              <div class="card-body">
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="address-type"
+                    id="saved-address"
+                  />
+                  <label class="form-check-label" for="saved-address"
+                    >Sử dụng địa chỉ đã lưu</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="address-type"
+                    id="new-address"
+                  />
+                  <label class="form-check-label" for="new-address"
+                    >Nhập địa chỉ mới</label
+                  >
+                </div>
+
+                <div id="new-address-form" style="display: none">
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="Họ và tên"
+                  />
+                  <input
+                    type="tel"
+                    class="form-control mb-2"
+                    placeholder="Số điện thoại"
+                  />
+                  <select class="form-select mb-2">
+                    <option>Chọn Tỉnh/Thành Phố</option>
+                  </select>
+                  <select class="form-select mb-2">
+                    <option>Chọn Quận/Huyện</option>
+                  </select>
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="Địa chỉ cụ thể"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Phương thức thanh toán -->
+            <div class="card card-payment-method">
+              <div class="card-header">Phương Thức Thanh Toán</div>
+              <div class="card-body">
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="payment-method"
+                    id="cash"
+                  />
+                  <label class="form-check-label" for="cash"
+                    >Thanh Toán Tiền Mặt</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="payment-method"
+                    id="bank-transfer"
+                  />
+                  <label class="form-check-label" for="bank-transfer"
+                    >Chuyển Khoản Ngân Hàng</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="payment-method"
+                    id="credit-card"
+                  />
+                  <label class="form-check-label" for="credit-card"
+                    >Thanh Toán Thẻ</label
+                  >
+                </div>
+
+                <div id="card-details" class="card-details mt-3">
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="Số thẻ"
+                  />
+                  <div class="row">
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ngày hết hạn (MM/YY)"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="CVV"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tổng thanh toán -->
+            <div class="card cart-payment mt-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Tổng tiền:</span>
+                  <strong>100,000đ</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Phí vận chuyển:</span>
+                  <strong>20,000đ</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Tổng thanh toán:</span>
+                  <strong>110,000đ</strong>
+                </div>
+                <button class="btn btn-primary w-100">Đặt Hàng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__row">
+          <!-- Footer column 1 -->
+          <div class="footer__col">
+            <!-- Logo -->
+            <a href="./" class="logo footer__logo">
+              <h1 class="logo__title">pizza 4ps</h1>
+            </a>
+            <p class="footer__desc">
+              Chúng tôi cam kết mang đến cho khách hàng những trải nghiệm ẩm
+              thực tuyệt vời với các món pizza được làm từ nguyên liệu tươi ngon
+              và công thức độc đáo.
+            </p>
+
+            <p class="footer__help-text">
+              Nhận thông tin mới nhất từ chúng tôi.
+            </p>
+            <form action="" class="footer__form">
+              <input
+                type="text"
+                class="footer__input"
+                placeholder="Email address"
+              />
+              <button class="my_btn btn--primary">GỬI</button>
+            </form>
+          </div>
+
+          <!-- Footer column 2 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Nhà hàng</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="#!" class="footer__link">Hà Nội</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Hồ Chí Minh</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Hải Phòng</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Đà Nẵng</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Bình Dương</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer column 3 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Dịch vụ</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="#!" class="footer__link">Chính sách giao hàng</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link"
+                  >Chính sách đổi trả và hoàn tiền</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer column 4 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Chính sách</h3>
+            <ul class="footer__list">
+              <li>
+                <a href="#!" class="footer__link"
+                  >Chính sách và quy định chung</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Chính sách thanh toán</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link"
+                  >Chính sách quy định E-Voucher</a
+                >
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Careers</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">About</a>
+              </li>
+              <li>
+                <a href="#!" class="footer__link">Affiliates</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer column 5 -->
+          <div class="footer__col">
+            <h3 class="footer__heading">Contact</h3>
+            <ul class="footer__list">
+              <li>
+                <p class="footer__label">Email</p>
+                <a href="mailto:contact@grocerymart.com" class="footer__link">
+                  contact@grocerymart.com
+                </a>
+              </li>
+              <li>
+                <p class="footer__label">Hotline</p>
+                <a href="tel:18008888" class="footer__link">18008888</a>
+              </li>
+              <li>
+                <p class="footer__label">Address</p>
+                <p class="footer__text">
+                  No. 11D, Lot A10, Nam Trung Yen urban area, Yen Hoa Ward, Cau
+                  Giay District, City. Hanoi
+                </p>
+              </li>
+              <li>
+                <p class="footer__label">Hours</p>
+                <p class="footer__text">M - F 08:00am - 06:00pm</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            Bản quyền © 2024 Pizza 4P’s. Đã đăng ký Bản quyền
+          </p>
+
+          <div class="footer__socials">
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--facebook"
+            >
+              <img
+                src="../assets/icons/facebook.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--youtube"
+            >
+              <img
+                src="../assets/icons/youtube.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--tiktok"
+            >
+              <img
+                src="../assets/icons/tiktok.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--twitter"
+            >
+              <img
+                src="../assets/icons/twitter.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+            <a
+              href="#!"
+              class="footer__social-link footer__social-link--linkedin"
+            >
+              <img
+                src="../assets/icons/linkedin.svg"
+                alt=""
+                class="footer__social-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Xử lý địa chỉ mới
+      document
+        .getElementById("new-address")
+        .addEventListener("change", function () {
+          document.getElementById("new-address-form").style.display = "block";
+        });
+
+      document
+        .getElementById("saved-address")
+        .addEventListener("change", function () {
+          document.getElementById("new-address-form").style.display = "none";
+        });
+
+      // Xử lý thanh toán thẻ
+      document
+        .getElementById("credit-card")
+        .addEventListener("change", function () {
+          document.getElementById("card-details").style.display = "block";
+        });
+
+      ["cash", "bank-transfer"].forEach(function (id) {
+        document.getElementById(id).addEventListener("change", function () {
+          document.getElementById("card-details").style.display = "none";
+        });
+      });
+    </script>
+    <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/flickity.pkgd.min.js"></script>
+  </body>
+</html>

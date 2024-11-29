@@ -654,11 +654,13 @@ function showCart() {
         <div class="cart-item-details">
           <div class="cart-item-name">${product.name}</div>
           <div class="cart-item-price">${product.price} x ${cartItem.quantity}</div>
+          <a href="#" class="add-note">Thêm ghi chú</a>
           <div class="cart-item-controls">
-            <button class="decrease-quantity">-</button>
-            <span class="cart_quantity">${cartItem.quantity}</span>
-            <button class="increase-quantity">+</button>
-            <button class="remove-item">Xóa</button>
+        <button class="decrease-quantity">-</button>
+        <span class="cart_quantity">${cartItem.quantity}</span>
+        <button class="increase-quantity">+</button>
+        <button class="remove-item">Xóa</button>
+        
           </div>
         </div>
       `;
