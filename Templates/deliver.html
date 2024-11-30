@@ -111,6 +111,9 @@
                 placeholder="Tìm kiếm..."
                 aria-label="Search"
               />
+              <button class="btn btn__search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
           </form>
 
@@ -209,6 +212,10 @@
                   </svg>
                   Đăng xuất
                 </button>
+                <!-- btn  Xem lịch sử đơn hàng -->
+                <button class="history-btn">
+                  <a href="../Templates/history.html">Xem lịch sử đơn hàng</a>
+                </button>
               </div>
             </div>
           </div>
@@ -277,13 +284,92 @@
       <!-- Phổ biến -->
       <div class="home__row">
         <h2 class="heading" id="san-pham">Sản phẩm</h2>
-        <select class="home__dropdown" id="menu-dropdown">
-          <option value="" selected hidden>Sắp xếp theo</option>
-          <option value="newest">Mới nhất</option>
-          <option value="price-desc">Giá giảm dần</option>
-          <option value="price-asc">Giá tăng dần</option>
-          <option value="best-seller">Sản phẩm bán chạy</option>
-        </select>
+        <div class="control-search-container">
+          <div class="advanced-search__container">
+            <button class="advanced-search__btn" id="js-advanced-search-toggle">
+              Tìm kiếm nâng cao
+            </button>
+
+            <div
+              class="advanced-search__overlay"
+              id="js-advanced-search-overlay"
+            >
+              <div class="advanced-search__popup" id="js-advanced-search-popup">
+                <form class="advanced-search__form">
+                  <div class="advanced-search__form-group">
+                    <label for="product-name" class="advanced-search__label"
+                      >Tên Sản Phẩm</label
+                    >
+                    <input
+                      type="text"
+                      id="product-name"
+                      class="advanced-search__input"
+                      name="product-name"
+                      placeholder="Nhập tên sản phẩm"
+                    />
+                  </div>
+
+                  <div class="advanced-search__form-group">
+                    <label for="category" class="advanced-search__label"
+                      >Phân Loại</label
+                    >
+                    <select
+                      id="category"
+                      class="advanced-search__select"
+                      name="category"
+                    >
+                      <option value="">Chọn phân loại</option>
+                      <option value="pizza">Bánh Pizza</option>
+                      <option value="khaivi">Khai vị</option>
+                      <option value="salad">Salad</option>
+                      <option value="monchinh">Món Chính/ Mì Ý</option>
+                      <option value="trangmieng">Tráng miệng</option>
+                      <option value="thucuong">Thức uống</option>
+                      <option value="topping">Thêm Topping</option>
+                    </select>
+                  </div>
+
+                  <div class="advanced-search__form-group">
+                    <label class="advanced-search__label">Khoảng Giá</label>
+                    <div class="advanced-search__price-range">
+                      <input
+                        type="number"
+                        id="price-min"
+                        class="advanced-search__input advanced-search__price-range-input"
+                        name="price-min"
+                        placeholder="Giá tối thiểu"
+                        min="0"
+                      />
+                      <input
+                        type="number"
+                        id="price-max"
+                        class="advanced-search__input advanced-search__price-range-input"
+                        name="price-max"
+                        placeholder="Giá tối đa"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="advanced-search__form-group">
+                    <button type="submit" class="advanced-search__submit-btn">
+                      Tìm Kiếm
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <select class="home__dropdown" id="menu-dropdown">
+            <option value="" selected hidden>Sắp xếp theo</option>
+            <option value="newest">Mới nhất</option>
+            <option value="price-desc">Giá giảm dần</option>
+            <option value="price-asc">Giá tăng dần</option>
+            <option value="best-seller">Sản phẩm bán chạy</option>
+          </select>
+        </div>
+
+        <!-- tìm kiếm nâng cao -->
       </div>
       <div class="row product-list">
         <!-- Existing product list code here -->
@@ -476,6 +562,25 @@
       </footer>
     </main>
     <div id="toast"></div>
+    <!-- tìm nâng cao -->
+    <script>
+      const toggleBtn = document.getElementById("js-advanced-search-toggle");
+      const overlay = document.getElementById("js-advanced-search-overlay");
+      const searchPopup = document.getElementById("js-advanced-search-popup");
+
+      toggleBtn.addEventListener("click", function () {
+        overlay.classList.toggle("advanced-search__overlay--active");
+        searchPopup.classList.toggle("advanced-search__popup--active");
+      });
+
+      // Đóng form khi click ngoài form
+      overlay.addEventListener("click", function (event) {
+        if (event.target === overlay) {
+          overlay.classList.remove("advanced-search__overlay--active");
+          searchPopup.classList.remove("advanced-search__popup--active");
+        }
+      });
+    </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
     <script src="../assets/js/notification.js"></script>

@@ -170,8 +170,24 @@
   cursor: pointer;
   font-size: 14px;
 }
+.history-btn {
+  color: #ff7a7a; /* Màu đỏ nhạt hơn */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+}
 
 .logout-btn:hover {
+  background-color: #fff1f1;
+}
+.history-btn:hover {
   background-color: #fff1f1;
 }
 
@@ -357,6 +373,7 @@
   width: 100%;
   height: 40px;
   overflow: hidden;
+  position: relative;
 }
 .search-input {
   flex: 1;
@@ -364,6 +381,19 @@
   border: none;
   outline: none;
   font-size: 25px;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.btn__search {
+  position: absolute; /* Position the button absolutely */
+  right: 10px; /* Align it to the right */
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #666; /* Icon color */
+  font-size: large;
 }
 .my-form-control {
   background-color: #eee !important;

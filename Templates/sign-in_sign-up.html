@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in & Sign up Form</title>
     <link rel="stylesheet" href="../assets/css/sign-in_sign-up.css" />
+    <link rel="stylesheet" href="../assets/css/notification.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
+    />
   </head>
   <body>
     <main>
@@ -18,9 +23,9 @@
               </div>
 
               <div class="heading">
-                <h2>Welcome Back</h2>
-                <h6>Not registred yet?</h6>
-                <a href="#" class="toggle">Sign up</a>
+                <h2>Đăng nhập</h2>
+                <h6>Bạn chưa có tài khoản?</h6>
+                <a href="#" class="toggle">Đăng ký ngay</a>
               </div>
 
               <div class="actual-form">
@@ -70,8 +75,17 @@
                 />
 
                 <p class="text">
-                  Forgotten your password or you login datails?
-                  <a href="#">Get help</a> signing in
+                  Quên mật khẩu?
+                  <a
+                    href="#"
+                    onclick='toast({
+                    title: "Lỗi",
+                    message: "Chức năng này đang được phát triển",
+                    type: "error",
+                    duration: 3000,
+                  })'
+                    >bấm vào đây để lấy lại
+                  </a>
                 </p>
               </div>
             </form>
@@ -87,9 +101,9 @@
               </div>
 
               <div class="heading">
-                <h2>Get Started</h2>
-                <h6>Already have an account?</h6>
-                <a href="#" class="toggle">Sign in</a>
+                <h2>Đăng kí</h2>
+                <h6>Bạn đã có tài khoản?</h6>
+                <a href="#" class="toggle">Đăng nhập ngay</a>
               </div>
 
               <div class="actual-form">
@@ -140,7 +154,7 @@
                     autocomplete="off"
                     required
                   />
-                  <label>Password</label>
+                  <label>Mật khẩu</label>
                   <p class="form-error">Mật khẩu ít nhất 4 ký tự</p>
                   <img
                     src="../assets/icons/form-error.svg"
@@ -174,9 +188,9 @@
             <div class="text-slider">
               <div class="text-wrap">
                 <div class="text-group">
-                  <h2>Create your own courses</h2>
-                  <h2>Customize as you like</h2>
-                  <h2>Invite students to your class</h2>
+                  <h2>Sản phẩm chất lượng</h2>
+                  <h2>Nguyên liệu tươi ngon</h2>
+                  <h2>Phục vụ tận tâm</h2>
                 </div>
               </div>
 
@@ -189,10 +203,12 @@
           </div>
         </div>
       </div>
+      <div id="toast"></div>
     </main>
 
     <!-- Javascript file -->
     <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/sign-in_sign_up.js"></script>
   </body>
 </html>
