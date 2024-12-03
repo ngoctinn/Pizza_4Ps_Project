@@ -32,6 +32,7 @@
       href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/notification.css" />
     <link rel="stylesheet" href="../assets/css/Cart.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <!-- Fonts -->
@@ -87,7 +88,7 @@
           <!-- Nav Links -->
           <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Trang chủ</a>
+              <a class="nav-link" href="./Index.html">Trang chủ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="./Index.html">Giao hàng</a>
@@ -170,7 +171,16 @@
                   <span>Tổng cộng:</span>
                   <span>900.000đ</span>
                 </div>
-                <a href="#" class="view-cart-btn">Xem giỏ hàng</a>
+                <a
+                  href="#"
+                  onclick="toast({
+                  title: 'Thông báo',
+                  message: 'Bạn đang trong giỏ hàng',
+                  type: 'info'
+                })"
+                  class="view-cart-btn"
+                  >Xem giỏ hàng</a
+                >
               </div>
             </div>
 
@@ -388,8 +398,16 @@
           <button id="view-summary-btn" class="confirm-btn">
             Xem Tóm Tắt Đơn Pizza
           </button>
-          <button class="confirm-btn" style="margin-top: 15px">
-            Xác Nhận Đặt Pizza
+          <button
+            onclick="toast({
+            title: 'Đặt hàng thành công',
+            message: 'Đơn hàng của bạn đã được ghi nhận',
+            type: 'success'
+          })"
+            class="confirm-btn"
+            style="margin-top: 15px"
+          >
+            Đặt hàng
           </button>
         </div>
       </div>
@@ -631,6 +649,7 @@
         </div>
       </div>
     </footer>
+    <div id="toast"></div>
 
     <script>
       // Xử lý chọn địa chỉ
@@ -742,6 +761,7 @@
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>
   </body>
 </html>
