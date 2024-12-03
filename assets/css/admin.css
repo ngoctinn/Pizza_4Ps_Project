@@ -13,6 +13,45 @@ a {
   text-decoration: none;
   color: inherit;
 }
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+h1 {
+  margin-bottom: 10px;
+}
+
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #242e52;
+  border-radius: 4px;
+}
+.btn_filter {
+  padding: 5px 10px;
+  border: 1px solid #ffc107;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: #ffc107 !important;
+}
+.btn-luu {
+  background-color: white;
+  color: #242e52 !important;
+  padding: 5px 10px;
+  border: 1px solid #242e52 !important;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.btn-luu:hover {
+  background-color: #242e52;
+  color: white !important;
+}
+.str-tongtien {
+  display: inline-block;
+  margin-top: 15px;
+}
 /* Layout */
 .admin-container {
   display: flex;
@@ -235,7 +274,17 @@ th {
 }
 .order-expanded-details {
   display: none;
-  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+.order-product span {
+  width: 50%;
+  /* NẾU DÀI QUÁ HIỆN ... */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 50px;
 }
 .order-product {
   display: flex;

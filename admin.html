@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bảng Điều Khiển Quản Trị</title>
     <link rel="stylesheet" href="./assets/css/admin.css" />
+    <link rel="stylesheet" href="./assets/css/notification.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="admin-container">
@@ -88,7 +93,7 @@
               <option value="asc">Tăng dần</option>
               <option value="desc">Giảm dần</option>
             </select>
-            <button class="btn btn-secondary" onclick="filterOrders()">
+            <button class="btn_filter btn-secondary" onclick="filterOrders()">
               Lọc
             </button>
           </div>
@@ -348,7 +353,7 @@
       </div>
     </div>
     <!-- Notification -->
-    <div id="notification" class="notification"></div>
+    <div id="toast"></div>
     <script src="./assets/js/admin.js"></script>
     <script src="./assets/js/notification.js"></script>
   </body>

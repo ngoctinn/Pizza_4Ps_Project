@@ -21,16 +21,6 @@ function closeModal(id) {
   document.getElementById(id).classList.remove("active");
 }
 
-// Notification
-function showNotification(message) {
-  const notification = document.getElementById("notification");
-  notification.textContent = message;
-  notification.style.display = "block";
-  setTimeout(() => {
-    notification.style.display = "none";
-  }, 3000);
-}
-
 // Dữ Liệu Người Dùng Giả
 let users = [
   {
@@ -476,9 +466,22 @@ function renderOrders() {
         order.status === "đã hủy" ? "selected" : ""
       }>Đã hủy</option>
     `;
-    statusSelect.onchange = () =>
-      updateOrderStatus(order.id, statusSelect.value);
+    // Biến tạm để lưu trạng thái mới
+    let newStatus = order.status;
+    statusSelect.onchange = () => {
+      newStatus = statusSelect.value;
+    };
     tdStatus.appendChild(statusSelect);
+
+    // Nút Lưu thay đổi trạng thái
+    const saveButton = document.createElement("button");
+    saveButton.textContent = "Lưu";
+    saveButton.classList.add("btn-luu");
+    saveButton.onclick = () => {
+      updateOrderStatus(order.id, newStatus);
+    };
+    tdStatus.appendChild(saveButton);
+
     tr.appendChild(tdStatus);
 
     const tdDate = document.createElement("td");
@@ -514,7 +517,6 @@ function renderOrders() {
     // Tính tổng tiền
     let total = 0;
     order.products.forEach((product) => {
-      // Remove non-digit characters and parse to integer
       const unitPriceNumber = parseInt(
         product.unitPrice.replace(/[^0-9]/g, "")
       );
@@ -553,7 +555,7 @@ function renderOrders() {
     detailContent += `
         </tbody>
       </table>
-      <strong>Tổng Tiền:</strong> ${totalFormatted}
+      <strong class="str-tongtien">Tổng Tiền:</strong> ${totalFormatted}
     `;
 
     detailTd.innerHTML = detailContent;
@@ -569,6 +571,12 @@ function updateOrderStatus(id, newStatus) {
     order.status = newStatus;
     renderOrders();
   }
+  toast({
+    title: "Thông Báo",
+    message: "Cập nhật trạng thái đơn hàng thành công.",
+    type: "success",
+    duration: 3000,
+  });
 }
 
 // Xem Chi Tiết Đơn Hàng
@@ -589,7 +597,12 @@ function filterOrders() {
   const sortOrderAddress = document.getElementById("sortOrderAddress").value;
 
   // Chỉ hiện thông báo mà không thực hiện lọc
-  showNotification("Lọc thành công");
+  toast({
+    title: "Thông Báo",
+    message: "Lọc đơn hàng thành công.",
+    type: "success",
+    duration: 3000,
+  });
 }
 // Mock Data for Users
 users.push(
