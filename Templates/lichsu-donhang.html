@@ -31,8 +31,8 @@
     />
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/lichsu-donhang.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
-    <link rel="stylesheet" href="../assets/css/product-detail.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <!-- Fonts -->
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
@@ -223,8 +223,8 @@
       </nav>
     </header>
     <main>
-      <div class="product-page">
-        <div class="product-container">
+      <div class="recept-page">
+        <div class="recept-container">
           <ul class="breadcrumbs">
             <li>
               <a href="#!" class="breadcrumbs__link">
@@ -239,45 +239,243 @@
               </a>
             </li>
             <li>
-              <a href="#!" class="breadcrumbs__link"> Pizza </a>
+              <a href="#!" class="breadcrumbs__link"> Lịch sử đơn hàng </a>
             </li>
           </ul>
         </div>
-        <!-- Product detail -->
-        <div class="product-container">
-          <div class="product-detail-container">
-            <div class="product-image">
-              <img
-                src="../assets/img/products/KV_(2pc)Camembert&MascarponeTruffle.webp"
-                alt="Eggs Benedict Burger"
-              />
+        <!-- lịch sử đơn hàng -->
+        <div class="order-list">
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <span class="order-label">Ngày mua:</span>
+                <span class="order-value">15/11/2023</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Mã đơn hàng:</span>
+                <span class="order-value">#12345</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Trạng thái:</span>
+                <span class="order-value status-completed">Đã giao hàng</span>
+              </div>
             </div>
-            <div class="product-details">
-              <h2>Eggs Benedict Burger</h2>
-              <p>
-                Ground beef, hollandaise sauce mix, stone ground mustard, with a
-                egg; it's so much taste you would like most this taste burger.
-              </p>
-              <span class="price">$7.50</span>
 
-              <div class="special-instructions">
-                <!-- label tiếng việt -->
-                <label for="instructions">Ghi chú</label>
-                <textarea
-                  id="instructions"
-                  placeholder="Thêm ghi chú cho món ăn của bạn"
-                ></textarea>
+            <div class="order-details-section">
+              <div class="order-info" style="flex-grow: 1">
+                <span class="order-label">Thành tiền:</span>
+                <span
+                  class="order-value"
+                  style="color: #4caf50; font-weight: bold"
+                  >1.250.000đ</span
+                >
               </div>
+              <a
+                href="#"
+                class="view-details-link"
+                onclick="toggleDetails(event)"
+                >Xem chi tiết →</a
+              >
+            </div>
 
-              <div class="details-bottom">
-                <div class="quantity">
-                  <button class="minus-btn">-</button>
-                  <div class="quantity-display">1</div>
-                  <button class="plus-btn">+</button>
+            <div class="order-expanded-details" id="orderDetails">
+              <div class="order-product">
+                <span>Áo thun nam cao cấp</span>
+                <span>Số lượng: 2</span>
+                <span>250.000đ</span>
+              </div>
+              <div class="order-product">
+                <span>Quần jean nam</span>
+                <span>Số lượng: 1</span>
+                <span>750.000đ</span>
+              </div>
+              <div class="order-details-address">
+                <div class="order-info">
+                  <span class="order-label">Địa chỉ nhận hàng:</span>
+                  <span class="order-value"
+                    >123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</span
+                  >
                 </div>
-
-                <button class="add-to-cart-btn">Thêm vào giỏ hàng</button>
               </div>
+              <div class="total-payment">Tổng thanh toán: 1.250.000đ</div>
+            </div>
+          </div>
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <span class="order-label">Ngày mua:</span>
+                <span class="order-value">15/11/2023</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Mã đơn hàng:</span>
+                <span class="order-value">#12345</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Trạng thái:</span>
+                <span class="order-value status-pending">Đang xử lý</span>
+              </div>
+            </div>
+
+            <div class="order-details-section">
+              <div class="order-info" style="flex-grow: 1">
+                <span class="order-label">Thành tiền:</span>
+                <span
+                  class="order-value"
+                  style="color: #4caf50; font-weight: bold"
+                  >1.250.000đ</span
+                >
+              </div>
+              <a
+                href="#"
+                class="view-details-link"
+                onclick="toggleDetails(event)"
+                >Xem chi tiết →</a
+              >
+            </div>
+
+            <div class="order-expanded-details" id="orderDetails">
+              <div class="order-product">
+                <span>Áo thun nam cao cấp</span>
+                <span>Số lượng: 2</span>
+                <span>250.000đ</span>
+              </div>
+              <div class="order-product">
+                <span>Quần jean nam</span>
+                <span>Số lượng: 1</span>
+                <span>750.000đ</span>
+              </div>
+              <div class="order-details-address">
+                <div class="order-info">
+                  <span class="order-label">Người mua:</span>
+                  <span class="order-value">Nguyen Van B</span>
+                </div>
+                <div class="order-info">
+                  <span class="order-label">SĐT người mua:</span>
+                  <span class="order-value">0123456789</span>
+                </div>
+                <div class="order-info">
+                  <span class="order-label">Địa chỉ nhận hàng:</span>
+                  <span class="order-value"
+                    >123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</span
+                  >
+                </div>
+              </div>
+              <div class="total-payment">Tổng thanh toán: 1.250.000đ</div>
+            </div>
+          </div>
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <span class="order-label">Ngày mua:</span>
+                <span class="order-value">15/11/2023</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Mã đơn hàng:</span>
+                <span class="order-value">#12345</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Trạng thái:</span>
+                <span class="order-value" style="color: #4caf50"
+                  >Đã giao hàng</span
+                >
+              </div>
+            </div>
+
+            <div class="order-details-section">
+              <div class="order-info" style="flex-grow: 1">
+                <span class="order-label">Thành tiền:</span>
+                <span
+                  class="order-value"
+                  style="color: #4caf50; font-weight: bold"
+                  >1.250.000đ</span
+                >
+              </div>
+              <a
+                href="#"
+                class="view-details-link"
+                onclick="toggleDetails(event)"
+                >Xem chi tiết →</a
+              >
+            </div>
+
+            <div class="order-expanded-details" id="orderDetails">
+              <div class="order-product">
+                <span>Áo thun nam cao cấp</span>
+                <span>Số lượng: 2</span>
+                <span>250.000đ</span>
+              </div>
+              <div class="order-product">
+                <span>Quần jean nam</span>
+                <span>Số lượng: 1</span>
+                <span>750.000đ</span>
+              </div>
+              <div class="order-details-address">
+                <div class="order-info">
+                  <span class="order-label">Địa chỉ nhận hàng:</span>
+                  <span class="order-value"
+                    >123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</span
+                  >
+                </div>
+              </div>
+              <div class="total-payment">Tổng thanh toán: 1.250.000đ</div>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-header">
+              <div class="order-info">
+                <span class="order-label">Ngày mua:</span>
+                <span class="order-value">15/11/2023</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Mã đơn hàng:</span>
+                <span class="order-value">#12345</span>
+              </div>
+              <div class="order-info">
+                <span class="order-label">Trạng thái:</span>
+                <span class="order-value" style="color: #4caf50"
+                  >Đã giao hàng</span
+                >
+              </div>
+            </div>
+
+            <div class="order-details-section">
+              <div class="order-info" style="flex-grow: 1">
+                <span class="order-label">Thành tiền:</span>
+                <span
+                  class="order-value"
+                  style="color: #4caf50; font-weight: bold"
+                  >1.250.000đ</span
+                >
+              </div>
+              <a
+                href="#"
+                class="view-details-link"
+                onclick="toggleDetails(event)"
+                >Xem chi tiết →</a
+              >
+            </div>
+
+            <div class="order-expanded-details" id="orderDetails">
+              <div class="order-product">
+                <span>Áo thun nam cao cấp</span>
+                <span>Số lượng: 2</span>
+                <span>250.000đ</span>
+              </div>
+              <div class="order-product">
+                <span>Quần jean nam</span>
+                <span>Số lượng: 1</span>
+                <span>750.000đ</span>
+              </div>
+              <div class="order-details-address">
+                <div class="order-info">
+                  <span class="order-label">Địa chỉ nhận hàng:</span>
+                  <span class="order-value"
+                    >123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</span
+                  >
+                </div>
+              </div>
+              <div class="total-payment">Tổng thanh toán: 1.250.000đ</div>
             </div>
           </div>
         </div>
@@ -466,82 +664,12 @@
       </div>
     </footer>
     <script>
-      function searchProducts(query) {
-        // Check if the current page is not deliver.html
-        if (window.location.pathname !== "/Templates/deliver.html") {
-          // Redirect to deliver.html with the search query as a URL parameter
-          window.location.href = `/Templates/deliver.html?search=${encodeURIComponent(
-            query
-          )}`;
-          return;
-        }
+      function toggleDetails(event) {
+        event.preventDefault();
+        const orderCard = event.target.closest(".order-card");
+        const details = orderCard.querySelector(".order-expanded-details");
+        details.classList.toggle("active");
       }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // Function to get query parameter by name
-        tangGiam();
-        function getQueryParam(name) {
-          const urlParams = new URLSearchParams(window.location.search);
-          return urlParams.get(name);
-        }
-
-        // Get the product ID from the URL
-        const productId = getQueryParam("id");
-
-        // Set the onclick attribute for the add-to-cart button
-        const addToCartBtn = document.querySelector(".add-to-cart-btn");
-        addToCartBtn.setAttribute("onclick", `addToCart(${productId})`);
-        console.log("đã chạy");
-
-        // Fetch the product details from local storage
-        const storedProducts = JSON.parse(localStorage.getItem("products"));
-        const product = storedProducts.find((p) => p.id == productId);
-
-        if (product) {
-          // Update the product details on the page
-          document.querySelector(".product-image img").src = product.image;
-          document.querySelector(".product-details h2").textContent =
-            product.name;
-          document.querySelector(".product-details p").textContent =
-            product.decribe;
-          document.querySelector(".product-details .price").textContent =
-            product.price;
-        } else {
-          // Handle case where product is not found
-          document.querySelector(".product-details").innerHTML =
-            "<p>Product not found.</p>";
-        }
-      });
-      function tangGiam() {
-        // Chọn các phần tử
-        const plusBtn = document.querySelector(".plus-btn");
-        const minusBtn = document.querySelector(".minus-btn");
-        const quantityDisplay = document.querySelector(".quantity-display");
-
-        // Khởi tạo biến quantity
-        let quantity = parseInt(quantityDisplay.textContent);
-
-        // Sự kiện cho nút tăng
-        plusBtn.addEventListener("click", () => {
-          quantity++;
-          quantityDisplay.textContent = quantity;
-        });
-
-        // Sự kiện cho nút giảm
-        minusBtn.addEventListener("click", () => {
-          if (quantity > 1) {
-            quantity--;
-            quantityDisplay.textContent = quantity;
-          }
-        });
-      }
-      document
-        .getElementById("search-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const query = document.getElementById("search-input").value;
-          searchProducts(query);
-        });
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>

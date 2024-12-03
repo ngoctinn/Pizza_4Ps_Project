@@ -6,6 +6,8 @@ const products = [
     price: "245,000 VND",
     image: "../assets/img/products/PZ_TomXotToiCay.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 2,
@@ -13,6 +15,8 @@ const products = [
     price: "398,000 VND",
     image: "../assets/img/products/PZ_MargheritaThitNguoi&Burrata.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 3,
@@ -20,6 +24,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/PZ_3LoaiPMNL.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 4,
@@ -27,6 +33,8 @@ const products = [
     price: "248,000 VND",
     image: "../assets/img/products/PZ_4LoaiPMNL.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 5,
@@ -34,13 +42,17 @@ const products = [
     price: "298,000 VND",
     image: "../assets/img/products/PZ_5LoaiPMNL.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 6,
-    name: "Pizza Margherita",
+    name: "Pizza 3 loại phô mai nhà làm",
     price: "160,000 VND",
     image: "../assets/img/products/PZ_Margherita.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 7,
@@ -48,6 +60,8 @@ const products = [
     price: "331,000 VND",
     image: "../assets/img/products/PZ_MargheritaThitNguoi.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 8,
@@ -55,6 +69,8 @@ const products = [
     price: "238,000 VND",
     image: "../assets/img/products/PZ_Margherita&2LoaiXucXichY.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 9,
@@ -62,6 +78,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/PZ_MargheritaCaTimNuong.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 10,
@@ -69,6 +87,8 @@ const products = [
     price: "278,000 VND",
     image: "../assets/img/products/PZ_CaHoiXotKemMiSo.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 11,
@@ -76,6 +96,8 @@ const products = [
     price: "274,000 VND",
     image: "../assets/img/products/PZ_haisancay&pmhunkhoi.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 12,
@@ -83,6 +105,8 @@ const products = [
     price: "254,000 VND",
     image: "../assets/img/products/PZ_tom&mayonnaise.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 13,
@@ -90,6 +114,8 @@ const products = [
     price: "218,000 VND",
     image: "../assets/img/products/PZ_GaXotTeriyaki.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 14,
@@ -97,6 +123,8 @@ const products = [
     price: "208,000 VND",
     image: "../assets/img/products/PZ_Camembert&XotNamThitNguoi.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 15,
@@ -104,6 +132,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/PZ_4LoaiNam1.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 16,
@@ -111,6 +141,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/PZ_4LoaiNam2.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 17,
@@ -118,6 +150,8 @@ const products = [
     price: "178,000 VND",
     image: "../assets/img/products/PZ_XotBiNgoiQueTay&Hoa.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 18,
@@ -125,6 +159,8 @@ const products = [
     price: "178,000 VND",
     image: "../assets/img/products/PZ_xotbingoiquetay&pmLactic.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 19,
@@ -132,6 +168,8 @@ const products = [
     price: "178,000 VND",
     image: "../assets/img/products/PZ_XotBiNgoiQueTay&PMMozzarella.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 20,
@@ -139,6 +177,8 @@ const products = [
     price: "218,000 VND",
     image: "../assets/img/products/PZ_gaTandooi.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 21,
@@ -146,6 +186,8 @@ const products = [
     price: "188,000 VND",
     image: "../assets/img/products/PZ_CaiXoan&RicottaChanh.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 22,
@@ -153,6 +195,8 @@ const products = [
     price: "420,000 VND",
     image: "../assets/img/products/PZ_SoDiep&XotMisoNgot.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 23,
@@ -160,6 +204,8 @@ const products = [
     price: "294,000 VND",
     image: "../assets/img/products/PZ_ThitBoCayKieuKebab.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 24,
@@ -167,6 +213,8 @@ const products = [
     price: "248,000 VND",
     image: "../assets/img/products/PZ_BoKho.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 25,
@@ -174,6 +222,8 @@ const products = [
     price: "170,000 VND",
     image: "../assets/img/products/PZ_XucXichCay.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 26,
@@ -181,6 +231,8 @@ const products = [
     price: "160,000 VND",
     image: "../assets/img/products/PZ_trung&caiboxoi.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 27,
@@ -188,6 +240,8 @@ const products = [
     price: "160,000 VND",
     image: "../assets/img/products/PZ_Hawaiian.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 28,
@@ -195,6 +249,8 @@ const products = [
     price: "109,000 VND",
     image: "../assets/img/products/KV_cacloaiPMNL(S).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 29,
@@ -202,6 +258,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/KV_cacloaiPMNL(L).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 30,
@@ -209,6 +267,8 @@ const products = [
     price: "144,000 VND",
     image: "../assets/img/products/KV_thitnguoicuonxoai&xotchanhday.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 31,
@@ -216,6 +276,8 @@ const products = [
     price: "47,000 VND",
     image: "../assets/img/products/KV_(1pc)Camembert&MascarponeTruffle.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 32,
@@ -223,6 +285,8 @@ const products = [
     price: "94,000 VND",
     image: "../assets/img/products/KV_(2pc)Camembert&MascarponeTruffle.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 33,
@@ -230,6 +294,8 @@ const products = [
     price: "72,000 VND",
     image: "../assets/img/products/KV_khoaitayDucbolo.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 34,
@@ -237,6 +303,8 @@ const products = [
     price: "92,000 VND",
     image: "../assets/img/products/KV_supngheuham.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 35,
@@ -244,6 +312,8 @@ const products = [
     price: "82,000 VND",
     image: "../assets/img/products/KV_supcachuathitvienY.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 36,
@@ -251,6 +321,8 @@ const products = [
     price: "98,000 VND",
     image: "../assets/img/products/KV_garan&giaviphuongDong(2mieng).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 37,
@@ -258,6 +330,8 @@ const products = [
     price: "44,000 VND",
     image: "../assets/img/products/KV_thitnguoicuonRicotta&Rocket.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 38,
@@ -265,6 +339,8 @@ const products = [
     price: "334,000 VND",
     image: "../assets/img/products/KV_setthitnguoiPMNL(lon).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 39,
@@ -272,6 +348,8 @@ const products = [
     price: "172,000 VND",
     image: "../assets/img/products/KV_setthitnguoiPMNL(nho).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 40,
@@ -279,6 +357,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/KV_Burrata&cacom.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 41,
@@ -286,6 +366,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/KV_Burrataxotbocay(L).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 42,
@@ -293,6 +375,8 @@ const products = [
     price: "98,000 VND",
     image: "../assets/img/products/KV_Burrataxotbocay(S).webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 43,
@@ -300,6 +384,8 @@ const products = [
     price: "98,000 VND",
     image: "../assets/img/products/KV_khoaitaynghien&pmRaclette.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 44,
@@ -307,6 +393,8 @@ const products = [
     price: "98,000 VND",
     image: "../assets/img/products/KV_pateganga.webp",
     type: "KhaiVi",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 45,
@@ -314,6 +402,8 @@ const products = [
     price: "158,000 VND",
     image: "../assets/img/products/SL_cahoibo&pmRicotta.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 46,
@@ -321,6 +411,8 @@ const products = [
     price: "105,000 VND",
     image: "../assets/img/products/SL_caixoan.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 47,
@@ -328,6 +420,8 @@ const products = [
     price: "105,000 VND",
     image: "../assets/img/products/SL_Mozzarella&cachuaDaLat.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 48,
@@ -335,6 +429,8 @@ const products = [
     price: "185,000 VND",
     image: "../assets/img/products/SL_pmBurrata&rauRocket.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 49,
@@ -342,6 +438,8 @@ const products = [
     price: "81,000 VND",
     image: "../assets/img/products/SL_rauRocket&cachua.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 50,
@@ -349,6 +447,8 @@ const products = [
     price: "85,000 VND",
     image: "../assets/img/products/SL_rauxanh&xotnhalam.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 51,
@@ -356,6 +456,8 @@ const products = [
     price: "88,000 VND",
     image: "../assets/img/products/SL_thitnguoicuonRicotta&Rocket.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 52,
@@ -363,6 +465,8 @@ const products = [
     price: "158,000 VND",
     image: "../assets/img/products/SL_tom&bo.webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 53,
@@ -370,6 +474,8 @@ const products = [
     price: "129,000 VND",
     image: "../assets/img/products/SL_traicayBurrata&thitnguoi(nho).webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 54,
@@ -377,6 +483,8 @@ const products = [
     price: "238,000 VND",
     image: "../assets/img/products/SL_traicayBurrata&thitnguoi(lon).webp",
     type: "Salad",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 55,
@@ -384,6 +492,8 @@ const products = [
     price: "165,000 VND",
     image: "../assets/img/products/MC_comyRisottomuc.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 56,
@@ -391,6 +501,8 @@ const products = [
     price: "194,000 VND",
     image: "../assets/img/products/MC_Fettuccine&xotkemcahoi.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 57,
@@ -398,6 +510,8 @@ const products = [
     price: "198,000 VND",
     image: "../assets/img/products/MC_Fettuccine&xottomnam.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 58,
@@ -405,6 +519,8 @@ const products = [
     price: "178,000 VND",
     image: "../assets/img/products/MC_Lasagnadutlo.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 59,
@@ -412,6 +528,8 @@ const products = [
     price: "165,000 VND",
     image: "../assets/img/products/MC_miyArrabbiata&pmMascarpone.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 60,
@@ -419,6 +537,8 @@ const products = [
     price: "168,000 VND",
     image: "../assets/img/products/MC_miybobam&pmhunkhoi.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 61,
@@ -426,6 +546,8 @@ const products = [
     price: "154,000 VND",
     image: "../assets/img/products/MC_miycua&xotkemcachua.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 62,
@@ -433,6 +555,8 @@ const products = [
     price: "165,000 VND",
     image: "../assets/img/products/MC_miyngheu&xotquetay.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 63,
@@ -440,6 +564,8 @@ const products = [
     price: "188,000 VND",
     image: "../assets/img/products/MC_miytomtoicay.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 64,
@@ -447,6 +573,8 @@ const products = [
     price: "150,000 VND",
     image: "../assets/img/products/MC_miyxotcachua&mpMascarpone.webp",
     type: "MonChinh",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 65,
@@ -454,6 +582,8 @@ const products = [
     price: "75,000 VND",
     image: "../assets/img/products/TM_banhphomai2lop.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 66,
@@ -461,6 +591,8 @@ const products = [
     price: "37,000 VND",
     image: "../assets/img/products/TM_puddingkemtrung.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 67,
@@ -468,6 +600,8 @@ const products = [
     price: "37,000 VND",
     image: "../assets/img/products/TM_puddingmatcha.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 68,
@@ -475,6 +609,8 @@ const products = [
     price: "40,000 VND",
     image: "../assets/img/products/TM_suachuaHyLap.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 69,
@@ -482,6 +618,8 @@ const products = [
     price: "27,000 VND",
     image: "../assets/img/products/TM_suachuaitduong.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 70,
@@ -489,6 +627,8 @@ const products = [
     price: "27,000 VND",
     image: "../assets/img/products/TM_suachuakhongduong.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 71,
@@ -496,6 +636,8 @@ const products = [
     price: "30,000 VND",
     image: "../assets/img/products/TM_suachuaxotchanhday.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 72,
@@ -503,6 +645,8 @@ const products = [
     price: "30,000 VND",
     image: "../assets/img/products/TM_suachuaxotdau.webp",
     type: "TrangMieng",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 73,
@@ -510,6 +654,8 @@ const products = [
     price: "65,000 VND",
     image: "../assets/img/products/TU_rauRocket.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 74,
@@ -517,6 +663,8 @@ const products = [
     price: "57,000 VND",
     image: "../assets/img/products/TU_duahau.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 75,
@@ -524,6 +672,8 @@ const products = [
     price: "57,000 VND",
     image: "../assets/img/products/TU_dua.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 76,
@@ -531,6 +681,8 @@ const products = [
     price: "59,000 VND",
     image: "../assets/img/products/TU_cam.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 77,
@@ -538,6 +690,8 @@ const products = [
     price: "42,000 VND",
     image: "../assets/img/products/TU_chanh.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 78,
@@ -545,6 +699,8 @@ const products = [
     price: "39,000 VND",
     image: "../assets/img/products/TU_coca.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 79,
@@ -552,6 +708,8 @@ const products = [
     price: "39,000 VND",
     image: "../assets/img/products/TU_cocazero.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 80,
@@ -559,6 +717,8 @@ const products = [
     price: "39,000 VND",
     image: "../assets/img/products/TU_sprite.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 81,
@@ -566,6 +726,8 @@ const products = [
     price: "44,000 VND",
     image: "../assets/img/products/TU_Heinkenkhongcon.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 82,
@@ -573,6 +735,8 @@ const products = [
     price: "440,000 VND",
     image: "../assets/img/products/TU_bo6loaibia.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 83,
@@ -580,6 +744,8 @@ const products = [
     price: "79,000 VND",
     image: "../assets/img/products/TU_Mikan.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 84,
@@ -587,6 +753,8 @@ const products = [
     price: "79,000 VND",
     image: "../assets/img/products/TU_KAGUARoast.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 85,
@@ -594,6 +762,8 @@ const products = [
     price: "79,000 VND",
     image: "../assets/img/products/TU_PremiumLager.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 86,
@@ -601,6 +771,8 @@ const products = [
     price: "79,000 VND",
     image: "../assets/img/products/TU_SessionIPA.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 87,
@@ -608,6 +780,8 @@ const products = [
     price: "79,000 VND",
     image: "../assets/img/products/TU_Cider.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 88,
@@ -615,6 +789,8 @@ const products = [
     price: "79,000 VND",
     image: "../assets/img/products/TU_Stout.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 89,
@@ -622,6 +798,8 @@ const products = [
     price: "44,000 VND",
     image: "../assets/img/products/TU_nuoctaolenmen.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 90,
@@ -629,6 +807,8 @@ const products = [
     price: "44,000 VND",
     image: "../assets/img/products/TU_nuoctaolenmenvidau.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 91,
@@ -636,6 +816,8 @@ const products = [
     price: "610,000 VND",
     image: "../assets/img/products/TU_Niida-honke.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 92,
@@ -643,6 +825,8 @@ const products = [
     price: "250,000 VND",
     image: "../assets/img/products/TU_Sangriado(250k).webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 93,
@@ -650,6 +834,8 @@ const products = [
     price: "99,000 VND",
     image: "../assets/img/products/TU_Sangriado(99k).webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 94,
@@ -657,6 +843,8 @@ const products = [
     price: "250,000 VND",
     image: "../assets/img/products/TU_SangriaTrang(250k).webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 95,
@@ -664,6 +852,8 @@ const products = [
     price: "99,000 VND",
     image: "../assets/img/products/TU_SangriaTrang(99k).webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 96,
@@ -671,6 +861,8 @@ const products = [
     price: "590,000 VND",
     image: "../assets/img/products/TU_vangtrangChapel.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 97,
@@ -678,6 +870,8 @@ const products = [
     price: "600,000 VND",
     image: "../assets/img/products/TU_RobertsonBurt.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
   {
     id: 98,
@@ -685,15 +879,12 @@ const products = [
     price: "770,000 VND",
     image: "../assets/img/products/TU_ilVeiOrtrugo.webp",
     type: "Pizza",
+    decribe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
 ];
 
 // Lưu trữ sản phẩm vào localStorage
 if (!localStorage.getItem("products")) {
   localStorage.setItem("products", JSON.stringify(products));
-}
-
-// Lưu trữ danh mục vào localStorage
-if (!localStorage.getItem("categories")) {
-  localStorage.setItem("categories", JSON.stringify(categories));
 }

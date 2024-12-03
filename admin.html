@@ -1,281 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Sidebar with Tabs</title>
-    <link
-      rel="stylesheet"
-      href="./assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bảng Điều Khiển Quản Trị</title>
     <link rel="stylesheet" href="./assets/css/admin.css" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
   </head>
   <body>
-    <div class="admin">
-      <div class="admin__sidebar">
-        <ul class="admin__sidebar-nav">
-          <li class="admin__sidebar-nav-item">
-            <a
-              href="#"
-              class="admin__sidebar-nav-link admin__sidebar-nav-link--active"
-              >Tổng quan</a
-            >
-          </li>
-          <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Sản phẩm</a>
-          </li>
-          <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Đơn hàng</a>
-          </li>
-          <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Người dùng</a>
-          </li>
-          <li class="admin__sidebar-nav-item">
-            <a href="#" class="admin__sidebar-nav-link">Thống kê</a>
-          </li>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <ul class="nav-links">
+          <li><a href="#" data-section="users">Người Dùng</a></li>
+          <li><a href="#" data-section="products">Sản Phẩm</a></li>
+          <li><a href="#" data-section="orders">Đơn Hàng</a></li>
+          <li><a href="#" data-section="statistics">Thống Kê</a></li>
         </ul>
-      </div>
-      <div class="admin__content">
-        <div class="admin__tab admin__tab--active admin__tab--1">
-          <h2>Tab 1</h2>
-          <p>This is the content for Tab 1.</p>
-        </div>
-        <div class="admin__tab admin__tab--2">
-          <div class="admin_tab-container container-fluid">
-            <div class="product_tab-header row d-flex justify-content-between">
-              <select class="header_dropdown col-lg-3" id="menu-dropdown">
-                <option value="menu-all">Tất cả</option>
-                <option value="menu-pizza">Bánh Pizza</option>
-                <option value="menu-khaivi">Khai vị</option>
-                <option value="menu-salad">Salad</option>
-                <option value="menu-monchinh">Món Chính/ Mì Ý</option>
-                <option value="menu-trangmieng">Tráng miệng</option>
-                <option value="menu-thucuong">Thức uống</option>
-                <option value="menu-topping">Thêm Topping</option>
-              </select>
-              <div class="header_search col-lg-7" id="search-form">
-                <input type="text" id="search-input" placeholder="Tìm kiếm" />
-                <button id="btn-search" onclick="searchProducts()">
-                  Tìm kiếm
-                </button>
-              </div>
-              <div class="header_btn col-lg-2">
-                <button type="button" onclick="openDialog()">
-                  Thêm sản phẩm
-                </button>
-                <!-- DIALOG START -->
-                <div class="dialog-overlay" id="dialogOverlay">
-                  <div class="dialog">
-                    <div class="header">
-                      <div class="header__content">
-                        <h2 class="header__title">Thêm Sản Phẩm Mới</h2>
-                        <button
-                          class="header__close-btn"
-                          onclick="closeDialog()"
-                        >
-                          &times;
-                        </button>
-                      </div>
-                    </div>
-
-                    <form
-                      class="product-form"
-                      id="productForm"
-                      onsubmit="handleSubmit(event)"
-                    >
-                      <div class="product-form__group">
-                        <label class="product-form__label" for="productImage"
-                          >Hình ảnh sản phẩm:</label
-                        >
-                        <input
-                          class="product-form__input product-form__input--file"
-                          type="file"
-                          id="productImage"
-                          accept="image/*"
-                          required
-                        />
-                      </div>
-
-                      <div class="product-form__group">
-                        <label class="product-form__label" for="productName"
-                          >Tên sản phẩm:</label
-                        >
-                        <input
-                          class="product-form__input"
-                          type="text"
-                          id="productName"
-                          required
-                        />
-                      </div>
-
-                      <div class="product-form__group">
-                        <label class="product-form__label" for="productType"
-                          >Loại sản phẩm:</label
-                        >
-                        <select
-                          class="product-form__select"
-                          id="productType"
-                          required
-                        >
-                          <option value="">Chọn loại sản phẩm</option>
-                          <option value="quanao">Quần áo</option>
-                          <option value="giay">Giày</option>
-                          <option value="phukien">Phụ kiện</option>
-                        </select>
-                      </div>
-
-                      <div class="product-form__group">
-                        <label class="product-form__label" for="productPrice"
-                          >Giá tiền:</label
-                        >
-                        <input
-                          class="product-form__input"
-                          type="number"
-                          id="productPrice"
-                          min="0"
-                          required
-                        />
-                      </div>
-
-                      <div class="product-form__group">
-                        <label
-                          class="product-form__label"
-                          for="productDescription"
-                          >Mô tả sản phẩm:</label
-                        >
-                        <textarea
-                          class="product-form__input product-form__input--textarea"
-                          id="productDescription"
-                          required
-                        ></textarea>
-                      </div>
-
-                      <button type="submit" class="button button--primary">
-                        Thêm Sản Phẩm
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <!-- DIALOG END -->
-                <!-- DIALOG EDIT -->
-                <div class="dialog-overlay" id="editDialogOverlay">
-                  <div class="dialog">
-                    <div class="header">
-                      <div class="header__content">
-                        <h2 class="header__title">Sửa Sản Phẩm</h2>
-                        <button
-                          class="header__close-btn"
-                          onclick="closeEditDialog()"
-                        >
-                          &times;
-                        </button>
-                      </div>
-                    </div>
-
-                    <form
-                      class="product-form"
-                      id="editProductForm"
-                      onsubmit="handleEditSubmit(event)"
-                    >
-                      <div class="product-form__group">
-                        <label
-                          class="product-form__label"
-                          for="editProductImage"
-                          >Hình ảnh sản phẩm:</label
-                        >
-                        <input
-                          class="product-form__input product-form__input--file"
-                          type="file"
-                          id="editProductImage"
-                          accept="image/*"
-                        />
-                      </div>
-
-                      <div class="product-form__group">
-                        <label class="product-form__label" for="editProductName"
-                          >Tên sản phẩm:</label
-                        >
-                        <input
-                          class="product-form__input"
-                          type="text"
-                          id="editProductName"
-                          required
-                        />
-                      </div>
-
-                      <div class="product-form__group">
-                        <label class="product-form__label" for="editProductType"
-                          >Loại sản phẩm:</label
-                        >
-                        <select
-                          class="product-form__select"
-                          id="editProductType"
-                          required
-                        >
-                          <option value="menu-pizza">Bánh Pizza</option>
-                          <option value="menu-khaivi">Khai vị</option>
-                          <option value="menu-salad">Salad</option>
-                          <option value="menu-monchinh">Món Chính/ Mì Ý</option>
-                          <option value="menu-trangmieng">Tráng miệng</option>
-                          <option value="menu-thucuong">Thức uống</option>
-                          <option value="menu-topping">Thêm Topping</option>
-                        </select>
-                      </div>
-
-                      <div class="product-form__group">
-                        <label
-                          class="product-form__label"
-                          for="editProductPrice"
-                          >Giá tiền:</label
-                        >
-                        <input
-                          class="product-form__input"
-                          type="number"
-                          id="editProductPrice"
-                          min="0"
-                          required
-                        />
-                      </div>
-
-                      <div class="product-form__group">
-                        <label
-                          class="product-form__label"
-                          for="editProductDescription"
-                          >Mô tả sản phẩm:</label
-                        >
-                        <textarea
-                          class="product-form__input product-form__input--textarea"
-                          id="editProductDescription"
-                          required
-                        ></textarea>
-                      </div>
-
-                      <button type="submit" class="button button--primary">
-                        Lưu Thay Đổi
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <!-- DIALOG EDIT END -->
-              </div>
-            </div>
-            <ul class="product-list">
-              <!-- Add more product items here -->
-            </ul>
+      </aside>
+      <main class="content">
+        <!-- User Management Section -->
+        <section id="users" class="section">
+          <h1>Quản Lý Người Dùng</h1>
+          <button class="btn btn-primary" onclick="openModal('addUserModal')">
+            Thêm Người Dùng
+          </button>
+          <table>
+            <thead>
+              <tr>
+                <th>Mã</th>
+                <th>Tên Người Dùng</th>
+                <th>Email</th>
+                <th>Trạng Thái</th>
+                <th>Loại Người Dùng</th>
+                <th>Hành Động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Các hàng người dùng -->
+            </tbody>
+          </table>
+        </section>
+        <!-- Product Management Section -->
+        <section id="products" class="section">
+          <h1>Quản Lý Sản Phẩm</h1>
+          <button
+            class="btn btn-primary"
+            onclick="openModal('addProductModal')"
+          >
+            Thêm Sản Phẩm
+          </button>
+          <table class="tbSanPham">
+            <thead>
+              <tr>
+                <th>Mã</th>
+                <th>Tên</th>
+                <th>Hình Ảnh</th>
+                <th>Giá</th>
+                <th>Loại</th>
+                <th>Mô Tả</th>
+                <th>Hành Động</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody">
+              <!-- Các hàng sản phẩm sẽ được thêm vào đây -->
+            </tbody>
+          </table>
+        </section>
+        <!-- Order Management Section -->
+        <section id="orders" class="section">
+          <h1>Quản Lý Đơn Hàng</h1>
+          <!-- Bộ lọc và Sắp xếp -->
+          <div class="filters">
+            <label for="startDate">Từ ngày:</label>
+            <input type="date" id="startDate" />
+            <label for="endDate">Đến ngày:</label>
+            <input type="date" id="endDate" />
+            <label for="filterOrderStatus">Trạng thái:</label>
+            <select id="filterOrderStatus">
+              <option value="">Tất cả</option>
+              <option value="chưa xử lý">Chưa xử lý</option>
+              <option value="đã xác nhận">Đã xác nhận</option>
+              <option value="đã giao thành công">Đã giao thành công</option>
+              <option value="đã hủy">Đã hủy</option>
+            </select>
+            <label for="sortOrderAddress">Sắp xếp theo quận:</label>
+            <select id="sortOrderAddress">
+              <option value="">Không sắp xếp</option>
+              <option value="asc">Tăng dần</option>
+              <option value="desc">Giảm dần</option>
+            </select>
+            <button class="btn btn-secondary" onclick="filterOrders()">
+              Lọc
+            </button>
           </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Mã Đơn</th>
+                <th>Khách Hàng</th>
+                <th>Trạng Thái</th>
+                <th>Ngày Đặt</th>
+                <th>Địa Chỉ Giao Hàng</th>
+                <th>Hành Động</th>
+              </tr>
+            </thead>
+            <tbody id="orderTableBody">
+              <!-- Các hàng đơn hàng sẽ được thêm vào đây -->
+            </tbody>
+          </table>
+        </section>
+        <!-- Business Statistics Section -->
+        <section id="statistics" class="section">
+          <h1>Thống Kê Kinh Doanh</h1>
+          <div class="statistics-section">
+            <div class="statistics-filters">
+              <div>
+                <label for="statStartDate">Từ ngày:</label>
+                <input type="date" id="statStartDate" />
+              </div>
+              <div>
+                <label for="statEndDate">Đến ngày:</label>
+                <input type="date" id="statEndDate" />
+              </div>
+              <button class="btn btn-primary" onclick="generateStatistics()">
+                Thống Kê
+              </button>
+            </div>
+            <div class="statistics-tables">
+              <h2>Thống Kê Bán Hàng Các Mặt Hàng</h2>
+              <table id="itemSalesTable">
+                <thead>
+                  <tr>
+                    <th>Tên Mặt Hàng</th>
+                    <th>Số Lượng Bán Ra</th>
+                    <th>Tổng Tiền Thu Được</th>
+                    <th>Hành Động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Item sales data will be inserted here -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="2">Tổng Doanh Thu</th>
+                    <th colspan="2" id="totalRevenue">0 VND</th>
+                  </tr>
+                </tfoot>
+              </table>
+
+              <h2>Top 5 Khách Hàng Phát Sinh Doanh Thu Nhiều Nhất</h2>
+              <table id="topCustomersTable">
+                <thead>
+                  <tr>
+                    <th>Tên Khách Hàng</th>
+                    <th>Tổng Doanh Thu</th>
+                    <th>Hành Động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Top customers data will be inserted here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Thêm Người Dùng Modal -->
+    <div class="modal" id="addUserModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Thêm Người Dùng</h3>
+          <button class="close-btn" onclick="closeModal('addUserModal')">
+            &times;
+          </button>
         </div>
-        <div class="admin__tab admin__tab--3">
-          <h2>Tab 3</h2>
-          <p>This is the content for Tab 3.</p>
-        </div>
-        <div class="admin__tab admin__tab--4">
-          <h2>Tab 4</h2>
-          <p>This is the content for Tab 3.</p>
-        </div>
+        <form onsubmit="addUser(event)">
+          <div class="form-group">
+            <label for="username">Tên Người Dùng:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="status">Trạng Thái:</label>
+            <select id="status">
+              <option value="Hoạt động">Hoạt động</option>
+              <option value="Khóa">Bị Khóa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="type">Loại Người Dùng:</label>
+            <select id="type">
+              <option value="Người quản trị">Người quản trị</option>
+              <option value="Khách hàng">Khách hàng</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Thêm</button>
+        </form>
       </div>
     </div>
+    <!-- Sửa Người Dùng Modal -->
+    <div class="modal" id="editUserModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Sửa Người Dùng</h3>
+          <button class="close-btn" onclick="closeModal('editUserModal')">
+            &times;
+          </button>
+        </div>
+        <form id="editUserForm">
+          <div class="form-group">
+            <label for="editUsername">Tên Người Dùng</label>
+            <input type="text" id="editUsername" required />
+          </div>
+          <div class="form-group">
+            <label for="editEmail">Email</label>
+            <input type="email" id="editEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="editStatus">Trạng Thái</label>
+            <select id="editStatus">
+              <option value="Hoạt động">Hoạt động</option>
+              <option value="Khóa">Khóa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editType">Loại Người Dùng</label>
+            <select id="editType">
+              <option value="Người quản trị">Người quản trị</option>
+              <option value="Khách hàng">Khách hàng</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Cập Nhật</button>
+        </form>
+      </div>
+    </div>
+    <!-- Thêm Sản Phẩm Modal -->
+    <div class="modal" id="addProductModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Thêm Sản Phẩm</h3>
+          <button class="close-btn" onclick="closeModal('addProductModal')">
+            &times;
+          </button>
+        </div>
+        <form
+          id="addProductForm"
+          enctype="multipart/form-data"
+          onsubmit="addProduct(event)"
+        >
+          <div class="form-group">
+            <label for="productName">Tên:</label>
+            <input type="text" id="productName" required />
+          </div>
+          <div class="form-group">
+            <label for="productImage">Hình Ảnh:</label>
+            <input type="file" id="productImage" accept="image/*" required />
+            <img
+              id="addImagePreview"
+              class="image-preview"
+              src="#"
+              alt="Image Preview"
+              style="display: none"
+            />
+          </div>
+          <div class="form-group">
+            <label for="productPrice">Giá:</label>
+            <input type="number" id="productPrice" min="0" required />
+          </div>
+          <div class="form-group">
+            <label for="productType">Loại:</label>
+            <select id="productType" required>
+              <option value="Pizza">Pizza</option>
+              <option value="Món khác">Món khác</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="productDescribe">Mô Tả:</label>
+            <textarea id="productDescribe" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Thêm</button>
+        </form>
+      </div>
+    </div>
+    <!-- Sửa Sản Phẩm Modal -->
+    <div class="modal" id="editProductModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Sửa Sản Phẩm</h3>
+          <button class="close-btn" onclick="closeModal('editProductModal')">
+            &times;
+          </button>
+        </div>
+        <form
+          id="editProductForm"
+          enctype="multipart/form-data"
+          onsubmit="updateProduct(event)"
+        >
+          <div class="form-group">
+            <label for="editProductName">Tên:</label>
+            <input type="text" id="editProductName" required />
+          </div>
+          <div class="form-group">
+            <label for="editProductImage">Hình Ảnh:</label>
+            <input type="file" id="editProductImage" accept="image/*" />
+            <img
+              id="editImagePreview"
+              class="image-preview"
+              src="#"
+              alt="Image Preview"
+              style="display: none"
+            />
+            <button
+              type="button"
+              class="btn btn-warning"
+              onclick="removeImage()"
+            >
+              Bỏ Hình
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="editProductPrice">Giá:</label>
+            <input type="number" id="editProductPrice" min="0" required />
+          </div>
+          <div class="form-group">
+            <label for="editProductType">Loại:</label>
+            <select id="editProductType" required>
+              <option value="Pizza">Pizza</option>
+              <option value="Món khác">Món khác</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editProductDescribe">Mô Tả:</label>
+            <textarea id="editProductDescribe" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Cập Nhật</button>
+        </form>
+      </div>
+    </div>
+    <!-- Add this HTML for the dialog -->
+    <div id="orderDialog" class="dialog">
+      <div class="dialog-content">
+        <button class="close-btn" onclick="closeDialog()">×</button>
+        <div id="orderCardsContainer"></div>
+      </div>
+    </div>
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
     <script src="./assets/js/admin.js"></script>
+    <script src="./assets/js/notification.js"></script>
   </body>
 </html>

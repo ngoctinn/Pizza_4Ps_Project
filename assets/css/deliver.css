@@ -350,6 +350,19 @@ main {
   justify-content: space-between;
   margin-top: 5rem;
 }
+@media screen and (max-width: 900px) {
+  .home__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home__row .heading {
+    margin-bottom: 2rem;
+    /* cen */
+  }
+  .advanced-search__btn {
+    margin-left: 0 !important;
+  }
+}
 /* Tùy chỉnh dropdown */
 .home__dropdown {
   margin-left: 10px;
@@ -476,13 +489,13 @@ main {
 .advanced-search__submit-btn {
   width: 100%;
   padding: 12px;
-  background-color: #4caf50;
+  background-color: #242e52;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .advanced-search__submit-btn:hover {
-  background-color: #45a049;
+  opacity: 0.9;
 }

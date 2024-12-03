@@ -150,13 +150,6 @@
   margin-top: 4px;
 }
 
-.dropdown-content a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  padding: 8px 16px;
-}
-
 .logout-btn {
   color: #ff7a7a; /* Màu đỏ nhạt hơn */
   display: flex;

@@ -272,7 +272,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (currentUser) {
     if (!toastShown) {
-      showToast("success", "Đăng nhập thành công");
+      toast({
+        title: "Thành công",
+        message: "Đăng nhập thành công",
+        type: "success",
+        duration: 3000,
+      });
       localStorage.setItem("toastShown", "true");
     }
     document.querySelectorAll(".user-name").forEach((el) => {
@@ -432,6 +437,12 @@ document.addEventListener("DOMContentLoaded", function () {
     filteredProducts = storedProducts.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
+    toast({
+      title: "success",
+      message: "Tìm kiếm thành công",
+      type: "success",
+      duration: 3000,
+    });
     console.log("Filtered products:", filteredProducts);
     thisPage = 1; // Reset to the first page
     document.getElementById("san-pham").scrollIntoView({
@@ -445,6 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loadItem();
     }
   }
+
   function getQueryParam(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -527,6 +539,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchProducts(query);
     });
 
+  // Add event listener to search advanced form
   // Load all products initially
   loadItem();
 });
@@ -576,6 +589,7 @@ function animationToCart(productId) {
   imageClone.style.height = `${imageRect.height}px`;
   imageClone.style.borderRadius = "50%";
   imageClone.style.transition = "all 0.8s ease-in-out";
+  imageClone.style.zIndex = "1000";
   document.body.appendChild(imageClone);
 
   setTimeout(() => {

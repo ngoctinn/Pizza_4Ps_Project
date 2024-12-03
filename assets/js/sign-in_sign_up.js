@@ -53,9 +53,11 @@ function login() {
       role: "admin",
     },
     {
-      account: "user@gmail.com",
-      password: "user123",
+      account: "dhsg@gmail.com",
+      password: "dhsg123",
+      name: "Nguyễn Ngọc Tín",
       role: "user",
+      cart: [],
     },
     // Thêm các người dùng khác ở đây
   ];
@@ -96,7 +98,6 @@ document
     event.preventDefault(); // Prevent default form submission
     signUp();
   });
-
 function signUp() {
   const name = document.getElementById("signUpName").value.trim();
   const email = document.getElementById("signUpEmail").value.trim();
@@ -104,20 +105,36 @@ function signUp() {
 
   // Validate name
   if (!name) {
-    alert("Vui lòng nhập tên.");
+    toast({
+      title: "Error",
+      message: "Vui lòng nhập tên.",
+      type: "error",
+      duration: 3000,
+    });
     return;
   }
 
   // Validate email format
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+(\.[^\s@]+)*$/;
+
   if (!emailPattern.test(email)) {
-    alert("Vui lòng nhập email hợp lệ.");
+    toast({
+      title: "Error",
+      message: "Vui lòng nhập email hợp lệ.",
+      type: "error",
+      duration: 3000,
+    });
     return;
   }
 
   // Validate password strength (at least 6 characters)
-  if (password.length < 6) {
-    alert("Mật khẩu phải có ít nhất 6 ký tự.");
+  if (password.length < 4) {
+    toast({
+      title: "Error",
+      message: "Mật khẩu phải có ít nhất 4 ký tự.",
+      type: "error",
+      duration: 3000,
+    });
     return;
   }
 
@@ -127,7 +144,12 @@ function signUp() {
   // Check if the email already exists
   const userExists = users.some((user) => user.account === email);
   if (userExists) {
-    alert("Email đã được sử dụng. Vui lòng sử dụng email khác.");
+    toast({
+      title: "Error",
+      message: "Email đã được sử dụng. Vui lòng sử dụng email khác.",
+      type: "error",
+      duration: 3000,
+    });
     return;
   }
 
@@ -146,7 +168,12 @@ function signUp() {
   // Save the updated users array to localStorage
   localStorage.setItem("users", JSON.stringify(users));
 
-  alert("Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.");
+  toast({
+    title: "Success",
+    message: "Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.",
+    type: "success",
+    duration: 3000,
+  });
 
   // Reset the sign-up form
   document.getElementById("signUpForm").reset();

@@ -15,8 +15,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
       rel="stylesheet"
+      href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
     />
 
     <!-- script -->
@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="../assets/css/flickity.min.css" />
     <!-- <link rel="stylesheet" href="../assets/css/reset.css" /> -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/Cart.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
@@ -141,7 +145,7 @@
                 <div class="cart-items">
                   <div class="cart-item">
                     <img
-                      src="/api/placeholder/48/48"
+                      src="../assets/img/products/PZ_Banhpizza.webp"
                       alt="Product 1"
                       class="cart-item-image"
                     />
@@ -152,7 +156,7 @@
                   </div>
                   <div class="cart-item">
                     <img
-                      src="/api/placeholder/48/48"
+                      src="../assets/img/products/PZ_CaHoiXotKemMiSo.webp"
                       alt="Product 2"
                       class="cart-item-image"
                     />
@@ -210,167 +214,250 @@
         </div>
       </nav>
     </header>
-    <main class="container my-5">
-      <div class="row g-4 shopping-cart">
-        <!-- Nội dung chính -->
-        <div class="col-lg-8">
-          <div class="main-content">
-            <h2>Giỏ Hàng</h2>
+    <main>
+      <div class="checkout-container">
+        <div class="product-cards-container">
+          <!-- nút trở lại trang sản phẩm -->
+          <a href="./" class="back-to-shop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="20"
+              height="20"
+            >
+              <path d="M15 18l-6-6 6-6"></path>
+            </svg>
 
-            <!-- Danh sách sản phẩm -->
-            <div id="product-list">
-              <div class="product-card">
-                <img
-                  src="../assets/img/products/KV_Burrata&cacom.webp"
-                  alt="Sản phẩm"
-                  class="me-3"
-                />
-                <div>
-                  <h5>Tên Sản Phẩm</h5>
-                  <p>Giá: 100,000đ</p>
-                </div>
-                <div class="product-quantity ms-auto">
-                  <button class="btn btn-sm btn-outline-secondary">-</button>
-                  <p class="quantity-count">1</p>
-                  <button class="btn btn-sm btn-outline-secondary">+</button>
-                </div>
-                <button class="btn btn-danger btn-sm ms-2">Xóa</button>
+            Trở lại trang sản phẩm
+          </a>
+
+          <div class="product-card">
+            <img
+              src="../assets/img/products/PZ_Margherita.webp"
+              alt="Pizza Margherita"
+            />
+            <div class="product-details">
+              <h3>Pizza Margherita</h3>
+              <p>Delicious classic pizza with fresh tomatoes and mozzarella.</p>
+              <p class="price">100.000đ</p>
+              <div class="quantity-controls">
+                <button class="decrease-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="increase-btn">+</button>
+                <button class="remove-btn">Xóa</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="../assets/img/products/PZ_haisancay&pmhunkhoi.webp"
+              alt="Pizza Pepperoni"
+            />
+            <div class="product-details">
+              <h3>Pizza Pepperoni</h3>
+              <p>Spicy pepperoni with a crispy crust and melted cheese.</p>
+              <p class="price">120.000đ</p>
+              <div class="quantity-controls">
+                <button class="decrease-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="increase-btn">+</button>
+                <button class="remove-btn">Xóa</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="../assets/img/products/PZ_Hawaiian.webp"
+              alt="Pizza Hawaiian"
+            />
+            <div class="product-details">
+              <h3>Pizza Hawaiian</h3>
+              <p>Sweet pineapple and savory ham on a cheesy base.</p>
+              <p class="price">110.000đ</p>
+              <div class="quantity-controls">
+                <button class="decrease-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="increase-btn">+</button>
+                <button class="remove-btn">Xóa</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="col-lg-4">
-          <div class="sidebar">
-            <!-- Địa chỉ giao hàng -->
-            <div class="card mb-3 card-address">
-              <div class="card-header">Địa Chỉ Giao Hàng</div>
-              <div class="card-body">
-                <div class="form-check mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="address-type"
-                    id="saved-address"
-                  />
-                  <label class="form-check-label" for="saved-address"
-                    >Sử dụng địa chỉ đã lưu</label
-                  >
-                </div>
-                <div class="form-check mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="address-type"
-                    id="new-address"
-                  />
-                  <label class="form-check-label" for="new-address"
-                    >Nhập địa chỉ mới</label
-                  >
-                </div>
+        <div class="checkout-form">
+          <!-- Địa chỉ giao hàng -->
+          <div class="form-section">
+            <h2>Địa Chỉ Giao Hàng</h2>
+            <div class="address-option">
+              <input
+                type="radio"
+                name="address-type"
+                id="saved-address"
+                checked
+              />
+              <label for="saved-address">Sử dụng địa chỉ đã lưu</label>
+            </div>
+            <div class="address-option">
+              <input type="radio" name="address-type" id="new-address" />
+              <label for="new-address">Nhập địa chỉ mới</label>
+            </div>
 
-                <div id="new-address-form" style="display: none">
-                  <input
-                    type="text"
-                    class="form-control mb-2"
-                    placeholder="Họ và tên"
-                  />
-                  <input
-                    type="tel"
-                    class="form-control mb-2"
-                    placeholder="Số điện thoại"
-                  />
-                  <input
-                    type="text"
-                    class="form-control mb-2"
-                    placeholder="Địa chỉ cụ thể"
-                  />
+            <div class="saved-addresses active">
+              <select class="form-group">
+                <option>Nguyễn Văn A - 123 Đường Pizza, Quận 1, TP.HCM</option>
+                <option>
+                  Trần Thị B - 456 Đường Margherita, Quận 2, TP.HCM
+                </option>
+              </select>
+            </div>
+
+            <div class="new-address">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Họ</label>
+                  <input type="text" placeholder="Nhập họ" />
+                </div>
+                <div class="form-group">
+                  <label>Tên</label>
+                  <input type="text" placeholder="Nhập tên" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Số Điện Thoại</label>
+                <input type="tel" placeholder="Nhập số điện thoại" />
+              </div>
+              <div class="form-group">
+                <label>Địa Chỉ Chi Tiết</label>
+                <input type="text" placeholder="Nhập số nhà, tên đường" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Tỉnh/Thành Phố</label>
+                  <select>
+                    <option>Chọn Thành Phố</option>
+                    <option>Hồ Chí Minh</option>
+                    <option>Hà Nội</option>
+                    <option>Đà Nẵng</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Quận/Huyện</label>
+                  <select>
+                    <option>Chọn Quận/Huyện</option>
+                  </select>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Phương thức thanh toán -->
-            <div class="card card-payment-method">
-              <div class="card-header">Phương Thức Thanh Toán</div>
-              <div class="card-body">
-                <div class="form-check mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="payment-method"
-                    id="cash"
-                  />
-                  <label class="form-check-label" for="cash"
-                    >Thanh Toán Tiền Mặt</label
-                  >
-                </div>
-                <div class="form-check mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="payment-method"
-                    id="bank-transfer"
-                  />
-                  <label class="form-check-label" for="bank-transfer"
-                    >Chuyển Khoản Ngân Hàng</label
-                  >
-                </div>
-                <div class="form-check mb-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="payment-method"
-                    id="credit-card"
-                  />
-                  <label class="form-check-label" for="credit-card"
-                    >Thanh Toán Thẻ</label
-                  >
-                </div>
-
-                <div id="card-details" class="card-details mt-3">
-                  <input
-                    type="text"
-                    class="form-control mb-2"
-                    placeholder="Số thẻ"
-                  />
-                  <div class="row">
-                    <div class="col">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="(MM/YY)"
-                      />
-                    </div>
-                    <div class="col">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="CVV"
-                      />
-                    </div>
-                  </div>
-                </div>
+          <!-- Phương thức thanh toán -->
+          <div class="form-section">
+            <h2>Phương Thức Thanh Toán</h2>
+            <div class="payment-methods">
+              <div class="payment-method" data-method="cash">Tiền Mặt</div>
+              <div class="payment-method" data-method="bank">Chuyển Khoản</div>
+              <div class="payment-method" data-method="card">
+                Thanh Toán Thẻ
               </div>
             </div>
 
-            <!-- Tổng thanh toán -->
-            <div class="card cart-payment mt-3">
-              <div class="card-body">
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Tổng tiền:</span>
-                  <strong>100,000đ</strong>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Phí vận chuyển:</span>
-                  <strong>20,000đ</strong>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Tổng thanh toán:</span>
-                  <strong>110,000đ</strong>
-                </div>
-                <button class="btn btn-primary w-100">Đặt Hàng</button>
+            <!-- Chi tiết thanh toán thẻ -->
+            <div class="payment-details card-form">
+              <div class="form-group">
+                <label>Số Thẻ</label>
+                <input type="text" placeholder="1234 5678 9012 3456" />
               </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Ngày Hết Hạn</label>
+                  <input type="text" placeholder="MM/YY" />
+                </div>
+                <div class="form-group">
+                  <label>CVV</label>
+                  <input type="text" placeholder="123" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Tên Trên Thẻ</label>
+                <input type="text" placeholder="NGUYEN VAN A" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Ghi chú -->
+          <div class="form-section">
+            <h2>Ghi Chú</h2>
+            <textarea
+              class="order-note"
+              rows="4"
+              placeholder="Nhập ghi chú đơn hàng (nếu có)"
+            ></textarea>
+          </div>
+
+          <button id="view-summary-btn" class="confirm-btn">
+            Xem Tóm Tắt Đơn Pizza
+          </button>
+          <button class="confirm-btn" style="margin-top: 15px">
+            Xác Nhận Đặt Pizza
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Tóm Tắt Đơn Hàng -->
+      <div class="order-summary-modal" id="order-summary-modal">
+        <div class="order-summary-content">
+          <span class="modal-close" id="close-summary">×</span>
+          <h2>Chi Tiết Đơn Pizza</h2>
+
+          <div class="form-section">
+            <h3>Thông Tin Sản Phẩm</h3>
+            <div class="summary-item">
+              <span>Pizza Margherita</span>
+              <span>Số lượng: 2</span>
+              <span>200.000đ</span>
+            </div>
+            <div class="summary-item">
+              <span>Pizza Pepperoni</span>
+              <span>Số lượng: 1</span>
+              <span>150.000đ</span>
+            </div>
+            <div class="summary-item">
+              <span>Pizza Hawaiian</span>
+              <span>Số lượng: 1</span>
+              <span>180.000đ</span>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Thông Tin Giao Hàng</h3>
+            <p>Nguyễn Văn A</p>
+            <p>Số điện thoại: 0123 456 789</p>
+            <p>Địa chỉ: 123 Đường Pizza, Quận 1, TP.HCM</p>
+          </div>
+
+          <div class="form-section">
+            <h3>Phương Thức Thanh Toán</h3>
+            <p>Thanh toán khi nhận hàng</p>
+          </div>
+
+          <div class="form-section">
+            <h3>Chi Phí</h3>
+            <div class="summary-total">
+              <span>Tổng Tiền Hàng</span>
+              <span>530.000đ</span>
+            </div>
+            <div class="summary-total">
+              <span>Phí Vận Chuyển</span>
+              <span>30.000đ</span>
+            </div>
+            <div class="summary-total" style="color: #242e52; font-size: 1.2em">
+              <span>Tổng Thanh Toán</span>
+              <span>560.000đ</span>
             </div>
           </div>
         </div>
@@ -558,32 +645,114 @@
         </div>
       </div>
     </footer>
+
     <script>
-      // Xử lý địa chỉ mới
+      // Xử lý chọn địa chỉ
       document
-        .getElementById("new-address")
-        .addEventListener("change", function () {
-          document.getElementById("new-address-form").style.display = "block";
+        .querySelectorAll('input[name="address-type"]')
+        .forEach((radio) => {
+          radio.addEventListener("change", function () {
+            const savedAddresses = document.querySelector(".saved-addresses");
+            const newAddress = document.querySelector(".new-address");
+
+            if (this.id === "saved-address") {
+              savedAddresses.classList.add("active");
+              newAddress.classList.remove("active");
+            } else {
+              savedAddresses.classList.remove("active");
+              newAddress.classList.add("active");
+            }
+          });
         });
 
-      document
-        .getElementById("saved-address")
-        .addEventListener("change", function () {
-          document.getElementById("new-address-form").style.display = "none";
-        });
+      // Xử lý chọn phương thức thanh toán
+      document.querySelectorAll(".payment-method").forEach((method) => {
+        method.addEventListener("click", function () {
+          // Bỏ chọn các phương thức khác
+          document
+            .querySelectorAll(".payment-method")
+            .forEach((m) => m.classList.remove("selected"));
+          this.classList.add("selected");
 
-      // Xử lý thanh toán thẻ
-      document
-        .getElementById("credit-card")
-        .addEventListener("change", function () {
-          document.getElementById("card-details").style.display = "block";
-        });
+          // Ẩn hiện chi tiết thanh toán
+          const paymentDetails = document.querySelector(".payment-details");
+          paymentDetails.classList.remove("active");
 
-      ["cash", "bank-transfer"].forEach(function (id) {
-        document.getElementById(id).addEventListener("change", function () {
-          document.getElementById("card-details").style.display = "none";
+          if (this.dataset.method === "card") {
+            paymentDetails.classList.add("active");
+          }
         });
       });
+
+      // Xử lý modal tóm tắt đơn hàng
+      const summaryModal = document.getElementById("order-summary-modal");
+      const viewSummaryBtn = document.getElementById("view-summary-btn");
+      const closeSummary = document.getElementById("close-summary");
+
+      viewSummaryBtn.addEventListener("click", function () {
+        summaryModal.style.display = "flex";
+      });
+
+      closeSummary.addEventListener("click", function () {
+        summaryModal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (e) {
+        if (e.target === summaryModal) {
+          summaryModal.style.display = "none";
+        }
+      });
+
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          summaryModal.style.display = "none";
+        }
+      });
+
+      // Xử lý tăng giảm số lượng và xóa sản phẩm
+      document.querySelectorAll(".product-card").forEach((card) => {
+        const decreaseBtn = card.querySelector(".decrease-btn");
+        const increaseBtn = card.querySelector(".increase-btn");
+        const quantitySpan = card.querySelector(".quantity");
+        const removeBtn = card.querySelector(".remove-btn");
+        const price = parseInt(
+          card.querySelector(".price").innerText.replace(/\D/g, "")
+        );
+
+        decreaseBtn.addEventListener("click", () => {
+          let qty = parseInt(quantitySpan.innerText);
+          if (qty > 1) {
+            qty--;
+            quantitySpan.innerText = qty;
+            updateTotal();
+          }
+        });
+
+        increaseBtn.addEventListener("click", () => {
+          let qty = parseInt(quantitySpan.innerText);
+          qty++;
+          quantitySpan.innerText = qty;
+          updateTotal();
+        });
+
+        removeBtn.addEventListener("click", () => {
+          card.remove();
+          updateTotal();
+        });
+      });
+
+      function updateTotal() {
+        let total = 0;
+        document.querySelectorAll(".product-card").forEach((card) => {
+          const qty = parseInt(card.querySelector(".quantity").innerText);
+          const price = parseInt(
+            card.querySelector(".price").innerText.replace(/\D/g, "")
+          );
+          total += qty * price;
+        });
+        document.querySelector(".summary-total span:nth-child(2)").innerText =
+          total.toLocaleString("vi-VN") + "đ";
+      }
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
