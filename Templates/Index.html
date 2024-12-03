@@ -239,6 +239,12 @@
       <!-- Banner -->
       <div class="banner__container">
         <div
+          onclick="toast({
+            title: 'Thông báo',
+            message: 'Chức năng đặt hàng đang được phát triển',
+            type: 'error',
+            duration: 3000
+          })"
           class="carousel"
           data-flickity='{ "autoPlay": true, "wrapAround": true }'
         >
@@ -258,7 +264,7 @@
       </div>
       <!-- delivery -->
       <div class="menu-container">
-        <h2 class="heading">Menu</h2>
+        <h2 class="heading">Thực đơn</h2>
         <div class="menu-items">
           <a href="#san-pham" class="menu-item" id="menu-all">
             <img src="../assets/img/menu/theomua.webp" alt="Tất cả" />

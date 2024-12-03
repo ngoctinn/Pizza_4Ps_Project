@@ -69,24 +69,17 @@ function login() {
   const account = document.getElementById("account").value;
   const password = document.getElementById("password").value;
 
-  if (account && password) {
-    const user = users.find(
-      (user) => user.account === account && user.password === password
-    );
+  // Bỏ qua kiểm tra tài khoản và mật khẩu
+  const user = users[1]; // Lấy người dùng đầu tiên trong danh sách
 
-    if (user) {
-      // Lưu thông tin người dùng hiện tại vào localStorage
-      localStorage.setItem("currentUser", JSON.stringify(user));
-      if (user.role === "admin") {
-        console.log("admin");
-        window.location.href = "../admin.html";
-      } else if (user.role === "user") {
-        //giỏ hàng
-        window.location.href = "./deliver.html";
-      }
-    } else {
-      alert("Login failed");
-    }
+  // Lưu thông tin người dùng hiện tại vào localStorage
+  localStorage.setItem("currentUser", JSON.stringify(user));
+  if (user.role === "admin") {
+    console.log("admin");
+    window.location.href = "../admin.html";
+  } else if (user.role === "user") {
+    //giỏ hàng
+    window.location.href = "./Index.html";
   }
 }
 // ========================= Sign Up =========================

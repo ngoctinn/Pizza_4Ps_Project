@@ -30,6 +30,7 @@
       href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/notification.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/lichsu-donhang.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
@@ -87,10 +88,10 @@
           <!-- Nav Links -->
           <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Trang chủ</a>
+              <a class="nav-link" href="./Index.html">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Giao hàng</a>
+              <a class="nav-link active" href="./Index.html">Giao hàng</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Liên hệ</a>
@@ -174,7 +175,7 @@
                   <span>Tổng cộng:</span>
                   <span>900.000đ</span>
                 </div>
-                <a href="#" class="view-cart-btn">Xem giỏ hàng</a>
+                <a href="./Cart.html" class="view-cart-btn">Xem giỏ hàng</a>
               </div>
             </div>
 
@@ -194,28 +195,17 @@
                   <div class="user-name">Nguyen Van A</div>
                   <div class="user-email">nguyenvana@example.com</div>
                 </div>
-                <a class="history-btn">
+                <a
+                  onclick="toast({
+                    title: 'Thông báo',
+                    message: 'Bạn đang xem lịch sử đơn hàng',
+                    type: 'success'
+                })"
+                  class="history-btn"
+                >
                   <i class="fa-regular fa-timer"></i>
                   Lịch sử đơn hàng
                 </a>
-
-                <button class="logout-btn" onclick="logout()">
-                  <svg
-                    class="logout-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                    <polyline points="16 17 21 12 16 7"></polyline>
-                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                  </svg>
-                  Đăng xuất
-                </button>
               </div>
             </div>
           </div>
@@ -233,7 +223,7 @@
               </a>
             </li>
             <li>
-              <a href="#!" class="breadcrumbs__link">
+              <a href="./Index.html" class="breadcrumbs__link">
                 Giao hàng
                 <img src="../assets/icons/arrow-right.svg" alt="" />
               </a>
@@ -242,6 +232,10 @@
               <a href="#!" class="breadcrumbs__link"> Lịch sử đơn hàng </a>
             </li>
           </ul>
+        </div>
+
+        <div class="heading">
+          <h2>Lịch sử đơn hàng</h2>
         </div>
         <!-- lịch sử đơn hàng -->
         <div class="order-list">
@@ -400,13 +394,13 @@
 
             <div class="order-expanded-details" id="orderDetails">
               <div class="order-product">
-                <span>Áo thun nam cao cấp</span>
+                <span>Pizza 3 loại phô mai nhà làm</span>
                 <span>Số lượng: 2</span>
                 <span>250.000đ</span>
               </div>
               <div class="order-product">
-                <span>Quần jean nam</span>
-                <span>Số lượng: 1</span>
+                <span>Pizza Margherita thịt nguội</span>
+                <span>Số lượng: 3</span>
                 <span>750.000đ</span>
               </div>
               <div class="order-details-address">
@@ -663,6 +657,7 @@
         </div>
       </div>
     </footer>
+    <div id="toast"></div>
     <script>
       function toggleDetails(event) {
         event.preventDefault();
@@ -671,6 +666,7 @@
         details.classList.toggle("active");
       }
     </script>
+    <script src="../assets/js/notification.js"></script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>
