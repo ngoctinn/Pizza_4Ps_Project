@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/product-detail.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/notification.css" />
     <!-- Fonts -->
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
     <!-- Favicon -->
@@ -87,10 +88,10 @@
           <!-- Nav Links -->
           <ul class="navbar-nav me-auto mb-2 ms-lg-5 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Trang chủ</a>
+              <a class="nav-link" href="./Index.html">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Giao hàng</a>
+              <a class="nav-link active" href="./Index.html">Giao hàng</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Liên hệ</a>
@@ -227,13 +228,13 @@
         <div class="product-container">
           <ul class="breadcrumbs">
             <li>
-              <a href="#!" class="breadcrumbs__link">
+              <a href="./Index.html" class="breadcrumbs__link">
                 Pizza 4P’s
                 <img src="../assets/icons/arrow-right.svg" alt="" />
               </a>
             </li>
             <li>
-              <a href="#!" class="breadcrumbs__link">
+              <a href="./Index.html" class="breadcrumbs__link">
                 Giao hàng
                 <img src="../assets/icons/arrow-right.svg" alt="" />
               </a>
@@ -465,6 +466,7 @@
         </div>
       </div>
     </footer>
+    <div id="toast"></div>
     <script>
       function searchProducts(query) {
         // Check if the current page is not deliver.html
@@ -543,8 +545,10 @@
           searchProducts(query);
         });
     </script>
+    <script src="../assets/js/notification.js"></script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
+    =
     <script src="../assets/js/flickity.pkgd.min.js"></script>
   </body>
 </html>

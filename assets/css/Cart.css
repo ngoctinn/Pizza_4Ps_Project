@@ -217,6 +217,7 @@ body {
 .payment-details {
   display: none;
   margin-top: 15px;
+  max-width: 540px;
 }
 
 .payment-details.active {
@@ -229,7 +230,7 @@ body {
   gap: 15px;
 }
 
-.confirm-btn {
+.datHang-btn {
   width: 100%;
   padding: 15px;
   background-color: #242e52;
@@ -241,7 +242,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.confirm-btn:hover {
+.datHang-btn:hover {
   background-color: #1a1f3b;
 }
 

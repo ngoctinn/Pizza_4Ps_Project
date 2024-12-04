@@ -423,7 +423,7 @@ let orders = [
   {
     id: 4,
     customer: "Pham Thi D",
-    status: "đã hủy",
+    status: "đã giao hàng",
     date: "2023-10-12",
     address: "Quận 7, Hồ Chí Minh",
     products: [
@@ -495,7 +495,7 @@ function renderOrders() {
     const tdActions = document.createElement("td");
     // Link xem chi tiết đơn hàng
     const viewLink = document.createElement("a");
-    viewLink.href = "#";
+    viewLink.cursor = "pointer";
     viewLink.textContent = "Xem";
     viewLink.onclick = (e) => {
       e.preventDefault();
@@ -671,7 +671,7 @@ orders.push(
   {
     id: 7,
     customer: "Le Van I",
-    status: "đã hủy",
+    status: "đã giao hàng",
     date: "2023-10-17",
     address: "Quận Tân Bình, Hồ Chí Minh",
     products: [
@@ -792,160 +792,162 @@ orders.push(
 );
 
 function generateStatistics() {
+  event.preventDefault();
   const startDate = document.getElementById("statStartDate").value;
   const endDate = document.getElementById("statEndDate").value;
 
   if (!startDate || !endDate) {
-    alert("Vui lòng chọn cả ngày bắt đầu và ngày kết thúc.");
-    return;
-  }
+    toast({
+      title: "Thông Báo",
+      message: "Vui lòng chọn ngày bắt đầu và kết thúc.",
+      type: "error",
+      duration: 3000,
+    });
+  } else {
+    // Filter orders within the date range
+    const filteredOrders = orders;
+    // Item Sales Statistics
+    const itemSalesMap = {};
+    let totalRevenue = 0;
 
-  // Filter orders within the date range
-  const filteredOrders = orders.filter((order) => {
-    return order.date >= startDate && order.date <= endDate;
-  });
+    filteredOrders.forEach((order) => {
+      order.products.forEach((product) => {
+        const { name, quantity, unitPrice } = product;
+        const priceNumber = parseInt(unitPrice.replace(/[^0-9]/g, ""));
+        if (itemSalesMap[name]) {
+          itemSalesMap[name].quantity += quantity;
+          itemSalesMap[name].revenue += quantity * priceNumber;
+        } else {
+          itemSalesMap[name] = {
+            quantity: quantity,
+            revenue: quantity * priceNumber,
+          };
+        }
+        totalRevenue += quantity * priceNumber;
+      });
+    });
 
-  // Item Sales Statistics
-  const itemSalesMap = {};
-  let totalRevenue = 0;
+    // Convert itemSalesMap to array for sorting
+    const itemSalesArray = Object.keys(itemSalesMap).map((key) => ({
+      name: key,
+      quantity: itemSalesMap[key].quantity,
+      revenue: itemSalesMap[key].revenue,
+    }));
 
-  filteredOrders.forEach((order) => {
-    order.products.forEach((product) => {
-      const { name, quantity, unitPrice } = product;
-      const priceNumber = parseInt(unitPrice.replace(/[^0-9]/g, ""));
-      if (itemSalesMap[name]) {
-        itemSalesMap[name].quantity += quantity;
-        itemSalesMap[name].revenue += quantity * priceNumber;
-      } else {
-        itemSalesMap[name] = {
-          quantity: quantity,
-          revenue: quantity * priceNumber,
-        };
+    // Determine best-selling and least-selling items
+    const sortedByQuantity = [...itemSalesArray].sort(
+      (a, b) => b.quantity - a.quantity
+    );
+    const bestSelling = sortedByQuantity[0];
+    const leastSelling = sortedByQuantity[sortedByQuantity.length - 1];
+
+    // Render Item Sales Table
+    const itemSalesTbody = document
+      .getElementById("itemSalesTable")
+      .querySelector("tbody");
+    itemSalesTbody.innerHTML = "";
+    itemSalesArray.forEach((item) => {
+      const tr = document.createElement("tr");
+
+      const tdName = document.createElement("td");
+      tdName.textContent = item.name;
+      tr.appendChild(tdName);
+
+      const tdQuantity = document.createElement("td");
+      tdQuantity.textContent = item.quantity;
+      tr.appendChild(tdQuantity);
+
+      const tdRevenue = document.createElement("td");
+      tdRevenue.textContent = new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      }).format(item.revenue);
+      tr.appendChild(tdRevenue);
+
+      const tdAction = document.createElement("td");
+      const viewBtn = document.createElement("button");
+      viewBtn.textContent = "Xem Hóa Đơn";
+      viewBtn.classList.add("view-invoices-btn");
+      viewBtn.onclick = () => viewInvoicesByItem(item.name, startDate, endDate);
+      tdAction.appendChild(viewBtn);
+      tr.appendChild(tdAction);
+
+      // Highlight best and least selling items
+      if (item.name === bestSelling.name) {
+        tr.classList.add("highlight-best");
       }
-      totalRevenue += quantity * priceNumber;
+      if (item.name === leastSelling.name) {
+        tr.classList.add("highlight-worst");
+      }
+
+      itemSalesTbody.appendChild(tr);
     });
-  });
 
-  // Convert itemSalesMap to array for sorting
-  const itemSalesArray = Object.keys(itemSalesMap).map((key) => ({
-    name: key,
-    quantity: itemSalesMap[key].quantity,
-    revenue: itemSalesMap[key].revenue,
-  }));
+    // Update Total Revenue
+    document.getElementById("totalRevenue").textContent = new Intl.NumberFormat(
+      "vi-VN",
+      {
+        style: "currency",
+        currency: "VND",
+      }
+    ).format(totalRevenue);
 
-  // Determine best-selling and least-selling items
-  const sortedByQuantity = [...itemSalesArray].sort(
-    (a, b) => b.quantity - a.quantity
-  );
-  const bestSelling = sortedByQuantity[0];
-  const leastSelling = sortedByQuantity[sortedByQuantity.length - 1];
+    // Customer Revenue Statistics
+    const customerRevenueMap = {};
 
-  // Render Item Sales Table
-  const itemSalesTbody = document
-    .getElementById("itemSalesTable")
-    .querySelector("tbody");
-  itemSalesTbody.innerHTML = "";
-  itemSalesArray.forEach((item) => {
-    const tr = document.createElement("tr");
-
-    const tdName = document.createElement("td");
-    tdName.textContent = item.name;
-    tr.appendChild(tdName);
-
-    const tdQuantity = document.createElement("td");
-    tdQuantity.textContent = item.quantity;
-    tr.appendChild(tdQuantity);
-
-    const tdRevenue = document.createElement("td");
-    tdRevenue.textContent = new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: "VND",
-    }).format(item.revenue);
-    tr.appendChild(tdRevenue);
-
-    const tdAction = document.createElement("td");
-    const viewBtn = document.createElement("button");
-    viewBtn.textContent = "Xem Hóa Đơn";
-    viewBtn.classList.add("view-invoices-btn");
-    viewBtn.onclick = () => viewInvoicesByItem(item.name, startDate, endDate);
-    tdAction.appendChild(viewBtn);
-    tr.appendChild(tdAction);
-
-    // Highlight best and least selling items
-    if (item.name === bestSelling.name) {
-      tr.classList.add("highlight-best");
-    }
-    if (item.name === leastSelling.name) {
-      tr.classList.add("highlight-worst");
-    }
-
-    itemSalesTbody.appendChild(tr);
-  });
-
-  // Update Total Revenue
-  document.getElementById("totalRevenue").textContent = new Intl.NumberFormat(
-    "vi-VN",
-    {
-      style: "currency",
-      currency: "VND",
-    }
-  ).format(totalRevenue);
-
-  // Customer Revenue Statistics
-  const customerRevenueMap = {};
-
-  filteredOrders.forEach((order) => {
-    const { customer, products } = order;
-    let orderTotal = 0;
-    products.forEach((product) => {
-      const priceNumber = parseInt(product.unitPrice.replace(/[^0-9]/g, ""));
-      orderTotal += product.quantity * priceNumber;
+    filteredOrders.forEach((order) => {
+      const { customer, products } = order;
+      let orderTotal = 0;
+      products.forEach((product) => {
+        const priceNumber = parseInt(product.unitPrice.replace(/[^0-9]/g, ""));
+        orderTotal += product.quantity * priceNumber;
+      });
+      if (customerRevenueMap[customer]) {
+        customerRevenueMap[customer] += orderTotal;
+      } else {
+        customerRevenueMap[customer] = orderTotal;
+      }
     });
-    if (customerRevenueMap[customer]) {
-      customerRevenueMap[customer] += orderTotal;
-    } else {
-      customerRevenueMap[customer] = orderTotal;
-    }
-  });
 
-  // Convert customerRevenueMap to array and sort
-  const customerRevenueArray = Object.keys(customerRevenueMap).map((key) => ({
-    name: key,
-    revenue: customerRevenueMap[key],
-  }));
-  customerRevenueArray.sort((a, b) => b.revenue - a.revenue);
-  const topCustomers = customerRevenueArray.slice(0, 5);
+    // Convert customerRevenueMap to array and sort
+    const customerRevenueArray = Object.keys(customerRevenueMap).map((key) => ({
+      name: key,
+      revenue: customerRevenueMap[key],
+    }));
+    customerRevenueArray.sort((a, b) => b.revenue - a.revenue);
+    const topCustomers = customerRevenueArray.slice(0, 5);
 
-  // Render Top Customers Table
-  const topCustomersTbody = document
-    .getElementById("topCustomersTable")
-    .querySelector("tbody");
-  topCustomersTbody.innerHTML = "";
-  topCustomers.forEach((customer) => {
-    const tr = document.createElement("tr");
+    // Render Top Customers Table
+    const topCustomersTbody = document
+      .getElementById("topCustomersTable")
+      .querySelector("tbody");
+    topCustomersTbody.innerHTML = "";
+    topCustomers.forEach((customer) => {
+      const tr = document.createElement("tr");
 
-    const tdName = document.createElement("td");
-    tdName.textContent = customer.name;
-    tr.appendChild(tdName);
+      const tdName = document.createElement("td");
+      tdName.textContent = customer.name;
+      tr.appendChild(tdName);
 
-    const tdRevenue = document.createElement("td");
-    tdRevenue.textContent = new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: "VND",
-    }).format(customer.revenue);
-    tr.appendChild(tdRevenue);
+      const tdRevenue = document.createElement("td");
+      tdRevenue.textContent = new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      }).format(customer.revenue);
+      tr.appendChild(tdRevenue);
 
-    const tdAction = document.createElement("td");
-    const viewBtn = document.createElement("button");
-    viewBtn.textContent = "Xem Hóa Đơn";
-    viewBtn.classList.add("view-invoices-btn");
-    viewBtn.onclick = () =>
-      viewInvoicesByCustomer(customer.name, startDate, endDate);
-    tdAction.appendChild(viewBtn);
-    tr.appendChild(tdAction);
+      const tdAction = document.createElement("td");
+      const viewBtn = document.createElement("button");
+      viewBtn.textContent = "Xem Hóa Đơn";
+      viewBtn.classList.add("view-invoices-btn");
+      viewBtn.onclick = () =>
+        viewInvoicesByCustomer(customer.name, startDate, endDate);
+      tdAction.appendChild(viewBtn);
+      tr.appendChild(tdAction);
 
-    topCustomersTbody.appendChild(tr);
-  });
+      topCustomersTbody.appendChild(tr);
+    });
+  }
 }
 
 // View Invoices by Item
@@ -954,7 +956,12 @@ function toggleDetails(event) {
   const details = event.target
     .closest(".order-card")
     .querySelector(".order-expanded-details");
-  details.style.display = details.style.display === "none" ? "block" : "none";
+  const computedStyle = window.getComputedStyle(details);
+  if (computedStyle.display === "none") {
+    details.style.display = "block";
+  } else {
+    details.style.display = "none";
+  }
 }
 
 function openDialog() {
@@ -983,51 +990,63 @@ function displayOrderCards(orders) {
   orders.forEach((order) => {
     const card = document.createElement("div");
     card.classList.add("order-card");
+    let statusClass = "";
+    if (order.status === "Đã giao hàng") {
+      statusClass = "status-completed";
+    } else if (order.status === "Đang xử lý") {
+      statusClass = "status-pending";
+    } else if (order.status === "Đã hủy") {
+      statusClass = "status-cancelled";
+    }
     card.innerHTML = `
-  <div class="order-header">
-    <div class="order-info">
-      <span class="order-label">Ngày mua:</span>
-      <span class="order-value">${order.date}</span>
-    </div>
-    <div class="order-info">
-      <span class="order-label">Mã đơn hàng:</span>
-      <span class="order-value">#${order.id}</span>
-    </div>
-    <div class="order-info">
-      <span class="order-label">Trạng thái:</span>
-      <span class="order-value status-completed">${order.status}</span>
-    </div>
-  </div>
-  <div class="order-details-section">
-    <div class="order-info" style="flex-grow: 1">
-      <span class="order-label">Thành tiền:</span>
-      <span class="order-value" style="color: #4caf50; font-weight: bold">${
-        order.total
-      }</span>
-    </div>
-    <a href="#" class="view-details-link" onclick="toggleDetails(event)">Xem chi tiết →</a>
-  </div>
-  <div class="order-expanded-details">
-    ${order.products
-      .map(
-        (product) => `
-      <div class="order-product">
-        <span>${product.name}</span>
-        <span>Số lượng: ${product.quantity}</span>
-        <span>${product.price}</span>
-      </div>
-    `
-      )
-      .join("")}
-    <div class="order-details-address">
+    <div class="order-header">
       <div class="order-info">
-        <span class="order-label">Địa chỉ nhận hàng:</span>
-        <span class="order-value">${order.address}</span>
+        <span class="order-label">Ngày mua:</span>
+        <span class="order-value">${order.date}</span>
+      </div>
+      <div class="order-info">
+        <span class="order-label">Mã đơn hàng:</span>
+        <span class="order-value">#${order.id}</span>
+      </div>
+      <div class="order-info">
+        <span class="order-label">Trạng thái:</span>
+        <span class="order-value ${statusClass}">${order.status}</span>
+      </div>
+      <div class="order-info">
+        <span class="order-label">Tên người mua:</span>
+        <span class="order-value">${order.customerName}</span>
       </div>
     </div>
-    <div class="total-payment">Tổng thanh toán: ${order.total}</div>
-  </div>
-`;
+    <div class="order-details-section">
+      <div class="order-info" style="flex-grow: 1">
+        <span class="order-label">Thành tiền:</span>
+        <span class="order-value" style="color: #4caf50; font-weight: bold">${
+          order.total
+        }</span>
+      </div>
+      <a class="view-details-link" onclick="toggleDetails(event)">Xem chi tiết &#9660</a>
+    </div>
+    <div class="order-expanded-details">
+      ${order.products
+        .map(
+          (product) => `
+        <div class="order-product">
+          <span>${product.name}</span>
+          <span>Số lượng: ${product.quantity}</span>
+          <span>${product.price}</span>
+        </div>
+      `
+        )
+        .join("")}
+      <div class="order-details-address">
+        <div class="order-info">
+          <span class="order-label">Địa chỉ nhận hàng:</span>
+          <span class="order-value">${order.address}</span>
+        </div>
+      </div>
+      <div class="total-payment">Tổng thanh toán: ${order.total}</div>
+    </div>
+  `;
     container.appendChild(card);
   });
 }
@@ -1036,6 +1055,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
   // Mock data, replace with actual data fetching logic
   return [
     {
+      customerName: "Nguyen Van A",
       id: 12345,
       date: "15/11/2023",
       status: "Đã giao hàng",
@@ -1055,6 +1075,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
       ],
     },
     {
+      customerName: "Tran Thi B",
       id: 12346,
       date: "16/11/2023",
       status: "Đã giao hàng",
@@ -1075,6 +1096,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
     },
     // Additional orders
     {
+      customerName: "Le Van C",
       id: 12347,
       date: "17/11/2023",
       status: "Đang xử lý",
@@ -1089,6 +1111,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
       ],
     },
     {
+      customerName: "Pham Van D",
       id: 12348,
       date: "18/11/2023",
       status: "Đã giao hàng",
@@ -1103,9 +1126,10 @@ function getOrdersByItem(itemName, startDate, endDate) {
       ],
     },
     {
+      customerName: "Nguyen Van E",
       id: 12349,
       date: "19/11/2023",
-      status: "Đã hủy",
+      status: "Đã giao hàng",
       total: "600.000đ",
       address: "202 Đường PQR, Phường STU, Quận 5, TP.HCM",
       products: [
@@ -1123,6 +1147,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
   // Mock data, replace with actual data fetching logic
   return [
     {
+      customerName: "Nguyen Van A",
       id: 12345,
       date: "15/11/2023",
       status: "Đã giao hàng",
@@ -1139,6 +1164,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
     },
     // Additional orders
     {
+      customerName: "Nguyen Van A",
       id: 12346,
       date: "16/11/2023",
       status: "Đã giao hàng",
@@ -1153,6 +1179,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
       ],
     },
     {
+      customerName: "Nguyen Van A",
       id: 12347,
       date: "17/11/2023",
       status: "Đang xử lý",
@@ -1167,6 +1194,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
       ],
     },
     {
+      customerName: "Nguyen Van A",
       id: 12348,
       date: "18/11/2023",
       status: "Đã giao hàng",

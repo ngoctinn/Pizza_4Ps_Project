@@ -35,6 +35,12 @@
     <link rel="stylesheet" href="../assets/css/notification.css" />
     <link rel="stylesheet" href="../assets/css/Cart.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+
+    <!-- font awaresome -->
+    <link
+      rel="stylesheet"
+      href="../assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
+    />
     <!-- Fonts -->
     <link rel="stylesheet" href="../assets/fonts/stylesheet.css" />
     <!-- Favicon -->
@@ -111,6 +117,18 @@
                 placeholder="Tìm kiếm..."
                 aria-label="Search"
               />
+              <button
+                class="btn btn__search"
+                onclick="toast({
+                title: 'Cảnh báo',
+                message: 'Bạn cần quay lại trang sản phẩm để tìm kiếm',
+                type: 'warning'
+
+              })"
+                type="button"
+              >
+                <i class="fas fa-search"></i>
+              </button>
             </div>
           </form>
 
@@ -395,7 +413,7 @@
             ></textarea>
           </div>
 
-          <button id="view-summary-btn" class="confirm-btn">
+          <button id="view-summary-btn" class="datHang-btn">
             Xem Tóm Tắt Đơn Pizza
           </button>
           <button
@@ -404,7 +422,7 @@
             message: 'Đơn hàng của bạn đã được ghi nhận',
             type: 'success'
           })"
-            class="confirm-btn"
+            class="datHang-btn"
             style="margin-top: 15px"
           >
             Đặt hàng
@@ -649,6 +667,18 @@
         </div>
       </div>
     </footer>
+    <div id="popup-overlay" class="popup-overlay">
+      <div class="popup-box">
+        <h3 id="popup-title">Confirm Action</h3>
+        <p id="popup-message">Are you sure?</p>
+        <div class="popup-buttons">
+          <button class="cancel-btn" onclick="closePopup()">Hủy bỏ</button>
+          <button class="confirm-btn" onclick="handleConfirm()">
+            Xác nhận
+          </button>
+        </div>
+      </div>
+    </div>
     <div id="toast"></div>
 
     <script>
@@ -726,10 +756,21 @@
 
         decreaseBtn.addEventListener("click", () => {
           let qty = parseInt(quantitySpan.innerText);
-          if (qty > 1) {
+          if (qty > 0) {
             qty--;
             quantitySpan.innerText = qty;
             updateTotal();
+            // nếu số lượng = 0 thì xóa sản phẩm
+            if (qty === 0) {
+              showConfirmPopup(
+                "Xóa sản phẩm",
+                "Bạn có chắc muốn xóa sản phẩm này?",
+                () => {
+                  card.remove();
+                  updateTotal();
+                }
+              );
+            }
           }
         });
 
@@ -741,8 +782,14 @@
         });
 
         removeBtn.addEventListener("click", () => {
-          card.remove();
-          updateTotal();
+          showConfirmPopup(
+            "Xóa sản phẩm",
+            "Bạn có chắc muốn xóa sản phẩm này?",
+            () => {
+              card.remove();
+              updateTotal();
+            }
+          );
         });
       });
 
@@ -758,6 +805,28 @@
         document.querySelector(".summary-total span:nth-child(2)").innerText =
           total.toLocaleString("vi-VN") + "đ";
       }
+      const cartWrapper = document.querySelector(".cart-wrapper");
+      const cartDropdown = document.querySelector(".cart-dropdown");
+      const popupBox = document.getElementById("popup-box");
+
+      cartWrapper.addEventListener("click", function (event) {
+        event.stopPropagation();
+        cartWrapper.classList.toggle("active");
+      });
+
+      cartDropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      popupBox.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!cartWrapper.contains(event.target)) {
+          cartWrapper.classList.remove("active");
+        }
+      });
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>

@@ -239,26 +239,56 @@
       <!-- Banner -->
       <div class="banner__container">
         <div
-          onclick="toast({
-            title: 'Thông báo',
-            message: 'Chức năng đặt hàng đang được phát triển',
-            type: 'error',
-            duration: 3000
-          })"
           class="carousel"
           data-flickity='{ "autoPlay": true, "wrapAround": true }'
         >
           <div class="carousel-cell">
-            <img src="../assets/img/banner1.webp" alt="banner1" />
+            <img
+              onclick="toast({
+              title: 'Thông báo',
+              message: 'Chức năng đang được phát triển',
+              type: 'error',
+              duration: 3000
+            })"
+              src="../assets/img/banner1.webp"
+              alt="banner1"
+            />
           </div>
           <div class="carousel-cell">
-            <img src="../assets/img/banner2.webp" alt="banner1" />
+            <img
+              onclick="toast({
+              title: 'Thông báo',
+              message: 'Chức năng đang được phát triển',
+              type: 'error',
+              duration: 3000
+            })"
+              src="../assets/img/banner2.webp"
+              alt="banner1"
+            />
           </div>
           <div class="carousel-cell">
-            <img src="../assets/img/banner3.webp" alt="banner1" />
+            <img
+              onclick="toast({
+              title: 'Thông báo',
+              message: 'Chức năng đang được phát triển',
+              type: 'error',
+              duration: 3000
+            })"
+              src="../assets/img/banner3.webp"
+              alt="banner1"
+            />
           </div>
           <div class="carousel-cell">
-            <img src="../assets/img/banner4.webp" alt="banner1" />
+            <img
+              onclick="toast({
+              title: 'Thông báo',
+              message: 'Chức năng đang được phát triển',
+              type: 'error',
+              duration: 3000
+            })"
+              src="../assets/img/banner4.webp"
+              alt="banner1"
+            />
           </div>
         </div>
       </div>
@@ -583,10 +613,44 @@
           </div>
         </div>
       </footer>
+      <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-box">
+          <h3 id="popup-title">Confirm Action</h3>
+          <p id="popup-message">Are you sure?</p>
+          <div class="popup-buttons">
+            <button class="cancel-btn" onclick="closePopup()">Hủy bỏ</button>
+            <button class="confirm-btn" onclick="handleConfirm()">
+              Xác nhận
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
     <div id="toast"></div>
     <!-- tìm nâng cao -->
     <script>
+      const cartWrapper = document.querySelector(".cart-wrapper");
+      const cartDropdown = document.querySelector(".cart-dropdown");
+      const popupBox = document.getElementById("popup-box");
+
+      cartWrapper.addEventListener("click", function (event) {
+        event.stopPropagation();
+        cartWrapper.classList.toggle("active");
+      });
+
+      cartDropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      popupBox.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!cartWrapper.contains(event.target)) {
+          cartWrapper.classList.remove("active");
+        }
+      });
       const toggleBtn = document.getElementById("js-advanced-search-toggle");
       const overlay = document.getElementById("js-advanced-search-overlay");
       const searchPopup = document.getElementById("js-advanced-search-popup");

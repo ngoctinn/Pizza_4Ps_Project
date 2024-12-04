@@ -45,6 +45,7 @@ document
     login();
   });
 function login() {
+  event.preventDefault();
   // khai báo dữ liệu mặc định
   const defaultUsers = [
     {
@@ -68,6 +69,17 @@ function login() {
 
   const account = document.getElementById("account").value;
   const password = document.getElementById("password").value;
+
+  //kiểm tra nhập đủ thông tin chưa
+  if (!account || !password) {
+    toast({
+      title: "Cảnh báo",
+      message: "Vui lòng nhập đủ thông tin.",
+      type: "error",
+      duration: 3000,
+    });
+    return;
+  }
 
   // Bỏ qua kiểm tra tài khoản và mật khẩu
   const user = users[1]; // Lấy người dùng đầu tiên trong danh sách
@@ -95,71 +107,18 @@ function signUp() {
   const name = document.getElementById("signUpName").value.trim();
   const email = document.getElementById("signUpEmail").value.trim();
   const password = document.getElementById("signUpPassword").value.trim();
+  const address = document.getElementById("signUpAddress").value.trim();
 
-  // Validate name
-  if (!name) {
+  // Validate the sign-up form
+  if (!name || !email || !password || !address) {
     toast({
-      title: "Error",
-      message: "Vui lòng nhập tên.",
+      title: "Cảnh báo",
+      message: "Vui lòng nhập đủ thông tin.",
       type: "error",
       duration: 3000,
     });
     return;
   }
-
-  // Validate email format
-  const emailPattern = /^[^\s@]+@[^\s@]+(\.[^\s@]+)*$/;
-
-  if (!emailPattern.test(email)) {
-    toast({
-      title: "Error",
-      message: "Vui lòng nhập email hợp lệ.",
-      type: "error",
-      duration: 3000,
-    });
-    return;
-  }
-
-  // Validate password strength (at least 6 characters)
-  if (password.length < 4) {
-    toast({
-      title: "Error",
-      message: "Mật khẩu phải có ít nhất 4 ký tự.",
-      type: "error",
-      duration: 3000,
-    });
-    return;
-  }
-
-  // Retrieve existing users from localStorage
-  let users = JSON.parse(localStorage.getItem("users")) || [];
-
-  // Check if the email already exists
-  const userExists = users.some((user) => user.account === email);
-  if (userExists) {
-    toast({
-      title: "Error",
-      message: "Email đã được sử dụng. Vui lòng sử dụng email khác.",
-      type: "error",
-      duration: 3000,
-    });
-    return;
-  }
-
-  // Create a new user object
-  const newUser = {
-    account: email,
-    password: password,
-    role: "user", // Default role
-    name: name,
-    cart: [], // Empty cart
-  };
-
-  // Add the new user to the users array
-  users.push(newUser);
-
-  // Save the updated users array to localStorage
-  localStorage.setItem("users", JSON.stringify(users));
 
   toast({
     title: "Success",

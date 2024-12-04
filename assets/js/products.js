@@ -885,6 +885,4 @@ const products = [
 ];
 
 // Lưu trữ sản phẩm vào localStorage
-if (!localStorage.getItem("products")) {
-  localStorage.setItem("products", JSON.stringify(products));
-}
+localStorage.setItem("products", JSON.stringify(products));

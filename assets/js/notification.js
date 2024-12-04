@@ -52,3 +52,36 @@ function toast({
     main.appendChild(toast);
   }
 }
+const popupOverlay = document.getElementById("popup-overlay");
+const popupTitle = document.getElementById("popup-title");
+const popupMessage = document.getElementById("popup-message");
+
+let confirmCallback = null;
+
+function showConfirmPopup(title, message, onConfirm, onCancel) {
+  popupTitle.innerText = title || "Confirm";
+  popupMessage.innerText = message || "Are you sure?";
+  popupOverlay.classList.add("show");
+
+  // Xử lý nút Confirm
+  const confirmButton = document.querySelector(".confirm-btn");
+  confirmButton.onclick = () => {
+    if (onConfirm) onConfirm(); // Gọi callback Xác nhận
+    closePopup();
+  };
+
+  // Xử lý nút Cancel
+  const cancelButton = document.querySelector(".cancel-btn");
+  cancelButton.onclick = () => {
+    if (onCancel) onCancel(); // Gọi callback Hủy (nếu cần)
+    closePopup();
+  };
+}
+
+function closePopup() {
+  popupOverlay.classList.remove("show");
+}
+
+function closePopup() {
+  popupOverlay.classList.remove("show");
+}
