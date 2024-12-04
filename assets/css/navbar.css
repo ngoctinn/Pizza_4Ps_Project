@@ -87,6 +87,7 @@
   padding-bottom: 8px;
   position: relative;
   display: inline-block;
+  z-index: 1;
 }
 
 .profile-trigger {
@@ -128,7 +129,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   margin-top: 8px;
   padding: 8px 0;
-  z-index: 1000001;
+  z-index: 1000;
 }
 
 .nav-profile:hover .dropdown-content {

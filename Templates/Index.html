@@ -629,28 +629,6 @@
     <div id="toast"></div>
     <!-- tìm nâng cao -->
     <script>
-      const cartWrapper = document.querySelector(".cart-wrapper");
-      const cartDropdown = document.querySelector(".cart-dropdown");
-      const popupBox = document.getElementById("popup-box");
-
-      cartWrapper.addEventListener("click", function (event) {
-        event.stopPropagation();
-        cartWrapper.classList.toggle("active");
-      });
-
-      cartDropdown.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
-
-      popupBox.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!cartWrapper.contains(event.target)) {
-          cartWrapper.classList.remove("active");
-        }
-      });
       const toggleBtn = document.getElementById("js-advanced-search-toggle");
       const overlay = document.getElementById("js-advanced-search-overlay");
       const searchPopup = document.getElementById("js-advanced-search-popup");
@@ -693,6 +671,28 @@
           behavior: "smooth",
         });
       }
+      const cartWrapper = document.querySelector(".cart-wrapper");
+      const cartDropdown = document.querySelector(".cart-dropdown");
+      const popupBox = document.getElementById("popup-box");
+
+      cartWrapper.addEventListener("click", function (event) {
+        event.stopPropagation();
+        cartWrapper.classList.toggle("active");
+      });
+
+      cartDropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      popupBox.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!cartWrapper.contains(event.target)) {
+          cartWrapper.classList.remove("active");
+        }
+      });
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>
