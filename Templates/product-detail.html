@@ -200,7 +200,7 @@
                   Lịch sử đơn hàng
                 </a>
 
-                <button class="logout-btn" onclick="logout()">
+                <button class="logout-btn" onclick="logout_detail()">
                   <svg
                     class="logout-icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -466,8 +466,41 @@
         </div>
       </div>
     </footer>
+    <div id="popup-overlay" class="popup-overlay">
+      <div class="popup-box">
+        <h3 id="popup-title">Confirm Action</h3>
+        <p id="popup-message">Are you sure?</p>
+        <div class="popup-buttons">
+          <button class="cancel-btn" onclick="closePopup()">Hủy bỏ</button>
+          <button class="confirm-btn" onclick="handleConfirm()">
+            Xác nhận
+          </button>
+        </div>
+      </div>
+    </div>
     <div id="toast"></div>
     <script>
+      function logout_detail() {
+        showConfirmPopup(
+          "Đăng xuất",
+          "Trang chi tiết sản phẩm sẽ không còn khả dụng. Bạn có chắc chắn muốn đăng xuất?",
+          function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            if (currentUser) {
+              const users = JSON.parse(localStorage.getItem("users")) || [];
+              const userIndex = users.findIndex(
+                (user) => user.account === currentUser.account
+              );
+              if (userIndex !== -1) {
+                users[userIndex].cart = currentUser.cart;
+                localStorage.setItem("users", JSON.stringify(users));
+              }
+            }
+            localStorage.removeItem("currentUser");
+            window.location.href = "index.html"; // Redirect to index page
+          }
+        );
+      }
       function searchProducts(query) {
         // Check if the current page is not deliver.html
         if (window.location.pathname !== "/Templates/deliver.html") {
