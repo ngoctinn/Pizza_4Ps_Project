@@ -15,7 +15,13 @@ navLinks.forEach((link) => {
 
 // Chức năng Modal
 function openModal(id) {
+  //focus vào modal
+  const modal = document.getElementById(id);
   document.getElementById(id).classList.add("active");
+  const firstInput = modal.querySelector("input, select, textarea");
+  if (firstInput) {
+    firstInput.focus();
+  }
 }
 function closeModal(id) {
   document.getElementById(id).classList.remove("active");
@@ -47,10 +53,18 @@ let users = [
 ];
 
 // Render Bảng Người Dùng
+let currentPage = 1;
+const usersPerPage = 4;
+
 function renderUsers() {
   const tbody = document.querySelector("#users tbody");
   tbody.innerHTML = "";
-  users.forEach((user) => {
+
+  const startIndex = (currentPage - 1) * usersPerPage;
+  const endIndex = startIndex + usersPerPage;
+  const paginatedUsers = users.slice(startIndex, endIndex);
+
+  paginatedUsers.forEach((user) => {
     const tr = document.createElement("tr");
 
     const tdId = document.createElement("td");
@@ -75,16 +89,16 @@ function renderUsers() {
 
     const tdActions = document.createElement("td");
 
-    // Nút Sửa
+    // Edit Button
     const editBtn = document.createElement("button");
     editBtn.textContent = "Sửa";
     editBtn.classList.add("btn", "btn-secondary");
     editBtn.onclick = () => editUser(user.id);
     tdActions.appendChild(editBtn);
 
-    // Nút Khóa/Mở Khóa
+    // Lock/Unlock Button
     const lockBtn = document.createElement("button");
-    lockBtn.textContent = user.status === "Hoạt động" ? "Khóa" : "Mở Khóa";
+    lockBtn.textContent = user.status === "Hoạt động" ? "Khóa" : "Mở";
     lockBtn.classList.add(
       "btn",
       user.status === "Hoạt động" ? "btn-warning" : "btn-success"
@@ -95,6 +109,64 @@ function renderUsers() {
     tr.appendChild(tdActions);
     tbody.appendChild(tr);
   });
+
+  renderPagination(users, usersPerPage, "usersPagination", renderUsers);
+}
+
+function renderPagination(
+  dataArray,
+  itemsPerPage,
+  paginationId,
+  renderFunction
+) {
+  const paginationContainer = document.getElementById(paginationId);
+  paginationContainer.innerHTML = "";
+
+  const totalPages = Math.ceil(dataArray.length / itemsPerPage);
+
+  // Previous Button (Optional)
+
+  const prevBtn = document.createElement("button");
+  prevBtn.innerHTML = "&larr;";
+  prevBtn.classList.add("btn", "btn-pagination");
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderFunction();
+    }
+  };
+  paginationContainer.appendChild(prevBtn);
+
+  // Page Numbers
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement("button");
+    pageBtn.textContent = i;
+    pageBtn.classList.add("btn", "btn-pagination");
+    if (i === currentPage) {
+      pageBtn.classList.add("active");
+    }
+    pageBtn.onclick = () => {
+      currentPage = i;
+      renderFunction();
+    };
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  // Next Button with Icon
+  const nextBtn = document.createElement("button");
+  nextBtn.innerHTML = "&#8594;"; // Right arrow icon
+  nextBtn.classList.add("btn", "btn-pagination");
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.onclick = () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderFunction();
+      console.log("currentPage", currentPage);
+      console.log("đã click");
+    }
+  };
+  paginationContainer.appendChild(nextBtn);
 }
 
 // Thêm Người Dùng
@@ -104,11 +176,27 @@ function addUser(event) {
   const email = document.getElementById("email").value;
   const status = document.getElementById("status").value;
   const type = document.getElementById("type").value;
+  // kiểm tra dữ liệu nhập vào đủ chưa
+  if (!username || !email) {
+    toast({
+      title: "Cảnh Báo",
+      message: "Vui lòng nhập đủ thông tin.",
+      type: "error",
+      duration: 3000,
+    });
+    return;
+  }
   const id = users.length ? users[users.length - 1].id + 1 : 1;
   users.push({ id, username, email, status, type });
   renderUsers();
   closeModal("addUserModal");
   event.target.reset();
+  toast({
+    title: "Thông Báo",
+    message: "Thêm người dùng thành công.",
+    type: "success",
+    duration: 3000,
+  });
 }
 
 // Sửa Người Dùng
@@ -143,6 +231,12 @@ function editUser(id) {
     // Render lại bảng và đóng modal
     renderUsers();
     closeModal("editUserModal");
+    toast({
+      title: "Thông Báo",
+      message: "Cập nhật người dùng thành công.",
+      type: "success",
+      duration: 3000,
+    });
   };
 }
 
@@ -188,13 +282,35 @@ let products = [
     type: "Pizza",
     describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
+  {
+    id: 5,
+    name: "Pizza 4 loại phô mai nhà làm",
+    price: "248,000 VND",
+    image: "./assets/img/products/PZ_4LoaiPMNL.webp",
+    type: "Pizza",
+    describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: 6,
+    name: "Pizza 4 loại phô mai nhà làm",
+    price: "248,000 VND",
+    image: "./assets/img/products/PZ_4LoaiPMNL.webp",
+    type: "Pizza",
+    describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
 ];
 
+const productsPerPage = 4;
 // Render Bảng Sản Phẩm
 function renderProducts() {
-  const tbody = document.getElementById("productTableBody");
+  const tbody = document.querySelector("#productTableBody");
   tbody.innerHTML = "";
-  products.forEach((product) => {
+
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const paginatedProducts = products.slice(startIndex, endIndex);
+
+  paginatedProducts.forEach((product) => {
     const tr = document.createElement("tr");
 
     const tdId = document.createElement("td");
@@ -245,6 +361,12 @@ function renderProducts() {
     tr.appendChild(tdActions);
     tbody.appendChild(tr);
   });
+  renderPagination(
+    products,
+    productsPerPage,
+    "productPagination",
+    renderProducts
+  );
 }
 
 // Thêm Sản Phẩm
@@ -375,14 +497,26 @@ function updateProduct(event) {
     renderProducts();
     closeModal("editProductModal");
   }
+  toast({
+    title: "Thông Báo",
+    message: "Cập nhật sản phẩm thành công.",
+    type: "success",
+    duration: 3000,
+  });
 }
 
 // Xóa Sản Phẩm
 function deleteProduct(id) {
-  if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?")) {
+  showConfirmPopup("Xóa sản phẩm", "Bạn có chắc xóa sản phẩm này không", () => {
     products = products.filter((p) => p.id !== id);
     renderProducts();
-  }
+    toast({
+      title: "Thông Báo",
+      message: "Xóa sản phẩm thành công.",
+      type: "success",
+      duration: 3000,
+    });
+  });
 }
 
 // Dữ Liệu Đơn Hàng Giả
@@ -433,11 +567,17 @@ let orders = [
   },
 ];
 
+const ordersPerPage = 5;
 // Render Bảng Đơn Hàng
 function renderOrders() {
   const tbody = document.getElementById("orderTableBody");
   tbody.innerHTML = "";
-  orders.forEach((order) => {
+
+  const startIndex = (currentPage - 1) * ordersPerPage;
+  const endIndex = startIndex + ordersPerPage;
+  const paginatedOrders = orders.slice(startIndex, endIndex);
+
+  paginatedOrders.forEach((order) => {
     const tr = document.createElement("tr");
     tr.id = `order-${order.id}`;
 
@@ -562,6 +702,8 @@ function renderOrders() {
     detailTr.appendChild(detailTd);
     tbody.appendChild(detailTr);
   });
+
+  renderPagination(orders, ordersPerPage, "ordersPagination", renderOrders);
 }
 
 // Cập Nhật Trạng Thái Đơn Hàng
@@ -1217,13 +1359,13 @@ function logout_admin() {
 
 // Render Ban Đầu
 document.addEventListener("DOMContentLoaded", () => {
-  renderUsers();
-  renderProducts();
-  renderOrders();
   // Kiểm tra trong localStorage xem có dữ liệu CurrentUser không
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   if (currentUser) {
     kiemtraDangnhapModal = document.getElementById("kiemtraDangnhapModal");
     kiemtraDangnhapModal.style.display = "none";
+    renderUsers();
+    renderProducts();
+    renderOrders();
   }
 });

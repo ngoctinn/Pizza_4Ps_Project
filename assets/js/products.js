@@ -653,7 +653,7 @@ const products = [
     name: "Nước ép rau Rocket hữu cơ",
     price: "65,000 VND",
     image: "../assets/img/products/TU_rauRocket.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -662,7 +662,7 @@ const products = [
     name: "Nước ép dưa hấu",
     price: "57,000 VND",
     image: "../assets/img/products/TU_duahau.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -671,7 +671,7 @@ const products = [
     name: "Nước ép dứa",
     price: "57,000 VND",
     image: "../assets/img/products/TU_dua.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -680,7 +680,7 @@ const products = [
     name: "Nước ép cam",
     price: "59,000 VND",
     image: "../assets/img/products/TU_cam.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -689,7 +689,7 @@ const products = [
     name: "Nước chanh",
     price: "42,000 VND",
     image: "../assets/img/products/TU_chanh.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -698,7 +698,7 @@ const products = [
     name: "Coca Cola",
     price: "39,000 VND",
     image: "../assets/img/products/TU_coca.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -707,7 +707,7 @@ const products = [
     name: "Coca Cola không đường",
     price: "39,000 VND",
     image: "../assets/img/products/TU_cocazero.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -716,7 +716,7 @@ const products = [
     name: "Sprite",
     price: "39,000 VND",
     image: "../assets/img/products/TU_sprite.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -725,7 +725,7 @@ const products = [
     name: "Bia Heineken không cồn",
     price: "44,000 VND",
     image: "../assets/img/products/TU_Heinkenkhongcon.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -734,7 +734,7 @@ const products = [
     name: "Bộ 6 loại bia Original của 4P's",
     price: "440,000 VND",
     image: "../assets/img/products/TU_bo6loaibia.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -743,7 +743,7 @@ const products = [
     name: "Bia 4P's Mikan (5.0% ABV)",
     price: "79,000 VND",
     image: "../assets/img/products/TU_Mikan.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -752,7 +752,7 @@ const products = [
     name: "Bia KAGUA Roast (6.2% ABV)",
     price: "79,000 VND",
     image: "../assets/img/products/TU_KAGUARoast.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -761,7 +761,7 @@ const products = [
     name: "Bia Premium Lager(5.5% ABV)",
     price: "79,000 VND",
     image: "../assets/img/products/TU_PremiumLager.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -770,7 +770,7 @@ const products = [
     name: "Bia Sesion IPA (4.5% ABV)",
     price: "79,000 VND",
     image: "../assets/img/products/TU_SessionIPA.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -779,7 +779,7 @@ const products = [
     name: "Whey Cider (6.5% ABV)",
     price: "79,000 VND",
     image: "../assets/img/products/TU_Cider.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -788,7 +788,7 @@ const products = [
     name: "Bia 4P's Whey Stout (5.5% ABV)",
     price: "79,000 VND",
     image: "../assets/img/products/TU_Stout.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -797,7 +797,7 @@ const products = [
     name: "Nước táo lên men",
     price: "44,000 VND",
     image: "../assets/img/products/TU_nuoctaolenmen.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -806,7 +806,7 @@ const products = [
     name: "Nước táo lên men vị dâu đỏ",
     price: "44,000 VND",
     image: "../assets/img/products/TU_nuoctaolenmenvidau.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -815,7 +815,7 @@ const products = [
     name: "Rượu Sake tự nhiên Niida-honke",
     price: "610,000 VND",
     image: "../assets/img/products/TU_Niida-honke.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -824,7 +824,7 @@ const products = [
     name: "Rượu Sangria đỏ Vang đỏ & trái cây",
     price: "250,000 VND",
     image: "../assets/img/products/TU_Sangriado(250k).webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -833,7 +833,7 @@ const products = [
     name: "Rượu Sangria đỏ Vang đỏ & trái cây",
     price: "99,000 VND",
     image: "../assets/img/products/TU_Sangriado(99k).webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -842,7 +842,7 @@ const products = [
     name: "Rượu Sangria trắng Vang trắng & trái cây",
     price: "250,000 VND",
     image: "../assets/img/products/TU_SangriaTrang(250k).webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -851,7 +851,7 @@ const products = [
     name: "Rượu Sangria trắng Vang trắng & trái cây",
     price: "99,000 VND",
     image: "../assets/img/products/TU_SangriaTrang(99k).webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
@@ -860,7 +860,7 @@ const products = [
     name: "Rượu vang trắng Chapel",
     price: "590,000 VND",
     image: "../assets/img/products/TU_vangtrangChapel.webp",
-    type: "Pizza",
+    type: "ThucUong",
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },

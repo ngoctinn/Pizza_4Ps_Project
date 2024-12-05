@@ -39,7 +39,7 @@
 
           <div class="admin_profile">
             <img
-              src="/assets/img/user.jpg"
+              src="./assets/img/user.jpg"
               alt="Admin Profile"
               class="admin_avatar"
             />
@@ -70,21 +70,25 @@
           <button class="btn btn-primary" onclick="openModal('addUserModal')">
             Thêm Người Dùng
           </button>
-          <table>
-            <thead>
-              <tr>
-                <th>Mã</th>
-                <th>Tên Người Dùng</th>
-                <th>Email</th>
-                <th>Trạng Thái</th>
-                <th>Loại Người Dùng</th>
-                <th>Hành Động</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Các hàng người dùng -->
-            </tbody>
-          </table>
+          <div class="tbl_container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mã</th>
+                  <th>Tên Người Dùng</th>
+                  <th>Email</th>
+                  <th>Trạng Thái</th>
+                  <th>Loại Người Dùng</th>
+                  <th>Hành Động</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Các hàng người dùng -->
+              </tbody>
+            </table>
+          </div>
+
+          <div id="usersPagination" class="pagination-container"></div>
         </section>
         <!-- Product Management Section -->
         <section id="products" class="section">
@@ -95,22 +99,25 @@
           >
             Thêm Sản Phẩm
           </button>
-          <table class="tbSanPham">
-            <thead>
-              <tr>
-                <th>Mã</th>
-                <th>Tên</th>
-                <th>Hình Ảnh</th>
-                <th>Giá</th>
-                <th>Loại</th>
-                <th>Mô Tả</th>
-                <th>Hành Động</th>
-              </tr>
-            </thead>
-            <tbody id="productTableBody">
-              <!-- Các hàng sản phẩm sẽ được thêm vào đây -->
-            </tbody>
-          </table>
+          <div class="tbl_container">
+            <table class="tbSanPham">
+              <thead>
+                <tr>
+                  <th>Mã</th>
+                  <th>Tên</th>
+                  <th>Hình Ảnh</th>
+                  <th>Giá</th>
+                  <th>Loại</th>
+                  <th>Mô Tả</th>
+                  <th>Hành Động</th>
+                </tr>
+              </thead>
+              <tbody id="productTableBody">
+                <!-- Các hàng sản phẩm sẽ được thêm vào đây -->
+              </tbody>
+            </table>
+          </div>
+          <div id="productPagination" class="pagination-container"></div>
         </section>
         <!-- Order Management Section -->
         <section id="orders" class="section">
@@ -139,21 +146,24 @@
               Lọc
             </button>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Mã Đơn</th>
-                <th>Khách Hàng</th>
-                <th>Trạng Thái</th>
-                <th>Ngày Đặt</th>
-                <th>Địa Chỉ Giao Hàng</th>
-                <th>Hành Động</th>
-              </tr>
-            </thead>
-            <tbody id="orderTableBody">
-              <!-- Các hàng đơn hàng sẽ được thêm vào đây -->
-            </tbody>
-          </table>
+          <div class="tbl_container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mã Đơn</th>
+                  <th>Khách Hàng</th>
+                  <th>Trạng Thái</th>
+                  <th>Ngày Đặt</th>
+                  <th>Địa Chỉ Giao Hàng</th>
+                  <th>Hành Động</th>
+                </tr>
+              </thead>
+              <tbody id="orderTableBody">
+                <!-- Các hàng đơn hàng sẽ được thêm vào đây -->
+              </tbody>
+            </table>
+          </div>
+          <div id="ordersPagination" class="pagination-container"></div>
         </section>
         <!-- Business Statistics Section -->
         <section id="statistics" class="section">
@@ -221,7 +231,7 @@
             &times;
           </button>
         </div>
-        <form onsubmit="addUser(event)">
+        <form onsubmit="addUser(event)" novalidate>
           <div class="form-group">
             <label for="username">Tên Người Dùng:</label>
             <input type="text" id="username" required />
@@ -257,7 +267,7 @@
             &times;
           </button>
         </div>
-        <form id="editUserForm">
+        <form id="editUserForm" novalidate>
           <div class="form-group">
             <label for="editUsername">Tên Người Dùng</label>
             <input type="text" id="editUsername" required />
@@ -296,6 +306,7 @@
           </button>
         </div>
         <form
+          novalidate
           id="addProductForm"
           enctype="multipart/form-data"
           onsubmit="addProduct(event)"
@@ -344,6 +355,7 @@
           </button>
         </div>
         <form
+          novalidate
           id="editProductForm"
           enctype="multipart/form-data"
           onsubmit="updateProduct(event)"
@@ -399,6 +411,18 @@
       </div>
     </div>
     <!-- Notification -->
+    <div id="popup-overlay" class="popup-overlay">
+      <div class="popup-box">
+        <h3 id="popup-title">Confirm Action</h3>
+        <p id="popup-message">Are you sure?</p>
+        <div class="popup-buttons">
+          <button class="cancel-btn" onclick="closePopup()">Hủy bỏ</button>
+          <button class="confirm-btn" onclick="handleConfirm()">
+            Xác nhận
+          </button>
+        </div>
+      </div>
+    </div>
     <div id="toast"></div>
     <script>
       function toggleSidebar() {
