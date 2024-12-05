@@ -296,20 +296,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Đăng xuất
 function logout() {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  if (currentUser) {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const userIndex = users.findIndex(
-      (user) => user.account === currentUser.account
-    );
-    if (userIndex !== -1) {
-      users[userIndex].cart = currentUser.cart;
-      localStorage.setItem("users", JSON.stringify(users));
+  showConfirmPopup("Xác nhận", "Bạn có chắc chắn muốn đăng xuất không?", () => {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const userIndex = users.findIndex(
+        (user) => user.account === currentUser.account
+      );
+      if (userIndex !== -1) {
+        users[userIndex].cart = currentUser.cart;
+        localStorage.setItem("users", JSON.stringify(users));
+      }
     }
-  }
-  localStorage.removeItem("currentUser");
-  location.reload();
+    localStorage.removeItem("currentUser");
+    location.reload();
+  });
 }
+
 // SHOW TOAST
 
 function showToast(type, message) {
@@ -391,7 +394,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (thisPage != 1) {
       let prev = document.createElement("li");
-      prev.innerText = "PREV";
+      prev.innerText = "←";
       prev.setAttribute("onclick", "changePage(" + (thisPage - 1) + ")");
       document.querySelector(".listPage").appendChild(prev);
     }
@@ -408,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (thisPage != count) {
       let next = document.createElement("li");
-      next.innerText = "NEXT";
+      next.innerText = "→";
       next.setAttribute("onclick", "changePage(" + (thisPage + 1) + ")");
       document.querySelector(".listPage").appendChild(next);
     }
@@ -773,3 +776,9 @@ function showCart() {
 document.addEventListener("DOMContentLoaded", function () {
   showCart();
 });
+
+function scrollToFooter() {
+  document.querySelector("footer").scrollIntoView({
+    behavior: "smooth",
+  });
+}

@@ -449,14 +449,24 @@
               <p class="footer__help-text">
                 Nhận thông tin mới nhất từ chúng tôi.
               </p>
-              <form action="" class="footer__form">
+              <div action="" class="footer__form">
                 <input
                   type="text"
                   class="footer__input"
                   placeholder="Email address"
                 />
-                <button class="my_btn btn--primary">GỬI</button>
-              </form>
+                <button
+                  onclick="toast({
+                title: 'Thông báo',
+                message: 'Chức năng này đang được phát triển',
+                type: 'info',
+                duration: 3000
+                })"
+                  class="my_btn btn--primary"
+                >
+                  GỬI
+                </button>
+              </div>
             </div>
 
             <!-- Footer column 2 -->
@@ -666,11 +676,7 @@
         overlay.classList.remove("advanced-search__overlay--active");
         searchPopup.classList.remove("advanced-search__popup--active");
       });
-      function scrollToFooter() {
-        document.querySelector("footer").scrollIntoView({
-          behavior: "smooth",
-        });
-      }
+
       const cartWrapper = document.querySelector(".cart-wrapper");
       const cartDropdown = document.querySelector(".cart-dropdown");
       const popupBox = document.getElementById("popup-box");

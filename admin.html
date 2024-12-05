@@ -125,9 +125,9 @@
           <!-- Bộ lọc và Sắp xếp -->
           <div class="filters">
             <label for="startDate">Từ ngày:</label>
-            <input type="date" id="startDate" />
+            <input type="date" value="2023-01-01" id="startDate" />
             <label for="endDate">Đến ngày:</label>
-            <input type="date" id="endDate" />
+            <input type="date" value="2024-01-01" id="endDate" />
             <label for="filterOrderStatus">Trạng thái:</label>
             <select id="filterOrderStatus">
               <option value="">Tất cả</option>
@@ -144,6 +144,10 @@
             </select>
             <button class="btn_filter btn-secondary" onclick="filterOrders()">
               Lọc
+            </button>
+            <!-- btn refesh -->
+            <button onclick="refresh()" class="btn_filter">
+              <i class="fas fa-sync-alt"></i>
             </button>
           </div>
           <div class="tbl_container">
@@ -172,11 +176,11 @@
             <div class="statistics-filters">
               <div>
                 <label for="statStartDate">Từ ngày:</label>
-                <input type="date" id="statStartDate" />
+                <input type="date" value="2023-01-01" id="statStartDate" />
               </div>
               <div>
                 <label for="statEndDate">Đến ngày:</label>
-                <input type="date" id="statEndDate" />
+                <input type="date" value="2024-01-01" id="statEndDate" />
               </div>
               <button class="btn btn-primary" onclick="generateStatistics()">
                 Thống Kê
@@ -290,7 +294,7 @@
               <option value="Khách hàng">Khách hàng</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-sua btn-primary">
+          <button type="submit" class="btn btn-capnhat btn-primary">
             Cập Nhật
           </button>
         </form>
@@ -298,7 +302,7 @@
     </div>
     <!-- Thêm Sản Phẩm Modal -->
     <div class="modal" id="addProductModal">
-      <div class="modal-content">
+      <div class="modal-content my-modal-content">
         <div class="modal-header">
           <h3>Thêm Sản Phẩm</h3>
           <button class="close-btn" onclick="closeModal('addProductModal')">
@@ -311,43 +315,53 @@
           enctype="multipart/form-data"
           onsubmit="addProduct(event)"
         >
-          <div class="form-group">
-            <label for="productName">Tên:</label>
-            <input type="text" id="productName" required />
+          <div class="form-left">
+            <div class="form-group">
+              <label for="productName">Tên:</label>
+              <input type="text" id="productName" required />
+            </div>
+            <div class="form-group">
+              <label for="productPrice">Giá:</label>
+              <input type="number" id="productPrice" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="productType">Loại:</label>
+              <select id="productType" required>
+                <option value="Pizza">Pizza</option>
+                <option value="Món khác">Món khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="productDescribe">Mô Tả:</label>
+              <textarea id="productDescribe" rows="4" required></textarea>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="productImage">Hình Ảnh:</label>
-            <input type="file" id="productImage" accept="image/*" required />
-            <img
-              id="addImagePreview"
-              class="image-preview"
-              src="#"
-              alt="Image Preview"
-              style="display: none"
-            />
+          <div class="form-right">
+            <div class="form-group">
+              <label for="productImage">Hình Ảnh:</label>
+              <input type="file" id="productImage" accept="image/*" required />
+              <img
+                id="addImagePreview"
+                class="image-preview"
+                src="./assets/img/th.jpg"
+                alt="Image Preview"
+              />
+              <button
+                type="button"
+                class="btn btn-bohinh"
+                onclick="removeImageAdd()"
+              >
+                Bỏ Hình
+              </button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="productPrice">Giá:</label>
-            <input type="number" id="productPrice" min="0" required />
-          </div>
-          <div class="form-group">
-            <label for="productType">Loại:</label>
-            <select id="productType" required>
-              <option value="Pizza">Pizza</option>
-              <option value="Món khác">Món khác</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="productDescribe">Mô Tả:</label>
-            <textarea id="productDescribe" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-them btn-primary">Thêm</button>
+          <button type="submit" class="btn btn-sua btn-primary">Thêm</button>
         </form>
       </div>
     </div>
     <!-- Sửa Sản Phẩm Modal -->
     <div class="modal" id="editProductModal">
-      <div class="modal-content">
+      <div class="modal-content my-modal-content">
         <div class="modal-header">
           <h3>Sửa Sản Phẩm</h3>
           <button class="close-btn" onclick="closeModal('editProductModal')">
@@ -360,42 +374,46 @@
           enctype="multipart/form-data"
           onsubmit="updateProduct(event)"
         >
-          <div class="form-group">
-            <label for="editProductName">Tên:</label>
-            <input type="text" id="editProductName" required />
+          <div class="form-left">
+            <div class="form-group">
+              <label for="editProductName">Tên:</label>
+              <input type="text" id="editProductName" required />
+            </div>
+            <div class="form-group">
+              <label for="editProductPrice">Giá:</label>
+              <input type="number" id="editProductPrice" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="editProductType">Loại:</label>
+              <select id="editProductType" required>
+                <option value="Pizza">Pizza</option>
+                <option value="Món khác">Món khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="editProductDescribe">Mô Tả:</label>
+              <textarea id="editProductDescribe" rows="4" required></textarea>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="editProductImage">Hình Ảnh:</label>
-            <input type="file" id="editProductImage" accept="image/*" />
-            <img
-              id="editImagePreview"
-              class="image-preview"
-              src="#"
-              alt="Image Preview"
-              style="display: none"
-            />
-            <button
-              type="button"
-              class="btn btn-bohinh"
-              onclick="removeImage()"
-            >
-              Bỏ Hình
-            </button>
-          </div>
-          <div class="form-group">
-            <label for="editProductPrice">Giá:</label>
-            <input type="number" id="editProductPrice" min="0" required />
-          </div>
-          <div class="form-group">
-            <label for="editProductType">Loại:</label>
-            <select id="editProductType" required>
-              <option value="Pizza">Pizza</option>
-              <option value="Món khác">Món khác</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="editProductDescribe">Mô Tả:</label>
-            <textarea id="editProductDescribe" rows="4" required></textarea>
+          <div class="form-right">
+            <div class="form-group">
+              <label for="editProductImage">Hình Ảnh:</label>
+              <input type="file" id="editProductImage" accept="image/*" />
+              <img
+                id="editImagePreview"
+                class="image-preview"
+                src="#"
+                alt="Image Preview"
+                style="display: none"
+              />
+              <button
+                type="button"
+                class="btn btn-bohinh"
+                onclick="removeImage()"
+              >
+                Bỏ Hình
+              </button>
+            </div>
           </div>
           <button type="submit" class="btn btn-sua btn-primary">
             Cập Nhật
@@ -406,7 +424,7 @@
     <!-- Add this HTML for the dialog -->
     <div id="orderDialog" class="dialog">
       <div class="dialog-content">
-        <button class="close-btn" onclick="closeDialog()">×</button>
+        <button class="btn-close" onclick="closeDialog()">×</button>
         <div id="orderCardsContainer"></div>
       </div>
     </div>

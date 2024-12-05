@@ -100,7 +100,9 @@
               <a class="nav-link active" href="./Index.html">Giao hàng</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Liên hệ</a>
+              <a class="nav-link" onclick="scrollToFooter()" href="#"
+                >Liên hệ</a
+              >
             </li>
           </ul>
 
@@ -160,7 +162,7 @@
               </button>
 
               <div class="cart-dropdown">
-                <div class="cart-header">Giỏ hàng (3)</div>
+                <div class="cart-header">Giỏ hàng</div>
                 <div class="cart-items">
                   <div class="cart-item">
                     <img
@@ -222,6 +224,23 @@
                   <i class="fa-regular fa-timer"></i>
                   Lịch sử đơn hàng
                 </a>
+                <button class="logout-btn" onclick="logout_cart()">
+                  <svg
+                    class="logout-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  Đăng xuất
+                </button>
               </div>
             </div>
           </div>
@@ -257,7 +276,10 @@
             />
             <div class="product-details">
               <h3>Pizza Margherita</h3>
-              <p>Delicious classic pizza with fresh tomatoes and mozzarella.</p>
+              <p>
+                (Món chay) Bạn sẽ bất ngờ trước sự hợp cạ của bộ đôi “phô
+                mai-mật ong” này đấy!
+              </p>
               <p class="price">100.000đ</p>
               <div class="quantity-controls">
                 <button class="decrease-btn">-</button>
@@ -274,7 +296,10 @@
             />
             <div class="product-details">
               <h3>Pizza Pepperoni</h3>
-              <p>Spicy pepperoni with a crispy crust and melted cheese.</p>
+              <p>
+                (Món chay) Bạn sẽ bất ngờ trước sự hợp cạ của bộ đôi “phô
+                mai-mật ong” này đấy!
+              </p>
               <p class="price">120.000đ</p>
               <div class="quantity-controls">
                 <button class="decrease-btn">-</button>
@@ -291,7 +316,10 @@
             />
             <div class="product-details">
               <h3>Pizza Hawaiian</h3>
-              <p>Sweet pineapple and savory ham on a cheesy base.</p>
+              <p>
+                Dòng pizza 3 loại phô mai nhà làm gồm: phô mai Mozzarella, Grano
+                Padano và Camembert.
+              </p>
               <p class="price">110.000đ</p>
               <div class="quantity-controls">
                 <button class="decrease-btn">-</button>
@@ -503,14 +531,24 @@
             <p class="footer__help-text">
               Nhận thông tin mới nhất từ chúng tôi.
             </p>
-            <form action="" class="footer__form">
+            <div action="" class="footer__form">
               <input
                 type="text"
                 class="footer__input"
                 placeholder="Email address"
               />
-              <button class="my_btn btn--primary">GỬI</button>
-            </form>
+              <button
+                onclick="toast({
+              title: 'Thông báo',
+              message: 'Chức năng này đang được phát triển',
+              type: 'info',
+              duration: 3000
+              })"
+                class="my_btn btn--primary"
+              >
+                GỬI
+              </button>
+            </div>
           </div>
 
           <!-- Footer column 2 -->
@@ -827,6 +865,28 @@
           cartWrapper.classList.remove("active");
         }
       });
+
+      function logout_cart() {
+        showConfirmPopup(
+          "Đăng xuất",
+          "Trang giỏ hàng sẽ không còn khả dụng. Bạn có chắc chắn muốn đăng xuất?",
+          function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            if (currentUser) {
+              const users = JSON.parse(localStorage.getItem("users")) || [];
+              const userIndex = users.findIndex(
+                (user) => user.account === currentUser.account
+              );
+              if (userIndex !== -1) {
+                users[userIndex].cart = currentUser.cart;
+                localStorage.setItem("users", JSON.stringify(users));
+              }
+            }
+            localStorage.removeItem("currentUser");
+            window.location.href = "index.html"; // Redirect to index page
+          }
+        );
+      }
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/products.js"></script>

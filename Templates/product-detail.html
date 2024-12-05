@@ -544,6 +544,18 @@
           const query = document.getElementById("search-input").value;
           searchProducts(query);
         });
+      const cartWrapper = document.querySelector(".cart-wrapper");
+      const cartDropdown = document.querySelector(".cart-dropdown");
+      const popupBox = document.getElementById("popup-box");
+
+      cartWrapper.addEventListener("click", function (event) {
+        event.stopPropagation();
+        cartWrapper.classList.toggle("active");
+      });
+
+      cartDropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
     </script>
     <script src="../assets/js/notification.js"></script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>

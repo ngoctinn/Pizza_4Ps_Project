@@ -2,6 +2,14 @@
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll(".section");
 
+// Set the initial active section to "users"
+document.getElementById("users").classList.add("active");
+navLinks.forEach((link) => {
+  if (link.getAttribute("data-section") === "users") {
+    link.classList.add("active");
+  }
+});
+
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -380,6 +388,18 @@ function addProduct(event) {
   const imageInput = document.getElementById("productImage");
   const file = imageInput.files[0];
 
+  // kiểm tra dữ liệu nhập vào đủ chưa
+
+  if (!name || !price || !type || !describe) {
+    toast({
+      title: "Cảnh Báo",
+      message: "Vui lòng nhập đủ thông tin.",
+      type: "error",
+      duration: 3000,
+    });
+    return;
+  }
+
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
@@ -400,7 +420,12 @@ function addProduct(event) {
     };
     reader.readAsDataURL(file);
   } else {
-    alert("Vui lòng tải lên hình ảnh sản phẩm.");
+    toast({
+      title: "Cảnh Báo",
+      message: "Vui lòng chọn hình ảnh sản phẩm.",
+      type: "error",
+      duration: 3000,
+    });
   }
 }
 
@@ -462,6 +487,13 @@ function removeImage() {
   const imageInput = document.getElementById("editProductImage");
   imageInput.value = "";
   const preview = document.getElementById("editImagePreview");
+  preview.src = "#";
+  preview.style.display = "none";
+}
+function removeImageAdd() {
+  const imageInput = document.getElementById("productImage");
+  imageInput.value = "";
+  const preview = document.getElementById("addImagePreview");
   preview.src = "#";
   preview.style.display = "none";
 }
@@ -637,6 +669,7 @@ function renderOrders() {
     const viewLink = document.createElement("a");
     viewLink.cursor = "pointer";
     viewLink.textContent = "Xem";
+    viewLink.href = "#";
     viewLink.onclick = (e) => {
       e.preventDefault();
       viewOrderDetails(order.id);
@@ -737,7 +770,37 @@ function filterOrders() {
   const endDate = document.getElementById("endDate").value;
   const orderStatus = document.getElementById("filterOrderStatus").value;
   const sortOrderAddress = document.getElementById("sortOrderAddress").value;
+  // load lại dữ liệu đơn hàng
+  //giả bộ dữ liệu
+  orders_filter = [
+    {
+      id: 1,
+      customer: "Nguyen Van A",
+      status: "chưa xử lý",
+      date: "2023-10-01",
+      address: "Quận 1, Hồ Chí Minh",
+      products: [
+        { name: "Pizza Margherita", quantity: 2, unitPrice: "120,000 VND" },
+        { name: "Coca Cola", quantity: 3, unitPrice: "20,000 VND" },
+      ],
+    },
+    {
+      id: 2,
+      customer: "Tran Thi B",
+      status: "đã xác nhận",
+      date: "2023-10-05",
+      address: "Quận 3, Hồ Chí Minh",
+      products: [
+        { name: "Pizza Pepperoni", quantity: 1, unitPrice: "150,000 VND" },
+        { name: "Pepsi", quantity: 2, unitPrice: "20,000 VND" },
+      ],
+    },
+  ];
 
+  // Lọc dữ liệu giả bộ cứ show hết ra
+  orders = orders_filter;
+
+  renderOrders();
   // Chỉ hiện thông báo mà không thực hiện lọc
   toast({
     title: "Thông Báo",
@@ -745,6 +808,16 @@ function filterOrders() {
     type: "success",
     duration: 3000,
   });
+}
+
+function refresh() {
+  orders = originalOrders;
+  // clear input
+  document.getElementById("startDate").value = "";
+  document.getElementById("endDate").value = "";
+  document.getElementById("filterOrderStatus").value = "";
+  document.getElementById("sortOrderAddress").value = "";
+  renderOrders();
 }
 // Mock Data for Users
 users.push(
@@ -779,7 +852,7 @@ users.push(
 );
 
 // Mock Data for Orders
-orders.push(
+let originalOrders = [
   {
     id: 5,
     customer: "Pham Van G",
@@ -929,9 +1002,13 @@ orders.push(
       },
       { name: "Pepsi", quantity: 1, unitPrice: "20,000 VND" },
     ],
-  }
+  },
   // Add more orders as needed
-);
+];
+
+originalOrders.forEach((order) => {
+  orders.push(order);
+});
 
 function generateStatistics() {
   event.preventDefault();
@@ -1007,8 +1084,9 @@ function generateStatistics() {
       tr.appendChild(tdRevenue);
 
       const tdAction = document.createElement("td");
-      const viewBtn = document.createElement("button");
+      const viewBtn = document.createElement("a");
       viewBtn.textContent = "Xem Hóa Đơn";
+      viewBtn.href = "#";
       viewBtn.classList.add("view-invoices-btn");
       viewBtn.onclick = () => viewInvoicesByItem(item.name, startDate, endDate);
       tdAction.appendChild(viewBtn);
@@ -1079,8 +1157,9 @@ function generateStatistics() {
       tr.appendChild(tdRevenue);
 
       const tdAction = document.createElement("td");
-      const viewBtn = document.createElement("button");
+      const viewBtn = document.createElement("a");
       viewBtn.textContent = "Xem Hóa Đơn";
+      viewBtn.href = "#";
       viewBtn.classList.add("view-invoices-btn");
       viewBtn.onclick = () =>
         viewInvoicesByCustomer(customer.name, startDate, endDate);

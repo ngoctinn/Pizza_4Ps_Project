@@ -94,7 +94,9 @@
               <a class="nav-link active" href="./Index.html">Giao hàng</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Liên hệ</a>
+              <a class="nav-link" onclick="scrollToFooter()" href="#"
+                >Liên hệ</a
+              >
             </li>
           </ul>
 
@@ -354,14 +356,14 @@
 
             <div class="order-expanded-details" id="orderDetails">
               <div class="order-product">
-                <span>Áo thun nam cao cấp</span>
+                <span>Pizza gà Tandoori </span>
                 <span>Số lượng: 2</span>
                 <span>250.000đ</span>
               </div>
               <div class="order-product">
-                <span>Quần jean nam</span>
+                <span>Pizza xúc xích cay </span>
                 <span>Số lượng: 1</span>
-                <span>750.000đ</span>
+                <span>150.000đ</span>
               </div>
               <div class="order-details-address">
                 <div class="order-info">
@@ -394,9 +396,7 @@
               </div>
               <div class="order-info">
                 <span class="order-label">Trạng thái:</span>
-                <span class="order-value" style="color: #4caf50"
-                  >Đã giao hàng</span
-                >
+                <span class="order-value status-completed">Đã giao hàng</span>
               </div>
             </div>
 
@@ -452,9 +452,7 @@
               </div>
               <div class="order-info">
                 <span class="order-label">Trạng thái:</span>
-                <span class="order-value" style="color: #4caf50"
-                  >Đã giao hàng</span
-                >
+                <span class="order-value status-completed">Đã giao hàng</span>
               </div>
             </div>
 
@@ -518,14 +516,24 @@
             <p class="footer__help-text">
               Nhận thông tin mới nhất từ chúng tôi.
             </p>
-            <form action="" class="footer__form">
+            <div action="" class="footer__form">
               <input
                 type="text"
                 class="footer__input"
                 placeholder="Email address"
               />
-              <button class="my_btn btn--primary">GỬI</button>
-            </form>
+              <button
+                onclick="toast({
+              title: 'Thông báo',
+              message: 'Chức năng này đang được phát triển',
+              type: 'info',
+              duration: 3000
+              })"
+                class="my_btn btn--primary"
+              >
+                GỬI
+              </button>
+            </div>
           </div>
 
           <!-- Footer column 2 -->

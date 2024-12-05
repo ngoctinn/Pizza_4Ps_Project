@@ -1,4 +1,5 @@
 //Toast message
+//Toast message
 function toast({
   title = "Success",
   message = "Tạo tài khoản thành công",
@@ -8,17 +9,18 @@ function toast({
   const main = document.getElementById("toast");
   if (main) {
     const toast = document.createElement("div");
-    //Auto remove toast
+    // Auto remove toast
     const autoRemove = setTimeout(function () {
       main.removeChild(toast);
     }, duration + 1000);
-    //Remove toast when click btn close
+    // Remove toast when clicked
     toast.onclick = function (e) {
-      if (e.target.closest(".fa-regular")) {
+      if (e.target.closest(".toast__close")) {
         main.removeChild(toast);
         clearTimeout(autoRemove);
       }
     };
+
     const colors = {
       success: "#47d864",
       info: "#2f86eb",
@@ -47,11 +49,14 @@ function toast({
             </p>
         </div>
     </div>
-    <div class="toast__background"style="background-color: ${color};">
+    <div class="toast__background" style="background-color: ${color};">
     </div>`;
     main.appendChild(toast);
+
+    // Attach event listener to the close button
   }
 }
+
 const popupOverlay = document.getElementById("popup-overlay");
 const popupTitle = document.getElementById("popup-title");
 const popupMessage = document.getElementById("popup-message");

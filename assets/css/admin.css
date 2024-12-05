@@ -23,6 +23,7 @@ select {
 }
 h1 {
   margin-bottom: 10px;
+  font-size: 40px !important;
 }
 
 input[type="date"] {
@@ -30,6 +31,7 @@ input[type="date"] {
   border: 1px solid #242e52;
   border-radius: 4px;
 }
+
 /* Pagination Container */
 .pagination-container {
   margin-top: 20px;
@@ -72,15 +74,32 @@ input[type="date"] {
   padding: 8px 12px;
 }
 #toast {
-  top: 10px !important;
+  top: 5px !important;
+  font-size: 10px !important;
+}
+.btn-close {
+  margin-left: 840px;
+  margin-bottom: 10px;
+  font-size: larger;
+  cursor: pointer;
+  color: #1a2340;
+  background-color: transparent;
+  border: none;
+  font-size: xx-large;
+}
+.btn-capnhat {
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  font-size: 16px;
+  margin-left: 250px !important;
 }
 .btn_filter {
   padding: 5px 10px;
-  border: 1px solid #ffc107;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
-  background-color: #ffc107 !important;
+  color: #fff;
+  background-color: #242e52 !important;
 }
 .btn-luu {
   background-color: white;
@@ -299,7 +318,11 @@ th {
   cursor: pointer;
 }
 .filters {
-  margin: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 .filters label {
   margin-right: 5px;
@@ -307,6 +330,37 @@ th {
 .filters input {
   margin-right: 10px;
 }
+/* chia làm 2 cột */
+.my-modal-content {
+  max-width: 750px !important;
+}
+#editProductForm {
+  margin: 0 auto;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#addProductForm {
+  margin: 0 auto;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-left {
+  flex: 3;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+/* Right column styling */
+.form-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Forms */
 .form-group {
   margin: 15px 0;
@@ -336,10 +390,10 @@ th {
   padding: 10px 20px;
   text-wrap: nowrap;
   font-size: 16px;
-  margin-left: 245px;
+  margin-left: 588px;
 }
 .btn-bohinh {
-  padding: 3px 21px;
+  padding: 3px 77px;
   text-wrap: nowrap;
   font-size: 16px;
   margin-left: -2px;
@@ -462,8 +516,7 @@ th {
 }
 /* Image preview */
 .image-preview {
-  width: 100px;
-  height: 100px;
+  width: 70%;
   object-fit: cover;
   margin-top: 10px;
   border: 1px solid #ccc;

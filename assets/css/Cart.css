@@ -9,6 +9,12 @@ body {
   margin-top: 120px;
 }
 
+.back-to-shop {
+  font-size: 20px;
+}
+.back-to-shop svg {
+  margin-bottom: 3px;
+}
 .checkout-container {
   font-size: large;
   display: flex;
@@ -211,7 +217,8 @@ body {
 .payment-method:hover,
 .payment-method.selected {
   border-color: #242e52;
-  background-color: #e0e0e0;
+  background-color: #242e52;
+  color: antiquewhite;
 }
 
 .payment-details {
