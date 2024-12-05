@@ -70,7 +70,6 @@ function login() {
 
   const account = document.getElementById("account").value;
   const password = document.getElementById("password").value;
-  const role = document.getElementById("role").value;
 
   //kiểm tra nhập đủ thông tin chưa
   if (!account || !password) {
