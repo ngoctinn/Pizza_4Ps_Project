@@ -112,7 +112,16 @@
                 placeholder="Tìm kiếm..."
                 aria-label="Search"
               />
-              <button class="btn btn__search" type="submit">
+              <button
+                class="btn btn__search"
+                onclick="toast({
+                title: 'Thông báo',
+                message: 'Bạn cần trở về trang sản phẩm để tìm kiếm',
+                type: 'info',
+                duration: 3000,
+    
+              })"
+              >
                 <i class="fas fa-search"></i>
               </button>
             </div>
@@ -500,16 +509,6 @@
             window.location.href = "index.html"; // Redirect to index page
           }
         );
-      }
-      function searchProducts(query) {
-        // Check if the current page is not deliver.html
-        if (window.location.pathname !== "/Templates/deliver.html") {
-          // Redirect to deliver.html with the search query as a URL parameter
-          window.location.href = `/Templates/deliver.html?search=${encodeURIComponent(
-            query
-          )}`;
-          return;
-        }
       }
 
       document.addEventListener("DOMContentLoaded", function () {
