@@ -6,20 +6,62 @@
     <title>Bảng Điều Khiển Quản Trị</title>
     <link rel="stylesheet" href="./assets/css/admin.css" />
     <link rel="stylesheet" href="./assets/css/notification.css" />
+
     <link
       rel="stylesheet"
-      href="./assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
+      href="/assets/font-awesome-pro-v6-6.2.0/css/all.min.css"
     />
   </head>
   <body>
+    <!-- Admin.html -->
+    <!-- Admin.html -->
+
+    <!-- Kiểm tra đăng nhập Modal -->
+    <div class="kiemtra_dangnhap-sanpham" id="kiemtraDangnhapModal">
+      <div class="kiemtra_dangnhap-sanpham__content">
+        <p class="kiemtra_dangnhap-sanpham__message">
+          Bạn cần đăng nhập với tư cách là quản trị viên để truy cập trang này.
+        </p>
+        <a
+          href="./Templates/sign-in_sign-up.html"
+          class="kiemtra_dangnhap-sanpham__link"
+          >Đăng nhập</a
+        >
+      </div>
+    </div>
     <div class="admin-container">
+      <button class="hamburger" onclick="toggleSidebar()">
+        <i class="fa fa-bars"></i>
+      </button>
       <aside class="sidebar">
-        <ul class="nav-links">
-          <li><a href="#" data-section="users">Người Dùng</a></li>
-          <li><a href="#" data-section="products">Sản Phẩm</a></li>
-          <li><a href="#" data-section="orders">Đơn Hàng</a></li>
-          <li><a href="#" data-section="statistics">Thống Kê</a></li>
-        </ul>
+        <div class="sidebar-head">
+          <a href="./Templates/Index.html" class="logo">PIZZA 4P'S</a>
+
+          <div class="admin_profile">
+            <img
+              src="/assets/img/user.jpg"
+              alt="Admin Profile"
+              class="admin_avatar"
+            />
+            <div class="admin_info">
+              <h3 class="admin_name">Admin</h3>
+            </div>
+          </div>
+
+          <ul class="nav-links">
+            <!-- Logo -->
+            <li><a href="#" data-section="users">Người Dùng</a></li>
+            <li><a href="#" data-section="products">Sản Phẩm</a></li>
+            <li><a href="#" data-section="orders">Đơn Hàng</a></li>
+            <li><a href="#" data-section="statistics">Thống Kê</a></li>
+            <!-- Thông tin người dùng -->
+          </ul>
+        </div>
+        <a onclick="logout_admin()" class="logout">
+          <!-- icon chỉa qua bên trái -->
+          <i class="fa-solid fa-left-long"></i>
+          Đăng Xuất
+        </a>
       </aside>
       <main class="content">
         <!-- User Management Section -->
@@ -202,7 +244,7 @@
               <option value="Khách hàng">Khách hàng</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary">Thêm</button>
+          <button type="submit" class="btn btn-them btn-primary">Thêm</button>
         </form>
       </div>
     </div>
@@ -238,7 +280,9 @@
               <option value="Khách hàng">Khách hàng</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary">Cập Nhật</button>
+          <button type="submit" class="btn btn-sua btn-primary">
+            Cập Nhật
+          </button>
         </form>
       </div>
     </div>
@@ -286,7 +330,7 @@
             <label for="productDescribe">Mô Tả:</label>
             <textarea id="productDescribe" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Thêm</button>
+          <button type="submit" class="btn btn-them btn-primary">Thêm</button>
         </form>
       </div>
     </div>
@@ -320,7 +364,7 @@
             />
             <button
               type="button"
-              class="btn btn-warning"
+              class="btn btn-bohinh"
               onclick="removeImage()"
             >
               Bỏ Hình
@@ -341,7 +385,9 @@
             <label for="editProductDescribe">Mô Tả:</label>
             <textarea id="editProductDescribe" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Cập Nhật</button>
+          <button type="submit" class="btn btn-sua btn-primary">
+            Cập Nhật
+          </button>
         </form>
       </div>
     </div>
@@ -354,6 +400,12 @@
     </div>
     <!-- Notification -->
     <div id="toast"></div>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
+      }
+    </script>
     <script src="./assets/js/admin.js"></script>
     <script src="./assets/js/notification.js"></script>
   </body>

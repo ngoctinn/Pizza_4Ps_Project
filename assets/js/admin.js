@@ -160,7 +160,7 @@ let products = [
     id: 1,
     name: "Pizza Tôm Xốt Tỏi Cay",
     price: "245,000 VND",
-    image: "../assets/img/products/PZ_TomXotToiCay.webp",
+    image: "./assets/img/products/PZ_TomXotToiCay.webp",
     type: "Pizza",
     describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
@@ -168,7 +168,7 @@ let products = [
     id: 2,
     name: "Pizza Margherita thịt nguội & Burrata",
     price: "398,000 VND",
-    image: "../assets/img/products/PZ_MargheritaThitNguoi&Burrata.webp",
+    image: "./assets/img/products/PZ_MargheritaThitNguoi&Burrata.webp",
     type: "Pizza",
     describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
@@ -176,7 +176,7 @@ let products = [
     id: 3,
     name: "Pizza 3 loại phô mai nhà làm",
     price: "198,000 VND",
-    image: "../assets/img/products/PZ_3LoaiPMNL.webp",
+    image: "./assets/img/products/PZ_3LoaiPMNL.webp",
     type: "Pizza",
     describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
@@ -184,7 +184,7 @@ let products = [
     id: 4,
     name: "Pizza 4 loại phô mai nhà làm",
     price: "248,000 VND",
-    image: "../assets/img/products/PZ_4LoaiPMNL.webp",
+    image: "./assets/img/products/PZ_4LoaiPMNL.webp",
     type: "Pizza",
     describe: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
@@ -1210,10 +1210,20 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
     },
   ];
 }
+function logout_admin() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "./Templates/sign-in_sign-up.html";
+}
 
 // Render Ban Đầu
 document.addEventListener("DOMContentLoaded", () => {
   renderUsers();
   renderProducts();
   renderOrders();
+  // Kiểm tra trong localStorage xem có dữ liệu CurrentUser không
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (currentUser) {
+    kiemtraDangnhapModal = document.getElementById("kiemtraDangnhapModal");
+    kiemtraDangnhapModal.style.display = "none";
+  }
 });

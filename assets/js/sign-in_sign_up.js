@@ -51,7 +51,9 @@ function login() {
     {
       account: "admin@gmail.com",
       password: "admin123",
+      name: "Nguyễn Ngọc Tín",
       role: "admin",
+      cart: [],
     },
     {
       account: "dhsg@gmail.com",
@@ -62,13 +64,13 @@ function login() {
     },
     // Thêm các người dùng khác ở đây
   ];
-  if (!localStorage.getItem("users")) {
-    localStorage.setItem("users", JSON.stringify(defaultUsers));
-  }
+
+  localStorage.setItem("users", JSON.stringify(defaultUsers));
   let users = JSON.parse(localStorage.getItem("users")) || defaultUsers;
 
   const account = document.getElementById("account").value;
   const password = document.getElementById("password").value;
+  const role = document.getElementById("role").value;
 
   //kiểm tra nhập đủ thông tin chưa
   if (!account || !password) {
@@ -82,7 +84,12 @@ function login() {
   }
 
   // Bỏ qua kiểm tra tài khoản và mật khẩu
-  const user = users[1]; // Lấy người dùng đầu tiên trong danh sách
+  // nếu role là admin thì lấy người dùng đầu tiên trong danh sách
+  // nếu role là user thì lấy người dùng thứ 2 trong danh sách
+  let user = users[1];
+  if (role === "admin") {
+    user = users[0];
+  }
 
   // Lưu thông tin người dùng hiện tại vào localStorage
   localStorage.setItem("currentUser", JSON.stringify(user));
