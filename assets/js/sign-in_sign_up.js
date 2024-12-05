@@ -86,10 +86,7 @@ function login() {
   // Bỏ qua kiểm tra tài khoản và mật khẩu
   // nếu role là admin thì lấy người dùng đầu tiên trong danh sách
   // nếu role là user thì lấy người dùng thứ 2 trong danh sách
-  let user = users[1];
-  if (role === "admin") {
-    user = users[0];
-  }
+  const user = users[1];
 
   // Lưu thông tin người dùng hiện tại vào localStorage
   localStorage.setItem("currentUser", JSON.stringify(user));
