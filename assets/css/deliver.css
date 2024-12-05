@@ -426,7 +426,7 @@ main {
   border: 1px solid #ccc;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 10;
+  text-wrap: nowrap;
   position: relative;
   margin-left: 100px;
 }
