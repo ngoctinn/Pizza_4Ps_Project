@@ -1440,7 +1440,7 @@ function logout_admin() {
 document.addEventListener("DOMContentLoaded", () => {
   // Kiểm tra trong localStorage xem có dữ liệu CurrentUser không
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  if (currentUser) {
+  if (currentUser.role === "admin") {
     kiemtraDangnhapModal = document.getElementById("kiemtraDangnhapModal");
     kiemtraDangnhapModal.style.display = "none";
     renderUsers();
