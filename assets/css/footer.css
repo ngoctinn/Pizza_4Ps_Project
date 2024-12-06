@@ -7,7 +7,7 @@ footer {
 
 .footer__row {
   display: grid;
-  grid-template-columns: 5fr 2.4fr 2fr 2.9fr 1fr;
+  grid-template-columns: 4fr 2fr 2.8fr 2.9fr 1fr;
   gap: 50px;
 }
 .footer__container {
