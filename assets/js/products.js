@@ -882,6 +882,27 @@ const products = [
     decribe:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
   },
+  {
+    id: 99,
+    name: "Burrata (75g)",
+    price: "98,000 VND",
+    image: "../assets/img/products/TP_Burrata(75g).webp",
+    type: "Topping",
+  },
+  {
+    id: 100,
+    name: "Burrata (150g)",
+    price: "168,000 VND",
+    image: "../assets/img/products/TP_Burrata(150g).webp",
+    type: "Topping",
+  },
+  {
+    ìd: 101,
+    name: "Dầu ớt",
+    price: "38,000 VND",
+    image: "../assets/img/products/TP_dauot.webp",
+    type: "Topping",
+  },
 ];
 
 // Lưu trữ sản phẩm vào localStorage

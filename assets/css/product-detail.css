@@ -35,6 +35,18 @@ main {
   line-height: 150%;
   white-space: nowrap;
 }
+
+.btn__login {
+  padding: 5px 20px;
+  margin-top: 5px;
+  background-color: #fafafa;
+  color: #5a5a5a;
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 /* product detail */
 .product-detail-container {
   display: flex;

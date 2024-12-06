@@ -106,10 +106,11 @@ function renderUsers() {
 
     // Lock/Unlock Button
     const lockBtn = document.createElement("button");
+    lockBtn.className = "btn_lock-unlock";
     lockBtn.textContent = user.status === "Hoạt động" ? "Khóa" : "Mở";
     lockBtn.classList.add(
       "btn",
-      user.status === "Hoạt động" ? "btn-warning" : "btn-success"
+      user.status === "Hoạt động" ? "btn-success" : "btn-warning"
     );
     lockBtn.onclick = () => toggleLockUser(user.id);
     tdActions.appendChild(lockBtn);
@@ -1169,6 +1170,28 @@ function generateStatistics() {
       topCustomersTbody.appendChild(tr);
     });
   }
+}
+function refresh_tk() {
+  // Clear input fields
+  document.getElementById("statStartDate").value = "";
+  document.getElementById("statEndDate").value = "";
+
+  // Clear Item Sales Table
+  const itemSalesTbody = document
+    .getElementById("itemSalesTable")
+    .querySelector("tbody");
+  itemSalesTbody.innerHTML = "";
+
+  // Clear Top Customers Table
+  const topCustomersTbody = document
+    .getElementById("topCustomersTable")
+    .querySelector("tbody");
+  topCustomersTbody.innerHTML = "";
+
+  // Clear Total Revenue
+  document.getElementById("totalRevenue").textContent = "";
+
+  // Optionally, you can also clear any other data or reset any other UI elements if needed
 }
 
 // View Invoices by Item

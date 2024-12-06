@@ -185,6 +185,10 @@
               <button class="btn btn-primary" onclick="generateStatistics()">
                 Thống Kê
               </button>
+              <!-- btn refresh -->
+              <button onclick="refresh_tk()" class="btn_refresh">
+                <i class="fas fa-sync-alt"></i>
+              </button>
             </div>
             <div class="statistics-tables">
               <h2>Thống Kê Bán Hàng Các Mặt Hàng</h2>
@@ -328,7 +332,10 @@
               <label for="productType">Loại:</label>
               <select id="productType" required>
                 <option value="Pizza">Pizza</option>
-                <option value="Món khác">Món khác</option>
+                <option value="KhaiVi">Khai vị</option>
+                <option value="Salad">Salad</option>
+                <option value="MonKhac">Món chính/Mì Ý</option>
+                <option value="ThucUong">Thức uống</option>
               </select>
             </div>
             <div class="form-group">

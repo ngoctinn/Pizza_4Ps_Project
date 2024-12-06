@@ -37,6 +37,18 @@ input[type="date"] {
   margin-top: 20px;
   text-align: center;
 }
+.btn_refresh {
+  padding: 9px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #242e52 !important;
+}
+
+.btn_lock-unlock {
+  width: 70px;
+}
 
 /* Pagination Buttons */
 .btn-pagination {
