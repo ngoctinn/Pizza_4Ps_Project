@@ -20,16 +20,22 @@ body {
 .status-pending {
   background-color: #ffc107;
   color: white;
+  width: 130px;
+  text-align: center;
 }
 
 .status-completed {
   background-color: #4caf50;
   color: white;
+  width: 130px;
+  text-align: center;
 }
 
 .status-cancelled {
   background-color: #f44336;
   color: white;
+  width: 130px;
+  text-align: center;
 }
 .breadcrumbs {
   margin: 0 5%;

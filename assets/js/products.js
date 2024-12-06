@@ -7,7 +7,7 @@ const products = [
     image: "../assets/img/products/PZ_TomXotToiCay.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     image: "../assets/img/products/PZ_MargheritaThitNguoi&Burrata.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const products = [
     image: "../assets/img/products/PZ_3LoaiPMNL.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const products = [
     image: "../assets/img/products/PZ_4LoaiPMNL.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const products = [
     image: "../assets/img/products/PZ_5LoaiPMNL.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ const products = [
     image: "../assets/img/products/PZ_Margherita.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 7,
@@ -61,7 +61,7 @@ const products = [
     image: "../assets/img/products/PZ_MargheritaThitNguoi.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const products = [
     image: "../assets/img/products/PZ_Margherita&2LoaiXucXichY.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 9,
@@ -79,7 +79,7 @@ const products = [
     image: "../assets/img/products/PZ_MargheritaCaTimNuong.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 10,
@@ -88,7 +88,7 @@ const products = [
     image: "../assets/img/products/PZ_CaHoiXotKemMiSo.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 11,
@@ -97,7 +97,7 @@ const products = [
     image: "../assets/img/products/PZ_haisancay&pmhunkhoi.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 12,
@@ -106,7 +106,7 @@ const products = [
     image: "../assets/img/products/PZ_tom&mayonnaise.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 13,
@@ -115,7 +115,7 @@ const products = [
     image: "../assets/img/products/PZ_GaXotTeriyaki.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 14,
@@ -124,7 +124,7 @@ const products = [
     image: "../assets/img/products/PZ_Camembert&XotNamThitNguoi.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 15,
@@ -133,7 +133,7 @@ const products = [
     image: "../assets/img/products/PZ_4LoaiNam1.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 16,
@@ -142,7 +142,7 @@ const products = [
     image: "../assets/img/products/PZ_4LoaiNam2.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 17,
@@ -151,7 +151,7 @@ const products = [
     image: "../assets/img/products/PZ_XotBiNgoiQueTay&Hoa.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 18,
@@ -160,7 +160,7 @@ const products = [
     image: "../assets/img/products/PZ_xotbingoiquetay&pmLactic.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 19,
@@ -169,7 +169,7 @@ const products = [
     image: "../assets/img/products/PZ_XotBiNgoiQueTay&PMMozzarella.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 20,
@@ -178,7 +178,7 @@ const products = [
     image: "../assets/img/products/PZ_gaTandooi.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 21,
@@ -187,7 +187,7 @@ const products = [
     image: "../assets/img/products/PZ_CaiXoan&RicottaChanh.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 22,
@@ -196,7 +196,7 @@ const products = [
     image: "../assets/img/products/PZ_SoDiep&XotMisoNgot.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 23,
@@ -205,7 +205,7 @@ const products = [
     image: "../assets/img/products/PZ_ThitBoCayKieuKebab.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 24,
@@ -214,7 +214,7 @@ const products = [
     image: "../assets/img/products/PZ_BoKho.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 25,
@@ -223,7 +223,7 @@ const products = [
     image: "../assets/img/products/PZ_XucXichCay.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 26,
@@ -232,7 +232,7 @@ const products = [
     image: "../assets/img/products/PZ_trung&caiboxoi.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 27,
@@ -241,7 +241,7 @@ const products = [
     image: "../assets/img/products/PZ_Hawaiian.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 28,
@@ -250,7 +250,7 @@ const products = [
     image: "../assets/img/products/KV_cacloaiPMNL(S).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 29,
@@ -259,7 +259,7 @@ const products = [
     image: "../assets/img/products/KV_cacloaiPMNL(L).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 30,
@@ -268,7 +268,7 @@ const products = [
     image: "../assets/img/products/KV_thitnguoicuonxoai&xotchanhday.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 31,
@@ -277,7 +277,7 @@ const products = [
     image: "../assets/img/products/KV_(1pc)Camembert&MascarponeTruffle.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 32,
@@ -286,7 +286,7 @@ const products = [
     image: "../assets/img/products/KV_(2pc)Camembert&MascarponeTruffle.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 33,
@@ -295,7 +295,7 @@ const products = [
     image: "../assets/img/products/KV_khoaitayDucbolo.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 34,
@@ -304,7 +304,7 @@ const products = [
     image: "../assets/img/products/KV_supngheuham.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 35,
@@ -313,7 +313,7 @@ const products = [
     image: "../assets/img/products/KV_supcachuathitvienY.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 36,
@@ -322,7 +322,7 @@ const products = [
     image: "../assets/img/products/KV_garan&giaviphuongDong(2mieng).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 37,
@@ -331,7 +331,7 @@ const products = [
     image: "../assets/img/products/KV_thitnguoicuonRicotta&Rocket.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 38,
@@ -340,7 +340,7 @@ const products = [
     image: "../assets/img/products/KV_setthitnguoiPMNL(lon).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 39,
@@ -349,7 +349,7 @@ const products = [
     image: "../assets/img/products/KV_setthitnguoiPMNL(nho).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 40,
@@ -358,7 +358,7 @@ const products = [
     image: "../assets/img/products/KV_Burrata&cacom.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 41,
@@ -367,7 +367,7 @@ const products = [
     image: "../assets/img/products/KV_Burrataxotbocay(L).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 42,
@@ -376,7 +376,7 @@ const products = [
     image: "../assets/img/products/KV_Burrataxotbocay(S).webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 43,
@@ -385,7 +385,7 @@ const products = [
     image: "../assets/img/products/KV_khoaitaynghien&pmRaclette.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 44,
@@ -394,7 +394,7 @@ const products = [
     image: "../assets/img/products/KV_pateganga.webp",
     type: "KhaiVi",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 45,
@@ -403,7 +403,7 @@ const products = [
     image: "../assets/img/products/SL_cahoibo&pmRicotta.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 46,
@@ -412,7 +412,7 @@ const products = [
     image: "../assets/img/products/SL_caixoan.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 47,
@@ -421,7 +421,7 @@ const products = [
     image: "../assets/img/products/SL_Mozzarella&cachuaDaLat.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 48,
@@ -430,7 +430,7 @@ const products = [
     image: "../assets/img/products/SL_pmBurrata&rauRocket.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 49,
@@ -439,7 +439,7 @@ const products = [
     image: "../assets/img/products/SL_rauRocket&cachua.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 50,
@@ -448,7 +448,7 @@ const products = [
     image: "../assets/img/products/SL_rauxanh&xotnhalam.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 51,
@@ -457,7 +457,7 @@ const products = [
     image: "../assets/img/products/SL_thitnguoicuonRicotta&Rocket.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 52,
@@ -466,7 +466,7 @@ const products = [
     image: "../assets/img/products/SL_tom&bo.webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 53,
@@ -475,7 +475,7 @@ const products = [
     image: "../assets/img/products/SL_traicayBurrata&thitnguoi(nho).webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 54,
@@ -484,7 +484,7 @@ const products = [
     image: "../assets/img/products/SL_traicayBurrata&thitnguoi(lon).webp",
     type: "Salad",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 55,
@@ -493,7 +493,7 @@ const products = [
     image: "../assets/img/products/MC_comyRisottomuc.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 56,
@@ -502,7 +502,7 @@ const products = [
     image: "../assets/img/products/MC_Fettuccine&xotkemcahoi.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 57,
@@ -511,7 +511,7 @@ const products = [
     image: "../assets/img/products/MC_Fettuccine&xottomnam.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 58,
@@ -520,7 +520,7 @@ const products = [
     image: "../assets/img/products/MC_Lasagnadutlo.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 59,
@@ -529,7 +529,7 @@ const products = [
     image: "../assets/img/products/MC_miyArrabbiata&pmMascarpone.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 60,
@@ -538,7 +538,7 @@ const products = [
     image: "../assets/img/products/MC_miybobam&pmhunkhoi.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 61,
@@ -547,7 +547,7 @@ const products = [
     image: "../assets/img/products/MC_miycua&xotkemcachua.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 62,
@@ -556,7 +556,7 @@ const products = [
     image: "../assets/img/products/MC_miyngheu&xotquetay.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 63,
@@ -565,7 +565,7 @@ const products = [
     image: "../assets/img/products/MC_miytomtoicay.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 64,
@@ -574,7 +574,7 @@ const products = [
     image: "../assets/img/products/MC_miyxotcachua&mpMascarpone.webp",
     type: "MonChinh",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 65,
@@ -583,7 +583,7 @@ const products = [
     image: "../assets/img/products/TM_banhphomai2lop.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 66,
@@ -592,7 +592,7 @@ const products = [
     image: "../assets/img/products/TM_puddingkemtrung.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 67,
@@ -601,7 +601,7 @@ const products = [
     image: "../assets/img/products/TM_puddingmatcha.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 68,
@@ -610,7 +610,7 @@ const products = [
     image: "../assets/img/products/TM_suachuaHyLap.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 69,
@@ -619,7 +619,7 @@ const products = [
     image: "../assets/img/products/TM_suachuaitduong.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 70,
@@ -628,7 +628,7 @@ const products = [
     image: "../assets/img/products/TM_suachuakhongduong.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 71,
@@ -637,7 +637,7 @@ const products = [
     image: "../assets/img/products/TM_suachuaxotchanhday.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 72,
@@ -646,7 +646,7 @@ const products = [
     image: "../assets/img/products/TM_suachuaxotdau.webp",
     type: "TrangMieng",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 73,
@@ -655,7 +655,7 @@ const products = [
     image: "../assets/img/products/TU_rauRocket.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 74,
@@ -664,7 +664,7 @@ const products = [
     image: "../assets/img/products/TU_duahau.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 75,
@@ -673,7 +673,7 @@ const products = [
     image: "../assets/img/products/TU_dua.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 76,
@@ -682,7 +682,7 @@ const products = [
     image: "../assets/img/products/TU_cam.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 77,
@@ -691,7 +691,7 @@ const products = [
     image: "../assets/img/products/TU_chanh.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 78,
@@ -700,7 +700,7 @@ const products = [
     image: "../assets/img/products/TU_coca.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 79,
@@ -709,7 +709,7 @@ const products = [
     image: "../assets/img/products/TU_cocazero.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 80,
@@ -718,7 +718,7 @@ const products = [
     image: "../assets/img/products/TU_sprite.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 81,
@@ -727,7 +727,7 @@ const products = [
     image: "../assets/img/products/TU_Heinkenkhongcon.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 82,
@@ -736,7 +736,7 @@ const products = [
     image: "../assets/img/products/TU_bo6loaibia.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 83,
@@ -745,7 +745,7 @@ const products = [
     image: "../assets/img/products/TU_Mikan.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 84,
@@ -754,7 +754,7 @@ const products = [
     image: "../assets/img/products/TU_KAGUARoast.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 85,
@@ -763,7 +763,7 @@ const products = [
     image: "../assets/img/products/TU_PremiumLager.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 86,
@@ -772,7 +772,7 @@ const products = [
     image: "../assets/img/products/TU_SessionIPA.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 87,
@@ -781,7 +781,7 @@ const products = [
     image: "../assets/img/products/TU_Cider.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 88,
@@ -790,7 +790,7 @@ const products = [
     image: "../assets/img/products/TU_Stout.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 89,
@@ -799,7 +799,7 @@ const products = [
     image: "../assets/img/products/TU_nuoctaolenmen.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 90,
@@ -808,7 +808,7 @@ const products = [
     image: "../assets/img/products/TU_nuoctaolenmenvidau.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 91,
@@ -817,7 +817,7 @@ const products = [
     image: "../assets/img/products/TU_Niida-honke.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 92,
@@ -826,7 +826,7 @@ const products = [
     image: "../assets/img/products/TU_Sangriado(250k).webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 93,
@@ -835,7 +835,7 @@ const products = [
     image: "../assets/img/products/TU_Sangriado(99k).webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 94,
@@ -844,7 +844,7 @@ const products = [
     image: "../assets/img/products/TU_SangriaTrang(250k).webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 95,
@@ -853,7 +853,7 @@ const products = [
     image: "../assets/img/products/TU_SangriaTrang(99k).webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 96,
@@ -862,7 +862,7 @@ const products = [
     image: "../assets/img/products/TU_vangtrangChapel.webp",
     type: "ThucUong",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 97,
@@ -871,7 +871,7 @@ const products = [
     image: "../assets/img/products/TU_RobertsonBurt.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 98,
@@ -880,7 +880,7 @@ const products = [
     image: "../assets/img/products/TU_ilVeiOrtrugo.webp",
     type: "Pizza",
     decribe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, commodi facere. Totam quod repellat molestiae in cum. Pariatur tenetur, odio ab accusamus sed impedit. Alias cum reiciendis distinctio eligendi recusandae.",
+      "Pizza là món ăn phổ biến trên toàn thế giới với lớp vỏ giòn rụm, sốt cà chua đậm đà và phô mai tan chảy. Kết hợp với các loại topping như rau củ, thịt và thảo mộc, pizza mang đến trải nghiệm hương vị tuyệt vời. Dù thưởng thức nóng hay lạnh, pizza luôn là lựa chọn tuyệt vời cho mọi dịp.",
   },
   {
     id: 99,
