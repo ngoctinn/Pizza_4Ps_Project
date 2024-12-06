@@ -768,6 +768,35 @@ function showCart() {
     }
   });
 
+  // Function to show the Add Note Popup
+
+  // Add event listener to the "Thêm ghi chú" link
+  document.querySelector(".add-note").addEventListener("click", (event) => {
+    event.preventDefault();
+    /// Show the Add Note  Popup nếu mà xác nhận thì sẽ thông báo note added
+    showAddNotePopup(
+      (note) => {
+        console.log("Note added:", note); // Handle the note input
+      },
+      () => {
+        console.log("Note addition cancelled");
+      }
+    );
+  });
+
+  // Add event listener to the "Thêm ghi chú" link
+  document.querySelector(".add-note").addEventListener("click", (event) => {
+    event.preventDefault();
+    showAddNotePopup(
+      (note) => {
+        console.log("Note added:", note); // Handle the note input
+      },
+      () => {
+        console.log("Note addition cancelled");
+      }
+    );
+  });
+
   document.querySelector(".cart-count").textContent = totalQuantity;
   document.querySelector(
     ".cart-total span:last-child"

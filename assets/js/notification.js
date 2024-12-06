@@ -90,3 +90,36 @@ function closePopup() {
 function closePopup() {
   popupOverlay.classList.remove("show");
 }
+
+function showAddNotePopup(onConfirm, onCancel) {
+  const popupTitle = document.getElementById("popup-title");
+  const popupMessage = document.getElementById("popup-message");
+  const popupOverlay = document.getElementById("popup-overlay");
+
+  popupTitle.innerText = "Thêm ghi chú";
+  popupMessage.innerHTML =
+    '<input type="text" id="noteInput" placeholder="Nhập ghi chú của bạn">';
+
+  popupOverlay.classList.add("show");
+
+  // Handle Confirm button
+  const confirmButton = document.querySelector(".confirm-btn");
+  confirmButton.onclick = () => {
+    const noteInput = document.getElementById("noteInput").value;
+    if (onConfirm) onConfirm(noteInput); // Pass the note input to the callback
+    closePopup();
+  };
+
+  // Handle Cancel button
+  const cancelButton = document.querySelector(".cancel-btn");
+  cancelButton.onclick = () => {
+    if (onCancel) onCancel(); // Call the cancel callback if provided
+    closePopup();
+  };
+}
+
+// Function to close the popup
+function closePopup() {
+  const popupOverlay = document.getElementById("popup-overlay");
+  popupOverlay.classList.remove("show");
+}

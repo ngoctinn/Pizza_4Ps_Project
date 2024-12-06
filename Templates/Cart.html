@@ -217,8 +217,8 @@
 
               <div class="dropdown-content">
                 <div class="user-info">
-                  <div class="user-name">Nguyen Van A</div>
-                  <div class="user-email">nguyenvana@example.com</div>
+                  <div class="user-name">Nguyễn Ngọc Tín</div>
+                  <div class="user-email">ngoctinn.work@gmail.com</div>
                 </div>
                 <a href="./lichsu-donhang.html" class="history-btn">
                   <i class="fa-regular fa-timer"></i>
@@ -748,7 +748,14 @@
         <div class="cart-item-details">
           <div class="cart-item-name cart-item-name-cart">${product.name}</div>
           <div class="cart-item-price cart-item-price-cart">${product.price} x ${cartItem.quantity}</div>
-          <a href="#" class="add-note">Thêm ghi chú</a>
+          <a href="#" onclick="showAddNotePopup(
+    (note) => {
+      console.log('Note added:', note); // Handle the note input
+    },
+    () => {
+      console.log('Note addition cancelled');
+    }
+  )" class="add-note">Thêm ghi chú</a>
           <div class="cart-item-controls">
         <button class="decrease-quantity quantity-cart">-</button>
         <span class="cart_quantity quantity-cart span-quantity">${cartItem.quantity}</span>
