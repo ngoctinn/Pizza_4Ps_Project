@@ -331,30 +331,6 @@
         >
           <div class="form-left">
             <div class="form-group">
-              <label for="productName">Tên:</label>
-              <input type="text" id="productName" required />
-            </div>
-            <div class="form-group">
-              <label for="productPrice">Giá:</label>
-              <input type="number" id="productPrice" min="0" required />
-            </div>
-            <div class="form-group">
-              <label for="productType">Loại:</label>
-              <select id="productType" required>
-                <option value="Pizza">Pizza</option>
-                <option value="KhaiVi">Khai vị</option>
-                <option value="Salad">Salad</option>
-                <option value="MonKhac">Món chính/Mì Ý</option>
-                <option value="ThucUong">Thức uống</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="productDescribe">Mô Tả:</label>
-              <textarea id="productDescribe" rows="4" required></textarea>
-            </div>
-          </div>
-          <div class="form-right">
-            <div class="form-group">
               <label for="productImage">Hình Ảnh:</label>
               <input
                 type="file"
@@ -378,9 +354,33 @@
               </button>
             </div>
           </div>
-          <button type="submit" class="btn btn-them-sanpham btn-primary">
-            Thêm
-          </button>
+          <div class="form-right">
+            <div class="form-group">
+              <label for="productName">Tên:</label>
+              <input type="text" id="productName" required />
+            </div>
+            <div class="form-group">
+              <label for="productPrice">Giá:</label>
+              <input type="number" id="productPrice" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="productType">Loại:</label>
+              <select id="productType" required>
+                <option value="Pizza">Pizza</option>
+                <option value="KhaiVi">Khai vị</option>
+                <option value="Salad">Salad</option>
+                <option value="MonKhac">Món chính/Mì Ý</option>
+                <option value="ThucUong">Thức uống</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="productDescribe">Mô Tả:</label>
+              <textarea id="productDescribe" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-them-sanpham btn-primary">
+              Thêm
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -400,6 +400,26 @@
           onsubmit="updateProduct(event)"
         >
           <div class="form-left">
+            <div class="form-group">
+              <label for="editProductImage">Hình Ảnh:</label>
+              <input type="file" id="editProductImage" accept="image/*" />
+              <img
+                id="editImagePreview"
+                class="image-preview"
+                src="#"
+                alt="Image Preview"
+                style="display: none"
+              />
+              <button
+                type="button"
+                class="btn btn-bohinh"
+                onclick="removeImage()"
+              >
+                Bỏ Hình
+              </button>
+            </div>
+          </div>
+          <div class="form-right">
             <div class="form-group">
               <label for="editProductName">Tên:</label>
               <input type="text" id="editProductName" required />
@@ -422,30 +442,10 @@
               <label for="editProductDescribe">Mô Tả:</label>
               <textarea id="editProductDescribe" rows="4" required></textarea>
             </div>
+            <button type="submit" class="btn btn-sua btn-primary">
+              Cập Nhật
+            </button>
           </div>
-          <div class="form-right">
-            <div class="form-group">
-              <label for="editProductImage">Hình Ảnh:</label>
-              <input type="file" id="editProductImage" accept="image/*" />
-              <img
-                id="editImagePreview"
-                class="image-preview"
-                src="#"
-                alt="Image Preview"
-                style="display: none"
-              />
-              <button
-                type="button"
-                class="btn btn-bohinh"
-                onclick="removeImage()"
-              >
-                Bỏ Hình
-              </button>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-sua btn-primary">
-            Cập Nhật
-          </button>
         </form>
       </div>
     </div>
