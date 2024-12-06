@@ -1277,7 +1277,7 @@ function displayOrderCards(orders) {
     const card = document.createElement("div");
     card.classList.add("order-card");
     let statusClass = "";
-    if (order.status === "Đã giao hàng") {
+    if (order.status === "Đã giao") {
       statusClass = "status-completed";
     } else if (order.status === "Đang xử lý") {
       statusClass = "status-pending";
@@ -1299,7 +1299,7 @@ function displayOrderCards(orders) {
         <span class="order-value ${statusClass}">${order.status}</span>
       </div>
       <div class="order-info">
-        <span class="order-label">Tên người mua:</span>
+        <span class="order-label">Khách hàng:</span>
         <span class="order-value">${order.customerName}</span>
       </div>
     </div>
@@ -1344,7 +1344,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
       customerName: "Nguyen Van A",
       id: 12345,
       date: "15/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "1.250.000đ",
       address: "123 Đường ABC, Phường XYZ, Quận 1, TP.HCM",
       products: [
@@ -1364,7 +1364,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
       customerName: "Tran Thi B",
       id: 12346,
       date: "16/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "1.500.000đ",
       address: "456 Đường XYZ, Phường ABC, Quận 2, TP.HCM",
       products: [
@@ -1400,7 +1400,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
       customerName: "Pham Van D",
       id: 12348,
       date: "18/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "1.100.000đ",
       address: "101 Đường JKL, Phường MNO, Quận 4, TP.HCM",
       products: [
@@ -1415,7 +1415,7 @@ function getOrdersByItem(itemName, startDate, endDate) {
       customerName: "Nguyen Van E",
       id: 12349,
       date: "19/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "600.000đ",
       address: "202 Đường PQR, Phường STU, Quận 5, TP.HCM",
       products: [
@@ -1436,7 +1436,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
       customerName: "Nguyen Van A",
       id: 12345,
       date: "15/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "1.250.000đ",
       address: "123 Đường ABC, Phường XYZ, Quận 1, TP.HCM",
       products: [
@@ -1453,7 +1453,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
       customerName: "Nguyen Van A",
       id: 12346,
       date: "16/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "900.000đ",
       address: "456 Đường UVW, Phường XYZ, Quận 2, TP.HCM",
       products: [
@@ -1483,7 +1483,7 @@ function getOrdersByCustomer(customerName, startDate, endDate) {
       customerName: "Nguyen Van A",
       id: 12348,
       date: "18/11/2023",
-      status: "Đã giao hàng",
+      status: "Đã giao",
       total: "1.200.000đ",
       address: "101 Đường GHI, Phường JKL, Quận 4, TP.HCM",
       products: [

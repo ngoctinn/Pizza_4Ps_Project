@@ -53,7 +53,7 @@ input[type="date"] {
 }
 
 .btn_lock-unlock {
-  width: 70px;
+  width: 57px;
 }
 
 /* Pagination Buttons */
@@ -583,7 +583,7 @@ th {
   font-weight: bold;
 }
 .order-value {
-  padding: 2px 6px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 .status-completed {
