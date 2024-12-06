@@ -269,65 +269,67 @@
             Trở lại trang sản phẩm
           </a>
 
-          <div class="product-card">
-            <img
-              src="../assets/img/products/PZ_Margherita.webp"
-              alt="Pizza Margherita"
-            />
-            <div class="product-details">
-              <h3>Pizza Margherita</h3>
-              <p>
-                (Món chay) Bạn sẽ bất ngờ trước sự hợp cạ của bộ đôi “phô
-                mai-mật ong” này đấy!
-              </p>
-              <p class="price">100.000đ</p>
-              <div class="quantity-controls">
-                <button class="decrease-btn">-</button>
-                <span class="quantity">1</span>
-                <button class="increase-btn">+</button>
-                <button class="remove-btn">Xóa</button>
+          <div class="product-list">
+            <!-- <div class="product-card">
+              <img
+                src="../assets/img/products/PZ_Margherita.webp"
+                alt="Pizza Margherita"
+              />
+              <div class="product-details">
+                <h3>Pizza Margherita</h3>
+                <p>
+                  (Món chay) Bạn sẽ bất ngờ trước sự hợp cạ của bộ đôi “phô
+                  mai-mật ong” này đấy!
+                </p>
+                <p class="price">100.000đ</p>
+                <div class="quantity-controls">
+                  <button class="decrease-btn">-</button>
+                  <span class="quantity">1</span>
+                  <button class="increase-btn">+</button>
+                  <button class="remove-btn">Xóa</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="product-card">
-            <img
-              src="../assets/img/products/PZ_haisancay&pmhunkhoi.webp"
-              alt="Pizza Pepperoni"
-            />
-            <div class="product-details">
-              <h3>Pizza Pepperoni</h3>
-              <p>
-                (Món chay) Bạn sẽ bất ngờ trước sự hợp cạ của bộ đôi “phô
-                mai-mật ong” này đấy!
-              </p>
-              <p class="price">120.000đ</p>
-              <div class="quantity-controls">
-                <button class="decrease-btn">-</button>
-                <span class="quantity">1</span>
-                <button class="increase-btn">+</button>
-                <button class="remove-btn">Xóa</button>
+            <div class="product-card">
+              <img
+                src="../assets/img/products/PZ_haisancay&pmhunkhoi.webp"
+                alt="Pizza Pepperoni"
+              />
+              <div class="product-details">
+                <h3>Pizza Pepperoni</h3>
+                <p>
+                  (Món chay) Bạn sẽ bất ngờ trước sự hợp cạ của bộ đôi “phô
+                  mai-mật ong” này đấy!
+                </p>
+                <p class="price">120.000đ</p>
+                <div class="quantity-controls">
+                  <button class="decrease-btn">-</button>
+                  <span class="quantity">1</span>
+                  <button class="increase-btn">+</button>
+                  <button class="remove-btn">Xóa</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="product-card">
-            <img
-              src="../assets/img/products/PZ_Hawaiian.webp"
-              alt="Pizza Hawaiian"
-            />
-            <div class="product-details">
-              <h3>Pizza Hawaiian</h3>
-              <p>
-                Dòng pizza 3 loại phô mai nhà làm gồm: phô mai Mozzarella, Grano
-                Padano và Camembert.
-              </p>
-              <p class="price">110.000đ</p>
-              <div class="quantity-controls">
-                <button class="decrease-btn">-</button>
-                <span class="quantity">1</span>
-                <button class="increase-btn">+</button>
-                <button class="remove-btn">Xóa</button>
+            <div class="product-card">
+              <img
+                src="../assets/img/products/PZ_Hawaiian.webp"
+                alt="Pizza Hawaiian"
+              />
+              <div class="product-details">
+                <h3>Pizza Hawaiian</h3>
+                <p>
+                  Dòng pizza 3 loại phô mai nhà làm gồm: phô mai Mozzarella,
+                  Grano Padano và Camembert.
+                </p>
+                <p class="price">110.000đ</p>
+                <div class="quantity-controls">
+                  <button class="decrease-btn">-</button>
+                  <span class="quantity">1</span>
+                  <button class="increase-btn">+</button>
+                  <button class="remove-btn">Xóa</button>
+                </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -720,6 +722,155 @@
     <div id="toast"></div>
 
     <script>
+      function renderProductList() {
+        const currentUser = localStorage.getItem("currentUser");
+        const products = JSON.parse(localStorage.getItem("products"));
+        const cartList = document.querySelector(".product-list");
+        const cart = JSON.parse(currentUser).cart;
+        let totalQuantity = 0;
+        let totalPrice = 0;
+        cartList.innerHTML = "";
+
+        cart.forEach((cartItem) => {
+          const product = products.find((p) => p.id === cartItem.id);
+          if (product) {
+            totalQuantity += cartItem.quantity;
+            totalPrice +=
+              parseInt(product.price.replace(/[^0-9]/g, "")) *
+              cartItem.quantity;
+
+            const cartItemElement = document.createElement("div");
+            cartItemElement.classList.add("cart-item");
+            cartItemElement.classList.add("cart-item-cart");
+
+            cartItemElement.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="cart-item-image cart-item-image-cart" />
+        <div class="cart-item-details">
+          <div class="cart-item-name cart-item-name-cart">${product.name}</div>
+          <div class="cart-item-price cart-item-price-cart">${product.price} x ${cartItem.quantity}</div>
+          <a href="#" class="add-note">Thêm ghi chú</a>
+          <div class="cart-item-controls">
+        <button class="decrease-quantity quantity-cart">-</button>
+        <span class="cart_quantity quantity-cart span-quantity">${cartItem.quantity}</span>
+        <button class="increase-quantity quantity-cart">+</button>
+        <button class="remove-item">Xóa</button>
+        
+          </div>
+        </div>
+      `;
+            cartList.appendChild(cartItemElement);
+
+            // Add event listeners for the buttons
+            cartItemElement
+              .querySelector(".decrease-quantity")
+              .addEventListener("click", () => {
+                const quantityElement =
+                  cartItemElement.querySelector(".cart_quantity");
+                let quantity = parseInt(quantityElement.textContent);
+                if (quantity > 1) {
+                  quantity--;
+                  quantityElement.textContent = quantity;
+
+                  // Update quantity in local storage
+                  const currentUser = JSON.parse(
+                    localStorage.getItem("currentUser")
+                  );
+                  const cart = currentUser.cart;
+                  const productIndex = cart.findIndex(
+                    (item) => item.id === cartItem.id
+                  );
+                  if (productIndex !== -1) {
+                    cart[productIndex].quantity = quantity;
+                    currentUser.cart = cart;
+                    localStorage.setItem(
+                      "currentUser",
+                      JSON.stringify(currentUser)
+                    );
+                    renderProductList();
+                  }
+                } else {
+                  showConfirmPopup(
+                    "Xác nhận",
+                    "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?",
+                    () => {
+                      const newCart = cart.filter(
+                        (item) => item.id !== cartItem.id
+                      );
+                      const currentUser = JSON.parse(
+                        localStorage.getItem("currentUser")
+                      );
+                      currentUser.cart = newCart;
+                      localStorage.setItem(
+                        "currentUser",
+                        JSON.stringify(currentUser)
+                      );
+                      renderProductList();
+                    }
+                  );
+                }
+              });
+
+            cartItemElement
+              .querySelector(".increase-quantity")
+              .addEventListener("click", () => {
+                const quantityElement =
+                  cartItemElement.querySelector(".cart_quantity");
+                let quantity = parseInt(quantityElement.textContent);
+                quantity++;
+                quantityElement.textContent = quantity;
+
+                // Update quantity in local storage
+                const currentUser = JSON.parse(
+                  localStorage.getItem("currentUser")
+                );
+                const cart = currentUser.cart;
+                const productIndex = cart.findIndex(
+                  (item) => item.id === cartItem.id
+                );
+                if (productIndex !== -1) {
+                  cart[productIndex].quantity = quantity;
+                  currentUser.cart = cart;
+                  localStorage.setItem(
+                    "currentUser",
+                    JSON.stringify(currentUser)
+                  );
+                  renderProductList();
+                }
+              });
+
+            cartItemElement
+              .querySelector(".remove-item")
+              .addEventListener("click", () => {
+                showConfirmPopup(
+                  "Xác nhận",
+                  "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?",
+                  () => {
+                    const newCart = cart.filter(
+                      (item) => item.id !== cartItem.id
+                    );
+                    const currentUser = JSON.parse(
+                      localStorage.getItem("currentUser")
+                    );
+                    currentUser.cart = newCart;
+                    localStorage.setItem(
+                      "currentUser",
+                      JSON.stringify(currentUser)
+                    );
+                    renderProductList();
+                  }
+                );
+              });
+          }
+        });
+
+        document.querySelector(".cart-count").textContent = totalQuantity;
+        document.querySelector(
+          ".cart-total span:last-child"
+        ).textContent = `${totalPrice.toLocaleString()} VND`;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        renderProductList();
+      });
       // Xử lý chọn địa chỉ
       document
         .querySelectorAll('input[name="address-type"]')

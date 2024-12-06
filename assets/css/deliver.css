@@ -23,6 +23,17 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.close-btn-popup {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
 .btn__login:hover {
   opacity: 0.9;
 }

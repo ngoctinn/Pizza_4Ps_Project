@@ -8,6 +8,15 @@
 .nav-item {
   text-wrap: nowrap;
 }
+.increase-quantity,
+.decrease-quantity {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #242e52 !important;
+  border-radius: 50% !important;
+  padding: 1px 10px !important;
+  width: 30px;
+  height: 30px;
+}
 /* Ensure the navbar content is centered when collapsed */
 @media (max-width: 992px) {
   .navbar-collapse {
@@ -274,7 +283,7 @@
   color: #555;
   padding: 8px;
   width: 30px;
-  text-align: centers;
+  text-align: center;
 }
 
 .cart-item-controls .remove-item {

@@ -344,6 +344,7 @@
               id="js-advanced-search-overlay"
             >
               <div class="advanced-search__popup" id="js-advanced-search-popup">
+                <button class="close-btn-popup" id="close-btn-popup">X</button>
                 <form class="advanced-search__form">
                   <div class="advanced-search__form-group">
                     <label for="product-name" class="advanced-search__label"
@@ -647,6 +648,12 @@
         overlay.classList.toggle("advanced-search__overlay--active");
         searchPopup.classList.toggle("advanced-search__popup--active");
       });
+      document
+        .getElementById("close-btn-popup")
+        .addEventListener("click", function () {
+          overlay.classList.remove("advanced-search__overlay--active");
+          searchPopup.classList.remove("advanced-search__popup--active");
+        });
 
       // Đóng form khi click ngoài form
       overlay.addEventListener("click", function (event) {
