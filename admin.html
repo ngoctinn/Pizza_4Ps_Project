@@ -142,11 +142,11 @@
               <option value="asc">Tăng dần</option>
               <option value="desc">Giảm dần</option>
             </select>
-            <button class="btn_filter btn-secondary" onclick="filterOrders()">
+            <button class="btn btn-primary" onclick="filterOrders()">
               Lọc
             </button>
             <!-- btn refesh -->
-            <button onclick="refresh()" class="btn_filter">
+            <button onclick="refresh()" class="btn_refresh_order">
               <i class="fas fa-sync-alt"></i>
             </button>
           </div>
@@ -208,6 +208,16 @@
                   <tr>
                     <th colspan="2">Tổng Doanh Thu</th>
                     <th colspan="2" id="totalRevenue">0 VND</th>
+                    <!-- bán chạy nhất -->
+                    <!-- bán ế nhất -->
+                  </tr>
+                  <tr>
+                    <th colspan="2">Bán Chạy Nhất</th>
+                    <th colspan="2" id="bestSellingItem">N/A</th>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Bán Ế Nhất</th>
+                    <th colspan="2" id="leastSellingItem">N/A</th>
                   </tr>
                 </tfoot>
               </table>

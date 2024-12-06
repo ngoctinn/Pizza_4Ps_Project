@@ -1025,7 +1025,11 @@ function generateStatistics() {
     });
   } else {
     // Filter orders within the date range
-    const filteredOrders = orders;
+    const filteredOrders = orders.filter((order) => {
+      const orderDate = new Date(order.date);
+      return orderDate >= new Date(startDate) && orderDate <= new Date(endDate);
+    });
+
     // Item Sales Statistics
     const itemSalesMap = {};
     let totalRevenue = 0;
@@ -1112,6 +1116,10 @@ function generateStatistics() {
         currency: "VND",
       }
     ).format(totalRevenue);
+
+    // Update Best-Selling and Least-Selling Items
+    document.getElementById("bestSellingItem").textContent = bestSelling.name;
+    document.getElementById("leastSellingItem").textContent = leastSelling.name;
 
     // Customer Revenue Statistics
     const customerRevenueMap = {};
