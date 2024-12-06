@@ -670,13 +670,15 @@ function showCart() {
         <div class="cart-item-details">
           <div class="cart-item-name">${product.name}</div>
           <div class="cart-item-price">${product.price} x ${cartItem.quantity}</div>
-          <a href="#" class="add-note">Thêm ghi chú</a>
+          <a href="#" onclick="showAddNotePopup(
+            () => {},
+            () => {}
+          )" class="add-note">Thêm ghi chú</a>
           <div class="cart-item-controls">
-        <button class="decrease-quantity">-</button>
-        <span class="cart_quantity">${cartItem.quantity}</span>
-        <button class="increase-quantity">+</button>
-        <button class="remove-item">Xóa</button>
-        
+            <button class="decrease-quantity">-</button>
+            <span class="cart_quantity">${cartItem.quantity}</span>
+            <button class="increase-quantity">+</button>
+            <button class="remove-item">Xóa</button>
           </div>
         </div>
       `;
@@ -768,35 +770,7 @@ function showCart() {
     }
   });
 
-  // Function to show the Add Note Popup
-
-  // Add event listener to the "Thêm ghi chú" link
-  document.querySelector(".add-note").addEventListener("click", (event) => {
-    event.preventDefault();
-    /// Show the Add Note  Popup nếu mà xác nhận thì sẽ thông báo note added
-    showAddNotePopup(
-      (note) => {
-        console.log("Note added:", note); // Handle the note input
-      },
-      () => {
-        console.log("Note addition cancelled");
-      }
-    );
-  });
-
-  // Add event listener to the "Thêm ghi chú" link
-  document.querySelector(".add-note").addEventListener("click", (event) => {
-    event.preventDefault();
-    showAddNotePopup(
-      (note) => {
-        console.log("Note added:", note); // Handle the note input
-      },
-      () => {
-        console.log("Note addition cancelled");
-      }
-    );
-  });
-
+  // Update total quantity and total price
   document.querySelector(".cart-count").textContent = totalQuantity;
   document.querySelector(
     ".cart-total span:last-child"
@@ -804,6 +778,17 @@ function showCart() {
 }
 document.addEventListener("DOMContentLoaded", function () {
   showCart();
+});
+document.querySelector(".add-note").addEventListener("click", (event) => {
+  event.preventDefault();
+  showAddNotePopup(
+    (note) => {
+      console.log("Note added:", note); // Handle the note input
+    },
+    () => {
+      console.log("Note addition cancelled");
+    }
+  );
 });
 
 function scrollToFooter() {

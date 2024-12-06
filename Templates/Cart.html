@@ -100,7 +100,10 @@
               <a class="nav-link active" href="./Index.html">Giao hàng</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="scrollToFooter()" href="#"
+              <a
+                class="nav-link"
+                onclick="scrollToFooter()"
+                style="cursor: pointer"
                 >Liên hệ</a
               >
             </li>
@@ -811,6 +814,7 @@
                         "currentUser",
                         JSON.stringify(currentUser)
                       );
+                      showCart();
                       renderProductList();
                     }
                   );
@@ -863,6 +867,7 @@
                       "currentUser",
                       JSON.stringify(currentUser)
                     );
+                    showCart();
                     renderProductList();
                   }
                 );
