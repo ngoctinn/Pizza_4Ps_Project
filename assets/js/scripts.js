@@ -435,6 +435,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function searchProducts(query) {
+    if (!query) {
+      //random hiện 5 products
+      filteredProducts = storedProducts
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 5);
+      loadItem();
+    }
     const sanPham = document.getElementById("san-pham");
     sanPham.textContent = "Kết quả tìm kiếm cho: " + '" ' + query + ' "';
     filteredProducts = storedProducts.filter((product) =>
