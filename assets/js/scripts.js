@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loadItem();
     }
     const sanPham = document.getElementById("san-pham");
-    sanPham.textContent = "Kết quả tìm kiếm cho: " + '" ' + query + ' "';
+    sanPham.textContent = "Kết quả tìm kiếm cho: " + query;
     filteredProducts = storedProducts.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
@@ -470,6 +470,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
   }
+  const searchAdvanced = document.getElementById("search-advanced");
+  searchAdvanced.addEventListener("click", function (event) {
+    event.preventDefault();
+    toast({
+      title: "Thông báo",
+      message: "Tìm kiếm thành công",
+      type: "success",
+      duration: 3000,
+    });
+    const sanPham = document.getElementById("san-pham");
+    sanPham.textContent = "Kết quả tìm kiếm:";
+
+    // Select 5 random products
+    filteredProducts = storedProducts
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 10);
+
+    thisPage = 1; // Reset to the first page
+    document.getElementById("san-pham").scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+
+    if (filteredProducts.length === 0) {
+      productList.innerHTML =
+        "<img src='../assets/img/order/Undiscovered.avif' id='undiscovered' />";
+    } else {
+      loadItem();
+    }
+
+    console.log("search advanced");
+    overlay.classList.remove("advanced-search__overlay--active");
+    searchPopup.classList.remove("advanced-search__popup--active");
+  });
 
   // Get the search query from the URL parameter
   const searchQuery = getQueryParam("search");
@@ -502,7 +536,11 @@ document.addEventListener("DOMContentLoaded", function () {
           );
           break;
         case "best-seller":
-          filteredProducts.sort((a, b) => (b.sold || 0) - (a.sold || 0));
+          //random hiện 5 products
+          filteredProducts = storedProducts
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 10);
+          loadItem();
           return;
         default:
           break;

@@ -350,7 +350,7 @@ th {
 }
 /* chia làm 2 cột */
 .my-modal-content {
-  max-width: 750px !important;
+  max-width: 695px !important;
 }
 #editProductForm {
   margin: 0 auto;
@@ -373,7 +373,6 @@ th {
 /* Right column styling */
 .form-right {
   flex: 1;
-  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -408,14 +407,24 @@ th {
   padding: 10px 20px;
   text-wrap: nowrap;
   font-size: 16px;
-  margin-left: 588px;
+  margin-left: 532px;
+}
+.btn-them-sanpham {
+  padding: 10px 30px;
+  text-wrap: nowrap;
+  font-size: 16px;
+  margin-left: 529px;
+  display: block;
 }
 .btn-bohinh {
-  padding: 3px 77px;
+  padding: 3px 88px;
   text-wrap: nowrap;
   font-size: 16px;
   margin-left: -2px;
   background-color: #dc3545;
+}
+.form-input-img {
+  width: 230px !important;
 }
 
 /* styles-sanpham.css */
@@ -534,7 +543,7 @@ th {
 }
 /* Image preview */
 .image-preview {
-  width: 70%;
+  width: 97%;
   object-fit: cover;
   margin-top: 10px;
   border: 1px solid #ccc;

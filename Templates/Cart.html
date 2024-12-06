@@ -1008,26 +1008,14 @@
           total.toLocaleString("vi-VN") + "đ";
       }
       const cartWrapper = document.querySelector(".cart-wrapper");
-      const cartDropdown = document.querySelector(".cart-dropdown");
-      const popupBox = document.getElementById("popup-box");
 
-      cartWrapper.addEventListener("click", function (event) {
-        event.stopPropagation();
-        cartWrapper.classList.toggle("active");
-      });
-
-      cartDropdown.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
-
-      popupBox.addEventListener("click", function (event) {
-        event.stopPropagation();
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!cartWrapper.contains(event.target)) {
-          cartWrapper.classList.remove("active");
-        }
+      // thông báo đang trong giỏ hàng
+      cartWrapper.addEventListener("click", function (e) {
+        toast({
+          title: "Thông báo",
+          message: "Bạn đang trong giỏ hàng",
+          type: "info",
+        });
       });
 
       function logout_cart() {

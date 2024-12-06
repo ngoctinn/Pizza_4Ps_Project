@@ -666,25 +666,6 @@
       });
 
       // Tìm kiếm nâng cao
-      const searchAdvanced = document.getElementById("search-advanced");
-      searchAdvanced.addEventListener("click", function (event) {
-        event.preventDefault();
-        toast({
-          title: "Thông báo",
-          message: "Tìm kiếm thành công",
-          type: "success",
-          duration: 3000,
-        });
-        const sanPham = document.getElementById("san-pham");
-        sanPham.textContent = "Kết quả tìm kiếm: ";
-        document.getElementById("san-pham").scrollIntoView({
-          block: "start",
-          behavior: "smooth",
-        });
-        console.log("search advanced");
-        overlay.classList.remove("advanced-search__overlay--active");
-        searchPopup.classList.remove("advanced-search__popup--active");
-      });
 
       const cartWrapper = document.querySelector(".cart-wrapper");
       const cartDropdown = document.querySelector(".cart-dropdown");

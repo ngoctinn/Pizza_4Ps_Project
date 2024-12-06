@@ -766,13 +766,47 @@ function viewOrderDetails(id) {
 }
 
 // Lọc Đơn Hàng
+document
+  .getElementById("filterOrderStatus")
+  .addEventListener("change", function () {
+    toast({
+      title: "Thông Báo",
+      message: "Thay đổi trạng thái đơn hàng thành công.",
+      type: "success",
+      duration: 3000,
+    });
+  });
+
+document
+  .getElementById("sortOrderAddress")
+  .addEventListener("change", function () {
+    toast({
+      title: "Thông Báo",
+      message: "Thay đổi địa chỉ sắp xếp thành công.",
+      type: "success",
+      duration: 3000,
+    });
+  });
+
 function filterOrders() {
   const startDate = document.getElementById("startDate").value;
   const endDate = document.getElementById("endDate").value;
   const orderStatus = document.getElementById("filterOrderStatus").value;
   const sortOrderAddress = document.getElementById("sortOrderAddress").value;
-  // load lại dữ liệu đơn hàng
-  //giả bộ dữ liệu
+
+  // Kiểm tra ngày đã nhập chưa
+  if (!startDate || !endDate) {
+    toast({
+      title: "Thông Báo",
+      message: "Vui lòng nhập ngày bắt đầu và ngày kết thúc.",
+      type: "warning",
+      duration: 3000,
+    });
+    return;
+  }
+
+  // Load lại dữ liệu đơn hàng
+  // Giả bộ dữ liệu
   orders_filter = [
     {
       id: 1,
