@@ -20,7 +20,6 @@
     />
 
     <!-- script -->
-    <script src="../assets/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <!-- <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- CSS -->
@@ -316,144 +315,99 @@
         </div>
       </div>
       <!-- delivery -->
-      <div class="menu-container">
-        <h2 class="heading">Thực đơn</h2>
-        <div class="menu-items">
-          <a href="#san-pham" class="menu-item" id="menu-all">
-            <img src="../assets/img/menu/theomua.webp" alt="Tất cả" />
-            <p>Tất cả</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-pizza">
-            <img src="../assets/img/menu/pizza.webp" alt="Bánh Pizza" />
-            <p>Bánh Pizza</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-khaivi">
-            <img src="../assets/img/menu/khaivi.webp" alt="Khai vị" />
-            <p>Khai vị</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-salad">
-            <img src="../assets/img/menu/salad.webp" alt="Salad" />
-            <p>Salad</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-monchinh">
-            <img src="../assets/img/menu/miy.webp" alt="Món Chính/ Mì Ý" />
-            <p>Món Chính/ Mì Ý</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-trangmieng">
-            <img src="../assets/img/menu/trangmieng.webp" alt="Tráng miệng" />
-            <p>Tráng miệng</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-thucuong">
-            <img src="../assets/img/menu/thucuong.webp" alt="Thức uống" />
-            <p>Thức uống</p>
-          </a>
-          <a href="#san-pham" class="menu-item" id="menu-topping">
-            <img src="../assets/img/menu/topping.webp" alt="Thêm Topping" />
-            <p>Thêm Topping</p>
-          </a>
-        </div>
-      </div>
       <!-- Phổ biến -->
       <div class="home__row">
-        <h2 class="heading" id="san-pham">Sản phẩm</h2>
-        <div class="control-search-container">
-          <div class="advanced-search__container">
-            <button class="advanced-search__btn" id="js-advanced-search-toggle">
-              Tìm kiếm nâng cao
-            </button>
-
-            <div
-              class="advanced-search__overlay"
-              id="js-advanced-search-overlay"
-            >
-              <div class="advanced-search__popup" id="js-advanced-search-popup">
-                <button class="close-btn-popup" id="close-btn-popup">X</button>
-                <form class="advanced-search__form">
-                  <div class="advanced-search__form-group">
-                    <label for="product-name" class="advanced-search__label"
-                      >Tên Sản Phẩm</label
-                    >
-                    <input
-                      type="text"
-                      id="product-name"
-                      class="advanced-search__input"
-                      name="product-name"
-                      placeholder="Nhập tên sản phẩm"
-                    />
-                  </div>
-
-                  <div class="advanced-search__form-group">
-                    <label for="category" class="advanced-search__label"
-                      >Phân Loại</label
-                    >
-                    <select
-                      id="category"
-                      class="advanced-search__select"
-                      name="category"
-                    >
-                      <option value="">Chọn phân loại</option>
-                      <option value="pizza">Bánh Pizza</option>
-                      <option value="khaivi">Khai vị</option>
-                      <option value="salad">Salad</option>
-                      <option value="monchinh">Món Chính/ Mì Ý</option>
-                      <option value="trangmieng">Tráng miệng</option>
-                      <option value="thucuong">Thức uống</option>
-                      <option value="topping">Thêm Topping</option>
-                    </select>
-                  </div>
-
-                  <div class="advanced-search__form-group">
-                    <label class="advanced-search__label">Khoảng Giá</label>
-                    <div class="advanced-search__price-range">
-                      <input
-                        type="number"
-                        id="price-min"
-                        class="advanced-search__input advanced-search__price-range-input"
-                        name="price-min"
-                        placeholder="Giá tối thiểu"
-                        min="0"
-                      />
-                      <input
-                        type="number"
-                        id="price-max"
-                        class="advanced-search__input advanced-search__price-range-input"
-                        name="price-max"
-                        placeholder="Giá tối đa"
-                        min="0"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="advanced-search__form-group">
-                    <button
-                      type="submit"
-                      id="search-advanced"
-                      class="advanced-search__submit-btn"
-                    >
-                      Tìm Kiếm
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <select class="home__dropdown" id="menu-dropdown">
-            <option value="" selected hidden>Sắp xếp theo</option>
-            <option value="newest">Mới nhất</option>
-            <option value="price-desc">Giá giảm dần</option>
-            <option value="price-asc">Giá tăng dần</option>
-            <option value="best-seller">Sản phẩm bán chạy</option>
-          </select>
-        </div>
+        <h2 class="heading" id="san-pham">Thông tin tìm kiếm</h2>
 
         <!-- tìm kiếm nâng cao -->
       </div>
       <div class="row product-list">
-        <!-- Existing product list code here -->
+        <div class="col-md-3 mt-5 product__list--item">
+          <section class="panel">
+            <div class="pro-img-box">
+              <a href="../Templates/product-detail.html?id=10">
+                <img
+                  src="../assets/img/products/PZ_CaHoiXotKemMiSo.webp"
+                  alt="Pizza cá hồi xốt kem Miso"
+                />
+              </a>
+              <a onclick="addToCart(10)" class="adtocart">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+            </div>
+            <div class="panel-body pb-2 text-center">
+              <h4>
+                <a
+                  href="../Templates/product-detail.html?id=10"
+                  class="pro-title"
+                >
+                  Pizza cá hồi xốt kem Miso
+                </a>
+              </h4>
+              <p class="price">278,000 VND</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-md-3 mt-5 product__list--item">
+          <section class="panel">
+            <div class="pro-img-box">
+              <a href="../Templates/product-detail.html?id=11">
+                <img
+                  src="../assets/img/products/PZ_haisancay&pmhunkhoi.webp"
+                  alt="Pizza hải sản cay với phô mai hun khói"
+                />
+              </a>
+              <a onclick="addToCart(11)" class="adtocart">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+            </div>
+            <div class="panel-body pb-2 text-center">
+              <h4>
+                <a
+                  href="../Templates/product-detail.html?id=11"
+                  class="pro-title"
+                >
+                  Pizza hải sản cay với phô mai hun khói
+                </a>
+              </h4>
+              <p class="price">274,000 VND</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-md-3 mt-5 product__list--item">
+          <section class="panel">
+            <div class="pro-img-box">
+              <a href="../Templates/product-detail.html?id=12">
+                <img
+                  src="../assets/img/products/PZ_tom&mayonnaise.webp"
+                  alt="Pizza tôm và xốt Mayonnaise"
+                />
+              </a>
+              <a onclick="addToCart(12)" class="adtocart">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+            </div>
+            <div class="panel-body pb-2 text-center">
+              <h4>
+                <a
+                  href="../Templates/product-detail.html?id=12"
+                  class="pro-title"
+                >
+                  Pizza tôm và xốt Mayonnaise
+                </a>
+              </h4>
+              <p class="price">254,000 VND</p>
+            </div>
+          </section>
+        </div>
       </div>
       <!-- pagination -->
       <div class="pag_container">
-        <ul class="listPage"></ul>
+        <ul class="listPage">
+          <li class="active">1</li>
+        </ul>
       </div>
       <footer>
         <div class="footer__container">
@@ -659,38 +613,18 @@
         </div>
       </div>
     </main>
+
     <div id="toast"></div>
     <!-- tìm nâng cao -->
+    <script src="../assets/js/scripts.js"></script>
     <script>
-      const toggleBtn = document.getElementById("js-advanced-search-toggle");
-      const overlay = document.getElementById("js-advanced-search-overlay");
-      const searchPopup = document.getElementById("js-advanced-search-popup");
-
-      toggleBtn.addEventListener("click", function () {
-        overlay.classList.toggle("advanced-search__overlay--active");
-        searchPopup.classList.toggle("advanced-search__popup--active");
-      });
-      document
-        .getElementById("close-btn-popup")
-        .addEventListener("click", function () {
-          overlay.classList.remove("advanced-search__overlay--active");
-          searchPopup.classList.remove("advanced-search__popup--active");
-        });
-
-      // Đóng form khi click ngoài form
-      overlay.addEventListener("click", function (event) {
-        if (event.target === overlay) {
-          overlay.classList.remove("advanced-search__overlay--active");
-          searchPopup.classList.remove("advanced-search__popup--active");
-        }
-      });
+      // Tìm kiếm nâng cao
 
       const cartWrapper = document.querySelector(".cart-wrapper");
       const cartDropdown = document.querySelector(".cart-dropdown");
       const popupBox = document.getElementById("popup-box");
 
       cartWrapper.addEventListener("click", function (event) {
-        event.stopPropagation();
         cartWrapper.classList.toggle("active");
       });
 
@@ -709,7 +643,6 @@
       });
     </script>
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/products.js"></script>
     <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/flickity.pkgd.min.js"></script>
   </body>

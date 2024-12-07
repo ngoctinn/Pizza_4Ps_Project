@@ -126,12 +126,7 @@
               />
               <button
                 class="btn btn__search"
-                onclick="toast({
-                title: 'Cảnh báo',
-                message: 'Bạn cần quay lại trang sản phẩm để tìm kiếm',
-                type: 'warning'
-
-              })"
+                onclick="window.location.href = './Index-timkiem.html'"
                 type="button"
               >
                 <i class="fas fa-search"></i>
@@ -145,7 +140,7 @@
               ><button class="btn__login" type="button">Đăng nhập</button></a
             >
             <!-- Cart -->
-            <div class="cart-wrapper">
+            <!-- <div class="cart-wrapper">
               <button class="cart-button">
                 <svg
                   class="cart-icon"
@@ -207,7 +202,7 @@
                   >Xem giỏ hàng</a
                 >
               </div>
-            </div>
+            </div> -->
 
             <!-- Profile -->
             <div class="nav-profile">
@@ -275,6 +270,42 @@
           </a>
 
           <div class="product-list">
+            <div class="cart-item cart-item-cart">
+              <img
+                src="../assets/img/products/PZ_TomXotToiCay.webp"
+                alt="Pizza Tôm Xốt Tỏi Cay"
+                class="cart-item-image cart-item-image-cart"
+              />
+              <div class="cart-item-details">
+                <div class="cart-item-name cart-item-name-cart">
+                  Pizza Tôm Xốt Tỏi Cay
+                </div>
+                <div class="cart-item-price cart-item-price-cart">
+                  245,000 VND x 1
+                </div>
+                <a
+                  href="#"
+                  onclick="showAddNotePopup(
+          (note) => {
+            console.log('Note added:', note); // Handle the note input
+          },
+          () => {
+            console.log('Note addition cancelled');
+          }
+        )"
+                  class="add-note"
+                  >Thêm ghi chú</a
+                >
+                <div class="cart-item-controls">
+                  <button class="decrease-quantity quantity-cart">-</button>
+                  <span class="cart_quantity quantity-cart span-quantity"
+                    >1</span
+                  >
+                  <button class="increase-quantity quantity-cart">+</button>
+                  <button class="remove-item">Xóa</button>
+                </div>
+              </div>
+            </div>
             <!-- <div class="product-card">
               <img
                 src="../assets/img/products/PZ_Margherita.webp"
@@ -726,164 +757,164 @@
     <div id="toast"></div>
 
     <script>
-      function renderProductList() {
-        const currentUser = localStorage.getItem("currentUser");
-        const products = JSON.parse(localStorage.getItem("products"));
-        const cartList = document.querySelector(".product-list");
-        const cart = JSON.parse(currentUser).cart;
-        let totalQuantity = 0;
-        let totalPrice = 0;
-        cartList.innerHTML = "";
+      //     function renderProductList() {
+      //       const currentUser = localStorage.getItem("currentUser");
+      //       const products = JSON.parse(localStorage.getItem("products"));
+      //       const cartList = document.querySelector(".product-list");
+      //       const cart = JSON.parse(currentUser).cart;
+      //       let totalQuantity = 0;
+      //       let totalPrice = 0;
+      //       cartList.innerHTML = "";
 
-        cart.forEach((cartItem) => {
-          const product = products.find((p) => p.id === cartItem.id);
-          if (product) {
-            totalQuantity += cartItem.quantity;
-            totalPrice +=
-              parseInt(product.price.replace(/[^0-9]/g, "")) *
-              cartItem.quantity;
+      //       cart.forEach((cartItem) => {
+      //         const product = products.find((p) => p.id === cartItem.id);
+      //         if (product) {
+      //           totalQuantity += cartItem.quantity;
+      //           totalPrice +=
+      //             parseInt(product.price.replace(/[^0-9]/g, "")) *
+      //             cartItem.quantity;
 
-            const cartItemElement = document.createElement("div");
-            cartItemElement.classList.add("cart-item");
-            cartItemElement.classList.add("cart-item-cart");
+      //           const cartItemElement = document.createElement("div");
+      //           cartItemElement.classList.add("cart-item");
+      //           cartItemElement.classList.add("cart-item-cart");
 
-            cartItemElement.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="cart-item-image cart-item-image-cart" />
-        <div class="cart-item-details">
-          <div class="cart-item-name cart-item-name-cart">${product.name}</div>
-          <div class="cart-item-price cart-item-price-cart">${product.price} x ${cartItem.quantity}</div>
-          <a href="#" onclick="showAddNotePopup(
-    (note) => {
-      console.log('Note added:', note); // Handle the note input
-    },
-    () => {
-      console.log('Note addition cancelled');
-    }
-  )" class="add-note">Thêm ghi chú</a>
-          <div class="cart-item-controls">
-        <button class="decrease-quantity quantity-cart">-</button>
-        <span class="cart_quantity quantity-cart span-quantity">${cartItem.quantity}</span>
-        <button class="increase-quantity quantity-cart">+</button>
-        <button class="remove-item">Xóa</button>
-        
-          </div>
-        </div>
-      `;
-            cartList.appendChild(cartItemElement);
+      //           cartItemElement.innerHTML = `
+      //       <img src="${product.image}" alt="${product.name}" class="cart-item-image cart-item-image-cart" />
+      //       <div class="cart-item-details">
+      //         <div class="cart-item-name cart-item-name-cart">${product.name}</div>
+      //         <div class="cart-item-price cart-item-price-cart">${product.price} x ${cartItem.quantity}</div>
+      //         <a href="#" onclick="showAddNotePopup(
+      //   (note) => {
+      //     console.log('Note added:', note); // Handle the note input
+      //   },
+      //   () => {
+      //     console.log('Note addition cancelled');
+      //   }
+      // )" class="add-note">Thêm ghi chú</a>
+      //         <div class="cart-item-controls">
+      //       <button class="decrease-quantity quantity-cart">-</button>
+      //       <span class="cart_quantity quantity-cart span-quantity">${cartItem.quantity}</span>
+      //       <button class="increase-quantity quantity-cart">+</button>
+      //       <button class="remove-item">Xóa</button>
 
-            // Add event listeners for the buttons
-            cartItemElement
-              .querySelector(".decrease-quantity")
-              .addEventListener("click", () => {
-                const quantityElement =
-                  cartItemElement.querySelector(".cart_quantity");
-                let quantity = parseInt(quantityElement.textContent);
-                if (quantity > 1) {
-                  quantity--;
-                  quantityElement.textContent = quantity;
+      //         </div>
+      //       </div>
+      //     `;
+      //           cartList.appendChild(cartItemElement);
 
-                  // Update quantity in local storage
-                  const currentUser = JSON.parse(
-                    localStorage.getItem("currentUser")
-                  );
-                  const cart = currentUser.cart;
-                  const productIndex = cart.findIndex(
-                    (item) => item.id === cartItem.id
-                  );
-                  if (productIndex !== -1) {
-                    cart[productIndex].quantity = quantity;
-                    currentUser.cart = cart;
-                    localStorage.setItem(
-                      "currentUser",
-                      JSON.stringify(currentUser)
-                    );
-                    renderProductList();
-                  }
-                } else {
-                  showConfirmPopup(
-                    "Xác nhận",
-                    "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?",
-                    () => {
-                      const newCart = cart.filter(
-                        (item) => item.id !== cartItem.id
-                      );
-                      const currentUser = JSON.parse(
-                        localStorage.getItem("currentUser")
-                      );
-                      currentUser.cart = newCart;
-                      localStorage.setItem(
-                        "currentUser",
-                        JSON.stringify(currentUser)
-                      );
-                      showCart();
-                      renderProductList();
-                    }
-                  );
-                }
-              });
+      //           // Add event listeners for the buttons
+      //           cartItemElement
+      //             .querySelector(".decrease-quantity")
+      //             .addEventListener("click", () => {
+      //               const quantityElement =
+      //                 cartItemElement.querySelector(".cart_quantity");
+      //               let quantity = parseInt(quantityElement.textContent);
+      //               if (quantity > 1) {
+      //                 quantity--;
+      //                 quantityElement.textContent = quantity;
 
-            cartItemElement
-              .querySelector(".increase-quantity")
-              .addEventListener("click", () => {
-                const quantityElement =
-                  cartItemElement.querySelector(".cart_quantity");
-                let quantity = parseInt(quantityElement.textContent);
-                quantity++;
-                quantityElement.textContent = quantity;
+      //                 // Update quantity in local storage
+      //                 const currentUser = JSON.parse(
+      //                   localStorage.getItem("currentUser")
+      //                 );
+      //                 const cart = currentUser.cart;
+      //                 const productIndex = cart.findIndex(
+      //                   (item) => item.id === cartItem.id
+      //                 );
+      //                 if (productIndex !== -1) {
+      //                   cart[productIndex].quantity = quantity;
+      //                   currentUser.cart = cart;
+      //                   localStorage.setItem(
+      //                     "currentUser",
+      //                     JSON.stringify(currentUser)
+      //                   );
+      //                   renderProductList();
+      //                 }
+      //               } else {
+      //                 showConfirmPopup(
+      //                   "Xác nhận",
+      //                   "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?",
+      //                   () => {
+      //                     const newCart = cart.filter(
+      //                       (item) => item.id !== cartItem.id
+      //                     );
+      //                     const currentUser = JSON.parse(
+      //                       localStorage.getItem("currentUser")
+      //                     );
+      //                     currentUser.cart = newCart;
+      //                     localStorage.setItem(
+      //                       "currentUser",
+      //                       JSON.stringify(currentUser)
+      //                     );
+      //                     showCart();
+      //                     renderProductList();
+      //                   }
+      //                 );
+      //               }
+      //             });
 
-                // Update quantity in local storage
-                const currentUser = JSON.parse(
-                  localStorage.getItem("currentUser")
-                );
-                const cart = currentUser.cart;
-                const productIndex = cart.findIndex(
-                  (item) => item.id === cartItem.id
-                );
-                if (productIndex !== -1) {
-                  cart[productIndex].quantity = quantity;
-                  currentUser.cart = cart;
-                  localStorage.setItem(
-                    "currentUser",
-                    JSON.stringify(currentUser)
-                  );
-                  renderProductList();
-                }
-              });
+      //           cartItemElement
+      //             .querySelector(".increase-quantity")
+      //             .addEventListener("click", () => {
+      //               const quantityElement =
+      //                 cartItemElement.querySelector(".cart_quantity");
+      //               let quantity = parseInt(quantityElement.textContent);
+      //               quantity++;
+      //               quantityElement.textContent = quantity;
 
-            cartItemElement
-              .querySelector(".remove-item")
-              .addEventListener("click", () => {
-                showConfirmPopup(
-                  "Xác nhận",
-                  "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?",
-                  () => {
-                    const newCart = cart.filter(
-                      (item) => item.id !== cartItem.id
-                    );
-                    const currentUser = JSON.parse(
-                      localStorage.getItem("currentUser")
-                    );
-                    currentUser.cart = newCart;
-                    localStorage.setItem(
-                      "currentUser",
-                      JSON.stringify(currentUser)
-                    );
-                    showCart();
-                    renderProductList();
-                  }
-                );
-              });
-          }
-        });
+      //               // Update quantity in local storage
+      //               const currentUser = JSON.parse(
+      //                 localStorage.getItem("currentUser")
+      //               );
+      //               const cart = currentUser.cart;
+      //               const productIndex = cart.findIndex(
+      //                 (item) => item.id === cartItem.id
+      //               );
+      //               if (productIndex !== -1) {
+      //                 cart[productIndex].quantity = quantity;
+      //                 currentUser.cart = cart;
+      //                 localStorage.setItem(
+      //                   "currentUser",
+      //                   JSON.stringify(currentUser)
+      //                 );
+      //                 renderProductList();
+      //               }
+      //             });
 
-        document.querySelector(".cart-count").textContent = totalQuantity;
-        document.querySelector(
-          ".cart-total span:last-child"
-        ).textContent = `${totalPrice.toLocaleString()} VND`;
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        renderProductList();
-      });
+      //           cartItemElement
+      //             .querySelector(".remove-item")
+      //             .addEventListener("click", () => {
+      //               showConfirmPopup(
+      //                 "Xác nhận",
+      //                 "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?",
+      //                 () => {
+      //                   const newCart = cart.filter(
+      //                     (item) => item.id !== cartItem.id
+      //                   );
+      //                   const currentUser = JSON.parse(
+      //                     localStorage.getItem("currentUser")
+      //                   );
+      //                   currentUser.cart = newCart;
+      //                   localStorage.setItem(
+      //                     "currentUser",
+      //                     JSON.stringify(currentUser)
+      //                   );
+      //                   showCart();
+      //                   renderProductList();
+      //                 }
+      //               );
+      //             });
+      //         }
+      //       });
+
+      //       document.querySelector(".cart-count").textContent = totalQuantity;
+      //       document.querySelector(
+      //         ".cart-total span:last-child"
+      //       ).textContent = `${totalPrice.toLocaleString()} VND`;
+      //     }
+      //     document.addEventListener("DOMContentLoaded", function () {
+      //       renderProductList();
+      //     });
       // Xử lý chọn địa chỉ
       document
         .querySelectorAll('input[name="address-type"]')
@@ -969,7 +1000,6 @@
                 "Bạn có chắc muốn xóa sản phẩm này?",
                 () => {
                   card.remove();
-                  updateTotal();
                 }
               );
             }
@@ -988,35 +1018,34 @@
             "Xóa sản phẩm",
             "Bạn có chắc muốn xóa sản phẩm này?",
             () => {
-              card.remove();
-              updateTotal();
+              console.log("Xóa sản phẩm");
             }
           );
         });
       });
 
-      function updateTotal() {
-        let total = 0;
-        document.querySelectorAll(".product-card").forEach((card) => {
-          const qty = parseInt(card.querySelector(".quantity").innerText);
-          const price = parseInt(
-            card.querySelector(".price").innerText.replace(/\D/g, "")
-          );
-          total += qty * price;
-        });
-        document.querySelector(".summary-total span:nth-child(2)").innerText =
-          total.toLocaleString("vi-VN") + "đ";
-      }
-      const cartWrapper = document.querySelector(".cart-wrapper");
+      // function updateTotal() {
+      //   let total = 0;
+      //   document.querySelectorAll(".product-card").forEach((card) => {
+      //     const qty = parseInt(card.querySelector(".quantity").innerText);
+      //     const price = parseInt(
+      //       card.querySelector(".price").innerText.replace(/\D/g, "")
+      //     );
+      //     total += qty * price;
+      //   });
+      //   document.querySelector(".summary-total span:nth-child(2)").innerText =
+      //     total.toLocaleString("vi-VN") + "đ";
+      // }
+      // const cartWrapper = document.querySelector(".cart-wrapper");
 
-      // thông báo đang trong giỏ hàng
-      cartWrapper.addEventListener("click", function (e) {
-        toast({
-          title: "Thông báo",
-          message: "Bạn đang trong giỏ hàng",
-          type: "info",
-        });
-      });
+      // // thông báo đang trong giỏ hàng
+      // cartWrapper.addEventListener("click", function (e) {
+      //   toast({
+      //     title: "Thông báo",
+      //     message: "Bạn đang trong giỏ hàng",
+      //     type: "info",
+      //   });
+      // });
 
       function logout_cart() {
         showConfirmPopup(

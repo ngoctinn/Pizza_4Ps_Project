@@ -1047,8 +1047,9 @@ originalOrders.forEach((order) => {
 
 function generateStatistics() {
   event.preventDefault();
-  const startDate = document.getElementById("statStartDate").value;
-  const endDate = document.getElementById("statEndDate").value;
+  const startDate = "2023-01-01";
+  const endDate = "2024-12-31";
+  console.log(startDate, endDate);
 
   if (!startDate || !endDate) {
     toast({
