@@ -153,58 +153,42 @@
                 </svg>
                 <span class="cart-count" id="cart-quanlity">3</span>
               </button>
-
-              <div class="cart-dropdown">
-                <div class="cart-header">Giỏ hàng</div>
-                <div class="cart-items">
-                  <div class="cart-items">
-                    <div class="cart-item">
-                      <img
-                        src="../assets/img/products/PZ_haisancay&amp;pmhunkhoi.webp"
-                        alt="Pizza hải sản cay với phô mai hun khói"
-                        class="cart-item-image"
-                      />
-                      <div class="cart-item-details">
-                        <div class="cart-item-name">
-                          Pizza hải sản cay với phô mai hun khói
-                        </div>
-                        <div class="cart-item-price">274,000 VND x 3</div>
-                        <a
-                          href="#"
-                          onclick="showAddNotePopup(
-                        () => {},
-                        () => {}
-                      )"
-                          class="add-note"
-                          >Thêm ghi chú</a
-                        >
-                        <div class="cart-item-controls">
-                          <button
-                            class="decrease-quantity"
-                            fdprocessedid="ly97u"
-                          >
-                            -
-                          </button>
-                          <span class="cart_quantity">3</span>
-                          <button
-                            class="increase-quantity"
-                            fdprocessedid="fdq25a"
-                          >
-                            +
-                          </button>
-                          <button class="remove-item" fdprocessedid="06hmft">
-                            Xóa
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+              <div class="dropdown-content">
+                <div class="user-info">
+                  <div class="user-name">Nguyễn Ngọc Tins</div>
+                  <div class="user-email">ngoctinn.work@gmail.com</div>
+                  <div class="user-email">
+                    273 An Dương Vương, Quận 5, TP.HCM
                   </div>
                 </div>
-                <div class="cart-total">
-                  <span>Tổng cộng:</span>
-                  <span>900.000đ</span>
-                </div>
-                <a href="./Cart.html" class="view-cart-btn">Xem giỏ hàng</a>
+                <a
+                  onclick="toast({
+                    title: 'Thông báo',
+                    message: 'Bạn đang xem lịch sử đơn hàng',
+                    type: 'success'
+                })"
+                  class="history-btn"
+                >
+                  <i class="fa-regular fa-timer"></i>
+                  Lịch sử đơn hàng
+                </a>
+                <button class="logout-btn" onclick="logout_lichsu()">
+                  <svg
+                    class="logout-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  Đăng xuất
+                </button>
               </div>
             </div>
 
