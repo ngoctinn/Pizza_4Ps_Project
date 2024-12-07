@@ -143,18 +143,6 @@ main {
   background-color: #f5c518;
 }
 
-.btn__login {
-  padding: 5px 20px;
-  background-color: #fafafa;
-  color: #5a5a5a;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.btn__login:hover {
-  opacity: 0.9;
-}
 @media screen and (max-width: 1024px) {
   .product-detail-container {
     flex-direction: column;
