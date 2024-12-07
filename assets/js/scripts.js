@@ -766,6 +766,12 @@ function showCart() {
                   "currentUser",
                   JSON.stringify(currentUser)
                 );
+                toast({
+                  titile: "Thành công",
+                  message: "Xóa sản phẩm thành công",
+                  type: "success",
+                  duration: 3000,
+                });
                 showCart();
               }
             );
@@ -809,6 +815,12 @@ function showCart() {
               currentUser.cart = newCart;
               localStorage.setItem("currentUser", JSON.stringify(currentUser));
               showCart();
+              toast({
+                titile: "Thành công",
+                message: "Xóa sản phẩm thành công",
+                type: "success",
+                duration: 3000,
+              });
             }
           );
         });
