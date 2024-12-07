@@ -67,7 +67,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <!-- Logo -->
-        <a class="navbar-brand logo-style" href="#">Pizza 4p's</a>
+        <a class="navbar-brand logo-style" href="./Index.html">Pizza 4p's</a>
 
         <!-- Hamburger button for mobile -->
         <button
@@ -222,19 +222,26 @@
                 />
                 <span class="user-name"></span>
               </button>
-
               <div class="dropdown-content">
                 <div class="user-info">
-                  <div class="user-name">Nguyễn Ngọc Tín</div>
+                  <div class="user-name">Nguyễn Ngọc Tins</div>
                   <div class="user-email">ngoctinn.work@gmail.com</div>
+                  <div class="user-email">
+                    273 An Dương Vương, Quận 5, TP.HCM
+                  </div>
                 </div>
-                <!-- btn  Xem lịch sử đơn hàng -->
-                <a href="./lichsu-donhang.html" class="history-btn">
+                <a
+                  onclick="toast({
+                    title: 'Thông báo',
+                    message: 'Bạn đang xem lịch sử đơn hàng',
+                    type: 'success'
+                })"
+                  class="history-btn"
+                >
                   <i class="fa-regular fa-timer"></i>
                   Lịch sử đơn hàng
                 </a>
-
-                <button class="logout-btn" onclick="logout()">
+                <button class="logout-btn" onclick="logout_lichsu()">
                   <svg
                     class="logout-icon"
                     xmlns="http://www.w3.org/2000/svg"
